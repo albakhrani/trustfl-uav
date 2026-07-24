@@ -35,6 +35,29 @@ class CNNMnist(nn.Module):
         return self.fc2(F.relu(self.fc1(x)))
 
 
+class CNNEuroSAT(nn.Module):
+    """CNNMnist trunk for 64x64 RGB inputs (EuroSAT): in_ch=3, num_classes=10.
+    After the two pooled convs (64x64 -> 16x16) an adaptive max-pool reduces
+    to the same 7x7 grid the MNIST/FEMNIST trunk flattens, keeping the wire
+    size (~53 Mbit) in the class the shared 5 s comm deadline was calibrated
+    for. (A raw 64*16*16 flatten = 8.4M params = 270 Mbit is undeliverable
+    under the unchanged channel settings: 0-2 deliveries/round, measured.)"""
+
+    def __init__(self, num_classes=10):
+        super().__init__()
+        self.conv1 = nn.Conv2d(3, 32, 5, padding=2)
+        self.conv2 = nn.Conv2d(32, 64, 5, padding=2)
+        self.fc1 = nn.Linear(64 * 7 * 7, 512)
+        self.fc2 = nn.Linear(512, num_classes)
+
+    def forward(self, x):
+        x = F.max_pool2d(F.relu(self.conv1(x)), 2)
+        x = F.max_pool2d(F.relu(self.conv2(x)), 2)
+        x = F.adaptive_max_pool2d(x, 7)
+        x = x.flatten(1)
+        return self.fc2(F.relu(self.fc1(x)))
+
+
 class BasicBlock(nn.Module):
     expansion = 1
 
@@ -81,13 +104,16 @@ def build_model(model_cfg, dataset: str) -> nn.Module:
     name = model_cfg.name
     if name == "auto":
         name = {"synthetic": "mlp", "mnist": "cnn_mnist",
-                "femnist": "cnn_femnist", "cifar100": "resnet18"}[dataset]
+                "femnist": "cnn_femnist", "cifar100": "resnet18",
+                "eurosat": "cnn_eurosat"}[dataset]
     if name == "mlp":
         return MLP(num_classes=n_cls)
     if name == "cnn_mnist":
         return CNNMnist(num_classes=n_cls)
     if name == "cnn_femnist":
         return CNNMnist(num_classes=n_cls)  # same trunk, 62-way head
+    if name == "cnn_eurosat":
+        return CNNEuroSAT(num_classes=n_cls)
     if name == "resnet18":
         return ResNet18(num_classes=n_cls)
     raise ValueError(f"unknown model {name}")

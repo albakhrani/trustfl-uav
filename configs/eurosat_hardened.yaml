@@ -1,0 +1,23 @@
+# EuroSAT pilot: hardened-adversary comparison on aerial land-use
+# classification (transfer check for the Table-IV result). Clone of
+# configs/femnist_hardened.yaml with ONLY dataset/model changed; rounds stay
+# 60. Same 30 UAVs, Dirichlet(0.2), adaptive_system at 40% malicious, same
+# trust/selection/mobility/energy/channel settings.
+#
+# EuroSAT train/test split: deterministic stratified 80/20 with FIXED split
+# seed 42 (EUROSAT_SPLIT_SEED in trustfl/data.py, independent of the run
+# seed); normalization = per-channel mean/std of that train split.
+# Run once per method: --override name=eur_adsys_<method> method.name=<method>
+name: eurosat_hardened
+seed: 42
+seeds: [0, 1, 2]
+out_dir: ./results
+data: {dataset: eurosat, dirichlet_alpha: 0.2}
+model: {name: cnn_eurosat}
+train: {rounds: 60, local_epochs: 2, batch_size: 64, lr: 0.01, eval_every: 5}
+uav: {num_uavs: 30, high_mobility_fraction: 0.3, high_mobility_speed_factor: 3.0}
+resources: {compute_deadline: true, compute_slack: 1.5}
+trust: {k_max: 12, weight_mode: learnable}
+method: {name: trustfl, krum_f: 12, multikrum_m: 8}
+attack: {attack_type: adaptive_system, malicious_fraction: 0.4,
+         adaptive_trust_target: 0.6, misreport_factor: 2.0}

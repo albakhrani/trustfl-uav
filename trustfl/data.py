@@ -17,7 +17,39 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset, Subset, TensorDataset
 
-NUM_CLASSES = {"mnist": 10, "cifar100": 100, "femnist": 62, "synthetic": 5}
+NUM_CLASSES = {"mnist": 10, "cifar100": 100, "femnist": 62, "synthetic": 5,
+               "eurosat": 10}
+
+# EuroSAT ships no official train/test split: carve a deterministic stratified
+# 80/20 split ONCE with a FIXED seed (independent of the run seed) so every
+# run sees the identical split. Normalization stats computed on the 80% train
+# split under this seed.
+EUROSAT_SPLIT_SEED = 42
+EUROSAT_TEST_FRACTION = 0.2
+EUROSAT_MEAN = (0.3441, 0.3801, 0.4075)
+EUROSAT_STD = (0.2028, 0.1372, 0.1157)
+
+
+class _SubsetWithTargets(Subset):
+    """Subset exposing .targets so _labels_of stays O(1) (no image loads)."""
+
+    def __init__(self, base: Dataset, idx):
+        idx = np.asarray(idx)
+        super().__init__(base, idx.tolist())
+        self.targets = np.asarray(base.targets)[idx].tolist()
+
+
+def _eurosat_split_indices(targets):
+    y = np.asarray(targets)
+    g = np.random.default_rng(EUROSAT_SPLIT_SEED)
+    tr_idx, te_idx = [], []
+    for c in np.unique(y):
+        idx_c = np.where(y == c)[0]
+        g.shuffle(idx_c)
+        n_te = int(round(len(idx_c) * EUROSAT_TEST_FRACTION))
+        te_idx.extend(idx_c[:n_te].tolist())
+        tr_idx.extend(idx_c[n_te:].tolist())
+    return np.array(sorted(tr_idx)), np.array(sorted(te_idx))
 
 
 class _SyntheticBlobs(Dataset):
@@ -67,6 +99,13 @@ def load_dataset(cfg, seed: int) -> Tuple[Dataset, Dataset]:
         tf = T.Compose([T.ToTensor(), T.Normalize((0.1307,), (0.3081,))])
         tr = torchvision.datasets.EMNIST(cfg.data_dir, split="byclass", train=True, download=True, transform=tf)
         te = torchvision.datasets.EMNIST(cfg.data_dir, split="byclass", train=False, download=True, transform=tf)
+    elif name == "eurosat":
+        # 27,000 64x64 RGB images, 10 land-use classes (auto-download ~90 MB).
+        tf = T.Compose([T.ToTensor(), T.Normalize(EUROSAT_MEAN, EUROSAT_STD)])
+        full = torchvision.datasets.EuroSAT(cfg.data_dir, transform=tf, download=True)
+        tr_idx, te_idx = _eurosat_split_indices(full.targets)
+        tr = _SubsetWithTargets(full, tr_idx)
+        te = _SubsetWithTargets(full, te_idx)
     else:
         raise ValueError(f"unknown dataset {name}")
     return tr, te
