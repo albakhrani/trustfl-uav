@@ -20,8 +20,10 @@ methods cannot see.
 
 Retention is computed from `invited`, `delivered`, `influence`, and
 groups.json (honest = not malicious; high-mobility from groups). A run's
-retention for a round = |honest invited that appear in influence| /
-|honest invited|.  (Appearing in `influence` == survived into the aggregate.)
+retention for a round = |honest invited with POSITIVE influence weight| /
+|honest invited|.  (Positive weight == survived into the aggregate; zero-weight
+entries are discards.) Rounds where no update receives positive weight are
+skipped — retention is undefined when nothing was aggregated.
 
 CLI:
     python -m trustfl.audit --store ./results_store claim1
@@ -81,7 +83,13 @@ def retention_for_run(store: Store, run_id: str):
     for _, r in df.iterrows():
         invited = set(_parse_listcol(r.get("invited")))
         infl = _parse_dictcol(r.get("influence"))
-        survived = {int(k) for k in infl.keys()}
+        # Rounds where nothing received positive weight (e.g. cosine-fallback
+        # rounds returning an all-zero influence dict) aggregate nothing from
+        # clients: retention is undefined there, exactly as mal_influence is
+        # NaN when tot_infl == 0. Skip them.
+        if not infl or sum(float(w) for w in infl.values()) == 0:
+            continue
+        survived = {int(k) for k, w in infl.items() if float(w) > 0}
         honest_inv = {j for j in invited if j not in mal}
         if honest_inv:
             over.append(len(honest_inv & survived) / len(honest_inv))
