@@ -1,0 +1,109 @@
+name: femtest
+seed: 0
+seeds:
+- 0
+out_dir: ./results
+data:
+  dataset: femnist
+  data_dir: ./data
+  partition: dirichlet
+  dirichlet_alpha: 0.2
+  server_val_fraction: 0.01
+  min_samples_per_client: 10
+model:
+  name: cnn_femnist
+  num_classes: 0
+train:
+  rounds: 3
+  local_epochs: 2
+  batch_size: 64
+  lr: 0.01
+  momentum: 0.9
+  weight_decay: 0.0
+  fedprox_mu: 0.0
+  device: auto
+  eval_every: 5
+uav:
+  enabled: true
+  num_uavs: 30
+  area_m: 1000.0
+  alt_min_m: 50.0
+  alt_max_m: 150.0
+  v_max: 20.0
+  a_max: 5.0
+  gm_alpha: 0.85
+  round_duration_s: 10.0
+  high_mobility_fraction: 0.3
+  high_mobility_speed_factor: 3.0
+  battery_j: 500000.0
+  kappa: 1.0e-27
+  p0_hover_w: 80.0
+  p1_speed_w: 0.15
+  f_min_hz: 500000000.0
+  f_max_hz: 2000000000.0
+  cycles_per_sample: 2000000.0
+  server_pos:
+  - 500.0
+  - 500.0
+  - 0.0
+  bandwidth_hz: 5000000.0
+  beta0_db: -50.0
+  pathloss_alpha: 2.2
+  noise_dbm_per_hz: -174.0
+  p_tx_min_w: 0.05
+  p_tx_max_w: 1.0
+  bits_per_param: 32.0
+  comm_deadline_s: 5.0
+  e_min_j: 10000.0
+  idle_energy_drain: true
+trust:
+  alpha_beh: 0.7
+  alpha_comp: 0.7
+  alpha_comm: 0.7
+  w_participation: 0.2
+  w_commitment: 0.2
+  w_gradient: 0.6
+  weight_mode: learnable
+  w_beh: 0.34
+  w_comp: 0.33
+  w_comm: 0.33
+  learnable_lr: 0.5
+  asymmetry: 3.0
+  init_trust: 0.5
+  t_min: 0.3
+  aggregation_gate: true
+  round_consistency_gate: true
+  k_max: 12
+  staleness_beta: 0.0
+  explore_slots: 1
+resources:
+  enabled: true
+  lambda1: 1.0
+  lambda2: 1.0
+  lambda3: 0.0001
+  tau_max_s: 8.0
+  t_max_s: 5.0
+  dual_step: 0.1
+  max_iters: 50
+  tol: 0.001
+  compute_deadline: true
+  compute_slack: 1.5
+attack:
+  attack_type: adaptive_system
+  malicious_fraction: 0.4
+  label_flip_prob: 1.0
+  grad_scale_factor: 5.0
+  random_update_std: 1.0
+  misreport_factor: 2.0
+  delay_slack_s: 0.5
+  selective_prob: 0.4
+  adaptive_trust_target: 0.6
+  adaptive_probe_rounds: 5
+  evasive_align: 0.9
+  evasive_poison_scale: 1.0
+method:
+  name: fedavg
+  krum_f: 12
+  multikrum_m: 8
+  trimmed_mean_beta: 0.1
+  fedgreed_k: 5

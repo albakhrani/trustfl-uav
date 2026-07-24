@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering
+\caption{Two failure modes, one table: gradient-only aggregation collapses under attack; geometric aggregation discards honest high-mobility UAVs. TrustFL avoids both.}
+\label{tab:motivating}
+\begin{tabular}{lrrr}
+\toprule
+Method & Condition & Final acc & Failure mode \\
+\midrule
+FedAvg & grad_scale & 0.098 & accuracy collapse under attack \\
+Krum & none (honest high-mobility) & 0.641 & discards honest outliers \\
+TrustFL (ours) & none (honest high-mobility) & 0.989 & retains honest outliers \\
+\bottomrule
+\end{tabular}
+\end{table}

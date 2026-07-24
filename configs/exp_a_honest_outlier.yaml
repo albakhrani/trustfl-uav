@@ -1,0 +1,14 @@
+# Flagship (a): honest-outlier exclusion. 30% of UAVs are honest but
+# high-mobility (bad channels, non-IID); no attacker at all.
+# Hypothesis under test: Krum discards them; TrustFL retains them.
+# Run once per method: --override method.name=krum / trustfl / fedavg ...
+name: exp_a_honest_outlier
+seed: 42
+seeds: [0, 1, 2, 3, 4]
+out_dir: ./results
+data: {dataset: mnist, dirichlet_alpha: 0.2}
+train: {rounds: 100, local_epochs: 2, eval_every: 5}
+uav: {num_uavs: 30, high_mobility_fraction: 0.3, high_mobility_speed_factor: 3.0}
+trust: {k_max: 12, weight_mode: learnable}
+method: {name: trustfl, krum_f: 9, multikrum_m: 8}
+attack: {attack_type: none, malicious_fraction: 0.0}

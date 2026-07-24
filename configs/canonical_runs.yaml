@@ -1,0 +1,126 @@
+# Canonical run manifest — which experiments are PAPER-BLESSED and why.
+#
+# The results store ingests everything (diagnostics, superseded runs, smoke
+# tests). Paper tables must draw ONLY from canonical runs. This file is the
+# single auditable source of that decision: each entry maps an experiment
+# name to the claim it supports and a one-line justification. Everything not
+# listed here is exploratory and excluded from paper tables by construction.
+#
+# Applied via:  python -m trustfl.provenance apply
+# which writes a `paper_tag` column into the store's runs table.
+
+# ---------------------------------------------------------------------------
+# CANONICAL: included in paper tables
+# ---------------------------------------------------------------------------
+canonical:
+
+  # --- Claim 1: honest-outlier exclusion (MNIST + FEMNIST) ---
+  claim1_honest_outlier:
+    mnist:
+      exp_a_trustfl:   "ours; 5 seeds; retains honest high-mobility UAVs"
+      exp_a_krum:      "geometric baseline; 5 seeds; the CANONICAL krum_f=9 run"
+      exp_a_multikrum: "geometric baseline; 5 seeds"
+      exp_a_fedavg:    "clean-reference upper bound; 5 seeds"
+      exp_a_fltrust:   "gradient-trust baseline; 5 seeds"
+    femnist:
+      fem_a_trustfl:   "ours; 3 seeds; second-dataset replication"
+      fem_a_krum:      "geometric baseline; 3 seeds; second-dataset replication"
+
+  # --- Claim 2: system-dimension attacks (MNIST) ---
+  # NOTE: exp_b2_delay_* supersedes exp_b_strategic_delay_* (fixed attack
+  # semantics). fedgreed delay came from the exp_b_ run (post-fix), so its
+  # canonical delay entry is exp_b_strategic_delay_fedgreed.
+  claim2_system_attacks:
+    resource_misreport:
+      exp_b_resource_misreport_trustfl:  "ours"
+      exp_b_resource_misreport_fltrust:  "gradient-trust baseline (blind)"
+      exp_b_resource_misreport_fedgreed: "2025 baseline (blind)"
+      exp_b_resource_misreport_fedavg:   "no-defense reference"
+    strategic_delay:
+      exp_b2_delay_trustfl:              "ours; corrected delay semantics"
+      exp_b2_delay_fltrust:              "gradient-trust baseline; corrected"
+      exp_b_strategic_delay_fedgreed:    "2025 baseline; post-fix run"
+      exp_b2_delay_fedavg:               "no-defense reference; corrected"
+    selective_participation:
+      exp_b_selective_participation_trustfl:  "ours"
+      exp_b_selective_participation_fltrust:  "gradient-trust baseline (blind)"
+      exp_b_selective_participation_fedgreed: "2025 baseline (blind)"
+      exp_b_selective_participation_fedavg:   "no-defense reference"
+
+  # --- Claim 4: adaptive adversary (MNIST, naive on-off) ---
+  # The evasive-headline experiment is not yet run; these are the naive
+  # adaptive results (still reportable as the warm-up).
+  claim4_adaptive_naive:
+    exp_c_adaptive_trustfl:    "ours"
+    exp_c_adaptive_fedavg:     "no-defense; destabilized (report best+final)"
+    exp_c_adaptive_fltrust:    "gradient-trust baseline"
+    exp_c_adaptive_fedgreed:   "2025 baseline"
+    exp_c_adaptive_multikrum:  "geometric baseline"
+
+  # --- Claim 4: adaptive SYSTEM-dimension adversary (the headline, Path A) ---
+  # Trust-farming adversary whose payload is adaptively-selected system
+  # misbehavior. Evaluated on influence-share / retention, not accuracy.
+  claim4_adaptive_system:
+    exp_c_adsys_trustfl:       "ours"
+    exp_c_adsys_fedavg:        "no-defense reference"
+    exp_c_adsys_fltrust:       "gradient-trust baseline (blind to system dim)"
+    exp_c_adsys_fedgreed:      "2025 baseline (blind to system dim)"
+    exp_c_adsys_multikrum:     "geometric baseline"
+
+  # --- Claim 4 HARDENED: 40% malicious + compute-deadline (the real headline) ---
+  # The decisive dual-metric result: TrustFL retains 78-91% honest mobile UAVs
+  # while all baselines discard 30-60%, at matched attacker-influence. p=0.05
+  # (perfect seed separation) on retention vs every baseline.
+  claim4_hardened:
+    exp_h_adsys_trustfl:       "ours; retention 0.82, the only method keeping honest data"
+    exp_h_adsys_fedavg:        "no-defense; retention 0.64"
+    exp_h_adsys_fltrust:       "gradient-trust; retention 0.61 (discards honest)"
+    exp_h_adsys_fedgreed:      "2025 baseline; retention 0.50 (discards most honest)"
+    exp_h_adsys_multikrum:     "geometric; retention 0.59 (discards honest)"
+
+  # --- Claim 4 HARDENED on FEMNIST: dataset-independence of the headline ---
+  # Replicates and STRENGTHENS the MNIST result: retention 0.93 vs baselines
+  # 0.43-0.67, gaps +0.26 to +0.50, perfect seed separation p=0.05. FLTrust
+  # reaches higher accuracy (0.844) by discarding 33% of honest data.
+  claim4_hardened_femnist:
+    femh_adsys_trustfl:        "ours; retention 0.93 at 0.825 acc"
+    femh_adsys_fedavg:         "no-defense; retention 0.66"
+    femh_adsys_fltrust:        "gradient-trust; retention 0.67, higher acc BY discarding honest"
+    femh_adsys_fedgreed:       "2025 baseline; retention 0.43"
+    femh_adsys_multikrum:      "geometric; retention 0.54"
+
+  # --- Claim 4 ablations: which trust mechanism earns its place ---
+  claim4_ablations:
+    exp_c_adaptive_trustfl: "full TrustFL (reference for ablations)"
+    exp_c_ablate_nogate:    "remove round-consistency gate -> collapse (0.38)"
+    exp_c_ablate_symewma:   "symmetric EWMA (asymmetry=1.0)"
+
+  # --- Claim 3: cost vs robustness (drawn from ALL canonical runs' agg_time) ---
+  # No dedicated runs; cost is measured across every canonical experiment.
+  # Handled by analysis.cost() filtered to paper_tag != 'exploratory'.
+
+# ---------------------------------------------------------------------------
+# EXPLORATORY: excluded from paper tables (diagnostics, superseded, smoke)
+# ---------------------------------------------------------------------------
+exploratory_reasons:
+  exp_a_krum_diag:        "diagnostic rerun for norm-logging; dup of exp_a_krum"
+  exp_a_krum_f1:          "f-sweep robustness check; not the canonical f"
+  exp_a_krum_f3:          "f-sweep robustness check"
+  exp_a_krum_f6:          "f-sweep robustness check"
+  exp_a_krum_randhm:      "attribution test (randomized HM); mechanism check"
+  exp_b_strategic_delay_trustfl: "SUPERSEDED by exp_b2_delay_trustfl (attack bug)"
+  exp_b_strategic_delay_fltrust: "SUPERSEDED by exp_b2_delay_fltrust"
+  exp_b_strategic_delay_fedavg:  "SUPERSEDED by exp_b2_delay_fedavg"
+  cal_evasive_fedavg_p1.0: "evasive-attack calibration (null result)"
+  cal_evasive_fedavg_p3.0: "evasive-attack calibration (null result)"
+  cal_evasive_fedavg_p6.0: "evasive-attack calibration (null result)"
+  cal_femnist_fedavg:      "FEMNIST model calibration run"
+  mnist_fedavg_debug:      "environment verification"
+  mnist_trustfl_debug:     "environment verification"
+  mnist_attack_fedavg:     "early grad_scale demo (pre-store); may promote later"
+  smoke_synthetic:         "synthetic smoke test"
+  ev_fedavg:               "container smoke test"
+  ev_fedgreed:             "container smoke test"
+  ev_fltrust:              "container smoke test"
+  ev_multikrum:            "container smoke test"
+  ev_trustfl:              "container smoke test"

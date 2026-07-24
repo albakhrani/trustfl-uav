@@ -1,0 +1,23 @@
+# FEMNIST (EMNIST-byclass, 62-way) replication of the flagship experiments.
+# Second-dataset evidence for the thesis (modernization #4). FEMNIST plateaus
+# by ~40 rounds so 60 is sufficient; 3 seeds for variance/significance.
+#
+# Claim 1 (honest-outlier): default below (no attack, 30% high-mobility).
+#   method.name in {trustfl, krum, multikrum, fedavg, fltrust}
+# Claim 2 (system-dimension): add attack.attack_type=strategic_delay etc.,
+#   attack.malicious_fraction=0.3, uav.high_mobility_fraction=0.0
+# Claim 4 (adaptive): attack.attack_type=adaptive_trust, malicious_fraction=0.3
+#
+# Healthy clean FedAvg on this task lands ~0.83-0.87 (NOT 0.99 like MNIST):
+# EMNIST-byclass is 62-way and class-unbalanced.
+name: femnist_flagship
+seed: 42
+seeds: [0, 1, 2]
+out_dir: ./results
+data: {dataset: femnist, dirichlet_alpha: 0.2}
+model: {name: cnn_femnist}
+train: {rounds: 60, local_epochs: 2, batch_size: 64, lr: 0.01, eval_every: 5}
+uav: {num_uavs: 30, high_mobility_fraction: 0.3, high_mobility_speed_factor: 3.0}
+trust: {k_max: 12, weight_mode: learnable}
+method: {name: trustfl, krum_f: 9, multikrum_m: 8}
+attack: {attack_type: none, malicious_fraction: 0.0}

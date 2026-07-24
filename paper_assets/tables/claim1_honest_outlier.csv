@@ -1,0 +1,8 @@
+Dataset,Method,Final acc,Best acc,Rounds->0.95,Seeds
+femnist,krum,0.641 $\pm$ 0.035,0.7119858784018064,,3
+femnist,trustfl,0.828 $\pm$ 0.010,0.8457054924649468,,3
+mnist,fedavg,0.991 $\pm$ 0.001,0.99136,5.0,5
+mnist,fltrust,0.980 $\pm$ 0.002,0.9797399999999999,22.0,5
+mnist,krum,0.927 $\pm$ 0.018,0.9557399999999999,53.333333333333336,5
+mnist,multikrum,0.988 $\pm$ 0.002,0.98902,11.0,5
+mnist,trustfl,0.989 $\pm$ 0.001,0.98916,5.0,5

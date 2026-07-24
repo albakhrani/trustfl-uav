@@ -1,0 +1,7 @@
+Method,Aggregation cost,Agg time (ms),std,runs
+fedavg,O(M),7.5457,1.282,17
+trustfl,O(M log M),8.19,1.6009,26
+krum,O(M^2 d),50.6048,9.6149,8
+multikrum,O(M^2 d),53.0694,9.3695,8
+fltrust,O(M d),286.6808,15.1407,17
+fedgreed,O(M d) + val,1830.6609,229.5446,12

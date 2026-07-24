@@ -1,0 +1,11 @@
+# First real check on your machine: FedAvg, MNIST, Dirichlet non-IID, no attack.
+# Expected: >97% test accuracy within ~50 rounds on GPU (~ a few minutes).
+name: mnist_fedavg_debug
+seed: 42
+out_dir: ./results
+data: {dataset: mnist, dirichlet_alpha: 0.5}
+train: {rounds: 50, local_epochs: 2, batch_size: 64, lr: 0.01, eval_every: 5}
+uav: {num_uavs: 20}
+trust: {k_max: 10}
+method: {name: fedavg}
+attack: {attack_type: none, malicious_fraction: 0.0}

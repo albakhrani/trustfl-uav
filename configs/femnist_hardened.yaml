@@ -1,0 +1,20 @@
+# FEMNIST hardened replication: Claims 2+4 on the second dataset under the
+# same stronger threat model (40% malicious, compute-deadline on). Tests
+# whether the dual-metric result (TrustFL retains honest data while matching
+# attacker-influence suppression) is dataset-independent.
+#
+# FEMNIST plateaus by ~40 rounds; 60 is sufficient. 3 seeds.
+# Run once per method: --override method.name=trustfl / fltrust / fedgreed / ...
+name: femnist_hardened
+seed: 42
+seeds: [0, 1, 2]
+out_dir: ./results
+data: {dataset: femnist, dirichlet_alpha: 0.2}
+model: {name: cnn_femnist}
+train: {rounds: 60, local_epochs: 2, batch_size: 64, lr: 0.01, eval_every: 5}
+uav: {num_uavs: 30, high_mobility_fraction: 0.3, high_mobility_speed_factor: 3.0}
+resources: {compute_deadline: true, compute_slack: 1.5}
+trust: {k_max: 12, weight_mode: learnable}
+method: {name: trustfl, krum_f: 12, multikrum_m: 8}
+attack: {attack_type: adaptive_system, malicious_fraction: 0.4,
+         adaptive_trust_target: 0.6, misreport_factor: 2.0}

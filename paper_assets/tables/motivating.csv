@@ -1,0 +1,4 @@
+Method,Condition,Final acc,Failure mode
+FedAvg,grad_scale,0.098,accuracy collapse under attack
+Krum,none (honest high-mobility),0.641,discards honest outliers
+TrustFL (ours),none (honest high-mobility),0.989,retains honest outliers

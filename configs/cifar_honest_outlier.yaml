@@ -1,0 +1,19 @@
+# CIFAR-100 + ResNet-18: third-dataset replication (color images, harder task,
+# different modality from MNIST/FEMNIST character recognition). Establishes that
+# the flagship claims generalize beyond grayscale character tasks.
+#
+# COMPUTE WARNING: ResNet-18 (11.2M params) is ~20-40x the MNIST CNN.
+# Expect ~2-4 hours PER SEED. Run a calibration first (cifar_calib below).
+#
+# Claim 1 (honest-outlier): this config. method.name in {trustfl,krum,multikrum,fltrust,fedavg}
+name: cifar_honest_outlier
+seed: 42
+seeds: [0, 1]                     # start at 2 seeds; expand to 3 if variance needs it
+out_dir: ./results
+data: {dataset: cifar100, dirichlet_alpha: 0.2}
+model: {name: resnet18}
+train: {rounds: 100, local_epochs: 2, batch_size: 64, lr: 0.03, eval_every: 5}
+uav: {num_uavs: 30, high_mobility_fraction: 0.3, high_mobility_speed_factor: 3.0, comm_slack: 3.0}
+trust: {k_max: 12, weight_mode: learnable}
+method: {name: trustfl, krum_f: 9, multikrum_m: 8}
+attack: {attack_type: none, malicious_fraction: 0.0}

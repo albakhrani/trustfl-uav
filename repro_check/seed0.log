@@ -1,0 +1,23 @@
+[repro_h_trustfl seed=0] device=cuda method=trustfl attack=adaptive_system(0.4) uavs=30 rounds=100
+  round   0  test_acc=0.7570 test_loss=0.9097 delivered=11
+  round   5  test_acc=0.9702 test_loss=0.0938 delivered=10
+  round  10  test_acc=0.9763 test_loss=0.0694 delivered=9
+  round  15  test_acc=0.9796 test_loss=0.0617 delivered=11
+  round  20  test_acc=0.9859 test_loss=0.0449 delivered=11
+  round  25  test_acc=0.9854 test_loss=0.0448 delivered=10
+  round  30  test_acc=0.9852 test_loss=0.0473 delivered=10
+  round  35  test_acc=0.9864 test_loss=0.0427 delivered=12
+  round  40  test_acc=0.9866 test_loss=0.0433 delivered=11
+  round  45  test_acc=0.9884 test_loss=0.0381 delivered=12
+  round  50  test_acc=0.9885 test_loss=0.0398 delivered=11
+  round  55  test_acc=0.9891 test_loss=0.0366 delivered=12
+  round  60  test_acc=0.9895 test_loss=0.0370 delivered=11
+  round  65  test_acc=0.9904 test_loss=0.0360 delivered=8
+  round  70  test_acc=0.9889 test_loss=0.0370 delivered=11
+  round  75  test_acc=0.9894 test_loss=0.0353 delivered=12
+  round  80  test_acc=0.9899 test_loss=0.0349 delivered=10
+  round  85  test_acc=0.9888 test_loss=0.0393 delivered=11
+  round  90  test_acc=0.9896 test_loss=0.0363 delivered=10
+  round  95  test_acc=0.9899 test_loss=0.0358 delivered=10
+  round  99  test_acc=0.9897 test_loss=0.0375 delivered=10
+[repro_h_trustfl seed=0] done in 37.7 min final_acc=0.9897

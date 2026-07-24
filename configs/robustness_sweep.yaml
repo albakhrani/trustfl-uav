@@ -1,0 +1,27 @@
+# Robustness sweep: does TrustFL's advantage SCALE with threat severity?
+#
+# The six-facet snapshot (heatmap) shows effectiveness at ONE condition
+# (40% malicious, adaptive_system). This sweep measures the same facets as the
+# malicious fraction rises 10% -> 40%, answering the question a reviewer will
+# ask: "is this an artifact of one setting, or does the mechanism hold?"
+#
+# MNIST + 100 rounds + 2 seeds keeps it cheap (~25 min/run).
+# Run the sweep with:
+#   foreach ($f in 0.1,0.2,0.3,0.4) {
+#     foreach ($m in "trustfl","fltrust","fedgreed","multikrum","fedavg") {
+#       python -m trustfl.experiments.run --config configs/robustness_sweep.yaml `
+#         --override name=rs_f${f}_${m} method.name=$m attack.malicious_fraction=$f
+#     }
+#   }
+name: robustness_sweep
+seed: 42
+seeds: [0, 1]
+out_dir: ./results
+data: {dataset: mnist, dirichlet_alpha: 0.2}
+train: {rounds: 100, local_epochs: 2, eval_every: 5}
+uav: {num_uavs: 30, high_mobility_fraction: 0.3, high_mobility_speed_factor: 3.0}
+resources: {compute_deadline: true, compute_slack: 1.5}
+trust: {k_max: 12, weight_mode: learnable}
+method: {name: trustfl, krum_f: 12, multikrum_m: 8}
+attack: {attack_type: adaptive_system, malicious_fraction: 0.4,
+         adaptive_trust_target: 0.6, misreport_factor: 2.0}

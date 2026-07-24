@@ -1,0 +1,10 @@
+# Container smoke test: no downloads, tiny, exercises every code path.
+name: smoke_synthetic
+seed: 42
+out_dir: ./results
+data: {dataset: synthetic, partition: dirichlet, dirichlet_alpha: 0.5}
+train: {rounds: 10, local_epochs: 1, batch_size: 32, lr: 0.05, eval_every: 2, device: cpu}
+uav: {num_uavs: 12, battery_j: 2.0e5}
+trust: {k_max: 6, weight_mode: learnable}
+method: {name: trustfl}
+attack: {attack_type: grad_scale, malicious_fraction: 0.25, grad_scale_factor: 8.0}

@@ -1,0 +1,182 @@
+% ===========================================================================
+% trustfl.bib — VERIFIED bibliography (sweep 2026-07-11, entries re-verified
+% 2026-07-14 against publisher pages / dblp / authors' own BibTeX).
+% Policy: peer-reviewed entries only, except items explicitly marked
+% "arXiv preprint" in the note field. Do NOT add entries from memory.
+% ===========================================================================
+
+% ------------------------- baselines: classical ---------------------------
+
+@inproceedings{mcmahan2017fedavg,
+  author    = {McMahan, Brendan and Moore, Eider and Ramage, Daniel and
+               Hampson, Seth and Ag{\"u}era y Arcas, Blaise},
+  title     = {Communication-Efficient Learning of Deep Networks from
+               Decentralized Data},
+  booktitle = {Proceedings of the 20th International Conference on Artificial
+               Intelligence and Statistics (AISTATS)},
+  series    = {PMLR},
+  volume    = {54},
+  pages     = {1273--1282},
+  year      = {2017}
+}
+
+@inproceedings{blanchard2017krum,
+  author    = {Blanchard, Peva and El Mhamdi, El Mahdi and Guerraoui, Rachid
+               and Stainer, Julien},
+  title     = {Machine Learning with Adversaries: Byzantine Tolerant Gradient
+               Descent},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume    = {30},
+  pages     = {119--129},
+  year      = {2017}
+}
+
+@inproceedings{yin2018byzantine,
+  author    = {Yin, Dong and Chen, Yudong and Kannan, Ramchandran and
+               Bartlett, Peter},
+  title     = {Byzantine-Robust Distributed Learning: Towards Optimal
+               Statistical Rates},
+  booktitle = {Proceedings of the 35th International Conference on Machine
+               Learning (ICML)},
+  series    = {PMLR},
+  volume    = {80},
+  pages     = {5650--5659},
+  year      = {2018}
+}
+
+@inproceedings{cao2021fltrust,
+  author    = {Cao, Xiaoyu and Fang, Minghong and Liu, Jia and Gong, Neil
+               Zhenqiang},
+  title     = {{FLTrust}: Byzantine-Robust Federated Learning via Trust
+               Bootstrapping},
+  booktitle = {Proceedings of the Network and Distributed System Security
+               Symposium (NDSS)},
+  year      = {2021},
+  doi       = {10.14722/ndss.2021.24434},
+  note      = {NDSS 2021 (frequently miscited as 2022)}
+}
+
+% ------------------- baselines / competitors: 2025 SOTA -------------------
+
+@article{gui2025sophon,
+  author    = {Gui, Xiaoqiang and Yu, Guo-Xian and Wang, Jun and Yan,
+               Zhongmin and others},
+  title     = {Sophon: Byzantine-Robust Federated Learning via Dual Trust
+               Mechanism},
+  journal   = {IEEE Transactions on Dependable and Secure Computing},
+  volume    = {22},
+  number    = {6},
+  pages     = {5906--5917},
+  year      = {2025},
+  doi       = {10.1109/TDSC.2025.3577267}
+}
+
+@inproceedings{he2025fedaa,
+  author    = {He, Jialuo and Chen, Wei and Zhang, Xiaojin},
+  title     = {{FedAA}: A Reinforcement Learning Perspective on Adaptive
+               Aggregation for Fair and Robust Federated Learning},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {39},
+  number    = {16},
+  pages     = {17085--17093},
+  year      = {2025},
+  doi       = {10.1609/aaai.v39i16.33878}
+}
+
+@misc{fedgreed2025,
+  author    = {Kritharakis, Emmanouil and Makris, Antonios and
+               Jakovetic, Dusan and Tserpes, Konstantinos},
+  title     = {{FedGreed}: Loss-Based Greedy Aggregation for Byzantine-Robust
+               Federated Learning},
+  howpublished = {arXiv preprint arXiv:2508.18060},
+  year      = {2025},
+  note      = {Preprint; no peer-reviewed venue as of July 2026}
+}
+
+% -------------------- adjacent line: trust in UAV/IoT ---------------------
+
+@article{din2025trust,
+  author    = {Din, Ikram Ud and Taj, Imran and Almogren, Ahmad and Guizani,
+               Mohsen},
+  title     = {Federated Learning for Trust Enhancement in {UAV}-Enabled
+               {IoT} Networks: A Unified Approach},
+  journal   = {IEEE Internet of Things Journal},
+  volume    = {12},
+  number    = {8},
+  pages     = {9596--9603},
+  year      = {2025},
+  doi       = {10.1109/JIOT.2025.3542268}
+}
+
+@article{sahin2026cmbrf,
+  author    = {Batur {\c{S}}ahin, Canan},
+  title     = {Securing {UAV} Swarms with Vision Transformers: A
+               Byzantine-Robust Federated Learning Framework for Cross-Modal
+               Intrusion Detection},
+  journal   = {Drones},
+  volume    = {10},
+  number    = {2},
+  pages     = {125},
+  year      = {2026},
+  doi       = {10.3390/drones10020125},
+}
+
+% ----------------------- datasets & experimental infra --------------------
+
+@article{lecun1998mnist,
+  author    = {LeCun, Yann and Bottou, L{\'e}on and Bengio, Yoshua and
+               Haffner, Patrick},
+  title     = {Gradient-Based Learning Applied to Document Recognition},
+  journal   = {Proceedings of the IEEE},
+  volume    = {86},
+  number    = {11},
+  pages     = {2278--2324},
+  year      = {1998}
+}
+
+@inproceedings{cohen2017emnist,
+  author    = {Cohen, Gregory and Afshar, Saeed and Tapson, Jonathan and
+               van Schaik, Andr{\'e}},
+  title     = {{EMNIST}: Extending {MNIST} to Handwritten Letters},
+  booktitle = {International Joint Conference on Neural Networks (IJCNN)},
+  pages     = {2921--2926},
+  year      = {2017}
+}
+
+@misc{caldas2018leaf,
+  author    = {Caldas, Sebastian and Duddu, Sai Meher Karthik and Wu, Peter
+               and Li, Tian and Kone{\v{c}}n{\'y}, Jakub and McMahan, H.
+               Brendan and Smith, Virginia and Talwalkar, Ameet},
+  title     = {{LEAF}: A Benchmark for Federated Settings},
+  howpublished = {arXiv preprint arXiv:1812.01097},
+  year      = {2018},
+  note      = {Preprint; the standard citation for FEMNIST}
+}
+
+@misc{hsu2019noniid,
+  author    = {Hsu, Tzu-Ming Harry and Qi, Hang and Brown, Matthew},
+  title     = {Measuring the Effects of Non-Identical Data Distribution for
+               Federated Visual Classification},
+  howpublished = {arXiv preprint arXiv:1909.06335},
+  year      = {2019},
+  note      = {Preprint; the standard citation for Dirichlet partitioning}
+}
+
+% ------------------------------- theory -----------------------------------
+
+@book{cesabianchi2006prediction,
+  author    = {Cesa-Bianchi, Nicol{\`o} and Lugosi, G{\'a}bor},
+  title     = {Prediction, Learning, and Games},
+  publisher = {Cambridge University Press},
+  year      = {2006}
+}
+
+% ===========================================================================
+% EXCLUDED (venue unverified as of 2026-07-14) — do NOT cite until the
+% peer-reviewed record is confirmed:
+%   - FoundationFL (arXiv 2501.17381; claimed NDSS 2025 — verify camera-ready)
+%   - OptiGradTrust (arXiv 2507.23638; claimed GCPR 2025 — verify proceedings)
+%   - DFL-Dual (Sun et al., CVPR 2024, IEEE doc 10657953 — exact title
+%     unconfirmed; verify on IEEE Xplore, then add: useful contrast cite
+%     showing multi-metric trust that stays in data/model space).
+% ===========================================================================

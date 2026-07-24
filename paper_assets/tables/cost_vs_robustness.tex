@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Per-round aggregation cost by method (wall-clock, mean over all runs). Trust filtering is O(M log M) vs Krum-family O(M^2).}
+\label{tab:cost}
+\begin{tabular}{lrrrr}
+\toprule
+Method & Aggregation cost & Agg time (ms) & std & runs \\
+\midrule
+fedavg & O(M) & 7.5457 & 1.282 & 17 \\
+trustfl & O(M log M) & 8.19 & 1.6009 & 26 \\
+krum & O(M^2 d) & 50.6048 & 9.6149 & 8 \\
+multikrum & O(M^2 d) & 53.0694 & 9.3695 & 8 \\
+fltrust & O(M d) & 286.6808 & 15.1407 & 17 \\
+fedgreed & O(M d) + val & 1830.6609 & 229.5446 & 12 \\
+\bottomrule
+\end{tabular}
+\end{table}

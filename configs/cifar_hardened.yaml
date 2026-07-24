@@ -1,0 +1,18 @@
+# CIFAR-100 + ResNet-18 hardened: Claim 4 (adaptive system adversary) on the
+# third dataset, under the same threat model (40% malicious, compute-deadline).
+# The slack-factor deadline scales to CIFAR's data volume automatically.
+#
+# Run once per method: --override method.name=trustfl / fltrust / fedgreed / ...
+name: cifar_hardened
+seed: 42
+seeds: [0, 1]
+out_dir: ./results
+data: {dataset: cifar100, dirichlet_alpha: 0.2}
+model: {name: resnet18}
+train: {rounds: 100, local_epochs: 2, batch_size: 64, lr: 0.03, eval_every: 5}
+uav: {num_uavs: 30, high_mobility_fraction: 0.3, high_mobility_speed_factor: 3.0, comm_slack: 3.0}
+resources: {compute_deadline: true, compute_slack: 1.5}
+trust: {k_max: 12, weight_mode: learnable}
+method: {name: trustfl, krum_f: 12, multikrum_m: 8}
+attack: {attack_type: adaptive_system, malicious_fraction: 0.4,
+         adaptive_trust_target: 0.6, misreport_factor: 2.0}

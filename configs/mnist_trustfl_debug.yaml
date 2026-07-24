@@ -1,0 +1,11 @@
+# TrustFL under gradient-scaling attack, learnable trust weights, 3 seeds.
+name: mnist_trustfl_debug
+seed: 42
+seeds: [42, 43, 44]
+out_dir: ./results
+data: {dataset: mnist, dirichlet_alpha: 0.5}
+train: {rounds: 60, local_epochs: 2, batch_size: 64, lr: 0.01, eval_every: 5}
+uav: {num_uavs: 20}
+trust: {k_max: 10, weight_mode: learnable}
+method: {name: trustfl}
+attack: {attack_type: grad_scale, malicious_fraction: 0.2, grad_scale_factor: 10.0}
