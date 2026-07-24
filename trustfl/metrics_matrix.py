@@ -65,8 +65,12 @@ def facets_for_run(store: Store, run_id: str) -> dict:
         hit = rd[(rd["test_acc"].notna()) & (rd["test_acc"] >= target)]
         r_to = int(hit["round"].iloc[0]) if len(hit) else np.nan
 
-    # security
-    mi = [v for v in rd.get("malicious_influence_share", []) if v == v]
+    # security — second-half window, same definition as export.py's infl_late
+    if "malicious_influence_share" in rd.columns and "round" in rd.columns:
+        late = rd[rd["round"] >= rd["round"].max() / 2]
+        mi = [v for v in late["malicious_influence_share"] if v == v]
+    else:
+        mi = []
     mal_infl = float(np.mean(mi)) if mi else np.nan
 
     # resource effectiveness
@@ -79,8 +83,13 @@ def facets_for_run(store: Store, run_id: str) -> dict:
         total_delivered += dlv
     deliv_eff = float(np.mean(deff)) if deff else np.nan
     # energy consumed over the run / useful updates delivered
+    # mean_energy_j is per-UAV; scale by fleet size, same as export.py
+    meta = store.query("run_id = ?", (run_id,))
+    nu = meta.iloc[0]["num_uavs"] if len(meta) else None
+    nuav = float(nu) if nu is not None else np.nan
     energy = rd.dropna(subset=["mean_energy_j"])["mean_energy_j"] if "mean_energy_j" in rd else pd.Series([], dtype=float)
-    energy_spent = float(energy.iloc[0] - energy.iloc[-1]) if len(energy) >= 2 else np.nan
+    energy_spent = (float(energy.iloc[0] - energy.iloc[-1]) * nuav
+                    if len(energy) >= 2 and nuav == nuav else np.nan)
     energy_per_update = (energy_spent / total_delivered) if (total_delivered and energy_spent == energy_spent) else np.nan
 
     # cost
