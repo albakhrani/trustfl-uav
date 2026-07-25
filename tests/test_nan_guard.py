@@ -144,8 +144,108 @@ def test_nan_update_short_synthetic_run():
     assert np.isfinite(recs[-1]["test_acc"])
 
 
+def test_quarantine_zeroes_all_dimensions():
+    """Spec semantics: a quarantined round scores 0 on ALL THREE dimensions
+    and each EWMA processes the 0 normally (asymmetric down-update) —
+    plausible-looking compute/comm times must earn nothing that round."""
+    from trustfl.config import TrustConfig
+    from trustfl.trust.trust import TrustManager, _ewma
+
+    cfg = TrustConfig()
+    tm = TrustManager(cfg, 2)
+    # healthy-looking observations, but the payload was quarantined
+    tm.update(0, invited=True, participated=True, committed_time=5.0,
+              actual_time=4.0, grad_consistency=0.9, comm_time=1.0,
+              comm_max=5.0, delivered=False, c_expected=5.0, c_actual=4.0,
+              quarantined=True)
+    expect = _ewma(cfg.init_trust, 0.0, cfg.alpha_beh, cfg.asymmetry)
+    r = tm.records[0]
+    for name, got in (("beh", r.t_beh), ("comp", r.t_comp), ("comm", r.t_comm)):
+        assert abs(got - expect) < 1e-12, f"t_{name}={got}, expected {expect}"
+
+    # identical observations WITHOUT quarantine keep the normal (higher) scores
+    tm.update(1, invited=True, participated=True, committed_time=5.0,
+              actual_time=4.0, grad_consistency=0.9, comm_time=1.0,
+              comm_max=5.0, delivered=True, c_expected=5.0, c_actual=4.0)
+    assert tm.records[1].t_beh > expect and tm.records[1].t_comp > expect
+
+
+def test_zero_norm_quarantined_short_run():
+    """A delivered all-zeros delta (zero norm, perfectly finite) must be
+    quarantined exactly like a NaN payload: excluded from aggregation,
+    logged, all three trust dimensions driven down."""
+    from trustfl.attacks.attacks import AttackController
+    from trustfl.config import ExperimentConfig
+    from trustfl.data import iid_partition, label_variance, load_dataset, split_server_val
+    from trustfl.fl.client import Client, flatten_state
+    from trustfl.fl.server import Server
+    from trustfl.models import build_model
+    from trustfl.seeding import set_all_seeds
+    from trustfl.trust.trust import TrustManager
+    from trustfl.uav.network import UAVNetwork
+
+    cfg = ExperimentConfig.from_dict({
+        "name": "zero_norm_guard",
+        "seed": 0,
+        "data": {"dataset": "synthetic", "partition": "iid"},
+        "train": {"rounds": 5, "local_epochs": 1, "batch_size": 32,
+                  "lr": 0.05, "eval_every": 10, "device": "cpu"},
+        "uav": {"enabled": False, "num_uavs": 8},
+        "trust": {"k_max": 8},
+        "method": {"name": "trustfl"},
+        "attack": {"attack_type": "none", "malicious_fraction": 0.0},
+    })
+    n = cfg.uav.num_uavs
+    set_all_seeds(cfg.seed)
+    train, test = load_dataset(cfg.data, cfg.seed)
+    train, server_val = split_server_val(train, cfg.data.server_val_fraction, cfg.seed)
+    parts = iid_partition(train, n, cfg.seed)
+    sigma2 = {j: label_variance(train, parts[j], 5) for j in range(n)}
+    base = train.dataset if hasattr(train, "dataset") else train
+    clients = [Client(j, base, parts[j], cfg.train, "cpu", cfg.seed) for j in range(n)]
+
+    with tempfile.TemporaryDirectory() as out_dir:
+        server = Server(cfg, build_model(cfg.model, "synthetic"), clients,
+                        UAVNetwork(cfg.uav, cfg.seed), TrustManager(cfg.trust, n),
+                        AttackController(cfg.attack, n, cfg.seed),
+                        server_val, test, sigma2, "cpu", out_dir)
+
+        poison_round, poison_uid = 2, 0
+        current = {"t": -1}
+        orig_corrupt = server.attack.corrupt_delta
+
+        def zeroing_corrupt(uid, delta):
+            d = orig_corrupt(uid, delta)
+            if current["t"] == poison_round and uid == poison_uid:
+                d = torch.zeros_like(d)
+            return d
+
+        server.attack.corrupt_delta = zeroing_corrupt
+
+        recs = []
+        trust_before = None
+        for t in range(cfg.train.rounds):
+            current["t"] = t
+            if t == poison_round:
+                trust_before = server.trust.overall(poison_uid)
+            recs.append(server.run_round(t))
+            flat = flatten_state(server.model.state_dict())
+            assert bool(torch.isfinite(flat).all()), f"model non-finite after round {t}"
+
+        pr = recs[poison_round]
+        assert poison_uid in pr["invited"], "test setup broken: poisoned uav not invited"
+        assert poison_uid not in pr["delivered"], "zero-norm update reached aggregation"
+        assert pr.get("nonfinite_dropped") == [poison_uid]
+        assert server.trust.overall(poison_uid) < trust_before, \
+            "quarantined round did not reduce trust"
+        r = server.trust.records[poison_uid]
+        assert np.all(np.isfinite([r.t_beh, r.t_comp, r.t_comm]))
+
+
 if __name__ == "__main__":
     test_ewma_skips_nonfinite()
     test_trust_update_nonfinite_inputs()
     test_nan_update_short_synthetic_run()
+    test_quarantine_zeroes_all_dimensions()
+    test_zero_norm_quarantined_short_run()
     print("all NaN-guard regression tests passed")

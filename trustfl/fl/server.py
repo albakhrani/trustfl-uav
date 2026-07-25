@@ -205,14 +205,20 @@ class Server:
             # A delivered payload containing NaN/Inf (diverged local training,
             # overflowed attack payload) is unusable: one such delta poisons
             # the median reference, every cosine against it, and through
-            # grad_cons the trust EWMAs of ALL participants. Score it as a
-            # failed delivery so it reaches neither trust nor aggregation.
-            # Finite deltas — however large — are untouched.
-            if delivered and not bool(torch.isfinite(delta).all()):
+            # grad_cons the trust EWMAs of ALL participants. A ZERO-NORM delta
+            # is equally unusable (no gradient information, degenerate
+            # direction against the cosine reference). Quarantine both: the
+            # update reaches neither the consistency reference nor
+            # aggregation, and trust scores the round as maximally suspicious
+            # (all three instantaneous scores 0 — see TrustManager.update).
+            # Finite nonzero deltas — however large — are untouched.
+            quarantined = delivered and (not bool(torch.isfinite(delta).all())
+                                         or not bool(delta.any()))
+            if quarantined:
                 delivered = False
                 nonfinite_dropped.append(j)
             round_obs[j] = dict(participated=True, committed=committed, actual=actual,
-                                t_comm=t_comm, delivered=delivered)
+                                t_comm=t_comm, delivered=delivered, quarantined=quarantined)
             if delivered:
                 deltas[j] = delta
                 n_map[j] = result["n"]
@@ -280,7 +286,8 @@ class Server:
                                   grad_consistency=grad_cons.get(j),
                                   comm_time=obs["t_comm"], comm_max=cfg.uav.comm_deadline_s,
                                   delivered=obs["delivered"],
-                                  c_expected=obs["committed"], c_actual=obs["actual"])
+                                  c_expected=obs["committed"], c_actual=obs["actual"],
+                                  quarantined=obs.get("quarantined", False))
 
         # --- learnable trust weights (modernization #1) ---
         if cfg.trust.weight_mode == "learnable" and len(deltas) >= 2:

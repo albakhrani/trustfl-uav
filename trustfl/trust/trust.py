@@ -20,10 +20,13 @@ interface for the theory work in task #3.
 """
 from __future__ import annotations
 
+import logging
 from dataclasses import dataclass, field
 from typing import Dict, Optional
 
 import numpy as np
+
+_log = logging.getLogger(__name__)
 
 
 def _ewma(prev: float, phi: float, alpha: float, asym: float) -> float:
@@ -79,12 +82,19 @@ class TrustManager:
         well between useful and harmful participants."""
         if self.cfg.weight_mode != "learnable":
             return
+        theta_prev = self.theta.copy()
         r = np.nan_to_num(reward_per_dim, nan=0.0)
         if np.abs(r).max() > 0:
             r = r / (np.abs(r).max())        # scale-free
         # mild decay toward uniform prevents premature collapse on noisy reward
         self.theta = 0.98 * self.theta + self.cfg.learnable_lr * r
         self.theta -= self.theta.max()       # numeric stability
+        # Backstop: non-finite logits would make every trust score NaN via
+        # softmax; log and floor to the previous finite state, then continue.
+        if not np.all(np.isfinite(self.theta)):
+            _log.warning("non-finite trust-weight logits %s floored to previous %s",
+                         self.theta, theta_prev)
+            self.theta = theta_prev
         self.weight_history.append(self.weights.copy())
 
     # ---------------- Algorithm 1 ----------------
@@ -98,14 +108,22 @@ class TrustManager:
                committed_time: float, actual_time: float,
                grad_consistency: Optional[float],
                comm_time: float, comm_max: float, delivered: bool,
-               c_expected: float, c_actual: float) -> None:
+               c_expected: float, c_actual: float,
+               quarantined: bool = False) -> None:
         """One UAV's per-round trust update (Algorithm 1 lines 2-16).
 
         grad_consistency: score in [0,1] (cosine-to-robust-reference with
         norm-ratio penalty, computed by the server); None if UAV did not
         deliver (behavioral component then uses participation+commitment).
+
+        quarantined: the server found this UAV's delivered update non-finite
+        or zero-norm. All three instantaneous scores are 0 for this round
+        (maximally suspicious) and each EWMA processes the 0 normally, so
+        the asymmetric down-update applies. Default False: every existing
+        call path is bit-identical.
         """
         cfg, r = self.cfg, self.records[j]
+        prev_beh, prev_comp, prev_comm = r.t_beh, r.t_comp, r.t_comm
         if invited:
             r.rounds_invited += 1
             if participated:
@@ -115,30 +133,47 @@ class TrustManager:
 
         # Behavioral, Alg.1 lines 3-7
         if invited:
-            # Effective participation = DELIVERED rounds (documented deviation
-            # from the draft: training without delivering contributes nothing,
-            # and counting it lets never-delivering attackers keep p_rate=1).
-            p_rate = r.rounds_delivered / max(r.rounds_invited, 1)
-            if participated and committed_time > 0:
-                # adherence: 1 when on time, decays when slower than committed
-                c_adh = float(np.clip(committed_time / max(actual_time, 1e-9), 0.0, 1.0))
+            if quarantined:
+                phi_beh = 0.0
             else:
-                c_adh = 0.0
-            g_cons = float(np.clip(grad_consistency, 0.0, 1.0)) if grad_consistency is not None else 0.0
-            phi_beh = (cfg.w_participation * p_rate
-                       + cfg.w_commitment * c_adh
-                       + cfg.w_gradient * g_cons)
+                # Effective participation = DELIVERED rounds (documented deviation
+                # from the draft: training without delivering contributes nothing,
+                # and counting it lets never-delivering attackers keep p_rate=1).
+                p_rate = r.rounds_delivered / max(r.rounds_invited, 1)
+                if participated and committed_time > 0:
+                    # adherence: 1 when on time, decays when slower than committed
+                    c_adh = float(np.clip(committed_time / max(actual_time, 1e-9), 0.0, 1.0))
+                else:
+                    c_adh = 0.0
+                g_cons = float(np.clip(grad_consistency, 0.0, 1.0)) if grad_consistency is not None else 0.0
+                phi_beh = (cfg.w_participation * p_rate
+                           + cfg.w_commitment * c_adh
+                           + cfg.w_gradient * g_cons)
             r.t_beh = _ewma(r.t_beh, phi_beh, cfg.alpha_beh, cfg.asymmetry)  # Eq. (17), asymmetric
 
-        # Computational, Alg.1 lines 8-10 (only measurable when it computed)
-        if participated and c_expected > 0:
+        # Computational, Alg.1 lines 8-10 (only measurable when it computed;
+        # a quarantined round is scored 0 even when times look plausible)
+        if participated and quarantined:
+            r.t_comp = _ewma(r.t_comp, 0.0, cfg.alpha_comp, cfg.asymmetry)
+        elif participated and c_expected > 0:
             phi_comp = float(np.exp(-abs(c_actual - c_expected) / c_expected))  # Eq. (22)
             r.t_comp = _ewma(r.t_comp, phi_comp, cfg.alpha_comp, cfg.asymmetry)
 
         # Communication, Alg.1 lines 11-13
         if participated:
-            phi_comm = float(np.exp(-comm_time / max(comm_max, 1e-9))) * (1.0 if delivered else 0.0)  # Eq. (24)
+            phi_comm = 0.0 if quarantined else \
+                float(np.exp(-comm_time / max(comm_max, 1e-9))) * (1.0 if delivered else 0.0)  # Eq. (24)
             r.t_comm = _ewma(r.t_comm, phi_comm, cfg.alpha_comm, cfg.asymmetry)
+
+        # Backstop (should be unreachable given _ewma's non-finite skip):
+        # a non-finite trust state would permanently poison selection, so
+        # log and floor it to its previous finite value, then continue.
+        for name, prev in (("t_beh", prev_beh), ("t_comp", prev_comp),
+                           ("t_comm", prev_comm)):
+            if not np.isfinite(getattr(r, name)):
+                _log.warning("non-finite %s for uav %d floored to previous %.6f",
+                             name, j, prev)
+                setattr(r, name, prev)
 
         # staleness bookkeeping for Q_j, Eq. (31)
         r.staleness = 0 if participated else r.staleness + 1
