@@ -1,10 +1,13 @@
 # TrustFL-UAV
 
-Trust-aware federated learning for UAV-assisted edge computing.
+**Distinguishing Malicious from Unreliable Participants in Federated Learning
+over UAV Networks**
 
 This repository contains the simulation code, experiment configurations, and
-result aggregates for a manuscript **submitted to the IEEE Internet of Things
-Journal (under review)**. It implements the trust-assessment mechanism,
+result aggregates for the manuscript *"TrustFL-UAV: Distinguishing Malicious
+from Unreliable Participants in Federated Learning over UAV Networks"*,
+**submitted to the IEEE Internet of Things Journal (under review)**. It
+implements the trust-assessment mechanism,
 trust-constrained client selection, dual-decomposition resource allocation,
 and the UAV physics model (Gauss–Markov mobility, energy, and Rayleigh
 air-to-ground channel), together with all baselines and the three attack
@@ -168,14 +171,16 @@ Released under the MIT License — see [`LICENSE`](LICENSE).
 
 ## Citation
 
+If you use this code, please cite the manuscript:
+
 ```bibtex
-@article{trustfl_uav_2026,
-  title   = {TrustFL-UAV: Trust-Aware Federated Learning for UAV-Assisted Edge Computing},
-  author  = {The TrustFL-UAV Authors},
-  journal = {IEEE Internet of Things Journal (under review)},
+@article{albakhrani2026trustfl,
+  title   = {TrustFL-UAV: Distinguishing Malicious from Unreliable Participants
+             in Federated Learning over UAV Networks},
+  author  = {AL-Bakhrani, Ali A. and Xu, Zichuan and Obaidat, Mohammad S. and
+             Li, Mingchu and Xia, Qiufen and Li, Zhongwei},
+  journal = {IEEE Internet of Things Journal},
+  note    = {under review},
   year    = {2026}
 }
 ```
-
-> Citation stub — finalize the author list and title to match the submitted
-> manuscript before making this repository public.
