@@ -5,11 +5,12 @@ hard-coded expected value with a tolerance.
 
   Group A  (must MATCH, not retention-derived): accuracy, influence, delivery,
            energy, sign-flip, system attacks, fidelity jump, ablation,
-           scalability, clean accuracy. A mismatch FAILS the run (exit 1).
-  Group B  (retention-derived, EXPECTED TO CHANGE under the unified metric):
-           Table I retention, Mann-Whitney p-values, clean-setting retention,
-           overall retention. Printed as old-expected vs newly-computed;
-           never fails the run — mismatches are flags for the paper update.
+           scalability, clean accuracy, EuroSAT aggregates. A mismatch FAILS
+           the run (exit 1).
+  Group B  (retention-derived): Table I retention, Mann-Whitney p-values,
+           clean-setting retention. Expecteds hold the post-patch numbers
+           quoted in the paper (unified retention metric); printed as
+           expected-vs-computed and never fails the run.
 
 Usage:
     python claims_audit.py --data paper_assets/data              # post-patch
@@ -108,6 +109,20 @@ def mannwhitney(dfs, fam, baseline):
     bl = hd(dfs, fam, baseline)["ret_highmob"].dropna().values
     _, p = mannwhitneyu(tf, bl, alternative="greater", method="exact")
     return float(p), tf, bl
+
+
+def eur(dfs, method):
+    """EuroSAT adaptive-system rows (family eur_adsys) for one method."""
+    return dfs["runs"][dfs["runs"]["name"] == f"eur_adsys_{method}"]
+
+
+def eur_mean(dfs, method, col):
+    return float(eur(dfs, method)[col].mean())
+
+
+def eur_extreme(dfs, method, col, which):
+    s = eur(dfs, method)[col]
+    return float(s.min() if which == "min" else s.max())
 
 
 # ------------------------------------------------------------------ claims -
@@ -252,32 +267,56 @@ CLAIMS_A = [
      0.991, 0.001, ""),
 ]
 
-# Group B old expected values, exactly as currently quoted in the paper.
-_RET_OLD = {  # (family, method) -> old ret_highmob mean
-    ("exp_h_adsys", "trustfl"): 0.796, ("femh_adsys", "trustfl"): 0.848,
-    ("exp_h_adsys", "sophon"): 0.543, ("femh_adsys", "sophon"): 0.627,
-    ("exp_h_adsys", "fedaa"): 0.497, ("femh_adsys", "fedaa"): 0.626,
-    ("exp_h_adsys", "fltrust"): 0.520, ("femh_adsys", "fltrust"): 0.592,
-    ("exp_h_adsys", "fedgreed"): 0.393, ("femh_adsys", "fedgreed"): 0.364,
-    ("exp_h_adsys", "multikrum"): 0.461, ("femh_adsys", "multikrum"): 0.524,
-    ("exp_h_adsys", "fedavg"): 0.557, ("femh_adsys", "fedavg"): 0.599,
+# -- EuroSAT (family eur_adsys; 40% adaptive system+model attack; 3 seeds).
+#    Group-A aggregates over ret_highmob / infl_late / deliv_eff / final_acc,
+#    plus the two boundary seeds quoted in the text.
+_EUR = {  # method -> (ret_highmob, infl_late, deliv_eff, final_acc)
+    "trustfl": (0.920, 0.291, 0.913, 0.829),
+    "fedavg": (0.634, 0.429, 0.719, 0.774),
+    "multikrum": (0.563, 0.385, 0.728, 0.735),
+    "sophon": (0.443, 0.382, 0.738, 0.643),
+    "fedaa": (0.382, 0.276, 0.708, 0.626),
 }
-_P_OLD = {("exp_h_adsys", "sophon"): 0.008, ("exp_h_adsys", "fedaa"): 0.016,
-          ("femh_adsys", "sophon"): 0.028, ("femh_adsys", "fedaa"): 0.048}
-_CLEAN_RET_OLD = {"trustfl": 0.911, "fedavg": 0.820, "fltrust": 0.820,
+_EUR_COLS = ["ret_highmob", "infl_late", "deliv_eff", "final_acc"]
+CLAIMS_A += [
+    (f"A11-{m}-{c[:4]}", f"EuroSAT {c}: {m}",
+     (lambda d, m=m, c=c: eur_mean(d, m, c)), e, 0.005, "")
+    for m, vals in _EUR.items() for c, e in zip(_EUR_COLS, vals)
+] + [
+    ("A11-bnd-tf", "EuroSAT worst-seed ret_highmob: trustfl (min)",
+     lambda d: eur_extreme(d, "trustfl", "ret_highmob", "min"), 0.8806, 0.001, ""),
+    ("A11-bnd-fa", "EuroSAT best-seed ret_highmob: fedavg (max)",
+     lambda d: eur_extreme(d, "fedavg", "ret_highmob", "max"), 0.6454, 0.001, ""),
+]
+
+# Group B expected values, updated to the post-patch numbers now quoted in the
+# paper (unified retention metric, 2026-07). Printed as expected-vs-computed;
+# Group B never fails the run.
+_RET_EXP = {  # (family, method) -> post-patch ret_highmob mean
+    ("exp_h_adsys", "trustfl"): 0.7963, ("femh_adsys", "trustfl"): 0.8476,
+    ("exp_h_adsys", "sophon"): 0.4586, ("femh_adsys", "sophon"): 0.5385,
+    ("exp_h_adsys", "fedaa"): 0.2876, ("femh_adsys", "fedaa"): 0.3613,
+    ("exp_h_adsys", "fltrust"): 0.4340, ("femh_adsys", "fltrust"): 0.5293,
+    ("exp_h_adsys", "fedgreed"): 0.3934, ("femh_adsys", "fedgreed"): 0.3640,
+    ("exp_h_adsys", "multikrum"): 0.4616, ("femh_adsys", "multikrum"): 0.5239,
+    ("exp_h_adsys", "fedavg"): 0.5566, ("femh_adsys", "fedavg"): 0.5988,
+}
+_P_EXP = {("exp_h_adsys", "sophon"): 0.0040, ("exp_h_adsys", "fedaa"): 0.0040,
+          ("femh_adsys", "sophon"): 0.0079, ("femh_adsys", "fedaa"): 0.0079}
+_CLEAN_RET_EXP = {"trustfl": 0.911, "fedavg": 0.820, "fltrust": 0.640,
                   "multikrum": 0.637, "krum": 0.173}
 
 CLAIMS_B = (
     [(f"B1-{f[:4]}-{m}", f"Table I ret_highmob: {m} {'MNIST' if f=='exp_h_adsys' else 'FEMNIST'}",
-      (lambda d, f=f, m=m: hd_mean(d, f, m, "ret_highmob")), old, 0.0015, "")
-     for (f, m), old in _RET_OLD.items()]
+      (lambda d, f=f, m=m: hd_mean(d, f, m, "ret_highmob")), exp, 0.0015, "")
+     for (f, m), exp in _RET_EXP.items()]
     + [(f"B2-{f[:4]}-{m}", f"Mann-Whitney p (trustfl > {m}, {'MNIST' if f=='exp_h_adsys' else 'FEMNIST'})",
-        (lambda d, f=f, m=m: mannwhitney(d, f, m)[0]), old, 0.0015, "exact, greater")
-       for (f, m), old in _P_OLD.items()]
+        (lambda d, f=f, m=m: mannwhitney(d, f, m)[0]), exp, 0.0015, "exact, greater")
+       for (f, m), exp in _P_EXP.items()]
     + [(f"B3-{m}", f"clean ret_highmob: exp_a {m}",
         (lambda d, m=m: float(runs_named(d, f"exp_a_{m}")["ret_highmob"].mean())),
-        old, 0.0015, "")
-       for m, old in _CLEAN_RET_OLD.items()]
+        exp, 0.0015, "")
+       for m, exp in _CLEAN_RET_EXP.items()]
 )
 
 
@@ -338,7 +377,7 @@ def print_retention_detail(dfs):
         print(f"    {m:10s} hm {sub['ret_highmob'].mean():.3f}   "
               f"overall {sub['ret_overall'].mean():.3f}")
     print(f"\n  Mann-Whitney per-seed arrays (ret_highmob):")
-    for (fam, m) in _P_OLD:
+    for (fam, m) in _P_EXP:
         p, tf, bl = mannwhitney(dfs, fam, m)
         ds = "MNIST" if fam == "exp_h_adsys" else "FEMNIST"
         print(f"    {ds:8s} trustfl {np.sort(tf).round(3).tolist()} "
