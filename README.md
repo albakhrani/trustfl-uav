@@ -1,81 +1,181 @@
-# TrustFL-UAV Simulation Environment
+# TrustFL-UAV
 
-Trust-aware federated learning for UAV-assisted edge computing — simulation
-code for the AAAI-2027 submission. Implements the draft's Algorithms 1–4
-(trust assessment, trust-constrained selection, dual-decomposition resource
-allocation, main loop), the UAV physics of Section III (Gauss-Markov
-mobility Eqs. 4–6, energy Eqs. 7–10, Rayleigh air-to-ground channel
-Eqs. 11–13), all baselines, and all three attack families.
+Trust-aware federated learning for UAV-assisted edge computing.
 
-First-time setup: see `SETUP_WINDOWS.md`.
+This repository contains the simulation code, experiment configurations, and
+result aggregates for a manuscript **submitted to the IEEE Internet of Things
+Journal (under review)**. It implements the trust-assessment mechanism,
+trust-constrained client selection, dual-decomposition resource allocation,
+and the UAV physics model (Gauss–Markov mobility, energy, and Rayleigh
+air-to-ground channel), together with all baselines and the three attack
+families (gradient-space, system-dimension, and adaptive adversaries).
 
-## Run anything
+Every quoted number in the paper is machine-checked by `claims_audit.py`
+against the exported CSVs in `paper_assets/data/`.
 
-    python -m trustfl.experiments.run --config configs/<file>.yaml
-    python -m trustfl.experiments.run --config configs/<file>.yaml \
-        --override method.name=krum train.rounds=30 attack.malicious_fraction=0.3
+## Install
 
-Multi-seed: put `seeds: [0,1,2,3,4]` in the YAML — each seed writes its own
-`results/<name>/seed<k>/` with `metrics.jsonl` (per-round), the fully
-resolved `config_resolved.yaml`, and `run_meta.json` (hardware, torch
-version, git commit) — the reproducibility checklist fills itself from these.
+Python 3.12 is recommended (3.11 also works; avoid 3.13+ until PyTorch
+support stabilizes).
 
-## Methods (`method.name`)
+```bash
+python -m venv .venv
+# Windows:  .\.venv\Scripts\Activate.ps1
+# Linux/macOS:  source .venv/bin/activate
+python -m pip install --upgrade pip
+```
+
+For a **GPU build**, install PyTorch from its own index first, then the rest:
+
+```bash
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+pip install -r requirements.txt
+```
+
+A **CPU-only** environment needs just `pip install -r requirements.txt`
+(the default PyPI `torch` wheel is CPU-only). Detailed Windows/CUDA setup is
+in [`SETUP_WINDOWS.md`](SETUP_WINDOWS.md). Tested with Python 3.12.10,
+torch 2.12 (cu126), numpy 2.4, pandas 3.0, scipy 1.18, matplotlib 3.11.
+
+## Reproduce the paper numbers
+
+The exported aggregates are committed under `paper_assets/data/*.csv`, so the
+audit and figures run with no experiments required.
+
+**1. Re-export the CSVs from the results store** (optional — regenerates the
+committed CSVs identically from `results_store/`):
+
+```bash
+python -m trustfl.export --store ./results_store --out ./paper_assets/data
+```
+
+**2. Machine-check every quoted number** (exits 0 when all Group-A claims
+pass; Group-B prints the retention-derived values):
+
+```bash
+python claims_audit.py                 # add --matrix for the Table III grid
+```
+
+**3. Regenerate the EuroSAT figure (F9) from the CSVs:**
+
+```bash
+python paper_assets/make_fig_eurosat.py
+```
+
+This writes `paper_assets/figures/F9_eurosat.{pdf,png}` deterministically
+(byte-identical on re-run). The remaining figures (F1–F7 and the
+dual/heatmap/mechanism panels) are provided pre-rendered in
+`paper_assets/figures/`; regenerating them with
+`python -m trustfl.figures --store ./results_store <panel>` requires a
+paper-tagged results store.
+
+## Run an experiment
+
+General form:
+
+```bash
+python -m trustfl.experiments.run --config configs/<file>.yaml \
+    --override method.name=krum train.rounds=30 attack.malicious_fraction=0.3
+```
+
+The flagship hardened comparison — EuroSAT under a 40% adaptive
+system+model adversary (30 UAVs, 60 rounds, 3 seeds) — is one command per
+method (this is exactly what produced the `eur_adsys_*` runs behind F9):
+
+```bash
+python -m trustfl.experiments.run --config configs/eurosat_hardened.yaml \
+    --override name=eur_adsys_trustfl method.name=trustfl
+```
+
+Each seed writes `results/<name>/seed<k>/` with `metrics.jsonl` (per round),
+the fully resolved `config_resolved.yaml`, and `run_meta.json` (hardware,
+torch version, git commit). `results/` is not tracked; ingest runs into the
+store to aggregate them.
+
+### Methods (`method.name`)
 
 | name | what it is |
 |---|---|
-| `trustfl` | ours: Alg. 2 selection + trust-gated weighted aggregation |
+| `trustfl` | ours: trust-constrained selection + trust-gated weighted aggregation |
 | `fedavg` | McMahan et al. 2017 (add `train.fedprox_mu>0` for FedProx) |
-| `krum` / `multikrum` | Blanchard et al. 2017 — deliberately O(M²) |
+| `krum` / `multikrum` | Blanchard et al. 2017 |
 | `trimmed_mean` / `median` | Yin et al. 2018 |
 | `fltrust` | Cao et al., NDSS 2021 — server root dataset, cosine trust |
-| `fedgreed` | Kritharakis et al. 2025 — greedy lowest-val-loss selection |
+| `fedgreed` | greedy lowest-val-loss selection |
+| `sophon`, `fedaa` | additional robust-aggregation baselines |
 
-## Attacks (`attack.attack_type`)
+### Attacks (`attack.attack_type`)
 
 Gradient-space: `label_flip`, `sign_flip`, `grad_scale`, `random_update`.
 System-dimension (invisible to gradient-only defenses): `resource_misreport`,
-`strategic_delay`, `selective_participation`.
-Adaptive: `adaptive_trust` — on-off adversary that builds trust to a target,
-attacks, goes quiet, rebuilds.
+`strategic_delay`, `selective_participation`. Adaptive: `adaptive_trust` and
+`adaptive_system` — an on-off adversary that builds trust to a target,
+attacks, goes quiet, and rebuilds.
 
-## Trust mechanism knobs (`trust.*`)
+## Datasets
 
-- `weight_mode: fixed|learnable` — learnable = exponentiated-gradient online
-  update of the dimension weights (modernization #1)
-- `aggregation_gate` — ω ∝ ReLU(T−T_min)·n (ours) vs draft's linear Eq. 33
-- `round_consistency_gate` — multiply ω by current-round gradient-consistency
-  (closes the EWMA lag an adaptive adversary exploits)
-- `asym_down_factor` — asymmetric EWMA: trust falls fast, recovers slowly
-  (1.0 restores the draft's symmetric update)
+All datasets auto-download via `torchvision` into `data/` (gitignored) on
+first use:
 
-The last three are deliberate, documented deviations from the draft (the
-draft's mean-referenced consistency and linear weighting fail under strong
-attacks — verified in smoke tests). Each is an ablation in the paper.
-
-## Flagship experiment mapping
-
-| Claim | Config seed file | Sweep |
-|---|---|---|
-| (a) honest-outlier retention | `exp_a_honest_outlier.yaml` | `method.name` ∈ {trustfl, krum, multikrum, fedavg, fltrust} |
-| (b) system-dimension attacks | smoke/mnist config | `attack.attack_type` ∈ system attacks × `method.name` ∈ {trustfl, fltrust, fedgreed} |
-| (c) cost vs robustness | any | `uav.num_uavs` ∈ {20..100}; `agg_time_s` logged per round |
-| (d) adaptive adversaries | any | `attack.attack_type=adaptive_trust` × methods; ablate `round_consistency_gate`, `asym_down_factor` |
-| (e) scalability + accuracy | mnist/femnist/cifar configs | standard tables, `seeds: [...]` |
+- **MNIST** — quick baseline / debug.
+- **FEMNIST** — EMNIST-`byclass` (62 classes) as the base, partitioned across
+  clients with a Dirichlet split.
+- **EuroSAT** — 27,000 64×64 RGB aerial land-use images, 10 classes
+  (~90 MB). Deterministic stratified 80/20 split (fixed split seed 42,
+  independent of the run seed).
+- **CIFAR-100** — also supported.
+- **synthetic** — Gaussian-blob data for offline smoke tests (no download).
 
 ## Layout
 
-    trustfl/
-      config.py           dataclass config + YAML + CLI overrides
-      seeding.py          seeds, per-stream RNGs, run metadata
-      data.py             MNIST/CIFAR-100/FEMNIST/synthetic + Dirichlet partition
-      models.py           MLP, CNN (MNIST/FEMNIST), ResNet-18-GN (CIFAR-100)
-      uav/network.py      Sec. III physics (Eqs. 3-13)
-      trust/trust.py      Algorithm 1 + learnable weights (Eqs. 17-25)
-      trust/selection.py  Algorithms 2-3 (Eqs. 26-39)
-      fl/client.py        local SGD (+FedProx), delta extraction
-      fl/aggregation.py   all aggregation rules
-      fl/server.py        Algorithm 4 round loop, attacks applied server-blind
-      attacks/attacks.py  gradient / system / adaptive adversaries
-      experiments/run.py  entry point, multi-seed
-    configs/              one YAML per experiment
+```
+trustfl/                 the package
+  config.py              dataclass config + YAML + CLI overrides
+  seeding.py             seeds, per-stream RNGs, run metadata
+  data.py                dataset loading + Dirichlet partition
+  models.py              MLP, CNNs (MNIST/FEMNIST/EuroSAT), ResNet-18-GN
+  uav/network.py         UAV mobility, energy, and channel physics
+  trust/trust.py         trust assessment + learnable dimension weights
+  trust/selection.py     trust-constrained selection + resource allocation
+  fl/client.py           local SGD (+FedProx), delta extraction
+  fl/aggregation.py      all aggregation rules
+  fl/server.py           round loop; attacks applied server-blind
+  attacks/attacks.py     gradient / system / adaptive adversaries
+  store.py, export.py    results store (SQLite + parquet) and CSV export
+  metrics_matrix.py      Table III facet grid
+  experiments/run.py     entry point, multi-seed
+configs/                 one YAML per experiment
+tests/                   unit tests (pytest)
+paper_assets/            exported CSVs, tables, and figures
+  data/*.csv             the aggregates every claim is audited against
+  make_fig_eurosat.py    standalone EuroSAT figure (F9) regenerator
+results_store/           canonical run store (SQLite + parquet)
+repro_check/             a sample verified reproduction run
+claims_audit.py          machine-checks every quoted number (exit 0 = pass)
+```
+
+## Hardware note
+
+Experiments were run on a single NVIDIA RTX 4080 Laptop GPU (12 GB). No
+multi-GPU or cluster is required. Every experiment also runs on CPU for
+deterministic replay — add `--override train.device=cpu`; the synthetic
+smoke test (`configs/smoke_synthetic.yaml`) exercises the full pipeline on
+CPU in seconds and downloads nothing.
+
+## License
+
+Released under the MIT License — see [`LICENSE`](LICENSE).
+
+## Citation
+
+```bibtex
+@article{trustfl_uav_2026,
+  title   = {TrustFL-UAV: Trust-Aware Federated Learning for UAV-Assisted Edge Computing},
+  author  = {The TrustFL-UAV Authors},
+  journal = {IEEE Internet of Things Journal (under review)},
+  year    = {2026}
+}
+```
+
+> Citation stub — finalize the author list and title to match the submitted
+> manuscript before making this repository public.

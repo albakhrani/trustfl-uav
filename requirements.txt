@@ -1,6 +1,15 @@
+# Scientific stack
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+matplotlib>=3.8
+pyyaml>=6.0
+
+# Deep learning. For a CUDA build, install torch/torchvision FIRST from the
+# PyTorch index (see README "Install"), e.g.:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 torch>=2.4
 torchvision>=0.19
-numpy>=1.26
-pyyaml>=6.0
-pandas>=2.0
-matplotlib>=3.8
+
+# Parquet I/O for the results store (results_store/)
+pyarrow>=14.0
