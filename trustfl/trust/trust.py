@@ -29,7 +29,14 @@ import numpy as np
 def _ewma(prev: float, phi: float, alpha: float, asym: float) -> float:
     """Asymmetric EWMA: trust decreases (phi < prev) are incorporated `asym`
     times faster than increases. asym=1 recovers the draft's Eqs. (17)(21)(23).
-    Counters on-off adaptive adversaries that farm trust between attacks."""
+    Counters on-off adaptive adversaries that farm trust between attacks.
+
+    A non-finite phi (NaN/Inf from a corrupted upstream observation) is
+    skipped entirely — one poisoned observation must never turn a trust
+    score NaN, because NaN trust fails every >= comparison and permanently
+    removes the UAV from selection and aggregation."""
+    if not np.isfinite(phi):
+        return prev
     gain = (1 - alpha) * (asym if phi < prev else 1.0)
     gain = min(gain, 1.0)
     return (1 - gain) * prev + gain * phi

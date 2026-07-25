@@ -140,6 +140,7 @@ class Server:
         invited = self._invite()
         deltas, n_map, arrivals = {}, {}, {}
         round_obs = {}  # uid -> physical observations for trust update
+        nonfinite_dropped = []  # delivered updates quarantined for NaN/Inf
 
         for j in invited:
             participates = self.attack.will_participate(j, invited=True)
@@ -201,6 +202,15 @@ class Server:
                 committed = actual = t_comm = 0.0
                 delivered = True
 
+            # A delivered payload containing NaN/Inf (diverged local training,
+            # overflowed attack payload) is unusable: one such delta poisons
+            # the median reference, every cosine against it, and through
+            # grad_cons the trust EWMAs of ALL participants. Score it as a
+            # failed delivery so it reaches neither trust nor aggregation.
+            # Finite deltas — however large — are untouched.
+            if delivered and not bool(torch.isfinite(delta).all()):
+                delivered = False
+                nonfinite_dropped.append(j)
             round_obs[j] = dict(participated=True, committed=committed, actual=actual,
                                 t_comm=t_comm, delivered=delivered)
             if delivered:
@@ -239,14 +249,21 @@ class Server:
 
         # --- aggregation (timed for flagship claim #3) ---
         agg_delta, agg_wallclock = None, 0.0
+        self._last_agg_nonfinite = False
         if deltas:
             t0 = time.perf_counter()
             agg_delta = self._aggregate(deltas, n_map, grad_cons)
             agg_wallclock = time.perf_counter() - t0
-            sd = self.model.state_dict()
-            new_flat = flatten_state(sd).cpu() + agg_delta
-            self.model.load_state_dict(
-                {k: v.to(self.device) for k, v in unflatten_like(new_flat, sd).items()})
+            # last-resort guard: inputs are finite by construction, but an
+            # aggregator can still overflow in float32; a non-finite aggregate
+            # would destroy the global model irreversibly, so skip the round.
+            if bool(torch.isfinite(agg_delta).all()):
+                sd = self.model.state_dict()
+                new_flat = flatten_state(sd).cpu() + agg_delta
+                self.model.load_state_dict(
+                    {k: v.to(self.device) for k, v in unflatten_like(new_flat, sd).items()})
+            else:
+                self._last_agg_nonfinite = True
 
         # --- trust updates (Algorithm 1) for every UAV, participant or not ---
         for j in list(self.clients):
@@ -269,6 +286,7 @@ class Server:
         if cfg.trust.weight_mode == "learnable" and len(deltas) >= 2:
             self._update_trust_weights(deltas)
 
+        self._last_nonfinite_dropped = nonfinite_dropped
         return self._log_round(t, invited, deltas, agg_wallclock)
 
     # ---------------- helpers ----------------
@@ -358,6 +376,11 @@ class Server:
         norms = getattr(self, "_last_delta_norms", None)
         if norms:
             rec["delta_norms"] = {str(k): round(v, 4) for k, v in norms.items()}
+        nf = getattr(self, "_last_nonfinite_dropped", None)
+        if nf:
+            rec["nonfinite_dropped"] = sorted(nf)
+        if getattr(self, "_last_agg_nonfinite", False):
+            rec["agg_nonfinite_skipped"] = True
         knn = getattr(self, "_last_krum_nn", None)
         if knn:
             rec["krum_nn"] = {str(k): v for k, v in knn.items()}
