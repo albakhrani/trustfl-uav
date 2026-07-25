@@ -1,4 +1,20 @@
-/.venv/
-/data/
+# Python
 __pycache__/
 *.pyc
+.venv/
+.pytest_cache/
+
+# Datasets (auto-downloaded via torchvision at runtime; never committed)
+/data/
+
+# Raw per-run experiment outputs — regenerate by re-running; the canonical
+# aggregates live in results_store/ and paper_assets/data/*.csv
+results/
+
+# Local scratch / backup run stores (not part of the release)
+results_store_backup/
+results_newseeds/
+results_store_v2/
+
+# Editor / IDE
+.idea/

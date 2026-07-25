@@ -145,7 +145,7 @@ def test_nan_update_short_synthetic_run():
 
 
 def test_quarantine_zeroes_all_dimensions():
-    """Spec semantics: a quarantined round scores 0 on ALL THREE dimensions
+    """Guard semantics: a quarantined round scores 0 on ALL THREE dimensions
     and each EWMA processes the 0 normally (asymmetric down-update) —
     plausible-looking compute/comm times must earn nothing that round."""
     from trustfl.config import TrustConfig
