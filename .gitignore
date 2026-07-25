@@ -15,6 +15,7 @@ results/
 results_store_backup/
 results_newseeds/
 results_store_v2/
+results_newseeds_run.log
 
 # Editor / IDE
 .idea/
