@@ -5,8 +5,8 @@ store are untouched until you explicitly ingest). Reproduction of seed 0 was
 verified bit-exact, so seeds 3, 4 are valid members of the same experiment.
 
 Skips any (name, seed) that is already finished, so re-running resumes where
-it left off. Run this from the project root (D:\\postdoc_WorkDUT\\paper1\\trustfl-uav)
-with the project venv as the interpreter.
+it left off. Run this from the project root with the project venv as the
+interpreter.
 
     python run_missing_seeds.py
 """
