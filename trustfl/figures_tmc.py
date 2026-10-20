@@ -458,16 +458,16 @@ class TMC:
                 a.fill_between(x, lo, hi, color=cc, alpha=0.15, lw=0)
         a.set_xlabel("round"); a.set_ylabel("mean trust")
         a.legend(frameon=False)
-        _panel(a, "a", "Trust separates the populations\n(system attack)")
+        _panel(a, "a", "Mean trust, honest vs. malicious\n(system attack; five seeds)")
 
         names = [("w_beh", "behavioral", "#009E73", "-"),
                  ("w_comp", "computational", "#CC79A7", "--"),
                  ("w_comm", "communication", "#56B4E9", ":")]
         for panel, fam, letter, ttl in [
                 (b, "exp_h_adsys", "b",
-                 "Weights under CYCLING system attack:\ntracking the moving dimension"),
+                 "Weights under the cycling system attack\n(five seeds: mean and min\u2013max)"),
                 (c, "fid_signflip", "c",
-                 "Weights under sign-flip: convergence\nto pure behavioral (Thm. 2 verified)")]:
+                 "Weights under sign-flip: convergence\nto pure behavioral (cf. Thm. 2)")]:
             for col, lab, cc, ls in names:
                 band = self.h.band(fam, "trustfl", col)
                 if band:
