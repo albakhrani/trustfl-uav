@@ -115,9 +115,13 @@ def main():
     ax.set_ylabel("aggregation time per round (ms)")
     ax.set_title("Aggregation cost vs. swarm size\n"
                  f"($\\alpha$: log-log exponent, fit over $M\\geq{FIT_MIN_M}$)")
+    # y range from the means (the +/- std band of the micro-benchmark can dip
+    # below zero at small M; the band is clipped by the axis, not the data)
+    ax.set_ylim(df["ms_mean"].min() * 0.5, df["ms_mean"].max() * 2.0)
     ax.grid(True, which="both", linestyle=":", linewidth=0.6)
-    ax.legend(loc="upper left", frameon=False, handlelength=2.4,
-              handletextpad=0.4, borderaxespad=0.2)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2,
+              frameon=False, handlelength=2.4, handletextpad=0.4,
+              columnspacing=1.0)
 
     pdf = os.path.join(a.out, "F8_scalability.pdf")
     png = os.path.join(a.out, "F8_scalability.png")
