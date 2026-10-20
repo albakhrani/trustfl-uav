@@ -8,6 +8,10 @@ ranked per facet with ties sharing the higher mark; ranks 1-3 = filled
 Facets and direction: accuracy (final_acc, higher), retention (hm_retention,
 higher), security (mal_infl, lower), delivery (deliv_eff, higher), energy
 (energy_per_update, lower), cost (agg_ms, lower).
+Ranking is done on the values at the table's printed precision (three
+decimals for the four ratios, whole joules for energy, 0.1 ms for cost), so
+that two methods whose printed values coincide are a tie and share the higher
+mark; the unrounded pooled means are written alongside for inspection.
 
     python paper_assets/make_table4_marks.py --store <store> --out <dir>
 
@@ -26,9 +30,9 @@ from trustfl.metrics_matrix import matrix
 from trustfl.store import Store
 
 PREFIXES = ["exp_h_adsys", "femh_adsys"]
-FACETS = [("final_acc", "acc", False), ("hm_retention", "ret", False),
-          ("mal_infl", "infl", True), ("deliv_eff", "deliv", False),
-          ("energy_per_update", "energy", True), ("agg_ms", "cost", True)]
+FACETS = [("final_acc", "acc", False, 3), ("hm_retention", "ret", False, 3),
+          ("mal_infl", "infl", True, 3), ("deliv_eff", "deliv", False, 3),
+          ("energy_per_update", "energy", True, 0), ("agg_ms", "cost", True, 1)]
 ORDER = ["TrustFL", "Sophon", "FedAA", "FLTrust", "FedGreed", "Multi-Krum", "FedAvg"]
 TEX = {2: r"\CIRCLE", 1: r"\LEFTcircle", 0: r"\Circle"}
 CITE = {"TrustFL": r"\textbf{TrustFL}", "Sophon": "Sophon", "FedAA": "FedAA",
@@ -55,12 +59,13 @@ def main():
         df.to_csv(os.path.join(a.out, f"matrix_{p}.csv"), index=False)
         mats[p] = df.set_index("method")
     pooled = pd.DataFrame({k: (mats[PREFIXES[0]][k] + mats[PREFIXES[1]][k]) / 2
-                           for k, _, _ in FACETS})
+                           for k, _, _, _ in FACETS})
     pooled = pooled.loc[[m for m in ORDER if m in pooled.index]]
     marks = pd.DataFrame(index=pooled.index)
-    for k, short, lower in FACETS:
-        rk = pooled[k].rank(ascending=lower, method="min")
+    for k, short, lower, nd in FACETS:
+        rk = pooled[k].round(nd).rank(ascending=lower, method="min")
         marks[short] = rk.map(mark)
+        pooled[f"printed_{short}"] = pooled[k].round(nd)
         pooled[f"rank_{short}"] = rk
     out = pd.concat([marks, pooled], axis=1)
     out.index.name = "method"
