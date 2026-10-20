@@ -1,0 +1,77 @@
+% exclusion precision (S1) and recall (S2) per seed; 'excl. none' = no zero-weighted delivered update
+\begin{tabular}{llrrrr}
+\toprule
+Dataset & Method & Seed & Precision & Recall & Skipped rounds \\
+\midrule
+MNIST & TrustFL & 0 & excl. none & 0.000 & 0 \\
+MNIST & TrustFL & 1 & excl. none & 0.000 & 0 \\
+MNIST & TrustFL & 2 & excl. none & 0.000 & 0 \\
+MNIST & TrustFL & 3 & excl. none & 0.000 & 0 \\
+MNIST & TrustFL & 4 & excl. none & 0.000 & 0 \\
+MNIST & Sophon & 0 & 0.334 & 0.313 & 0 \\
+MNIST & Sophon & 1 & 0.115 & 0.265 & 1 \\
+MNIST & Sophon & 2 & 0.384 & 0.321 & 0 \\
+MNIST & Sophon & 3 & 0.558 & 0.535 & 2 \\
+MNIST & Sophon & 4 & 0.343 & 0.303 & 0 \\
+MNIST & FedAA & 0 & 0.377 & 0.392 & 0 \\
+MNIST & FedAA & 1 & 0.292 & 0.480 & 0 \\
+MNIST & FedAA & 2 & 0.486 & 0.522 & 0 \\
+MNIST & FedAA & 3 & 0.361 & 0.398 & 0 \\
+MNIST & FedAA & 4 & 0.282 & 0.287 & 0 \\
+MNIST & FLTrust & 0 & 0.301 & 0.205 & 0 \\
+MNIST & FLTrust & 1 & 0.194 & 0.169 & 0 \\
+MNIST & FLTrust & 2 & 0.426 & 0.185 & 0 \\
+MNIST & FLTrust & 3 & 0.472 & 0.312 & 3 \\
+MNIST & FLTrust & 4 & 0.285 & 0.179 & 0 \\
+MNIST & FedGreed & 0 & 0.361 & 0.441 & 0 \\
+MNIST & FedGreed & 1 & 0.186 & 0.234 & 0 \\
+MNIST & FedGreed & 2 & 0.504 & 0.567 & 0 \\
+MNIST & FedGreed & 3 & 0.529 & 0.209 & 0 \\
+MNIST & FedGreed & 4 & 0.328 & 0.388 & 0 \\
+MNIST & Multi-Krum & 0 & 0.545 & 0.117 & 0 \\
+MNIST & Multi-Krum & 1 & 0.571 & 0.130 & 0 \\
+MNIST & Multi-Krum & 2 & 0.444 & 0.165 & 0 \\
+MNIST & Multi-Krum & 3 & 1.000 & 0.006 & 2 \\
+MNIST & Multi-Krum & 4 & 0.231 & 0.053 & 0 \\
+MNIST & FedAvg & 0 & excl. none & 0.000 & 0 \\
+MNIST & FedAvg & 1 & excl. none & 0.000 & 0 \\
+MNIST & FedAvg & 2 & excl. none & 0.000 & 0 \\
+MNIST & FedAvg & 3 & excl. none & 0.000 & 0 \\
+MNIST & FedAvg & 4 & excl. none & 0.000 & 0 \\
+FEMNIST & TrustFL & 0 & excl. none & 0.000 & 0 \\
+FEMNIST & TrustFL & 1 & excl. none & 0.000 & 0 \\
+FEMNIST & TrustFL & 2 & excl. none & 0.000 & 0 \\
+FEMNIST & TrustFL & 3 & excl. none & 0.000 & 0 \\
+FEMNIST & TrustFL & 4 & excl. none & 0.000 & 0 \\
+FEMNIST & Sophon & 0 & 0.284 & 0.368 & 0 \\
+FEMNIST & Sophon & 1 & 0.102 & 0.202 & 1 \\
+FEMNIST & Sophon & 2 & 0.366 & 0.311 & 0 \\
+FEMNIST & Sophon & 3 & 0.517 & 0.505 & 0 \\
+FEMNIST & Sophon & 4 & 0.420 & 0.389 & 0 \\
+FEMNIST & FedAA & 0 & 0.350 & 0.460 & 0 \\
+FEMNIST & FedAA & 1 & 0.208 & 0.412 & 0 \\
+FEMNIST & FedAA & 2 & 0.290 & 0.425 & 0 \\
+FEMNIST & FedAA & 3 & 0.523 & 0.602 & 0 \\
+FEMNIST & FedAA & 4 & 0.545 & 0.851 & 0 \\
+FEMNIST & FLTrust & 0 & 0.370 & 0.134 & 0 \\
+FEMNIST & FLTrust & 1 & 0.122 & 0.061 & 0 \\
+FEMNIST & FLTrust & 2 & 0.397 & 0.134 & 0 \\
+FEMNIST & FLTrust & 3 & 0.460 & 0.122 & 0 \\
+FEMNIST & FLTrust & 4 & 0.377 & 0.146 & 0 \\
+FEMNIST & FedGreed & 0 & 0.442 & 0.504 & 0 \\
+FEMNIST & FedGreed & 1 & 0.202 & 0.316 & 0 \\
+FEMNIST & FedGreed & 2 & 0.219 & 0.276 & 0 \\
+FEMNIST & FedGreed & 3 & 0.604 & 0.286 & 0 \\
+FEMNIST & FedGreed & 4 & 0.427 & 0.474 & 0 \\
+FEMNIST & Multi-Krum & 0 & 0.676 & 0.175 & 0 \\
+FEMNIST & Multi-Krum & 1 & 0.091 & 0.014 & 0 \\
+FEMNIST & Multi-Krum & 2 & 0.423 & 0.082 & 0 \\
+FEMNIST & Multi-Krum & 3 & 0.600 & 0.017 & 0 \\
+FEMNIST & Multi-Krum & 4 & 0.739 & 0.283 & 0 \\
+FEMNIST & FedAvg & 0 & excl. none & 0.000 & 0 \\
+FEMNIST & FedAvg & 1 & excl. none & 0.000 & 0 \\
+FEMNIST & FedAvg & 2 & excl. none & 0.000 & 0 \\
+FEMNIST & FedAvg & 3 & excl. none & 0.000 & 0 \\
+FEMNIST & FedAvg & 4 & excl. none & 0.000 & 0 \\
+\bottomrule
+\end{tabular}

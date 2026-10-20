@@ -1,15 +1,15 @@
-CLAIMS REPORT — recomputed fresh from the store
+CLAIMS REPORT â€” recomputed fresh from the store
 ============================================================
 
 [MNIST hardened, retention]
   TrustFL: mean 0.796  per-seed 0.692 0.744 0.799 0.828 0.919
-  vs sophon: gap +0.338  [TrustFL worst 0.692 vs best 0.652] CLEAN SEPARATION  Mann-Whitney p=0.0040
-  vs fedaa: gap +0.509  [TrustFL worst 0.692 vs best 0.527] CLEAN SEPARATION  Mann-Whitney p=0.0040
+  vs sophon: gap +0.442  [TrustFL worst 0.692 vs best 0.503] CLEAN SEPARATION
+  vs fedaa: gap +0.474  [TrustFL worst 0.692 vs best 0.561] CLEAN SEPARATION
 
 [FEMNIST hardened, retention]
   TrustFL: mean 0.848  per-seed 0.625 0.830 0.845 0.963 0.975
-  vs sophon: gap +0.309  [TrustFL worst 0.625 vs best 0.735] overlap  Mann-Whitney p=0.0079
-  vs fedaa: gap +0.486  [TrustFL worst 0.625 vs best 0.718] overlap  Mann-Whitney p=0.0079
+  vs sophon: gap +0.455  [TrustFL worst 0.625 vs best 0.586] CLEAN SEPARATION
+  vs fedaa: gap +0.530  [TrustFL worst 0.625 vs best 0.674] overlap
 
 [Committed sentence check]
   'p<=0.036 across all four dataset x competitor comparisons,

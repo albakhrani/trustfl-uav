@@ -1,0 +1,119 @@
+% all Addendum A metrics, mean$\pm$sd (ddof 1) and exploratory exact one-sided MWU p (TrustFL better), unadjusted
+\begin{tabular}{llrrr}
+\toprule
+Dataset & Metric & Method & Mean$\pm$sd & $p$ \\
+\midrule
+MNIST & S1 exclusion precision & TrustFL & excl. none & -- \\
+MNIST & S1 exclusion precision & Sophon & 0.347$\pm$0.158 & -- \\
+MNIST & S1 exclusion precision & FedAA & 0.359$\pm$0.082 & -- \\
+MNIST & S1 exclusion precision & FLTrust & 0.336$\pm$0.112 & -- \\
+MNIST & S1 exclusion precision & FedGreed & 0.382$\pm$0.140 & -- \\
+MNIST & S1 exclusion precision & Multi-Krum & 0.558$\pm$0.281 & -- \\
+MNIST & S1 exclusion precision & FedAvg & excl. none & -- \\
+MNIST & S2 exclusion recall & TrustFL & 0.000$\pm$0.000 & -- \\
+MNIST & S2 exclusion recall & Sophon & 0.347$\pm$0.107 & 1.000 \\
+MNIST & S2 exclusion recall & FedAA & 0.416$\pm$0.091 & 1.000 \\
+MNIST & S2 exclusion recall & FLTrust & 0.210$\pm$0.059 & 1.000 \\
+MNIST & S2 exclusion recall & FedGreed & 0.368$\pm$0.149 & 1.000 \\
+MNIST & S2 exclusion recall & Multi-Krum & 0.094$\pm$0.064 & 1.000 \\
+MNIST & S2 exclusion recall & FedAvg & 0.000$\pm$0.000 & 1.000 \\
+MNIST & S3 honest false-exclusion & TrustFL & 0.000$\pm$0.000 & -- \\
+MNIST & S3 honest false-exclusion & Sophon & 0.366$\pm$0.042 & 0.004 \\
+MNIST & S3 honest false-exclusion & FedAA & 0.398$\pm$0.055 & 0.004 \\
+MNIST & S3 honest false-exclusion & FLTrust & 0.238$\pm$0.056 & 0.004 \\
+MNIST & S3 honest false-exclusion & FedGreed & 0.385$\pm$0.167 & 0.004 \\
+MNIST & S3 honest false-exclusion & Multi-Krum & 0.062$\pm$0.053 & 0.024 \\
+MNIST & S3 honest false-exclusion & FedAvg & 0.000$\pm$0.000 & 1.000 \\
+MNIST & S3-HM honest high-mob. false-exclusion & TrustFL & 0.000$\pm$0.000 & -- \\
+MNIST & S3-HM honest high-mob. false-exclusion & Sophon & 0.357$\pm$0.108 & 0.004 \\
+MNIST & S3-HM honest high-mob. false-exclusion & FedAA & 0.354$\pm$0.259 & 0.004 \\
+MNIST & S3-HM honest high-mob. false-exclusion & FLTrust & 0.186$\pm$0.130 & 0.004 \\
+MNIST & S3-HM honest high-mob. false-exclusion & FedGreed & 0.297$\pm$0.227 & 0.024 \\
+MNIST & S3-HM honest high-mob. false-exclusion & Multi-Krum & 0.097$\pm$0.100 & 0.024 \\
+MNIST & S3-HM honest high-mob. false-exclusion & FedAvg & 0.000$\pm$0.000 & 1.000 \\
+MNIST & S4 invitation-independent HM retention & TrustFL & 0.263$\pm$0.158 & -- \\
+MNIST & S4 invitation-independent HM retention & Sophon & 0.151$\pm$0.072 & 0.210 \\
+MNIST & S4 invitation-independent HM retention & FedAA & 0.137$\pm$0.077 & 0.111 \\
+MNIST & S4 invitation-independent HM retention & FLTrust & 0.180$\pm$0.077 & 0.210 \\
+MNIST & S4 invitation-independent HM retention & FedGreed & 0.163$\pm$0.059 & 0.210 \\
+MNIST & S4 invitation-independent HM retention & Multi-Krum & 0.195$\pm$0.085 & 0.274 \\
+MNIST & S4 invitation-independent HM retention & FedAvg & 0.230$\pm$0.082 & 0.274 \\
+MNIST & S5a J per honest delivered update & TrustFL & 8202$\pm$814 & -- \\
+MNIST & S5a J per honest delivered update & Sophon & 11727$\pm$3562 & 0.004 \\
+MNIST & S5a J per honest delivered update & FedAA & 11711$\pm$2873 & 0.004 \\
+MNIST & S5a J per honest delivered update & FLTrust & 11619$\pm$3056 & 0.004 \\
+MNIST & S5a J per honest delivered update & FedGreed & 11230$\pm$2843 & 0.004 \\
+MNIST & S5a J per honest delivered update & Multi-Krum & 11858$\pm$3211 & 0.004 \\
+MNIST & S5a J per honest delivered update & FedAvg & 11685$\pm$2964 & 0.004 \\
+MNIST & S5b J per honest used update & TrustFL & 8202$\pm$814 & -- \\
+MNIST & S5b J per honest used update & Sophon & 18747$\pm$6528 & 0.004 \\
+MNIST & S5b J per honest used update & FedAA & 19589$\pm$5141 & 0.004 \\
+MNIST & S5b J per honest used update & FLTrust & 15543$\pm$5160 & 0.004 \\
+MNIST & S5b J per honest used update & FedGreed & 18451$\pm$1996 & 0.004 \\
+MNIST & S5b J per honest used update & Multi-Krum & 12595$\pm$2896 & 0.004 \\
+MNIST & S5b J per honest used update & FedAvg & 11685$\pm$2964 & 0.004 \\
+MNIST & D1 Jain fairness (honest) & TrustFL & 0.462$\pm$0.035 & -- \\
+MNIST & D1 Jain fairness (honest) & Sophon & 0.689$\pm$0.145 & -- \\
+MNIST & D1 Jain fairness (honest) & FedAA & 0.530$\pm$0.093 & -- \\
+MNIST & D1 Jain fairness (honest) & FLTrust & 0.705$\pm$0.144 & -- \\
+MNIST & D1 Jain fairness (honest) & FedGreed & 0.561$\pm$0.080 & -- \\
+MNIST & D1 Jain fairness (honest) & Multi-Krum & 0.714$\pm$0.133 & -- \\
+MNIST & D1 Jain fairness (honest) & FedAvg & 0.742$\pm$0.143 & -- \\
+FEMNIST & S1 exclusion precision & TrustFL & excl. none & -- \\
+FEMNIST & S1 exclusion precision & Sophon & 0.338$\pm$0.156 & -- \\
+FEMNIST & S1 exclusion precision & FedAA & 0.383$\pm$0.147 & -- \\
+FEMNIST & S1 exclusion precision & FLTrust & 0.345$\pm$0.130 & -- \\
+FEMNIST & S1 exclusion precision & FedGreed & 0.379$\pm$0.169 & -- \\
+FEMNIST & S1 exclusion precision & Multi-Krum & 0.506$\pm$0.260 & -- \\
+FEMNIST & S1 exclusion precision & FedAvg & excl. none & -- \\
+FEMNIST & S2 exclusion recall & TrustFL & 0.000$\pm$0.000 & -- \\
+FEMNIST & S2 exclusion recall & Sophon & 0.355$\pm$0.111 & 1.000 \\
+FEMNIST & S2 exclusion recall & FedAA & 0.550$\pm$0.185 & 1.000 \\
+FEMNIST & S2 exclusion recall & FLTrust & 0.119$\pm$0.034 & 1.000 \\
+FEMNIST & S2 exclusion recall & FedGreed & 0.371$\pm$0.109 & 1.000 \\
+FEMNIST & S2 exclusion recall & Multi-Krum & 0.114$\pm$0.115 & 1.000 \\
+FEMNIST & S2 exclusion recall & FedAvg & 0.000$\pm$0.000 & 1.000 \\
+FEMNIST & S3 honest false-exclusion & TrustFL & 0.000$\pm$0.000 & -- \\
+FEMNIST & S3 honest false-exclusion & Sophon & 0.377$\pm$0.058 & 0.004 \\
+FEMNIST & S3 honest false-exclusion & FedAA & 0.344$\pm$0.067 & 0.004 \\
+FEMNIST & S3 honest false-exclusion & FLTrust & 0.131$\pm$0.015 & 0.004 \\
+FEMNIST & S3 honest false-exclusion & FedGreed & 0.323$\pm$0.096 & 0.004 \\
+FEMNIST & S3 honest false-exclusion & Multi-Krum & 0.035$\pm$0.017 & 0.004 \\
+FEMNIST & S3 honest false-exclusion & FedAvg & 0.000$\pm$0.000 & 1.000 \\
+FEMNIST & S3-HM honest high-mob. false-exclusion & TrustFL & 0.000$\pm$0.000 & -- \\
+FEMNIST & S3-HM honest high-mob. false-exclusion & Sophon & 0.386$\pm$0.151 & 0.004 \\
+FEMNIST & S3-HM honest high-mob. false-exclusion & FedAA & 0.487$\pm$0.213 & 0.004 \\
+FEMNIST & S3-HM honest high-mob. false-exclusion & FLTrust & 0.106$\pm$0.041 & 0.004 \\
+FEMNIST & S3-HM honest high-mob. false-exclusion & FedGreed & 0.316$\pm$0.166 & 0.004 \\
+FEMNIST & S3-HM honest high-mob. false-exclusion & Multi-Krum & 0.061$\pm$0.066 & 0.024 \\
+FEMNIST & S3-HM honest high-mob. false-exclusion & FedAvg & 0.000$\pm$0.000 & 1.000 \\
+FEMNIST & S4 invitation-independent HM retention & TrustFL & 0.289$\pm$0.109 & -- \\
+FEMNIST & S4 invitation-independent HM retention & Sophon & 0.157$\pm$0.078 & 0.048 \\
+FEMNIST & S4 invitation-independent HM retention & FedAA & 0.129$\pm$0.085 & 0.016 \\
+FEMNIST & S4 invitation-independent HM retention & FLTrust & 0.216$\pm$0.072 & 0.210 \\
+FEMNIST & S4 invitation-independent HM retention & FedGreed & 0.145$\pm$0.042 & 0.028 \\
+FEMNIST & S4 invitation-independent HM retention & Multi-Krum & 0.212$\pm$0.085 & 0.123 \\
+FEMNIST & S4 invitation-independent HM retention & FedAvg & 0.248$\pm$0.090 & 0.274 \\
+FEMNIST & S5a J per honest delivered update & TrustFL & 8874$\pm$2774 & -- \\
+FEMNIST & S5a J per honest delivered update & Sophon & 11593$\pm$2662 & 0.111 \\
+FEMNIST & S5a J per honest delivered update & FedAA & 11616$\pm$2775 & 0.155 \\
+FEMNIST & S5a J per honest delivered update & FLTrust & 11578$\pm$2630 & 0.155 \\
+FEMNIST & S5a J per honest delivered update & FedGreed & 11873$\pm$3055 & 0.155 \\
+FEMNIST & S5a J per honest delivered update & Multi-Krum & 11900$\pm$2947 & 0.111 \\
+FEMNIST & S5a J per honest delivered update & FedAvg & 11454$\pm$2865 & 0.155 \\
+FEMNIST & S5b J per honest used update & TrustFL & 8874$\pm$2774 & -- \\
+FEMNIST & S5b J per honest used update & Sophon & 18876$\pm$5337 & 0.004 \\
+FEMNIST & S5b J per honest used update & FedAA & 17756$\pm$3870 & 0.008 \\
+FEMNIST & S5b J per honest used update & FLTrust & 13327$\pm$3017 & 0.048 \\
+FEMNIST & S5b J per honest used update & FedGreed & 17427$\pm$2498 & 0.004 \\
+FEMNIST & S5b J per honest used update & Multi-Krum & 12308$\pm$2852 & 0.111 \\
+FEMNIST & S5b J per honest used update & FedAvg & 11454$\pm$2865 & 0.155 \\
+FEMNIST & D1 Jain fairness (honest) & TrustFL & 0.490$\pm$0.116 & -- \\
+FEMNIST & D1 Jain fairness (honest) & Sophon & 0.701$\pm$0.137 & -- \\
+FEMNIST & D1 Jain fairness (honest) & FedAA & 0.540$\pm$0.102 & -- \\
+FEMNIST & D1 Jain fairness (honest) & FLTrust & 0.744$\pm$0.141 & -- \\
+FEMNIST & D1 Jain fairness (honest) & FedGreed & 0.620$\pm$0.121 & -- \\
+FEMNIST & D1 Jain fairness (honest) & Multi-Krum & 0.724$\pm$0.133 & -- \\
+FEMNIST & D1 Jain fairness (honest) & FedAvg & 0.743$\pm$0.139 & -- \\
+\bottomrule
+\end{tabular}

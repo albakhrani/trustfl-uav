@@ -1,0 +1,21 @@
+% D2: first logged evaluation round with test accuracy >= 0.95 (MNIST) / 0.80 (FEMNIST); D3 worst-seed final accuracy
+\begin{tabular}{llrr}
+\toprule
+Dataset & Method & Rounds-to-target (seeds 0--4) & Worst-seed acc. \\
+\midrule
+MNIST & TrustFL & 5, 5, 5, 10, 5 & 0.9855 \\
+MNIST & Sophon & 25, 25, 25, 25, 20 & 0.9789 \\
+MNIST & FedAA & 10, 10, 10, 15, 5 & 0.9845 \\
+MNIST & FLTrust & 20, 20, 15, 25, 20 & 0.9787 \\
+MNIST & FedGreed & 5, 10, 5, 10, 5 & 0.9831 \\
+MNIST & Multi-Krum & 5, 5, 10, 10, 5 & 0.9839 \\
+MNIST & FedAvg & 5, 5, 5, 10, 5 & 0.9865 \\
+FEMNIST & TrustFL & 10, 5, 5, 10, 10 & 0.8122 \\
+FEMNIST & Sophon & 5, 10, 5, 30, 10 & 0.7982 \\
+FEMNIST & FedAA & 10, 25, 20, 59, 10 & 0.8010 \\
+FEMNIST & FLTrust & 10, 5, 5, 15, 5 & 0.8261 \\
+FEMNIST & FedGreed & 10, 10, 15, 20, 10 & 0.8000 \\
+FEMNIST & Multi-Krum & 10, 10, 10, 15, 10 & 0.7936 \\
+FEMNIST & FedAvg & 10, 10, 5, 20, 10 & 0.8056 \\
+\bottomrule
+\end{tabular}

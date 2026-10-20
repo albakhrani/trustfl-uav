@@ -1,0 +1,25 @@
+{
+ "fit_min_M": 128,
+ "exponent_M_ge_128": {
+  "fedavg": 0.8265,
+  "fedgreed": 0.9869,
+  "fltrust": 0.761,
+  "krum": 1.5108,
+  "multikrum": 1.4061,
+  "sophon": 1.079,
+  "trustfl": 1.0801
+ },
+ "exponent_all_M": {
+  "fedavg": 0.738,
+  "fedgreed": 0.8199,
+  "fltrust": 0.5633,
+  "krum": 1.1823,
+  "multikrum": 1.1862,
+  "sophon": 0.4958,
+  "trustfl": 1.1158
+ },
+ "ratio_krum_over_trustfl": {
+  "64": 2.192,
+  "512": 4.879
+ }
+}
