@@ -418,9 +418,9 @@ class TMC:
         if vals:
             ymax = max(max(v) for v in vals.values())
             _bars(c, [m for m in methods if m in vals], vals,
-                  ylabel="energy per useful update (J)", fmt="{:.0f}",
+                  ylabel="energy per delivered update (J)", fmt="{:.0f}",
                   ylim=(0, ymax * 1.3), rot=14)
-        _panel(c, "c", "Energy cost per useful update\n(lower is better)")
+        _panel(c, "c", "Energy per delivered update\n(lower is better)")
 
         cost = self.h.runs.groupby("method")["agg_time_ms"].mean()
         for m in methods:
