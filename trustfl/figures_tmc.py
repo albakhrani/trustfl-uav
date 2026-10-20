@@ -422,7 +422,10 @@ class TMC:
                   ylim=(0, ymax * 1.3), rot=14)
         _panel(c, "c", "Energy per delivered update\n(lower is better)")
 
-        cost = self.h.runs.groupby("method")["agg_time_ms"].mean()
+        # R05: timings from the hardened family of this panel only, not the
+        # mean over every run in the store
+        cost = (self.h.runs[self.h.runs["family"] == fam]
+                .groupby("method")["agg_time_ms"].mean())
         for m in methods:
             rets = self.h.vals(fam, m, "ret_highmob")
             if not rets or m not in cost.index or cost[m] != cost[m]:
