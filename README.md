@@ -1,5 +1,10 @@
 # TrustFL-UAV
 
+**Revision R1 (October 2026).** The code, regenerated data store, Study 2 protocol, traces and
+analysis, and the claims-audit record for the revised manuscript (IEEE IoT-J, IoT-71387-2026.R1)
+are on the [`revision-r1`](https://github.com/albakhrani/trustfl-uav/tree/revision-r1) branch.
+This `main` branch is kept unchanged as the version submitted with the original manuscript.
+
 **Distinguishing Malicious from Unreliable Participants in Federated Learning
 over UAV Networks**
 
