@@ -1,0 +1,4163 @@
+{
+ "task": "TrustFL-UAV revision \u2014 figure and table regeneration from one data store (20 Oct 2026)",
+ "generated": "2026-10-21T02:50:14+0000",
+ "repository": {
+  "path": "/sessions/rcw-01t4mxyejcjxmgo7wyabunwv/mnt/paper1/trustfl-uav",
+  "branch": "revision-r1",
+  "base_commit": "a0cd40ce4939a661fa17bc7b94f4c18f59f4360b",
+  "commits": [
+   "74e5949 2026-10-21 02:48:13 +0000 Add the Study 2 record: frozen protocol, campaign binding and final report, per-attempt records, sealed per-seed inputs, pipeline code snapshot",
+   "caffd43 2026-10-21 02:29:20 +0000 Remove a local tool-directory entry from .gitignore; no code change",
+   "1fe11d0 2026-10-21 02:22:55 +0000 R01/R02 follow-up: F9 regenerated with R09",
+   "a0fe27d 2026-10-21 02:22:22 +0000 R09: committed script for the two-panel Fig. 10 (EuroSAT per-seed retention; retention across tasks) from runs_summary.csv; no data change",
+   "84f1fe1 2026-10-20 10:18:43 +0000 Table III rows (eur_adsys, 5 methods x 3 seeds) from runs_summary.csv; Table V cell definitions",
+   "2386622 2026-10-20 10:17:50 +0000 R01/R02 follow-up: F7 regenerated after R08",
+   "d14ceb8 2026-10-20 10:17:19 +0000 R08: Fig. 8 panel titles reworded to match the corrected caption (no data change)",
+   "bd0590b 2026-10-20 09:28:10 +0000 R01/R02: regenerate paper_assets data, figures F1-F9, Table IV/V/VI rows and supplement from the single revision store (revision_assets_20261020/store); scalability.csv unchanged (62a88df8)",
+   "449dfcf 2026-10-20 09:26:30 +0000 claims_audit: expected values updated to the revised Section VI (single revision store); covers Table V/IV/VI, tests, clean, isolated, sign-flip, scalability",
+   "7058bb2 2026-10-20 09:23:56 +0000 R06: F8 scalability figure layout (legend below axes, y-range from the means)",
+   "07ce47c 2026-10-20 09:19:42 +0000 Table IV marks: rank on printed precision so equal printed values tie and share the higher mark",
+   "63a7a51 2026-10-20 09:17:57 +0000 R06: add committed F8 scalability figure script (fits exponents for M>=128 and all M) and Table IV marks script over the metrics matrix",
+   "efe193b 2026-10-20 09:17:50 +0000 R05: Fig. 7(d) aggregation timings from the hardened family only, not the all-runs mean",
+   "f8ac688 2026-10-20 09:17:03 +0000 R04: Fig. 7(c) labelled energy per delivered update (energy_per_update_j, no metric change)"
+  ]
+ },
+ "store": {
+  "path": "/sessions/rcw-01t4mxyejcjxmgo7wyabunwv/mnt/paper1/revision_assets_20261020/store",
+  "composition": "REGENERATION_TASK Section 2 (see checks/composition_check.md)",
+  "run_files": {
+   "store/eur_adsys_fedaa/seed0/config_resolved.yaml": {
+    "sha256": "5edf194e9c79d97ff4d9b3b4a9106347b66773862e684510d14222e1b683f935",
+    "bytes": 2152
+   },
+   "store/eur_adsys_fedaa/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/eur_adsys_fedaa/seed0/metrics.jsonl": {
+    "sha256": "3f8fae3b409d6de55d588b44259b84fadf1781c1011715dad71cee5c94df07f9",
+    "bytes": 47196
+   },
+   "store/eur_adsys_fedaa/seed0/run_meta.json": {
+    "sha256": "9538074d6ffb07937267d2371713ef3e26f8705354028f2b294474d586e29843",
+    "bytes": 3386
+   },
+   "store/eur_adsys_fedaa/seed1/config_resolved.yaml": {
+    "sha256": "a1604b4873dc35f7edd9a50bae0fe3db5b2f855f41c90f9e359f1761bdb04d41",
+    "bytes": 2152
+   },
+   "store/eur_adsys_fedaa/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/eur_adsys_fedaa/seed1/metrics.jsonl": {
+    "sha256": "c702dcea97ab58f9e25170c985281821f46844098f2c3bbc023f2df497581822",
+    "bytes": 44198
+   },
+   "store/eur_adsys_fedaa/seed1/run_meta.json": {
+    "sha256": "2a269313bf8bb36542e366a909e767ed51319820785648fc068048ec998efcda",
+    "bytes": 3386
+   },
+   "store/eur_adsys_fedaa/seed2/config_resolved.yaml": {
+    "sha256": "84dede603849747a098dff9abd571c18e67b075d9c7bc424de231df4a145373c",
+    "bytes": 2152
+   },
+   "store/eur_adsys_fedaa/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/eur_adsys_fedaa/seed2/metrics.jsonl": {
+    "sha256": "6f1bb7030210a3c2c3c86e9a53afbb26241e9d27045b90720a4644739f0cedec",
+    "bytes": 46570
+   },
+   "store/eur_adsys_fedaa/seed2/run_meta.json": {
+    "sha256": "db99e46fbcc6a5ec6e20dde4d61db90b24d1b35bdae572f9d0faff8ba812f2ae",
+    "bytes": 3386
+   },
+   "store/eur_adsys_fedavg/seed0/config_resolved.yaml": {
+    "sha256": "f9b70f27c937fc6afc6ecd9db10864e16fc58052bf8d8975ddc1c2f1a1b48662",
+    "bytes": 2154
+   },
+   "store/eur_adsys_fedavg/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/eur_adsys_fedavg/seed0/metrics.jsonl": {
+    "sha256": "55987cddcd75433745e51f3bec350720a887523332e32b8c1fbe5f4cb606a242",
+    "bytes": 48163
+   },
+   "store/eur_adsys_fedavg/seed0/run_meta.json": {
+    "sha256": "deed56a2e46bf4f7258d74539c5e89c3705c789aaca2c53a3859ed85d4e6bb6b",
+    "bytes": 3388
+   },
+   "store/eur_adsys_fedavg/seed1/config_resolved.yaml": {
+    "sha256": "3723deb67f7e2908e67c2cb8be33b420a5d1882e05977d4c397c77100b9c8c1b",
+    "bytes": 2154
+   },
+   "store/eur_adsys_fedavg/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/eur_adsys_fedavg/seed1/metrics.jsonl": {
+    "sha256": "bf518bdb11183c9f4c6958391f9545eaa445135e8e5a851afcabb08091a5e74a",
+    "bytes": 46825
+   },
+   "store/eur_adsys_fedavg/seed1/run_meta.json": {
+    "sha256": "88e8f567ca1ee1d1b1f0f4d3e25f7b8872c6493a703e35a897791293e8a0349f",
+    "bytes": 3388
+   },
+   "store/eur_adsys_fedavg/seed2/config_resolved.yaml": {
+    "sha256": "6f4dd2ef952e927459808017d74bcc36f252596b0c4d542b6e7916cd770c232f",
+    "bytes": 2154
+   },
+   "store/eur_adsys_fedavg/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/eur_adsys_fedavg/seed2/metrics.jsonl": {
+    "sha256": "055cadff5e2e8c2c4f9cc8a51236ea476f0d0701d98c811e1727aeedc210c92f",
+    "bytes": 47931
+   },
+   "store/eur_adsys_fedavg/seed2/run_meta.json": {
+    "sha256": "9567b360652655542482d3497c16880e41eaa6260cdb335f57ae2f07fec7f70c",
+    "bytes": 3388
+   },
+   "store/eur_adsys_multikrum/seed0/config_resolved.yaml": {
+    "sha256": "b84c416ce7fcb7c61bde85e72b9063f491ce69226f3cc2da1f06c0d15e8c3e83",
+    "bytes": 2160
+   },
+   "store/eur_adsys_multikrum/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/eur_adsys_multikrum/seed0/metrics.jsonl": {
+    "sha256": "e5ee9a5a32b0b7135cddc2d9b4901c067f4344033bcac2feb97c0106e2fb30fc",
+    "bytes": 51261
+   },
+   "store/eur_adsys_multikrum/seed0/run_meta.json": {
+    "sha256": "09905c0890f2e6df23595ec1b1af8871ea76b37173b6292cdd08d0de6ade8d13",
+    "bytes": 3394
+   },
+   "store/eur_adsys_multikrum/seed1/config_resolved.yaml": {
+    "sha256": "543813ac2cafefa724b3a9fde2537f49a2509b2ab0541650f2580f159e92a212",
+    "bytes": 2160
+   },
+   "store/eur_adsys_multikrum/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/eur_adsys_multikrum/seed1/metrics.jsonl": {
+    "sha256": "ab91518b3c24b2b0e8f6e0cd737fc947e7b75d8bc9f957fb2429f4227adfc04a",
+    "bytes": 50331
+   },
+   "store/eur_adsys_multikrum/seed1/run_meta.json": {
+    "sha256": "c25081ce2fdc6d93e53a8a705140b5c12be2fc6b9efcae11c4b38a067430ae51",
+    "bytes": 3394
+   },
+   "store/eur_adsys_multikrum/seed2/config_resolved.yaml": {
+    "sha256": "93338f415939ce457f0f68bdf314007ff7a2db227a900ff16253caf93a193b34",
+    "bytes": 2160
+   },
+   "store/eur_adsys_multikrum/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/eur_adsys_multikrum/seed2/metrics.jsonl": {
+    "sha256": "23986c1ddd42d406b438be02c68f6aa89a97588b837df4f9fb487fd18a5126e5",
+    "bytes": 51227
+   },
+   "store/eur_adsys_multikrum/seed2/run_meta.json": {
+    "sha256": "b005e83ba84cbc14f6d1b16bca0e39d984c0fe7e6022f9949966322de9f5b35d",
+    "bytes": 3394
+   },
+   "store/eur_adsys_sophon/seed0/config_resolved.yaml": {
+    "sha256": "075c89edb17574e5527b3a5b5b88e8571e7a83d2da10396f7b55e719b2a4cd3b",
+    "bytes": 2154
+   },
+   "store/eur_adsys_sophon/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/eur_adsys_sophon/seed0/metrics.jsonl": {
+    "sha256": "adcdb6a2b3aff8cb94e458463fac61e522c3aaa6356cfbd28418e482e5a29c6e",
+    "bytes": 48415
+   },
+   "store/eur_adsys_sophon/seed0/run_meta.json": {
+    "sha256": "faed020348e0f5f45c8b8011331ec95dd5974ffb57e42fd0cf24f89e7e434a29",
+    "bytes": 3388
+   },
+   "store/eur_adsys_sophon/seed1/config_resolved.yaml": {
+    "sha256": "e293542f13ec9b5459a868fb42dfb8291ecf61735955236677344d7735e1c19a",
+    "bytes": 2154
+   },
+   "store/eur_adsys_sophon/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/eur_adsys_sophon/seed1/metrics.jsonl": {
+    "sha256": "ba630095a4c5d07c62693bc2299172f1bf10809b72ac57c19693ace097c96405",
+    "bytes": 46067
+   },
+   "store/eur_adsys_sophon/seed1/run_meta.json": {
+    "sha256": "8e2b24e5ab149a237931a2f9499d834be4df5cd78ed361208c7ce108f4e4334e",
+    "bytes": 3388
+   },
+   "store/eur_adsys_sophon/seed2/config_resolved.yaml": {
+    "sha256": "268ab6d6b2c39a442d194375c4af5e72d8780daea6313407947535744b58c7d3",
+    "bytes": 2154
+   },
+   "store/eur_adsys_sophon/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/eur_adsys_sophon/seed2/metrics.jsonl": {
+    "sha256": "53bf0439ffc1a5c19a0947ecdf527f3d785ca3d65c249d1d95dd3267323b5315",
+    "bytes": 47328
+   },
+   "store/eur_adsys_sophon/seed2/run_meta.json": {
+    "sha256": "062884bde33a93b672c313d9cc0ed56ab51adc2660eac5218600740f6e83a167",
+    "bytes": 3388
+   },
+   "store/eur_adsys_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "9615ebfd7680cfacd8bc6ca9c82ac0f4f10f500a09612b54e6b1316f3cebcae4",
+    "bytes": 2156
+   },
+   "store/eur_adsys_trustfl/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/eur_adsys_trustfl/seed0/metrics.jsonl": {
+    "sha256": "4fd75a2666527a55a5ccc0485cb15d5c8eea2db13725354d8c39b8dca4938cdb",
+    "bytes": 52405
+   },
+   "store/eur_adsys_trustfl/seed0/run_meta.json": {
+    "sha256": "f5bd90be1ea3a278727c0db9fb1c6f665da3ade97a922d499fb57310f45a6844",
+    "bytes": 3390
+   },
+   "store/eur_adsys_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "8bbd33377f7ee5d882f5c25efd044ced4bc12c0e8f92d40abb4354366c7f2a4c",
+    "bytes": 2156
+   },
+   "store/eur_adsys_trustfl/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/eur_adsys_trustfl/seed1/metrics.jsonl": {
+    "sha256": "3f71f753a351aaa3bd5bfe749b2a15a48d4d50f06ebecda27d290a9c08c61a67",
+    "bytes": 53069
+   },
+   "store/eur_adsys_trustfl/seed1/run_meta.json": {
+    "sha256": "532672be1e75054555e92cd0310e54fb68236a78d7bbd24eb72e085c9dd41003",
+    "bytes": 3390
+   },
+   "store/eur_adsys_trustfl/seed2/config_resolved.yaml": {
+    "sha256": "ac06a0a4c74de023a0edddd6fa1e1f6a90b35ef6b321059191ae1ee9a342ba16",
+    "bytes": 2146
+   },
+   "store/eur_adsys_trustfl/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/eur_adsys_trustfl/seed2/metrics.jsonl": {
+    "sha256": "982ee872161f69aab6bc468625f9887d6e6a4fdf3c74823a915b026eb49e7d95",
+    "bytes": 50963
+   },
+   "store/eur_adsys_trustfl/seed2/run_meta.json": {
+    "sha256": "1a295f7bf8970187aef47a46714991b8e63408f916f77d0f871c28dac82921d3",
+    "bytes": 3370
+   },
+   "store/exp_a_fedavg/seed0/config_resolved.yaml": {
+    "sha256": "d5652c7e6d7c6b32ef0f040c1d962b8033f8856ebd4b2a42b07087191e8652d3",
+    "bytes": 2164
+   },
+   "store/exp_a_fedavg/seed0/groups.json": {
+    "sha256": "1bea34ca53a7b27efaf55dc073d5194d9e04ca208f068ef00f2b4e17defcfe8c",
+    "bytes": 130
+   },
+   "store/exp_a_fedavg/seed0/metrics.jsonl": {
+    "sha256": "02e7d0ace293068cac43e977a03940223016ef8e320cec52d7d5a8331958c156",
+    "bytes": 81019
+   },
+   "store/exp_a_fedavg/seed0/run_meta.json": {
+    "sha256": "4878742ea595d5c83272287cc0cc6f8d5a644c92df1849e5f95b68df8685c67f",
+    "bytes": 3392
+   },
+   "store/exp_a_fedavg/seed1/config_resolved.yaml": {
+    "sha256": "78a16b66609efb6112481739b54758bf24ccafc579dd3f3a5fcc1d325d4976be",
+    "bytes": 2164
+   },
+   "store/exp_a_fedavg/seed1/groups.json": {
+    "sha256": "0924cdbfc1fab23f4ce8565ecc58aaaf2f3ddae3a36abb84965480d4ad326c63",
+    "bytes": 126
+   },
+   "store/exp_a_fedavg/seed1/metrics.jsonl": {
+    "sha256": "0bc11aee032140d90d1110e9f43dbfc0148fde095b575f59fa688478c06b3468",
+    "bytes": 80283
+   },
+   "store/exp_a_fedavg/seed1/run_meta.json": {
+    "sha256": "0622cc5219848fa3d4c866c5d4f08ed20b379c203344edcedfe9a4bcc0115b4f",
+    "bytes": 3392
+   },
+   "store/exp_a_fedavg/seed2/config_resolved.yaml": {
+    "sha256": "8dabac54983b27111c3bc01a15db13e5dcae06d484da77323288a81211c116d0",
+    "bytes": 2164
+   },
+   "store/exp_a_fedavg/seed2/groups.json": {
+    "sha256": "d4fb3e7eae4c0c2af370a0be8c89c1e8186b2378ec95622596d2c5160201ad80",
+    "bytes": 129
+   },
+   "store/exp_a_fedavg/seed2/metrics.jsonl": {
+    "sha256": "3cfcef4a6822e4c5d20ce54c09a8579528c30db2120cbb6c752b812aea876dd4",
+    "bytes": 79757
+   },
+   "store/exp_a_fedavg/seed2/run_meta.json": {
+    "sha256": "571e494d8ad98108a0fba8fbf5c08b579cb076f3ce7ee0923634708e20d3a196",
+    "bytes": 3392
+   },
+   "store/exp_a_fedavg/seed3/config_resolved.yaml": {
+    "sha256": "6553bce5e654bab4c2454560d8318cf2e06789edb0469d664e6424624d4e8ab5",
+    "bytes": 2164
+   },
+   "store/exp_a_fedavg/seed3/groups.json": {
+    "sha256": "8a3bddaec6e3bd7ce6aa368b0dc4e4edc6a6fa90a9029d2a10debe8bbe743375",
+    "bytes": 129
+   },
+   "store/exp_a_fedavg/seed3/metrics.jsonl": {
+    "sha256": "9a52f8a668cf8d35f0e427d7c8137739f9b57f8d81d998366af4b989e2774892",
+    "bytes": 80226
+   },
+   "store/exp_a_fedavg/seed3/run_meta.json": {
+    "sha256": "df5786e6601cbad949bc36048b037c5561e021750c15115b595bc7987ff4ccba",
+    "bytes": 3392
+   },
+   "store/exp_a_fedavg/seed4/config_resolved.yaml": {
+    "sha256": "2fd420eecfbf88c6bee64573a10ce83abb1d02a62bdf95b7d7c4c2a44b5e3a29",
+    "bytes": 2164
+   },
+   "store/exp_a_fedavg/seed4/groups.json": {
+    "sha256": "933b638812d2336d879ceb173fbcde43b28ba6c10de5b21529d9f91a6f9973ca",
+    "bytes": 131
+   },
+   "store/exp_a_fedavg/seed4/metrics.jsonl": {
+    "sha256": "a184e61613d8104212a7b50b20601b75403619968448399956015b5e5669a3ef",
+    "bytes": 80406
+   },
+   "store/exp_a_fedavg/seed4/run_meta.json": {
+    "sha256": "7e750112e5d50e64a78266777976f5919432d4a5c33242729f72f8134f794cbb",
+    "bytes": 3392
+   },
+   "store/exp_a_fltrust/seed0/config_resolved.yaml": {
+    "sha256": "e27fb168ae39a3c2b69289b175582e23c4fc2ab31eb8f70223caedfc6ca10faa",
+    "bytes": 2166
+   },
+   "store/exp_a_fltrust/seed0/groups.json": {
+    "sha256": "1bea34ca53a7b27efaf55dc073d5194d9e04ca208f068ef00f2b4e17defcfe8c",
+    "bytes": 130
+   },
+   "store/exp_a_fltrust/seed0/metrics.jsonl": {
+    "sha256": "bc87f52c999010226bc6b7c305ec6838ba7f617106b56d98ee1faf1cb4d3d368",
+    "bytes": 79514
+   },
+   "store/exp_a_fltrust/seed0/run_meta.json": {
+    "sha256": "6e339a82f956e6230632fe2c22bdd004858d2006843299dbb36f7c51a31327e2",
+    "bytes": 3394
+   },
+   "store/exp_a_fltrust/seed1/config_resolved.yaml": {
+    "sha256": "4366e9f95f6eb4d314289bc57d9b13f5aca073661ca84ce967f4e888c515d67b",
+    "bytes": 2166
+   },
+   "store/exp_a_fltrust/seed1/groups.json": {
+    "sha256": "0924cdbfc1fab23f4ce8565ecc58aaaf2f3ddae3a36abb84965480d4ad326c63",
+    "bytes": 126
+   },
+   "store/exp_a_fltrust/seed1/metrics.jsonl": {
+    "sha256": "f239a80dc4db9173ec9bbe2c89a5d4f0b0fd7444ac229ab52415311d31f88ba3",
+    "bytes": 79209
+   },
+   "store/exp_a_fltrust/seed1/run_meta.json": {
+    "sha256": "ad01d83d86127f4bc16fb71cbd5a89c3bf19b7b727154c205a2585f6304227de",
+    "bytes": 3394
+   },
+   "store/exp_a_fltrust/seed2/config_resolved.yaml": {
+    "sha256": "84103351b1407a5c6242404edcf754094e240a807581d1d7fd28d4a572cbb6da",
+    "bytes": 2166
+   },
+   "store/exp_a_fltrust/seed2/groups.json": {
+    "sha256": "d4fb3e7eae4c0c2af370a0be8c89c1e8186b2378ec95622596d2c5160201ad80",
+    "bytes": 129
+   },
+   "store/exp_a_fltrust/seed2/metrics.jsonl": {
+    "sha256": "b1941df8803b7012446257cfad68ac1aba3a03e1d32e514fe1342b7cd1530fa4",
+    "bytes": 78733
+   },
+   "store/exp_a_fltrust/seed2/run_meta.json": {
+    "sha256": "8007357e61c3de94aac76f1362e92dd1bed075a1722475ac910bb61b745de7be",
+    "bytes": 3394
+   },
+   "store/exp_a_fltrust/seed3/config_resolved.yaml": {
+    "sha256": "a2ef3682cad94df9874ed3da953aacaa4f36764ead044ba6555736cf643ce5c8",
+    "bytes": 2166
+   },
+   "store/exp_a_fltrust/seed3/groups.json": {
+    "sha256": "8a3bddaec6e3bd7ce6aa368b0dc4e4edc6a6fa90a9029d2a10debe8bbe743375",
+    "bytes": 129
+   },
+   "store/exp_a_fltrust/seed3/metrics.jsonl": {
+    "sha256": "bdb39b4211b992f5534dc3ce1ae7d1781c4257df4859e117a07f286773f55dd8",
+    "bytes": 78969
+   },
+   "store/exp_a_fltrust/seed3/run_meta.json": {
+    "sha256": "d2b44ce6c2396657b52b955be315dc3dd6aa76f4a4b6a1af4622b33d6f4bc810",
+    "bytes": 3394
+   },
+   "store/exp_a_fltrust/seed4/config_resolved.yaml": {
+    "sha256": "a68b8a10a375234eb6d5b3efa4d3c07b1503022b524770db9749834c4056bbfe",
+    "bytes": 2166
+   },
+   "store/exp_a_fltrust/seed4/groups.json": {
+    "sha256": "933b638812d2336d879ceb173fbcde43b28ba6c10de5b21529d9f91a6f9973ca",
+    "bytes": 131
+   },
+   "store/exp_a_fltrust/seed4/metrics.jsonl": {
+    "sha256": "914d0629b7a7f0eef83b648043a522dd4b1d6d352977bae926c8679ab514835d",
+    "bytes": 79162
+   },
+   "store/exp_a_fltrust/seed4/run_meta.json": {
+    "sha256": "ee82f33dbbc93f7c181a188b62aa27f6fe23f8b1f48d353ca7470f246d57f925",
+    "bytes": 3394
+   },
+   "store/exp_a_krum/seed0/config_resolved.yaml": {
+    "sha256": "1b6c5312d74214edd93d7634c04c5aeafb251d01a27bd22e279051d0e9d2fefe",
+    "bytes": 2160
+   },
+   "store/exp_a_krum/seed0/groups.json": {
+    "sha256": "1bea34ca53a7b27efaf55dc073d5194d9e04ca208f068ef00f2b4e17defcfe8c",
+    "bytes": 130
+   },
+   "store/exp_a_krum/seed0/metrics.jsonl": {
+    "sha256": "53862c6cb7adab90423ab43a3fcffc11dbe4b526fd8ba385139db3f814fa12e0",
+    "bytes": 66899
+   },
+   "store/exp_a_krum/seed0/run_meta.json": {
+    "sha256": "06fba5cf5f840537ba2634b4d178673c99156448e20cc4cb356a9dcc8bb844b1",
+    "bytes": 3388
+   },
+   "store/exp_a_krum/seed1/config_resolved.yaml": {
+    "sha256": "334d98608efce373161365f2e17641b09c164fac2261d290f05c34cd8cd8bd4b",
+    "bytes": 2160
+   },
+   "store/exp_a_krum/seed1/groups.json": {
+    "sha256": "0924cdbfc1fab23f4ce8565ecc58aaaf2f3ddae3a36abb84965480d4ad326c63",
+    "bytes": 126
+   },
+   "store/exp_a_krum/seed1/metrics.jsonl": {
+    "sha256": "72f05cfb12fdfdbcd1ddd6c280d30e39b9f278484d8b4cc41ee476b0cd350adf",
+    "bytes": 66829
+   },
+   "store/exp_a_krum/seed1/run_meta.json": {
+    "sha256": "90a6b9a6744400a01d154af28367a522682035748a87abb6d2591f21282b9d7c",
+    "bytes": 3388
+   },
+   "store/exp_a_krum/seed2/config_resolved.yaml": {
+    "sha256": "5d7a9c5e317bdb78cb2aafc397e67c1fc5f617eadc27547e3b4966fe2923fced",
+    "bytes": 2160
+   },
+   "store/exp_a_krum/seed2/groups.json": {
+    "sha256": "d4fb3e7eae4c0c2af370a0be8c89c1e8186b2378ec95622596d2c5160201ad80",
+    "bytes": 129
+   },
+   "store/exp_a_krum/seed2/metrics.jsonl": {
+    "sha256": "2e8ede9abee1b92874d0e5802f18e984aad60b0ff778fb653c3c6fcf21275874",
+    "bytes": 66445
+   },
+   "store/exp_a_krum/seed2/run_meta.json": {
+    "sha256": "3903d8194dc83e3cc44c1badaa0c63a908d80be582e56c7e0b791c91c43402d7",
+    "bytes": 3388
+   },
+   "store/exp_a_krum/seed3/config_resolved.yaml": {
+    "sha256": "5a0665a348961bb8635349ff170856053ae624cbf8d66c5cf7b31b13ad767d68",
+    "bytes": 2160
+   },
+   "store/exp_a_krum/seed3/groups.json": {
+    "sha256": "8a3bddaec6e3bd7ce6aa368b0dc4e4edc6a6fa90a9029d2a10debe8bbe743375",
+    "bytes": 129
+   },
+   "store/exp_a_krum/seed3/metrics.jsonl": {
+    "sha256": "c369c4f2fa1a7419458768834f26df7259b8f579578e38625ea8d2583f19e464",
+    "bytes": 66726
+   },
+   "store/exp_a_krum/seed3/run_meta.json": {
+    "sha256": "8dc5d728f16bbf580a6fc8d51a913839557669b35501c1a7a06795f911ee142a",
+    "bytes": 3388
+   },
+   "store/exp_a_krum/seed4/config_resolved.yaml": {
+    "sha256": "b85c221085f414570920e54a5331ab81a8777eed59f6434b384f3beca73043ea",
+    "bytes": 2160
+   },
+   "store/exp_a_krum/seed4/groups.json": {
+    "sha256": "933b638812d2336d879ceb173fbcde43b28ba6c10de5b21529d9f91a6f9973ca",
+    "bytes": 131
+   },
+   "store/exp_a_krum/seed4/metrics.jsonl": {
+    "sha256": "573186f07d5d34d8c5e9045ef3ce01887f897c5c6bfe7fc434cfd2c2d86f1e69",
+    "bytes": 66676
+   },
+   "store/exp_a_krum/seed4/run_meta.json": {
+    "sha256": "5f14c6efdc447f460788e38119dcd08322a85f15e41ed907d55c0ae1d60a889e",
+    "bytes": 3388
+   },
+   "store/exp_a_multikrum/seed0/config_resolved.yaml": {
+    "sha256": "949344685f9e4f4394cdfd2c4d6ddf941742ac505120db9665d20059348b6021",
+    "bytes": 2170
+   },
+   "store/exp_a_multikrum/seed0/groups.json": {
+    "sha256": "1bea34ca53a7b27efaf55dc073d5194d9e04ca208f068ef00f2b4e17defcfe8c",
+    "bytes": 130
+   },
+   "store/exp_a_multikrum/seed0/metrics.jsonl": {
+    "sha256": "58a5668d2f2c20b4ed384414b5bd0576ca59726a38df234c6b05db546eda2615",
+    "bytes": 82630
+   },
+   "store/exp_a_multikrum/seed0/run_meta.json": {
+    "sha256": "99921bbfd3d4e5667c2dff85152a9e487c36a8b45d400d2e7a0ae9c1a1dd440b",
+    "bytes": 3398
+   },
+   "store/exp_a_multikrum/seed1/config_resolved.yaml": {
+    "sha256": "4a15b5afb7db3be328cfd297d9d3ab1892483376f0fcea4ccc3d1aed97e8fa1f",
+    "bytes": 2170
+   },
+   "store/exp_a_multikrum/seed1/groups.json": {
+    "sha256": "0924cdbfc1fab23f4ce8565ecc58aaaf2f3ddae3a36abb84965480d4ad326c63",
+    "bytes": 126
+   },
+   "store/exp_a_multikrum/seed1/metrics.jsonl": {
+    "sha256": "99afa1a5db66001e5bbdd13310b6636225ce66087b483898a224bf0c8686656b",
+    "bytes": 82741
+   },
+   "store/exp_a_multikrum/seed1/run_meta.json": {
+    "sha256": "b529ff5f7eacb826028e594c5529d567cdae6d39bbb24cf15e8f9bb06a76f42f",
+    "bytes": 3398
+   },
+   "store/exp_a_multikrum/seed2/config_resolved.yaml": {
+    "sha256": "0ab1efc4e9f38fca8a87015e2fd877d6fa6d20aeaae40d7b86157cde309e863c",
+    "bytes": 2170
+   },
+   "store/exp_a_multikrum/seed2/groups.json": {
+    "sha256": "d4fb3e7eae4c0c2af370a0be8c89c1e8186b2378ec95622596d2c5160201ad80",
+    "bytes": 129
+   },
+   "store/exp_a_multikrum/seed2/metrics.jsonl": {
+    "sha256": "34297d74df748bd337ce5a36097e4855c232c170cdc3a65fa7ec46f3d1ff5f35",
+    "bytes": 82352
+   },
+   "store/exp_a_multikrum/seed2/run_meta.json": {
+    "sha256": "a1a92201ecb4b1591f507aab7484cc5c74b7fd2359c245a6b6a0832127e16247",
+    "bytes": 3398
+   },
+   "store/exp_a_multikrum/seed3/config_resolved.yaml": {
+    "sha256": "63415929ffffcf9b4326b11a20668f9985156696dbfe2c11ff2ac5f1ec65de1b",
+    "bytes": 2170
+   },
+   "store/exp_a_multikrum/seed3/groups.json": {
+    "sha256": "8a3bddaec6e3bd7ce6aa368b0dc4e4edc6a6fa90a9029d2a10debe8bbe743375",
+    "bytes": 129
+   },
+   "store/exp_a_multikrum/seed3/metrics.jsonl": {
+    "sha256": "671410d251512d1b45436f471a3b8d07a658e5d6d09541f3c3a85866347a481c",
+    "bytes": 82486
+   },
+   "store/exp_a_multikrum/seed3/run_meta.json": {
+    "sha256": "74dd138b8ebdfd2e8226ff220c7bdb07e356cbc8cb709d30274158ae9adcc0eb",
+    "bytes": 3398
+   },
+   "store/exp_a_multikrum/seed4/config_resolved.yaml": {
+    "sha256": "fe191bcb2e67c76aa7fe93f99e6ca61d90dc28a56f6eb2cfa1e4795b36cdf0bf",
+    "bytes": 2170
+   },
+   "store/exp_a_multikrum/seed4/groups.json": {
+    "sha256": "933b638812d2336d879ceb173fbcde43b28ba6c10de5b21529d9f91a6f9973ca",
+    "bytes": 131
+   },
+   "store/exp_a_multikrum/seed4/metrics.jsonl": {
+    "sha256": "a7ec78a6a510dcfda4a347e6dcc4c67d394be9f918b33c2ed37815d7dea7ba9b",
+    "bytes": 82354
+   },
+   "store/exp_a_multikrum/seed4/run_meta.json": {
+    "sha256": "131dbe623f8894d1e4ae20062f4e5bf256266e27a2dab16ddcf471c9dc853dd7",
+    "bytes": 3398
+   },
+   "store/exp_a_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "9ad49c4a4fd51a15ce2b6d02726db7e3250fa20f29bbeafe6ae56db0ebd84976",
+    "bytes": 2166
+   },
+   "store/exp_a_trustfl/seed0/groups.json": {
+    "sha256": "1bea34ca53a7b27efaf55dc073d5194d9e04ca208f068ef00f2b4e17defcfe8c",
+    "bytes": 130
+   },
+   "store/exp_a_trustfl/seed0/metrics.jsonl": {
+    "sha256": "d87955e5d0f74685aa6784ffbbe3380d46255ca38410058d3ce7d5f3783b0f07",
+    "bytes": 80477
+   },
+   "store/exp_a_trustfl/seed0/run_meta.json": {
+    "sha256": "c8133e3814cc3dac1aa2df19deda7101336d3ce8a135ba21ed34b42eb801b277",
+    "bytes": 3394
+   },
+   "store/exp_a_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "cb88ff45aca840a760192018cf5d228f25f63d09bd05e6d41ccd8b2f7784d668",
+    "bytes": 2166
+   },
+   "store/exp_a_trustfl/seed1/groups.json": {
+    "sha256": "0924cdbfc1fab23f4ce8565ecc58aaaf2f3ddae3a36abb84965480d4ad326c63",
+    "bytes": 126
+   },
+   "store/exp_a_trustfl/seed1/metrics.jsonl": {
+    "sha256": "5fd768901c22016e379ec5af86a9fe210da0ed3a226b1c927526ecce1f3ef65c",
+    "bytes": 80945
+   },
+   "store/exp_a_trustfl/seed1/run_meta.json": {
+    "sha256": "0f7369f83ed7c83c861aed9061300f63db484e9bb3f68c145bf7916658bef72e",
+    "bytes": 3394
+   },
+   "store/exp_a_trustfl/seed2/config_resolved.yaml": {
+    "sha256": "3794069712377989913d03534b60946a80b9ef130fc39c2bfcef96dd5a15df8c",
+    "bytes": 2166
+   },
+   "store/exp_a_trustfl/seed2/groups.json": {
+    "sha256": "d4fb3e7eae4c0c2af370a0be8c89c1e8186b2378ec95622596d2c5160201ad80",
+    "bytes": 129
+   },
+   "store/exp_a_trustfl/seed2/metrics.jsonl": {
+    "sha256": "8813e8bd3e529fd5d265d2e3c98c7bdd18636ac3e21243315bfd6be4d15826d8",
+    "bytes": 80789
+   },
+   "store/exp_a_trustfl/seed2/run_meta.json": {
+    "sha256": "0b94fd568c12c08ff613c6f70a2f8438b5ecebac846934e6664f5082c069bebc",
+    "bytes": 3394
+   },
+   "store/exp_a_trustfl/seed3/config_resolved.yaml": {
+    "sha256": "0a7f3f8c3eef88b10746e97b0f91420a9620e04b1c6199573d862ca9ad368d5f",
+    "bytes": 2166
+   },
+   "store/exp_a_trustfl/seed3/groups.json": {
+    "sha256": "8a3bddaec6e3bd7ce6aa368b0dc4e4edc6a6fa90a9029d2a10debe8bbe743375",
+    "bytes": 129
+   },
+   "store/exp_a_trustfl/seed3/metrics.jsonl": {
+    "sha256": "18d78ad48cb1abf6aac72804421587a579ca57c85f8fb29e7292e5a10d0095c4",
+    "bytes": 81935
+   },
+   "store/exp_a_trustfl/seed3/run_meta.json": {
+    "sha256": "22ec0289599fb50709a8e458c1f6f3616eaf0b5c0f7c60e9f834ff0478245b6a",
+    "bytes": 3394
+   },
+   "store/exp_a_trustfl/seed4/config_resolved.yaml": {
+    "sha256": "d4fc2d6bc90777f703f7bf335a2a6c049c6cd566cc1a7f9dd9237028ce614c5f",
+    "bytes": 2166
+   },
+   "store/exp_a_trustfl/seed4/groups.json": {
+    "sha256": "933b638812d2336d879ceb173fbcde43b28ba6c10de5b21529d9f91a6f9973ca",
+    "bytes": 131
+   },
+   "store/exp_a_trustfl/seed4/metrics.jsonl": {
+    "sha256": "c5f36ac68f7a9844b6bbfde4c921d173af22eb4ae832c60678eb9a64dc7c4053",
+    "bytes": 81975
+   },
+   "store/exp_a_trustfl/seed4/run_meta.json": {
+    "sha256": "56ec19a00052663467e9b83fef50b31006ac33641a0ed3f1c16575d46f34d1b9",
+    "bytes": 3394
+   },
+   "store/exp_b2_delay_fedavg/seed0/config_resolved.yaml": {
+    "sha256": "25cebfc99ac58f6d658070ff51d15beeda1af042775449e027d3844648149e5e",
+    "bytes": 2055
+   },
+   "store/exp_b2_delay_fedavg/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_b2_delay_fedavg/seed0/metrics.jsonl": {
+    "sha256": "59b6ee947ad4e9c1a60a22605ebe3387cace99e42c45928ec652f47e921118d7",
+    "bytes": 83419
+   },
+   "store/exp_b2_delay_fedavg/seed0/run_meta.json": {
+    "sha256": "77fbe565707f4b20b2fcc1be2631d8973044483b83b9a983eef47c54c568b9b0",
+    "bytes": 3235
+   },
+   "store/exp_b2_delay_fedavg/seed1/config_resolved.yaml": {
+    "sha256": "4ac818a3a243abbef40d288e502fd75cacaf13bc9d7cfd4442c3393809257b9d",
+    "bytes": 2055
+   },
+   "store/exp_b2_delay_fedavg/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_b2_delay_fedavg/seed1/metrics.jsonl": {
+    "sha256": "7965f240ff55eca03560405e5ffefc85dcfda0bc3638b6a3b23a9539fbaf84ca",
+    "bytes": 82606
+   },
+   "store/exp_b2_delay_fedavg/seed1/run_meta.json": {
+    "sha256": "2a76020adf89faf4978a24b81d19078e9b20b8e50667c644395b7417cea8d0a0",
+    "bytes": 3235
+   },
+   "store/exp_b2_delay_fedavg/seed2/config_resolved.yaml": {
+    "sha256": "2cac52faaf8393766e94774374a6e0f650867aeb28f0a74dfbc740246e83ab88",
+    "bytes": 2055
+   },
+   "store/exp_b2_delay_fedavg/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_b2_delay_fedavg/seed2/metrics.jsonl": {
+    "sha256": "268eea4fddba3a3f75668bf3c7a7c4592184726ec5a8453c1aef994fc2df6f27",
+    "bytes": 83398
+   },
+   "store/exp_b2_delay_fedavg/seed2/run_meta.json": {
+    "sha256": "64725dab14aec4a08070ea8ca5f26df541065f1f183871a669ae31c5c5117763",
+    "bytes": 3235
+   },
+   "store/exp_b2_delay_fltrust/seed0/config_resolved.yaml": {
+    "sha256": "3da4f0ddb5fe8c11bbf0a4cf82d62b33b280402754c2803fe87d9c5c7659cb73",
+    "bytes": 2057
+   },
+   "store/exp_b2_delay_fltrust/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_b2_delay_fltrust/seed0/metrics.jsonl": {
+    "sha256": "4d43d34f37c959f4cb5c7f9de84d81c900f9aa2ab3db676cf2efd303f89b5a62",
+    "bytes": 82089
+   },
+   "store/exp_b2_delay_fltrust/seed0/run_meta.json": {
+    "sha256": "2b5fd1849be6139cda190fdfb51bd8c4ff6fd212119bce867fcbb51af13763d5",
+    "bytes": 3237
+   },
+   "store/exp_b2_delay_fltrust/seed1/config_resolved.yaml": {
+    "sha256": "cb77cb0fb092a49de6920ac454c0a80709d7d15c3c312ccd1454c64a90b8d24f",
+    "bytes": 2057
+   },
+   "store/exp_b2_delay_fltrust/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_b2_delay_fltrust/seed1/metrics.jsonl": {
+    "sha256": "4d5e1ca933bbafb2b8d1d2b3f27e2ee71f5e96a7f447a9a18d87e1ffbd56d4c7",
+    "bytes": 81516
+   },
+   "store/exp_b2_delay_fltrust/seed1/run_meta.json": {
+    "sha256": "06991a73920703a8cda4ef4f1dede08a8eee541d486b6c86b5a4f4beb019bea3",
+    "bytes": 3237
+   },
+   "store/exp_b2_delay_fltrust/seed2/config_resolved.yaml": {
+    "sha256": "da21b5b2cc7ab51b3ecf2089e203ac3577b761e1c62ad1a588884c681d1cc3fc",
+    "bytes": 2057
+   },
+   "store/exp_b2_delay_fltrust/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_b2_delay_fltrust/seed2/metrics.jsonl": {
+    "sha256": "c639894d78ea1693a73b116dc11634fde30bdfa252950aca518dbe3153aa198f",
+    "bytes": 82117
+   },
+   "store/exp_b2_delay_fltrust/seed2/run_meta.json": {
+    "sha256": "f986a7e5bcd7fb152ccdb3f35e410a898cf4c908d1cb321b06871da619cecf9a",
+    "bytes": 3237
+   },
+   "store/exp_b2_delay_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "36c2cd71e48a5886c5942fe4978ad8824e635381277be61671d1df7d1a427c3b",
+    "bytes": 2057
+   },
+   "store/exp_b2_delay_trustfl/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_b2_delay_trustfl/seed0/metrics.jsonl": {
+    "sha256": "3194bae3a65a2eed09b984be3f6d301947d0e8b4462d06e4104b5a4402c1e01d",
+    "bytes": 83025
+   },
+   "store/exp_b2_delay_trustfl/seed0/run_meta.json": {
+    "sha256": "0118d0094c0ce936c10eb12cd91f8402ce67c296410c8d34ab188868c2b049bd",
+    "bytes": 3237
+   },
+   "store/exp_b2_delay_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "bcb5d882b26316aa0530767f61c4231e76bb484e36bbeeaaf233409c3ae87068",
+    "bytes": 2057
+   },
+   "store/exp_b2_delay_trustfl/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_b2_delay_trustfl/seed1/metrics.jsonl": {
+    "sha256": "17cfa46cb38615a7ae9c246fc6427e6363b5264a90f234db5993f5af6937319a",
+    "bytes": 84157
+   },
+   "store/exp_b2_delay_trustfl/seed1/run_meta.json": {
+    "sha256": "5495b63ae12654240f398285c264b658ad1892bf1827c696d045106f45ee5ba1",
+    "bytes": 3237
+   },
+   "store/exp_b2_delay_trustfl/seed2/config_resolved.yaml": {
+    "sha256": "7212a8b10e01d4771f9d3488e69ad428daf66324b6924279b5d6c1c06043e3b3",
+    "bytes": 2057
+   },
+   "store/exp_b2_delay_trustfl/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_b2_delay_trustfl/seed2/metrics.jsonl": {
+    "sha256": "12ab638e16032f830e86c29f5146b072c6d50586564766c3cc2f977d3dcf2327",
+    "bytes": 88401
+   },
+   "store/exp_b2_delay_trustfl/seed2/run_meta.json": {
+    "sha256": "14f490ae090bddb6c5df096b6f515d875dd45b545ccba1228b8c398b7923c92c",
+    "bytes": 3237
+   },
+   "store/exp_b_resource_misreport_fedavg/seed0/config_resolved.yaml": {
+    "sha256": "1a83ddd4e6776946c76b2699a148325cc37164a587313460a4544f8aff46490e",
+    "bytes": 2197
+   },
+   "store/exp_b_resource_misreport_fedavg/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_b_resource_misreport_fedavg/seed0/metrics.jsonl": {
+    "sha256": "0293a8f7f686dc68421265a57c358b6e5b5da519327e76294a18273b67ff67c3",
+    "bytes": 88958
+   },
+   "store/exp_b_resource_misreport_fedavg/seed0/run_meta.json": {
+    "sha256": "980c37057268c789899d4b313e1e03181875bf6950155877447001e1e2ab0aab",
+    "bytes": 3425
+   },
+   "store/exp_b_resource_misreport_fedavg/seed1/config_resolved.yaml": {
+    "sha256": "c11d3f931c3d99e6083b3aa254f89f9e8e8162cdf1dc292c5175d1238f465c65",
+    "bytes": 2197
+   },
+   "store/exp_b_resource_misreport_fedavg/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_b_resource_misreport_fedavg/seed1/metrics.jsonl": {
+    "sha256": "447b61a59ec31bbdec113ce84b52385a55ebd1659d1b55c69acea6724619fca6",
+    "bytes": 88988
+   },
+   "store/exp_b_resource_misreport_fedavg/seed1/run_meta.json": {
+    "sha256": "5347c49e1f707de7a42677bfad7b5c244867e85b60da045670fab118b6900dea",
+    "bytes": 3425
+   },
+   "store/exp_b_resource_misreport_fedavg/seed2/config_resolved.yaml": {
+    "sha256": "62750f39839f74f00c9d550bd6058509a5f53f32f942f8fcbd7845361feeca3c",
+    "bytes": 2197
+   },
+   "store/exp_b_resource_misreport_fedavg/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_b_resource_misreport_fedavg/seed2/metrics.jsonl": {
+    "sha256": "4f3333d6e348679f83c7d196e88abe88ed4194bc40645c2382dbf0d07dacf584",
+    "bytes": 89079
+   },
+   "store/exp_b_resource_misreport_fedavg/seed2/run_meta.json": {
+    "sha256": "324f408c61752318852fd9e8945d2ecb39a06835df478074dd6fb48bc78f2704",
+    "bytes": 3425
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed0/config_resolved.yaml": {
+    "sha256": "2f4f2dc3d680a9b3394ed78eb06d9bb9014da052c83ca77ef852e96bb36a4127",
+    "bytes": 2201
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed0/metrics.jsonl": {
+    "sha256": "b53ffd86b0c72d14591c528527910cd5fa71fad285a390fa9a04c152ec33efae",
+    "bytes": 76334
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed0/run_meta.json": {
+    "sha256": "c7d6dfd26a5f4c94f1a0ec2be3dc9dae4d2a7fa7b96e3a0f04526f0037e6d926",
+    "bytes": 3429
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed1/config_resolved.yaml": {
+    "sha256": "062bb71127288929ae5b2df6d2db3b9b7a6b0ad416b0d24b4adc407616f3dce2",
+    "bytes": 2201
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed1/metrics.jsonl": {
+    "sha256": "708188869bc44a59fdaa578c63c5c1f39cc1eba1193129c4eb18e02ddc8d7978",
+    "bytes": 76358
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed1/run_meta.json": {
+    "sha256": "6f15b91869f0ab45003f160093809adab006660ce106e2f04955fc484b2625ce",
+    "bytes": 3429
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed2/config_resolved.yaml": {
+    "sha256": "685caeea79abae3d68fc17015723d4e162fe661c36d9752052dc508a17f3225c",
+    "bytes": 2201
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed2/metrics.jsonl": {
+    "sha256": "782f0f53a4a372eb9f96fbeb256c980a01d9cc608063026d21e4a7ca847675fe",
+    "bytes": 76454
+   },
+   "store/exp_b_resource_misreport_fedgreed/seed2/run_meta.json": {
+    "sha256": "d9d5e787e97a5ee540783b1cb4f3531e1617c72988db5ff5efdac18e0cb1b622",
+    "bytes": 3429
+   },
+   "store/exp_b_resource_misreport_fltrust/seed0/config_resolved.yaml": {
+    "sha256": "d6b310e7fb212df15ae56389c9127728c4a5b6265afd35f8f1f33602192e497c",
+    "bytes": 2199
+   },
+   "store/exp_b_resource_misreport_fltrust/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_b_resource_misreport_fltrust/seed0/metrics.jsonl": {
+    "sha256": "9a36c12f436292e64741434ba1b391d8e8c5273019d16493dd03800c4c5f6606",
+    "bytes": 87528
+   },
+   "store/exp_b_resource_misreport_fltrust/seed0/run_meta.json": {
+    "sha256": "786a856478c4bbe2f6be5eba72bd5fd94ba23cf235575db2486050ddfb4601c2",
+    "bytes": 3427
+   },
+   "store/exp_b_resource_misreport_fltrust/seed1/config_resolved.yaml": {
+    "sha256": "b346d85ce63029877bd5371fb68d22ae6218836229183bedeaf1f9dc9577213b",
+    "bytes": 2199
+   },
+   "store/exp_b_resource_misreport_fltrust/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_b_resource_misreport_fltrust/seed1/metrics.jsonl": {
+    "sha256": "100c8b76f09bfb746318259c02e232c55087ebb07b90ba9f2e041f343dddf226",
+    "bytes": 87711
+   },
+   "store/exp_b_resource_misreport_fltrust/seed1/run_meta.json": {
+    "sha256": "9175d352e3e43db25e468b1c6f5d6b44cc034c1f42aef8b03d641ea4a01cc8f6",
+    "bytes": 3427
+   },
+   "store/exp_b_resource_misreport_fltrust/seed2/config_resolved.yaml": {
+    "sha256": "f4494a0854a121e92e5396c4ebce11caecacc6eeb3c0d719cfa6a54d3e479464",
+    "bytes": 2199
+   },
+   "store/exp_b_resource_misreport_fltrust/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_b_resource_misreport_fltrust/seed2/metrics.jsonl": {
+    "sha256": "bf364ff28daad160d3ce5a5015756ee92bc2b57e39d87f7605dec84c74d88135",
+    "bytes": 87912
+   },
+   "store/exp_b_resource_misreport_fltrust/seed2/run_meta.json": {
+    "sha256": "6bc66f6ffe5be7cd2486975609270045cc7b75d7b411b3d8963a77d076b54415",
+    "bytes": 3427
+   },
+   "store/exp_b_resource_misreport_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "e2c43e4b3f21d7940d9ae24eab1420d086a7ad0f5b0a28420633472b057cf939",
+    "bytes": 2199
+   },
+   "store/exp_b_resource_misreport_trustfl/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_b_resource_misreport_trustfl/seed0/metrics.jsonl": {
+    "sha256": "b191381c58027e7dc336003ccb440dac2a8ca7e4bafebfe32592654f30578510",
+    "bytes": 89244
+   },
+   "store/exp_b_resource_misreport_trustfl/seed0/run_meta.json": {
+    "sha256": "70dfd0f8db79e06787e3b850c6860bb740d2e0433a209faa02cd7e0197e42f77",
+    "bytes": 3427
+   },
+   "store/exp_b_resource_misreport_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "e10d2a08df4c769aee9bb748ecdd65e3097691bf6b57df4b3eef2e4980bebe1b",
+    "bytes": 2199
+   },
+   "store/exp_b_resource_misreport_trustfl/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_b_resource_misreport_trustfl/seed1/metrics.jsonl": {
+    "sha256": "a98fc7765657fabbfe35474cf2f7e9708852a8b83b4554aecd2170fc3211b11b",
+    "bytes": 89171
+   },
+   "store/exp_b_resource_misreport_trustfl/seed1/run_meta.json": {
+    "sha256": "5c6ef7e348032285fe81259678e60f2323b4503d732ce75250392e7d6e4d859e",
+    "bytes": 3427
+   },
+   "store/exp_b_resource_misreport_trustfl/seed2/config_resolved.yaml": {
+    "sha256": "2b7e26389a04b9702fd4214331760b24a44c9fa00ff98af33c84b95671f114e2",
+    "bytes": 2199
+   },
+   "store/exp_b_resource_misreport_trustfl/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_b_resource_misreport_trustfl/seed2/metrics.jsonl": {
+    "sha256": "b79894342c3d14a5fea9fc2f7d6064dabf99e4b36d2f067fcdc602ee279e62e5",
+    "bytes": 89148
+   },
+   "store/exp_b_resource_misreport_trustfl/seed2/run_meta.json": {
+    "sha256": "8bd99a862266efdea3d13188d680a1a52bff44fbd6fa270ff2681a891a08905f",
+    "bytes": 3427
+   },
+   "store/exp_b_selective_participation_fedavg/seed0/config_resolved.yaml": {
+    "sha256": "e60ae8d5c1d3b7c698759cce9fe1cf0beb98337cd7c174d0f1880845dcd14c1e",
+    "bytes": 2207
+   },
+   "store/exp_b_selective_participation_fedavg/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_b_selective_participation_fedavg/seed0/metrics.jsonl": {
+    "sha256": "c184945e15cad0240f3fbcf659eacf92272a05be8c7be672705e175c1d05f0d1",
+    "bytes": 82066
+   },
+   "store/exp_b_selective_participation_fedavg/seed0/run_meta.json": {
+    "sha256": "0739ddd397b5175499b7cc245b41fd18789a70a641674c29937e32bc1ac1d2ef",
+    "bytes": 3435
+   },
+   "store/exp_b_selective_participation_fedavg/seed1/config_resolved.yaml": {
+    "sha256": "e4522484623d325c4cb92bff50b9046d86e408e4a7ae917df86c7a3531a386c6",
+    "bytes": 2207
+   },
+   "store/exp_b_selective_participation_fedavg/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_b_selective_participation_fedavg/seed1/metrics.jsonl": {
+    "sha256": "ad9e6bb2ccd7bd14b54d1db879e496b8729a46bbc3f798d3e74a1b49fe54612e",
+    "bytes": 80699
+   },
+   "store/exp_b_selective_participation_fedavg/seed1/run_meta.json": {
+    "sha256": "3942ff555361a8d0d2c8a4858ecde7ac2a5ff2fc6bb76de3d2cff6aa9c93ae04",
+    "bytes": 3435
+   },
+   "store/exp_b_selective_participation_fedavg/seed2/config_resolved.yaml": {
+    "sha256": "f791c5cb0075ea222d0d8971dcc76ddff57152665f3c87566c016617a64eb0ff",
+    "bytes": 2207
+   },
+   "store/exp_b_selective_participation_fedavg/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_b_selective_participation_fedavg/seed2/metrics.jsonl": {
+    "sha256": "39916c0de299d6a9f8ea788df5580903893dd3cb36e92ca0d843eea5772ad6d3",
+    "bytes": 82255
+   },
+   "store/exp_b_selective_participation_fedavg/seed2/run_meta.json": {
+    "sha256": "90afe8c2fc3285776c5a78595e0931588250bde0631c0b80142ae1ad10d3d810",
+    "bytes": 3435
+   },
+   "store/exp_b_selective_participation_fedgreed/seed0/config_resolved.yaml": {
+    "sha256": "77d894b4f39edf6829567164307a574bb6138f980e53428fe62e89dbe717ff68",
+    "bytes": 2211
+   },
+   "store/exp_b_selective_participation_fedgreed/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_b_selective_participation_fedgreed/seed0/metrics.jsonl": {
+    "sha256": "0195e69a5b342dfda7adfe52615d642bf50f81b52fcfccfb748990560b19b637",
+    "bytes": 72519
+   },
+   "store/exp_b_selective_participation_fedgreed/seed0/run_meta.json": {
+    "sha256": "5b66f8f3bbfa9d6f2e780e346df6e3a1904df8fc5c62be8cc23ee8263fa83556",
+    "bytes": 3439
+   },
+   "store/exp_b_selective_participation_fedgreed/seed1/config_resolved.yaml": {
+    "sha256": "a44cc1345e29bb6c4cfc14c7ffa88953078fa76288e5c08430421370e7f63ab8",
+    "bytes": 2211
+   },
+   "store/exp_b_selective_participation_fedgreed/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_b_selective_participation_fedgreed/seed1/metrics.jsonl": {
+    "sha256": "f287878732149ba71801928b93833e19c965ec7787f563f3e697f6d208679e2c",
+    "bytes": 72023
+   },
+   "store/exp_b_selective_participation_fedgreed/seed1/run_meta.json": {
+    "sha256": "e5fb7b056a4415b9f7767457f47d1dd4bb13ce99fc3b9cebca9ac75a5863734b",
+    "bytes": 3439
+   },
+   "store/exp_b_selective_participation_fedgreed/seed2/config_resolved.yaml": {
+    "sha256": "067b6382b02afd88f5853ac668df77764527afea48932c39f8dac62738a994ff",
+    "bytes": 2211
+   },
+   "store/exp_b_selective_participation_fedgreed/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_b_selective_participation_fedgreed/seed2/metrics.jsonl": {
+    "sha256": "b38bf389911f3f5288f1e921e2ad028d9c5eeac1044b64db09541af6f90fe3e1",
+    "bytes": 72785
+   },
+   "store/exp_b_selective_participation_fedgreed/seed2/run_meta.json": {
+    "sha256": "d3c5dacb345c3f0647f4522e78b05177807c38ec52dab50daa687adc9c9efd65",
+    "bytes": 3439
+   },
+   "store/exp_b_selective_participation_fltrust/seed0/config_resolved.yaml": {
+    "sha256": "1df8145e091ac905060cf4aedf6424cd9931df6167a660c077569698602e7770",
+    "bytes": 2209
+   },
+   "store/exp_b_selective_participation_fltrust/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_b_selective_participation_fltrust/seed0/metrics.jsonl": {
+    "sha256": "3efbcfba44150aa7204cc5130d7f51bc647f504f6c6b2da8c11e7881ff67a70e",
+    "bytes": 80840
+   },
+   "store/exp_b_selective_participation_fltrust/seed0/run_meta.json": {
+    "sha256": "d1c7d0ae027989fc692bba4864b155fba048bf76232eb86a4c828d9d66628e9d",
+    "bytes": 3437
+   },
+   "store/exp_b_selective_participation_fltrust/seed1/config_resolved.yaml": {
+    "sha256": "da6bfc4da89822697ce0aa8661eff271f8da733dbb4be30b68aa5561a5688593",
+    "bytes": 2209
+   },
+   "store/exp_b_selective_participation_fltrust/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_b_selective_participation_fltrust/seed1/metrics.jsonl": {
+    "sha256": "8a93e2834120012f7a41c7edd3911d11abb4162e6da54c77cf6a605c7e56005a",
+    "bytes": 79615
+   },
+   "store/exp_b_selective_participation_fltrust/seed1/run_meta.json": {
+    "sha256": "429ab724b5fc99c18a1ffbc9f57fbce7d88207f2dfcc9828c3b30db63b734f42",
+    "bytes": 3437
+   },
+   "store/exp_b_selective_participation_fltrust/seed2/config_resolved.yaml": {
+    "sha256": "d9bc68da22c3e03597e6a1724be0dee2fff1127d0ec19f0fc0228ba75cdf8d50",
+    "bytes": 2209
+   },
+   "store/exp_b_selective_participation_fltrust/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_b_selective_participation_fltrust/seed2/metrics.jsonl": {
+    "sha256": "c456b0956aa0b465007fa0e6488c77a64ff152d6c09de2ca8505528a0ba4497a",
+    "bytes": 81043
+   },
+   "store/exp_b_selective_participation_fltrust/seed2/run_meta.json": {
+    "sha256": "3b4b4c6f07e842aba25cd5fa73b4942087db610b412654ec3085ead2b22e5409",
+    "bytes": 3437
+   },
+   "store/exp_b_selective_participation_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "1393ab31db24ba598384c8b1d5c332274f3bb1da8e96ebc78722793286124a59",
+    "bytes": 2209
+   },
+   "store/exp_b_selective_participation_trustfl/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_b_selective_participation_trustfl/seed0/metrics.jsonl": {
+    "sha256": "93f9c7e2ea43bc9a8dd5b2f3925dd02146d2c8b51a4bdde618b10a2a37a0f4ae",
+    "bytes": 88517
+   },
+   "store/exp_b_selective_participation_trustfl/seed0/run_meta.json": {
+    "sha256": "cf8c296c8470d6327f9013a688e9111c3c7d92b661c537a111d957365f126df2",
+    "bytes": 3437
+   },
+   "store/exp_b_selective_participation_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "ad24524ae9e94f5a28ff6a64481c8eeae55a4459e3789de9ca512a9f133cd9ec",
+    "bytes": 2209
+   },
+   "store/exp_b_selective_participation_trustfl/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_b_selective_participation_trustfl/seed1/metrics.jsonl": {
+    "sha256": "44878f0f8c27d8dd062a23b92b097934c311d0f53f27bbaa64f713a346317212",
+    "bytes": 88051
+   },
+   "store/exp_b_selective_participation_trustfl/seed1/run_meta.json": {
+    "sha256": "7d6bb5277b53311b71311d814af9c70a6d14f090ab7f7142e74b535d9af35c26",
+    "bytes": 3437
+   },
+   "store/exp_b_selective_participation_trustfl/seed2/config_resolved.yaml": {
+    "sha256": "5f7b7bab743d7f6cafa4a4a503be0c928c2af814529b70b66f220ff76682193b",
+    "bytes": 2209
+   },
+   "store/exp_b_selective_participation_trustfl/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_b_selective_participation_trustfl/seed2/metrics.jsonl": {
+    "sha256": "923593d942d2b5d44a542ff22d46ec4e2542d186fa2cfcb698bf0492857f07c0",
+    "bytes": 88083
+   },
+   "store/exp_b_selective_participation_trustfl/seed2/run_meta.json": {
+    "sha256": "743a9c1a2bc586df7abd797da85fe62663dae55f8d0edf2a5a0a54c1017dd781",
+    "bytes": 3437
+   },
+   "store/exp_c_ablate_nogate/seed0/config_resolved.yaml": {
+    "sha256": "25b07e711b7552515035df5687012a3517dafc4a868624d5767129acb9d7012b",
+    "bytes": 2056
+   },
+   "store/exp_c_ablate_nogate/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_c_ablate_nogate/seed0/metrics.jsonl": {
+    "sha256": "71c5f9a5ea1955d9169df846df336751f64c6a48563f59d55ff276797051101c",
+    "bytes": 53359
+   },
+   "store/exp_c_ablate_nogate/seed0/run_meta.json": {
+    "sha256": "673e66638e955029d08281afbf674e9f9d97f3a301573f0400549f8d82485b5c",
+    "bytes": 3236
+   },
+   "store/exp_c_ablate_nogate/seed1/config_resolved.yaml": {
+    "sha256": "ce517236a2ffec995840cd7f40ff95916634f579b0758214a21d0fe8b3fa988e",
+    "bytes": 2056
+   },
+   "store/exp_c_ablate_nogate/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_c_ablate_nogate/seed1/metrics.jsonl": {
+    "sha256": "30a4176eadbd8f15797d7ae10aa3cca4a1716613cbc0b66aecac708705153621",
+    "bytes": 88928
+   },
+   "store/exp_c_ablate_nogate/seed1/run_meta.json": {
+    "sha256": "f445cd688ba81144a3a153982151e2d0ff50d6ce1b9bb8d1bd821df5bea56313",
+    "bytes": 3236
+   },
+   "store/exp_c_ablate_nogate/seed2/config_resolved.yaml": {
+    "sha256": "a5723620e16cf9c3fa295c8b43fa796908c7ee3f6c20a4bc3ce92bbc67612de7",
+    "bytes": 2056
+   },
+   "store/exp_c_ablate_nogate/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_c_ablate_nogate/seed2/metrics.jsonl": {
+    "sha256": "6f06724ef28db0eb56a8d18c48c09c4a197d3b74d78e139934eef661ab204ca3",
+    "bytes": 89171
+   },
+   "store/exp_c_ablate_nogate/seed2/run_meta.json": {
+    "sha256": "d6983899ad95af420cae4cea6c79a2d6f1976114513835283e7c28842b8cd064",
+    "bytes": 3236
+   },
+   "store/exp_c_ablate_symewma/seed0/config_resolved.yaml": {
+    "sha256": "f9aaf4d85b442020fa03947b262de45dde114f8f468671b10ab457bb959440b4",
+    "bytes": 2031
+   },
+   "store/exp_c_ablate_symewma/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_c_ablate_symewma/seed0/metrics.jsonl": {
+    "sha256": "48b652cdc17c67d545e95e4abf9e8ddb8f6345c0ce95460ddf2555d1891f1419",
+    "bytes": 89413
+   },
+   "store/exp_c_ablate_symewma/seed0/run_meta.json": {
+    "sha256": "2b170724f9bb02d7979a7997501c3c137cfb9be4a4e9459e2bdb94ebbb160efa",
+    "bytes": 3204
+   },
+   "store/exp_c_ablate_symewma/seed1/config_resolved.yaml": {
+    "sha256": "638f77d8ce39272b52f1edb01e75cede0472a503d640d79f54148eeb43ffc7af",
+    "bytes": 2031
+   },
+   "store/exp_c_ablate_symewma/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_c_ablate_symewma/seed1/metrics.jsonl": {
+    "sha256": "1d967887da1b43d2c38e73b6a11460905c7bccb31a93586611453fe015ca0711",
+    "bytes": 88812
+   },
+   "store/exp_c_ablate_symewma/seed1/run_meta.json": {
+    "sha256": "978221b43891e42c2d8286790c056fc630cbe479281ddf40995e0ffb42ae4c26",
+    "bytes": 3204
+   },
+   "store/exp_c_ablate_symewma/seed2/config_resolved.yaml": {
+    "sha256": "d650a904384f97ae6fad4adbcb1714fe30601f74d1739dec791e11d7b3092dac",
+    "bytes": 2031
+   },
+   "store/exp_c_ablate_symewma/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_c_ablate_symewma/seed2/metrics.jsonl": {
+    "sha256": "36a39819763c27006a63e788c86a98593b1605ecc9c3eed856941d14be6d371c",
+    "bytes": 89430
+   },
+   "store/exp_c_ablate_symewma/seed2/run_meta.json": {
+    "sha256": "06474eba08501e7fa2b70fac6633f74467543bc1696b31f34f4101f01dc80244",
+    "bytes": 3204
+   },
+   "store/exp_c_adaptive_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "5c25fa909ec2fd1a13c04fa5ddc0f41f7629c3e32ded9827e3620c3a8fa184a4",
+    "bytes": 2058
+   },
+   "store/exp_c_adaptive_trustfl/seed0/groups.json": {
+    "sha256": "7b6f3d51d4c79bfafc77ceebf4feefc754cc177d3c15e48d64331f94e2098ff9",
+    "bytes": 128
+   },
+   "store/exp_c_adaptive_trustfl/seed0/metrics.jsonl": {
+    "sha256": "7e30e708c89b781be5c17c6f6a07381f25babfba43233cce14fc7e00c6067740",
+    "bytes": 89194
+   },
+   "store/exp_c_adaptive_trustfl/seed0/run_meta.json": {
+    "sha256": "550e624b2eb9e2fbfca7d4ef6cc2cba52db41774e1e5acd2fe022d67958ef566",
+    "bytes": 3238
+   },
+   "store/exp_c_adaptive_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "786e75c9d38024320a301781fd5086adab33ffd4a92f72c281733cbccd2cfeae",
+    "bytes": 2058
+   },
+   "store/exp_c_adaptive_trustfl/seed1/groups.json": {
+    "sha256": "e31f0421c8b34aa7e15bcd73f78585f083a0fd357e8bd6e363e675ae4ea0fab5",
+    "bytes": 127
+   },
+   "store/exp_c_adaptive_trustfl/seed1/metrics.jsonl": {
+    "sha256": "b963c7fee739820c41186eb8533c29889a277d6dd6a99eaf8c1e667a967584f6",
+    "bytes": 88959
+   },
+   "store/exp_c_adaptive_trustfl/seed1/run_meta.json": {
+    "sha256": "12db4c01ddba02f6debda8e91b6decf5137ef27b3129bfbb79844567291ed0e9",
+    "bytes": 3238
+   },
+   "store/exp_c_adaptive_trustfl/seed2/config_resolved.yaml": {
+    "sha256": "a23d95d36ae528968408821ffb767eb4c5ef7a2d7f41f3c399f705f80a15ca2a",
+    "bytes": 2058
+   },
+   "store/exp_c_adaptive_trustfl/seed2/groups.json": {
+    "sha256": "17f7f48037a7dbc22a8b4205f78a3a643bad377c74a3527d09cec67a4319069f",
+    "bytes": 127
+   },
+   "store/exp_c_adaptive_trustfl/seed2/metrics.jsonl": {
+    "sha256": "9d5b8dbca833a07a3888c5cb9f7f4a78a0f73e03b0fde61eb400d6c56fd87354",
+    "bytes": 89209
+   },
+   "store/exp_c_adaptive_trustfl/seed2/run_meta.json": {
+    "sha256": "64c39f8a295a0cd4a866bc7b9d471d155dd577899df9de78888fa29210660d2f",
+    "bytes": 3238
+   },
+   "store/exp_h_adsys_fedaa/seed0/config_resolved.yaml": {
+    "sha256": "479cb6ef3c3aee2f79fb1b8a09ce359c93e56b89b4d62b70091ba6b3b5a903bb",
+    "bytes": 2179
+   },
+   "store/exp_h_adsys_fedaa/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_fedaa/seed0/metrics.jsonl": {
+    "sha256": "0fcb0092bdb9bd5306cba890cd8e404d38aa07f1fea3cf219de4763d1b0d5a31",
+    "bytes": 77788
+   },
+   "store/exp_h_adsys_fedaa/seed0/run_meta.json": {
+    "sha256": "09957c156b7b8f91dfad3747cbb4b398ae96ed6c7597a1d3b6f414522c4e0a93",
+    "bytes": 3407
+   },
+   "store/exp_h_adsys_fedaa/seed1/config_resolved.yaml": {
+    "sha256": "7e1a04820d6cee0e1c58259526bea544516a73c1c00fb80e686058e1ebfd3fed",
+    "bytes": 2179
+   },
+   "store/exp_h_adsys_fedaa/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/exp_h_adsys_fedaa/seed1/metrics.jsonl": {
+    "sha256": "bea143bef87a73dcb91c697f4c735571d8927a51d939d366ccc610e573b0e705",
+    "bytes": 73288
+   },
+   "store/exp_h_adsys_fedaa/seed1/run_meta.json": {
+    "sha256": "42537c08b14ac9484de81a971e4d7fd5d5c20ac9e32e79fd7dbd825a9841ae3d",
+    "bytes": 3407
+   },
+   "store/exp_h_adsys_fedaa/seed2/config_resolved.yaml": {
+    "sha256": "7b7b062449a119c6c47e67d70ed3e801fdcfe9186818449eae70caef2a057e1f",
+    "bytes": 2179
+   },
+   "store/exp_h_adsys_fedaa/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/exp_h_adsys_fedaa/seed2/metrics.jsonl": {
+    "sha256": "cdd9af83a21c5d147c925857aa34f9c581d87175a7e9ebd51a2f18a2f2af92b4",
+    "bytes": 77881
+   },
+   "store/exp_h_adsys_fedaa/seed2/run_meta.json": {
+    "sha256": "00c65ff5d2ef5f698e7dc95ee030b129ee92db64b6358527ebde99eed29251ba",
+    "bytes": 3407
+   },
+   "store/exp_h_adsys_fedaa/seed3/config_resolved.yaml": {
+    "sha256": "71c2dadbc052913317eca5a300446ea294c2a0d167fdf8f5e891c656a2930f7f",
+    "bytes": 2179
+   },
+   "store/exp_h_adsys_fedaa/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_fedaa/seed3/metrics.jsonl": {
+    "sha256": "d6da790b8afd9b70dd1e4fa8c99ea0b32b10ce3b221353934209fbc04748e719",
+    "bytes": 66339
+   },
+   "store/exp_h_adsys_fedaa/seed3/run_meta.json": {
+    "sha256": "0b0c68fd7dad148e23f9c4d7625eb9852eccd9a94905f720574d6be862b0dbf9",
+    "bytes": 3407
+   },
+   "store/exp_h_adsys_fedaa/seed4/config_resolved.yaml": {
+    "sha256": "03c73a55b75fd4cfc78c96878baa2430984cfcb42a4377dc1b2e897c757826e9",
+    "bytes": 2179
+   },
+   "store/exp_h_adsys_fedaa/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/exp_h_adsys_fedaa/seed4/metrics.jsonl": {
+    "sha256": "ff43d68df934064ba14498accf659ea9f77e9725c6eee4c57d9dbc7517337790",
+    "bytes": 78556
+   },
+   "store/exp_h_adsys_fedaa/seed4/run_meta.json": {
+    "sha256": "cf3efadf78521039f72a04b6d521f9a176a2134c692f4031165ea08a4cbd8223",
+    "bytes": 3407
+   },
+   "store/exp_h_adsys_fedavg/seed0/config_resolved.yaml": {
+    "sha256": "41bb84fff3c2ec550a41cb0ea3d901f091881dfe002b303e45b099489e5802d9",
+    "bytes": 2158
+   },
+   "store/exp_h_adsys_fedavg/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_fedavg/seed0/metrics.jsonl": {
+    "sha256": "a46dfc9b63db80223b77a75fa4d5b5d8172468c0bdecd7b6f2512c40e3806cdc",
+    "bytes": 80978
+   },
+   "store/exp_h_adsys_fedavg/seed0/run_meta.json": {
+    "sha256": "f291d63b3704f706ddd27132180117e2076398f3826d615e0976fffcc5de9080",
+    "bytes": 3376
+   },
+   "store/exp_h_adsys_fedavg/seed1/config_resolved.yaml": {
+    "sha256": "7b6b7f6cab9b231017eea6f5708924610654acdfe7407d9876273354c777ddab",
+    "bytes": 2158
+   },
+   "store/exp_h_adsys_fedavg/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/exp_h_adsys_fedavg/seed1/metrics.jsonl": {
+    "sha256": "c2c0ac87acf0663248c996752b4df232c39c9d039e8df86e8ec145378985da0f",
+    "bytes": 77184
+   },
+   "store/exp_h_adsys_fedavg/seed1/run_meta.json": {
+    "sha256": "11937d4467df7b16805559d1f7e2b3162539235d643d4248c1af860c29f46b05",
+    "bytes": 3376
+   },
+   "store/exp_h_adsys_fedavg/seed2/config_resolved.yaml": {
+    "sha256": "71f87e0a23acb43d24a0e2594fb0f6c822b92c228c8c70193a1f857d8b21d756",
+    "bytes": 2158
+   },
+   "store/exp_h_adsys_fedavg/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/exp_h_adsys_fedavg/seed2/metrics.jsonl": {
+    "sha256": "8ecbbf43d55053534e4d890d0d6376eeeb690dc98a77b03dd4ba91c20ba3c267",
+    "bytes": 78928
+   },
+   "store/exp_h_adsys_fedavg/seed2/run_meta.json": {
+    "sha256": "4e136ccb60acf11b1392d66dbe0fe85ad567e8de12e465e67b1bfe8faa2184b2",
+    "bytes": 3376
+   },
+   "store/exp_h_adsys_fedavg/seed3/config_resolved.yaml": {
+    "sha256": "af3b90060accd36685db2fd2495a86e08c0007725cbfe7e5eb2f02e01388b47e",
+    "bytes": 2158
+   },
+   "store/exp_h_adsys_fedavg/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_fedavg/seed3/metrics.jsonl": {
+    "sha256": "32192cec8602910b62a9df57cdf69e184ab9bd1ea303b1df7e4238c73b81713f",
+    "bytes": 69209
+   },
+   "store/exp_h_adsys_fedavg/seed3/run_meta.json": {
+    "sha256": "05c432ce21d868024a861b57c4382cc30cffd8c9b52361312e23a8673c71bca9",
+    "bytes": 3376
+   },
+   "store/exp_h_adsys_fedavg/seed4/config_resolved.yaml": {
+    "sha256": "b76c3c87123ad4192da3172946a75f662f900d1000e53323aac3723f3f952ab4",
+    "bytes": 2158
+   },
+   "store/exp_h_adsys_fedavg/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/exp_h_adsys_fedavg/seed4/metrics.jsonl": {
+    "sha256": "95591eba54f4586f116b1435b590a0a261f0eddf598280e6c46c978d928beec8",
+    "bytes": 76446
+   },
+   "store/exp_h_adsys_fedavg/seed4/run_meta.json": {
+    "sha256": "ca6c4a28c0908aba96d582ff94a80dcd613c5f82c2f55391e5e635e5e7add411",
+    "bytes": 3376
+   },
+   "store/exp_h_adsys_fedgreed/seed0/config_resolved.yaml": {
+    "sha256": "af1936bac3dcdbdbf6ba5fc1476090e4b7100ce70b17dfe3f9992c71d4d1e46a",
+    "bytes": 2162
+   },
+   "store/exp_h_adsys_fedgreed/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_fedgreed/seed0/metrics.jsonl": {
+    "sha256": "5ebd3318c8353ee31f8c5b60917982876d432d805734f4ec10e68aefbcdc92da",
+    "bytes": 71933
+   },
+   "store/exp_h_adsys_fedgreed/seed0/run_meta.json": {
+    "sha256": "a667a06afbab461570ccada366b6702ae61cc86d74f4d0896e5058e5dfc98377",
+    "bytes": 3380
+   },
+   "store/exp_h_adsys_fedgreed/seed1/config_resolved.yaml": {
+    "sha256": "4b8c493f28deba4ef4914b0d97541371f9da06abf62ba86db0619d1701bcc43a",
+    "bytes": 2162
+   },
+   "store/exp_h_adsys_fedgreed/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/exp_h_adsys_fedgreed/seed1/metrics.jsonl": {
+    "sha256": "b22bdfbf96165e91e17e03520d0fe4402e1dec088f457bc1ada903f910d26dad",
+    "bytes": 69982
+   },
+   "store/exp_h_adsys_fedgreed/seed1/run_meta.json": {
+    "sha256": "749ad7e2e7bde16cbee197ad167300587b0cffef1fdf088b125788691bdc2194",
+    "bytes": 3380
+   },
+   "store/exp_h_adsys_fedgreed/seed2/config_resolved.yaml": {
+    "sha256": "c7581b7201eef69ba26fe235d8deb671cf72ec281abfdc2d4dd0032816209a7d",
+    "bytes": 2162
+   },
+   "store/exp_h_adsys_fedgreed/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/exp_h_adsys_fedgreed/seed2/metrics.jsonl": {
+    "sha256": "b04e2ba6a34c013987794bead7946b59c816ccb9a91ddd3f04bee7a16bdf2849",
+    "bytes": 71197
+   },
+   "store/exp_h_adsys_fedgreed/seed2/run_meta.json": {
+    "sha256": "6109d06d43a0ab5948f5c9d77c88e8d982a601f8cff098b316bb9d1e488d326e",
+    "bytes": 3380
+   },
+   "store/exp_h_adsys_fedgreed/seed3/config_resolved.yaml": {
+    "sha256": "e93e8e95277984a9a5a38ca1b59017b1b5e626582a4cfc9112a12eed0afebd88",
+    "bytes": 2162
+   },
+   "store/exp_h_adsys_fedgreed/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_fedgreed/seed3/metrics.jsonl": {
+    "sha256": "5cf370b0d07477f38e3b52789c736258bf6b74a6d363b46c0a35883109fb198b",
+    "bytes": 65291
+   },
+   "store/exp_h_adsys_fedgreed/seed3/run_meta.json": {
+    "sha256": "e0a9b14756ec42bcb7e4d3b0d455e6f5b0a154b7f36ddcab0eb5e8845b3ee7b6",
+    "bytes": 3380
+   },
+   "store/exp_h_adsys_fedgreed/seed4/config_resolved.yaml": {
+    "sha256": "e3e23ef17e88b54680fd4b024fcf8ce7ca39c36989110dde23814f7030a24a1f",
+    "bytes": 2162
+   },
+   "store/exp_h_adsys_fedgreed/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/exp_h_adsys_fedgreed/seed4/metrics.jsonl": {
+    "sha256": "cfc77936f15622f2b5aad05bbe307872dbe59429f6d43463303f48a78aafd8e6",
+    "bytes": 72528
+   },
+   "store/exp_h_adsys_fedgreed/seed4/run_meta.json": {
+    "sha256": "00753e2895e1d938f61d3ffd3e7dd4b6d83aaa826834db8c6fd9321be88b2966",
+    "bytes": 3380
+   },
+   "store/exp_h_adsys_fltrust/seed0/config_resolved.yaml": {
+    "sha256": "86a9dc4b528dd282d9017e382fba9c909a163238f7b343bfbf1c10d8854cc7d9",
+    "bytes": 2160
+   },
+   "store/exp_h_adsys_fltrust/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_fltrust/seed0/metrics.jsonl": {
+    "sha256": "3d54b0f66aefe699fa60661a5efd6a87ea71a7f6ac0182261fa8aa100c5b84f3",
+    "bytes": 75798
+   },
+   "store/exp_h_adsys_fltrust/seed0/run_meta.json": {
+    "sha256": "dd249247ffeb3291766b325f8d02298b5e0e203a278d6b4909fe397f55f285a9",
+    "bytes": 3378
+   },
+   "store/exp_h_adsys_fltrust/seed1/config_resolved.yaml": {
+    "sha256": "6fc25a9da0a62113d1b839b97fe50dba3a80579703967daa2ce7e9678fd73d63",
+    "bytes": 2160
+   },
+   "store/exp_h_adsys_fltrust/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/exp_h_adsys_fltrust/seed1/metrics.jsonl": {
+    "sha256": "1f64867d90c4d1b7bd43cbfefff020241b58c22761c5e7686a4311a109010884",
+    "bytes": 75586
+   },
+   "store/exp_h_adsys_fltrust/seed1/run_meta.json": {
+    "sha256": "66b48c31da4c011bbdc95ad5ac8558cdf3edc16a1af243451b2c1c5a40552198",
+    "bytes": 3378
+   },
+   "store/exp_h_adsys_fltrust/seed2/config_resolved.yaml": {
+    "sha256": "afc157f5cdb5f1b159c63c76e6fbf5bfc71a0f61101f82a20f394dabdd49c518",
+    "bytes": 2160
+   },
+   "store/exp_h_adsys_fltrust/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/exp_h_adsys_fltrust/seed2/metrics.jsonl": {
+    "sha256": "d01881594d1f699ed91d73664859cf19598b9c6556fce6027e9ef25cfac96552",
+    "bytes": 78816
+   },
+   "store/exp_h_adsys_fltrust/seed2/run_meta.json": {
+    "sha256": "817c26ba4864a645b5c1601fdd411f7ad5aea9c6dfb1f7ea17f00891b5787049",
+    "bytes": 3378
+   },
+   "store/exp_h_adsys_fltrust/seed3/config_resolved.yaml": {
+    "sha256": "cb5f1f21a437b344cca812e120478ae15f8678a9affac3d83c490fd7105625bc",
+    "bytes": 2160
+   },
+   "store/exp_h_adsys_fltrust/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_fltrust/seed3/metrics.jsonl": {
+    "sha256": "bae72122c6be0d04433e13daea5bd6fc2ea1fc16ef235ce7865d13642b391d6d",
+    "bytes": 69504
+   },
+   "store/exp_h_adsys_fltrust/seed3/run_meta.json": {
+    "sha256": "cf941d8ee9317812174617444ef0370c05813ae231ce58edd929e1f5eb9e7777",
+    "bytes": 3378
+   },
+   "store/exp_h_adsys_fltrust/seed4/config_resolved.yaml": {
+    "sha256": "c66a633d9ca299954d7580239c814beb4ad795bc2ad6dab170759ff84deb8d4b",
+    "bytes": 2160
+   },
+   "store/exp_h_adsys_fltrust/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/exp_h_adsys_fltrust/seed4/metrics.jsonl": {
+    "sha256": "66fad4e139ea458d399d7e1d1c032e7fa1165a35f88b100fad85bc596ac5e7b5",
+    "bytes": 76083
+   },
+   "store/exp_h_adsys_fltrust/seed4/run_meta.json": {
+    "sha256": "22ad6dfa3a8849c6f8c74c41c68a94b65115ee097fda8a6ce81a8f0103c8dd0f",
+    "bytes": 3378
+   },
+   "store/exp_h_adsys_multikrum/seed0/config_resolved.yaml": {
+    "sha256": "34ebc0e2fbcf1ce4121b332348bcbb323110bd8de1176ee73246031a2da7b99a",
+    "bytes": 2164
+   },
+   "store/exp_h_adsys_multikrum/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_multikrum/seed0/metrics.jsonl": {
+    "sha256": "b4cafd1ceeb7e5ed28f43c47a54a753725fab965e4498a53fc79b0578ee079b7",
+    "bytes": 80525
+   },
+   "store/exp_h_adsys_multikrum/seed0/run_meta.json": {
+    "sha256": "3f9f6c609babe1cb98191589e02be795113c06eb902dc71f8672998323f94ee2",
+    "bytes": 3382
+   },
+   "store/exp_h_adsys_multikrum/seed1/config_resolved.yaml": {
+    "sha256": "74633e24cb7d111c4cf64f33f18c81e65dd92d1572f292e22827ddf604c972d6",
+    "bytes": 2164
+   },
+   "store/exp_h_adsys_multikrum/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/exp_h_adsys_multikrum/seed1/metrics.jsonl": {
+    "sha256": "96112844fc8d50594ddd5ff52f783625958331b4dea467338980ea6d8c8e523c",
+    "bytes": 83210
+   },
+   "store/exp_h_adsys_multikrum/seed1/run_meta.json": {
+    "sha256": "1a80f1fca3ada1d0be850ab55d76b225409d4401d7bd9af8dee92318530b00a1",
+    "bytes": 3382
+   },
+   "store/exp_h_adsys_multikrum/seed2/config_resolved.yaml": {
+    "sha256": "93b26dfc37eacf4b4a6172dcc998d37a27762b656aea50d6d8fbd94c72f01f04",
+    "bytes": 2164
+   },
+   "store/exp_h_adsys_multikrum/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/exp_h_adsys_multikrum/seed2/metrics.jsonl": {
+    "sha256": "6a9ba38eed71d90d08af27bf3138319b99c93a35e196ff611a859ac5dd4d6d0b",
+    "bytes": 86083
+   },
+   "store/exp_h_adsys_multikrum/seed2/run_meta.json": {
+    "sha256": "b872fc431e618000b7dcf281808efcb25521c7dd19e7b400d735f71445eab5b6",
+    "bytes": 3382
+   },
+   "store/exp_h_adsys_multikrum/seed3/config_resolved.yaml": {
+    "sha256": "24cd0ed5a8ef6dbf717e45be9a44791ecb2037ca401381c66ce9be1aeedec363",
+    "bytes": 2164
+   },
+   "store/exp_h_adsys_multikrum/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_multikrum/seed3/metrics.jsonl": {
+    "sha256": "06858cd29eded1fc1d2358c1bf4514fd329d4adec45d43e81faec36e598f99f1",
+    "bytes": 71828
+   },
+   "store/exp_h_adsys_multikrum/seed3/run_meta.json": {
+    "sha256": "6c93eedc4a7b34f8f146099e34e07966bb459385f7ddcc999888d1c6bc388739",
+    "bytes": 3382
+   },
+   "store/exp_h_adsys_multikrum/seed4/config_resolved.yaml": {
+    "sha256": "65d134a0b9f509f0d3cf8bb141ee29a1803624ec52e01339a93d7446f8da05d0",
+    "bytes": 2164
+   },
+   "store/exp_h_adsys_multikrum/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/exp_h_adsys_multikrum/seed4/metrics.jsonl": {
+    "sha256": "0f87e20524f4934beef912db051709d90421c8e4b74241c4904fe1671a7eb296",
+    "bytes": 82205
+   },
+   "store/exp_h_adsys_multikrum/seed4/run_meta.json": {
+    "sha256": "4da9db9bd94a835c4d98a8416f21b22194edac85502634cb8bf4e6adf63fce56",
+    "bytes": 3382
+   },
+   "store/exp_h_adsys_sophon/seed0/config_resolved.yaml": {
+    "sha256": "07a1248404e3fcbb84715e10097de167c93cb42120861af7522d597bdeca77d8",
+    "bytes": 2181
+   },
+   "store/exp_h_adsys_sophon/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_sophon/seed0/metrics.jsonl": {
+    "sha256": "f60c7056b22ce9471979a50ca770d1845b96fb99cb8c74a2d3f6a889e6ab3dd0",
+    "bytes": 77624
+   },
+   "store/exp_h_adsys_sophon/seed0/run_meta.json": {
+    "sha256": "32d8c129cffee107c2bafd012418f0c4403d125be425a2dd3f5d932050c041e9",
+    "bytes": 3409
+   },
+   "store/exp_h_adsys_sophon/seed1/config_resolved.yaml": {
+    "sha256": "0ab8209118e58a8e82b63fcdc122fc730f58abe8327e9b1714e6c2ac7d1c36eb",
+    "bytes": 2181
+   },
+   "store/exp_h_adsys_sophon/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/exp_h_adsys_sophon/seed1/metrics.jsonl": {
+    "sha256": "ead4a27d8da33f8a1bbc447a00de9d9c1dea21e46c95746cdf7ec8122910e807",
+    "bytes": 71737
+   },
+   "store/exp_h_adsys_sophon/seed1/run_meta.json": {
+    "sha256": "2b40adb9863d6849f57db782e48d071784c7e158b9f9f9a8bb2e0f6a722a1537",
+    "bytes": 3409
+   },
+   "store/exp_h_adsys_sophon/seed2/config_resolved.yaml": {
+    "sha256": "ecf7872f6e099a83459d76665d77455171c8f479b735146436ab21c943fa207b",
+    "bytes": 2181
+   },
+   "store/exp_h_adsys_sophon/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/exp_h_adsys_sophon/seed2/metrics.jsonl": {
+    "sha256": "393c4d990b233e4bee37ec27501b6914b519259b6168ad718924506c3a910483",
+    "bytes": 78521
+   },
+   "store/exp_h_adsys_sophon/seed2/run_meta.json": {
+    "sha256": "342fda437595e8787630d47f4f206d05511f4bbbea11673c4fe4b5ece230fa0c",
+    "bytes": 3409
+   },
+   "store/exp_h_adsys_sophon/seed3/config_resolved.yaml": {
+    "sha256": "4acaa4eaaf2f09a14cb6441087eb92f02e4a2cd926e3f6452250a602a6117db1",
+    "bytes": 2181
+   },
+   "store/exp_h_adsys_sophon/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_sophon/seed3/metrics.jsonl": {
+    "sha256": "83455b2fd58af69c915b054f2a6b36805e357b682485e821c3cc98ca8068988e",
+    "bytes": 68898
+   },
+   "store/exp_h_adsys_sophon/seed3/run_meta.json": {
+    "sha256": "aac61005ac9a16d796523e47834b8ba3ab3617ab2461cbcc85318648bf6a55c4",
+    "bytes": 3409
+   },
+   "store/exp_h_adsys_sophon/seed4/config_resolved.yaml": {
+    "sha256": "9a00bd2eea7b74c1670a2b75a89e0a901d7bf1b71a7836cee6fb18c598a8649b",
+    "bytes": 2181
+   },
+   "store/exp_h_adsys_sophon/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/exp_h_adsys_sophon/seed4/metrics.jsonl": {
+    "sha256": "d0d7e72167d31724e2a5d4849cb39a473e556e09c4d548dddc1351faaee757cc",
+    "bytes": 77671
+   },
+   "store/exp_h_adsys_sophon/seed4/run_meta.json": {
+    "sha256": "c68528e8a5270090ccc323156d29fbc202db0911659b906bb0f0172019acb349",
+    "bytes": 3409
+   },
+   "store/exp_h_adsys_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "e8a9e6cb163239cb15d3ed33d9d368bdab1f2dc3f5e7774204d568e49503e165",
+    "bytes": 2131
+   },
+   "store/exp_h_adsys_trustfl/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_trustfl/seed0/metrics.jsonl": {
+    "sha256": "591345a79adcff52d6e7df151f22839353adfca993de971a49eebfcd5ff25814",
+    "bytes": 85917
+   },
+   "store/exp_h_adsys_trustfl/seed0/run_meta.json": {
+    "sha256": "c2e58a6e99113c8b1e259dc137b42fe9336640f6ff5ee83b931b064a8a46dee5",
+    "bytes": 3332
+   },
+   "store/exp_h_adsys_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "79a799646f9711ddcaabf3477baf4e5ccd7c721fe9b626f1985973c46e59a3ef",
+    "bytes": 2131
+   },
+   "store/exp_h_adsys_trustfl/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/exp_h_adsys_trustfl/seed1/metrics.jsonl": {
+    "sha256": "bea8db3cdaa3507b283af57bd7709ed86389f18aef2e8554faef1b29de098e7b",
+    "bytes": 83239
+   },
+   "store/exp_h_adsys_trustfl/seed1/run_meta.json": {
+    "sha256": "b9770eea86076b514e24ef01aed7e129005efcd28bfa4d8529df78eaa116cb0c",
+    "bytes": 3332
+   },
+   "store/exp_h_adsys_trustfl/seed2/config_resolved.yaml": {
+    "sha256": "3e7b5005b1ad13794577f876ebcf26eeb1e4efc39458b76bbb9b1480bb24974e",
+    "bytes": 2131
+   },
+   "store/exp_h_adsys_trustfl/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/exp_h_adsys_trustfl/seed2/metrics.jsonl": {
+    "sha256": "e3dfe35e8269163fe0b88801f6ca07bb06fede320ec4b9b2ad3bd546e7eb77e4",
+    "bytes": 88130
+   },
+   "store/exp_h_adsys_trustfl/seed2/run_meta.json": {
+    "sha256": "b9ae9867e0b52bd84f40b7ed2725caebd4aa2d44c7489f08809ae9f758177efd",
+    "bytes": 3332
+   },
+   "store/exp_h_adsys_trustfl/seed3/config_resolved.yaml": {
+    "sha256": "2f9b16bef13802fcc475cbe67f6071fa20dba35cac98996b24fe4f25a03ba6a8",
+    "bytes": 2154
+   },
+   "store/exp_h_adsys_trustfl/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/exp_h_adsys_trustfl/seed3/metrics.jsonl": {
+    "sha256": "9bbde29203e725f343de67baa1213874d7974c2774099f6cae5fcfa4f7a8ed54",
+    "bytes": 86997
+   },
+   "store/exp_h_adsys_trustfl/seed3/run_meta.json": {
+    "sha256": "9fb51fcc440aa64f1dbbd86b5b4b007f931a9d79c6e227c3e3b82e8baaa4cc54",
+    "bytes": 3357
+   },
+   "store/exp_h_adsys_trustfl/seed4/config_resolved.yaml": {
+    "sha256": "db9272bcfc90276d434c37843cb54f6b5abecd975690b742d4a151471b0e86bb",
+    "bytes": 2154
+   },
+   "store/exp_h_adsys_trustfl/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/exp_h_adsys_trustfl/seed4/metrics.jsonl": {
+    "sha256": "788eabe254730a8e817d012a729c5d276835120b64640da79489ed843b547b6d",
+    "bytes": 88747
+   },
+   "store/exp_h_adsys_trustfl/seed4/run_meta.json": {
+    "sha256": "77e1342724fcfd547a8e90bc8c0682bacef4a37ac83283f9ee0a0ca5ef8b6a3d",
+    "bytes": 3357
+   },
+   "store/femh_adsys_fedaa/seed0/config_resolved.yaml": {
+    "sha256": "b01f97164de6feed13bc292a5b4db97df3f4b15d68fc29fa7423250a210c360c",
+    "bytes": 2186
+   },
+   "store/femh_adsys_fedaa/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/femh_adsys_fedaa/seed0/metrics.jsonl": {
+    "sha256": "8a9eef98fe081dd9bf0ffd8746559f214b82b0973b26b4b5b628ec070850544c",
+    "bytes": 45269
+   },
+   "store/femh_adsys_fedaa/seed0/run_meta.json": {
+    "sha256": "9f69b2f9bd3e5d55e77130aa827e34ce50b8c4361504ecd3ea369c2e3de73a58",
+    "bytes": 3414
+   },
+   "store/femh_adsys_fedaa/seed1/config_resolved.yaml": {
+    "sha256": "60ccaeae0a9eee2cac3daabe272cc2d9f2fe0d9498c70ea9cb6df9331376eafb",
+    "bytes": 2186
+   },
+   "store/femh_adsys_fedaa/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/femh_adsys_fedaa/seed1/metrics.jsonl": {
+    "sha256": "f18314622b8a188bd27eb7ff5a650d81447cb4c29d908a53a452ab1f0daeae43",
+    "bytes": 43587
+   },
+   "store/femh_adsys_fedaa/seed1/run_meta.json": {
+    "sha256": "e64ecc512995084a62bd756c145a3b138555da64f110adb8a04e27999dd6eba7",
+    "bytes": 3414
+   },
+   "store/femh_adsys_fedaa/seed2/config_resolved.yaml": {
+    "sha256": "d5e86e8a7f388ed99d984995f402056ba5d5c28007c83e0d9c726a837dd3fb2b",
+    "bytes": 2186
+   },
+   "store/femh_adsys_fedaa/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/femh_adsys_fedaa/seed2/metrics.jsonl": {
+    "sha256": "f1a0c639b552a2b14f022609e9fdaf568432f9d599cfed5372a169cf9283d753",
+    "bytes": 44377
+   },
+   "store/femh_adsys_fedaa/seed2/run_meta.json": {
+    "sha256": "e4dce8fa278d7fad4696792acca892cf416b349b2832268be01d3ec9bd4e60a6",
+    "bytes": 3414
+   },
+   "store/femh_adsys_fedaa/seed3/config_resolved.yaml": {
+    "sha256": "b25c9eb7da75830696d4eb863eb9c09a566c9121e888238b5b4205dd476e2e56",
+    "bytes": 2186
+   },
+   "store/femh_adsys_fedaa/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/femh_adsys_fedaa/seed3/metrics.jsonl": {
+    "sha256": "c1392420689eab7cb90c8f732fa93716579372d20ba8878f466f44d82d7ed1d7",
+    "bytes": 40314
+   },
+   "store/femh_adsys_fedaa/seed3/run_meta.json": {
+    "sha256": "0641858cc07c0b968064dc160474b1d7fc38120e3d8f7a63e32020a91db1a92a",
+    "bytes": 3414
+   },
+   "store/femh_adsys_fedaa/seed4/config_resolved.yaml": {
+    "sha256": "ba51c55d5ae285d1ad1935bc82d2563110ea34c79a232bafb6ccbc7f75eea554",
+    "bytes": 2186
+   },
+   "store/femh_adsys_fedaa/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/femh_adsys_fedaa/seed4/metrics.jsonl": {
+    "sha256": "1a421410030678e0f396627998e6d1e430b85975cc95833c1cd56e3202d9ee9b",
+    "bytes": 45308
+   },
+   "store/femh_adsys_fedaa/seed4/run_meta.json": {
+    "sha256": "df1cf3e435d9be1889c574aff0be7230a8dd82c764e4fb978d83d0a71c7a4fc8",
+    "bytes": 3414
+   },
+   "store/femh_adsys_fedavg/seed0/config_resolved.yaml": {
+    "sha256": "ee4ab037fc52088f4f23773f0e7e3c6dbe333f73386fa154b0341d779ea27c37",
+    "bytes": 2136
+   },
+   "store/femh_adsys_fedavg/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/femh_adsys_fedavg/seed0/metrics.jsonl": {
+    "sha256": "fc1e1a35856511523a6321bb300fe9df8478a748560cfb2a523f567b0b9d3f4e",
+    "bytes": 48182
+   },
+   "store/femh_adsys_fedavg/seed0/run_meta.json": {
+    "sha256": "6b215a0a2427f4e205a60e2131fd9b26dd1af1fcaf104619cb1a425d54551a4a",
+    "bytes": 3337
+   },
+   "store/femh_adsys_fedavg/seed1/config_resolved.yaml": {
+    "sha256": "002ffd54f13e09a9c600bbe736138eba8d89d5dce210a8d139621a09d1f1071c",
+    "bytes": 2136
+   },
+   "store/femh_adsys_fedavg/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/femh_adsys_fedavg/seed1/metrics.jsonl": {
+    "sha256": "afede4b3a800285d90f539beb85cbd16a1ff932909cd083b9e170e8d4964e8d3",
+    "bytes": 44027
+   },
+   "store/femh_adsys_fedavg/seed1/run_meta.json": {
+    "sha256": "a0715c2d36b74d551d9e883b842289589aeccff1c6b01a1e0be3d128fde929b6",
+    "bytes": 3337
+   },
+   "store/femh_adsys_fedavg/seed2/config_resolved.yaml": {
+    "sha256": "2ec6dd2e2e2dac38783866f0e2dcbb8aef91ae6ee2705445d7e0b3ece6e1b62c",
+    "bytes": 2136
+   },
+   "store/femh_adsys_fedavg/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/femh_adsys_fedavg/seed2/metrics.jsonl": {
+    "sha256": "6564dee05a9a13e05bc52c40bda68865e045179dc75aaca51393d91342edcca0",
+    "bytes": 45524
+   },
+   "store/femh_adsys_fedavg/seed2/run_meta.json": {
+    "sha256": "73ba326f81a39a4a41d2d699424426f27834e02e3e3eb58b1179571fb0037131",
+    "bytes": 3337
+   },
+   "store/femh_adsys_fedavg/seed3/config_resolved.yaml": {
+    "sha256": "741ab587758e478d5bea758ad480de5da4b6f2db69cd6cd3103483c69648f34c",
+    "bytes": 2159
+   },
+   "store/femh_adsys_fedavg/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/femh_adsys_fedavg/seed3/metrics.jsonl": {
+    "sha256": "b3e7ed47433dce7e786319c8f42795e7745b5d265cc8b5e9d23a40cae082dc3b",
+    "bytes": 43839
+   },
+   "store/femh_adsys_fedavg/seed3/run_meta.json": {
+    "sha256": "35192200f8528c8b615558eee9c8abcc8dc06baa2653a7a74c872b4c7986bcea",
+    "bytes": 3362
+   },
+   "store/femh_adsys_fedavg/seed4/config_resolved.yaml": {
+    "sha256": "416820222db77748b2286646825c7d63437124067dafd5afaa66a347d6a764d7",
+    "bytes": 2159
+   },
+   "store/femh_adsys_fedavg/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/femh_adsys_fedavg/seed4/metrics.jsonl": {
+    "sha256": "4014dc187b9b544b605e7da4d2ddb3b416d36740c51c0f49f52fa1d43d102ef1",
+    "bytes": 49795
+   },
+   "store/femh_adsys_fedavg/seed4/run_meta.json": {
+    "sha256": "be707da9e8031130b96502a4acd865cfabfa78cb90311d6205c0a247c79aa559",
+    "bytes": 3362
+   },
+   "store/femh_adsys_fedgreed/seed0/config_resolved.yaml": {
+    "sha256": "1b611a629f98aa77b0849488432f157c491efcfa5a8b1baedafc6a608de46f13",
+    "bytes": 2140
+   },
+   "store/femh_adsys_fedgreed/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/femh_adsys_fedgreed/seed0/metrics.jsonl": {
+    "sha256": "747d7245cf74caf34f1ac3578948f1d9853c885785d34c9c2e3e2ebc754a5ae0",
+    "bytes": 43168
+   },
+   "store/femh_adsys_fedgreed/seed0/run_meta.json": {
+    "sha256": "9f8f66cd5fc4c47fb8fc4ad2c52881f4033511de07c4b3cfabb72ee1a24c8d1d",
+    "bytes": 3341
+   },
+   "store/femh_adsys_fedgreed/seed1/config_resolved.yaml": {
+    "sha256": "ac34732018be972fa77720f4908224118fe2a22bbddf8105d8b164d6322f871f",
+    "bytes": 2140
+   },
+   "store/femh_adsys_fedgreed/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/femh_adsys_fedgreed/seed1/metrics.jsonl": {
+    "sha256": "026ca15c2957aa5c9a438b6bbe63a477393ab704e03062436749b84581c89e9d",
+    "bytes": 40765
+   },
+   "store/femh_adsys_fedgreed/seed1/run_meta.json": {
+    "sha256": "1bb1c950e236fb9629fc1d287dc06b27ade3bf2d1274af80c793c555c783a6e2",
+    "bytes": 3341
+   },
+   "store/femh_adsys_fedgreed/seed2/config_resolved.yaml": {
+    "sha256": "b18d5d785bff98ab14b5d0758bfd232a8621940b4ce6aaadc742ddfae8624ee2",
+    "bytes": 2140
+   },
+   "store/femh_adsys_fedgreed/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/femh_adsys_fedgreed/seed2/metrics.jsonl": {
+    "sha256": "220b4e05f28184a7808dda68c532c7d1014b7cdc25687901b44e734ee90abcb5",
+    "bytes": 41564
+   },
+   "store/femh_adsys_fedgreed/seed2/run_meta.json": {
+    "sha256": "73da64d97d6f29a1d04b3f05e807642c19cd3b2aa1119d4cbd2f4a1186767f6e",
+    "bytes": 3341
+   },
+   "store/femh_adsys_fedgreed/seed3/config_resolved.yaml": {
+    "sha256": "907de2abe9bc2e0f40ef951334bb72f8ba7383743e6b74dcf088dab09a0a1ba7",
+    "bytes": 2163
+   },
+   "store/femh_adsys_fedgreed/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/femh_adsys_fedgreed/seed3/metrics.jsonl": {
+    "sha256": "82a9dc15fd87d016553cf7a55d14306314a06e19b72c9aafe4a72a5c652a2075",
+    "bytes": 40334
+   },
+   "store/femh_adsys_fedgreed/seed3/run_meta.json": {
+    "sha256": "8e66b1d3e744e3693fa7dbc5124d3f47fdc16147e96ba35f11701fc004f5193c",
+    "bytes": 3366
+   },
+   "store/femh_adsys_fedgreed/seed4/config_resolved.yaml": {
+    "sha256": "27ba90f3b4b0b3c1b8ffea0a5055a3d538d99c65bb61419912468721dd78490a",
+    "bytes": 2163
+   },
+   "store/femh_adsys_fedgreed/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/femh_adsys_fedgreed/seed4/metrics.jsonl": {
+    "sha256": "2516aa3e5b13a1d00679824891d907003b131c67108a591ba4f0391ef72b107f",
+    "bytes": 42204
+   },
+   "store/femh_adsys_fedgreed/seed4/run_meta.json": {
+    "sha256": "dec756a1d8794b6a283942a652af8615862d6048b5e726d55b51fd99dbd12b96",
+    "bytes": 3366
+   },
+   "store/femh_adsys_fltrust/seed0/config_resolved.yaml": {
+    "sha256": "544dc1452d1ca15b6561983f02ce1171d2d70e495f344a61838ec51f6f696af2",
+    "bytes": 2138
+   },
+   "store/femh_adsys_fltrust/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/femh_adsys_fltrust/seed0/metrics.jsonl": {
+    "sha256": "1cb97d8889bdd3cee00a793d1924f88145e4dfdaf4b6c1efdbc5b99820c5953f",
+    "bytes": 48699
+   },
+   "store/femh_adsys_fltrust/seed0/run_meta.json": {
+    "sha256": "247a00978ece882ba497cd03a844f3ecc5d184b46ae30dc07d7decb2f4f29cb7",
+    "bytes": 3339
+   },
+   "store/femh_adsys_fltrust/seed1/config_resolved.yaml": {
+    "sha256": "49d8e8377fb12a02f9a1ac7b21851013867b8bc72cca54eee840ce7fe31268df",
+    "bytes": 2138
+   },
+   "store/femh_adsys_fltrust/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/femh_adsys_fltrust/seed1/metrics.jsonl": {
+    "sha256": "165888d223a1c8f30bc05240c5a244d57646f91d51704ff7a9f2437169c6ebb4",
+    "bytes": 44138
+   },
+   "store/femh_adsys_fltrust/seed1/run_meta.json": {
+    "sha256": "3f60837bfa0c7a9e3ee91e8194ff9501e033e3ad7cde4bccfa88d30459e8130a",
+    "bytes": 3339
+   },
+   "store/femh_adsys_fltrust/seed2/config_resolved.yaml": {
+    "sha256": "f53cac15529c0f74e0c38d16ebedbfb2392dc485a7f1d8aa4d7cdbf42393da1e",
+    "bytes": 2138
+   },
+   "store/femh_adsys_fltrust/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/femh_adsys_fltrust/seed2/metrics.jsonl": {
+    "sha256": "715de7c945071f83d5fb35e916168a3c58bac5984b2a0ad2ac298c322f651124",
+    "bytes": 47383
+   },
+   "store/femh_adsys_fltrust/seed2/run_meta.json": {
+    "sha256": "b2f90ea0835e5cb8582eed025c1a08dadf1de33393bbc59773f2dda4c4485b13",
+    "bytes": 3339
+   },
+   "store/femh_adsys_fltrust/seed3/config_resolved.yaml": {
+    "sha256": "587c5533879be7fa57a08489857957e0988a8edd1370219157496fef863d8c26",
+    "bytes": 2161
+   },
+   "store/femh_adsys_fltrust/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/femh_adsys_fltrust/seed3/metrics.jsonl": {
+    "sha256": "858f93081852ed02d8e832096c66a26fe3d69a2fd939baaff223af8970d410f6",
+    "bytes": 43331
+   },
+   "store/femh_adsys_fltrust/seed3/run_meta.json": {
+    "sha256": "3e227ad0b77ab253ebc700a935b18403b5783863dd28719f1f859daae1d7a380",
+    "bytes": 3364
+   },
+   "store/femh_adsys_fltrust/seed4/config_resolved.yaml": {
+    "sha256": "0731513e5845d29af96202edad8333cfa004547c6559c102f48deff339a4783a",
+    "bytes": 2161
+   },
+   "store/femh_adsys_fltrust/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/femh_adsys_fltrust/seed4/metrics.jsonl": {
+    "sha256": "24f0fb4acbe9c0fb8b0ff65f92d5604a55d7a8b51aa28268c0ee14eaaf4496d0",
+    "bytes": 47768
+   },
+   "store/femh_adsys_fltrust/seed4/run_meta.json": {
+    "sha256": "b5db243811e51428a041d2f0c2d865509d0d128993921ae34943775d28894be4",
+    "bytes": 3364
+   },
+   "store/femh_adsys_multikrum/seed0/config_resolved.yaml": {
+    "sha256": "fcac7e6f3c67ef395ca0d84454750dd2a9733dd878bab6784f14d351e594a96e",
+    "bytes": 2142
+   },
+   "store/femh_adsys_multikrum/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/femh_adsys_multikrum/seed0/metrics.jsonl": {
+    "sha256": "3327111808a0efee0f9c1960ec2fc66c7bab684bd1ed25a87b246cc3d28acd8c",
+    "bytes": 49549
+   },
+   "store/femh_adsys_multikrum/seed0/run_meta.json": {
+    "sha256": "be7faeb4569a6d38153739eb54d561e480efcda4e4e37674a3ce17e377bc131a",
+    "bytes": 3343
+   },
+   "store/femh_adsys_multikrum/seed1/config_resolved.yaml": {
+    "sha256": "c61c8eda3da91afa5cc6d0e44b97e1d10a2f1073e44b2ca3c5777f03c839e8a4",
+    "bytes": 2142
+   },
+   "store/femh_adsys_multikrum/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/femh_adsys_multikrum/seed1/metrics.jsonl": {
+    "sha256": "36bb11863f1a0bf186bd90e1265b3145d396c64077e449a26e922d6680ec3d13",
+    "bytes": 47821
+   },
+   "store/femh_adsys_multikrum/seed1/run_meta.json": {
+    "sha256": "ad2b34597c6d0a7f5a0dd52ed7c45833f7da7d86e889a90bfd665e6841f09b2e",
+    "bytes": 3343
+   },
+   "store/femh_adsys_multikrum/seed2/config_resolved.yaml": {
+    "sha256": "1a249f8f8f7874f4567bad31ad434a3b41c4e10af13b9e42038d0867c6b97cc2",
+    "bytes": 2142
+   },
+   "store/femh_adsys_multikrum/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/femh_adsys_multikrum/seed2/metrics.jsonl": {
+    "sha256": "7f6a09634fe02b6a6c4f3d51f7ebc2f87183d2d2906bea212e68853662889f09",
+    "bytes": 48368
+   },
+   "store/femh_adsys_multikrum/seed2/run_meta.json": {
+    "sha256": "e6ffb5ff2cc9f94a5fda6c8c9e283a8b2aa42643ff7ebd732c0f76b822f5ce0e",
+    "bytes": 3343
+   },
+   "store/femh_adsys_multikrum/seed3/config_resolved.yaml": {
+    "sha256": "45e2186b401fbdc97be4a6177cfb452d5ebecdf72488acaf9119bcd321dd4d38",
+    "bytes": 2194
+   },
+   "store/femh_adsys_multikrum/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/femh_adsys_multikrum/seed3/metrics.jsonl": {
+    "sha256": "a8ce17ea11ded64bfd9dee7da5b30cd2d5d30489f9cbb995fb3e163b0b189026",
+    "bytes": 46689
+   },
+   "store/femh_adsys_multikrum/seed3/run_meta.json": {
+    "sha256": "2adfadece42ca47062bd6fc868f1c442fc8591beb1c7412b4c1088a155df7965",
+    "bytes": 3422
+   },
+   "store/femh_adsys_multikrum/seed4/config_resolved.yaml": {
+    "sha256": "38c68b5d9b3ec9c5dd2598ff6ba67c45294417cbc3f542d47ba8093681c1fe8e",
+    "bytes": 2156
+   },
+   "store/femh_adsys_multikrum/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/femh_adsys_multikrum/seed4/metrics.jsonl": {
+    "sha256": "4c000162d88bf93fc30a9b781995a3c6e53b115881e0a7e9a0bfb5a639712ced",
+    "bytes": 51382
+   },
+   "store/femh_adsys_multikrum/seed4/run_meta.json": {
+    "sha256": "1ec240f66f3b36fcb357f6cbc5cf6c103e099747629be25da3d1af7c9106a806",
+    "bytes": 3359
+   },
+   "store/femh_adsys_sophon/seed0/config_resolved.yaml": {
+    "sha256": "a5c0d333b3be722cd2cc5b0185bf7b65b43520f922f458bd5cd90d2590660979",
+    "bytes": 2188
+   },
+   "store/femh_adsys_sophon/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/femh_adsys_sophon/seed0/metrics.jsonl": {
+    "sha256": "198e73dc3c042a41239e79da5798091b412361bcb7fdf4fa77287e7f5ec227a6",
+    "bytes": 44687
+   },
+   "store/femh_adsys_sophon/seed0/run_meta.json": {
+    "sha256": "031ad7e51fdf49328d3aabfc51cc9099bef64f61340c0b7cf160bb8eeb67d66e",
+    "bytes": 3416
+   },
+   "store/femh_adsys_sophon/seed1/config_resolved.yaml": {
+    "sha256": "1dcae055ba2e87e05015539b744565ae709d913ccae49b8fac370a58ff033dcd",
+    "bytes": 2188
+   },
+   "store/femh_adsys_sophon/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/femh_adsys_sophon/seed1/metrics.jsonl": {
+    "sha256": "c0392b411bd3d3e7a20900ab851479f9e8fc0dd5996ea9bd7f8fcad6bb8a9bce",
+    "bytes": 43911
+   },
+   "store/femh_adsys_sophon/seed1/run_meta.json": {
+    "sha256": "e21539347cf6e9426fbca2a4dfa7d7c4f26063cf0c18ed2f59ec112cdb6f689a",
+    "bytes": 3416
+   },
+   "store/femh_adsys_sophon/seed2/config_resolved.yaml": {
+    "sha256": "25f6720bba21b8ca56d9854de1fc943b3d213b3f9fccd3776dac3d56b396d9dd",
+    "bytes": 2188
+   },
+   "store/femh_adsys_sophon/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/femh_adsys_sophon/seed2/metrics.jsonl": {
+    "sha256": "790279f36ccbe11fe3b7fb9b3e7c38507dbf7a4b7d147d093fe25afd09838a88",
+    "bytes": 47125
+   },
+   "store/femh_adsys_sophon/seed2/run_meta.json": {
+    "sha256": "9a95753cc4e2bd0229aad9e33f755995927ae0b5ce7decf2178af51a9a83a345",
+    "bytes": 3416
+   },
+   "store/femh_adsys_sophon/seed3/config_resolved.yaml": {
+    "sha256": "5c2e88aa7f671f65dca0a15f273961390781e50dbb59f9262e339398b95be41e",
+    "bytes": 2188
+   },
+   "store/femh_adsys_sophon/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/femh_adsys_sophon/seed3/metrics.jsonl": {
+    "sha256": "002d1a1714cadaf3211379994bd7ef0fd33c2e1c72d4940d4a3eb7e567250244",
+    "bytes": 42403
+   },
+   "store/femh_adsys_sophon/seed3/run_meta.json": {
+    "sha256": "def0796ea6bbfeb781740d31253c512d1a51ad78f77c0325600ecd8b513c13e9",
+    "bytes": 3416
+   },
+   "store/femh_adsys_sophon/seed4/config_resolved.yaml": {
+    "sha256": "3c4c55505bc4fa392a513bd9f4a3e5a531029a4dd210d69206d56b70ce7f1167",
+    "bytes": 2188
+   },
+   "store/femh_adsys_sophon/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/femh_adsys_sophon/seed4/metrics.jsonl": {
+    "sha256": "8e94e54bc3691bccb6993050c38a62ee95f60bf253d07f0a43a903a514d8f892",
+    "bytes": 47348
+   },
+   "store/femh_adsys_sophon/seed4/run_meta.json": {
+    "sha256": "d8c127d913a5c016cbbef0a83b6f86591486e4a2fd839b12b16c7ec057f848bc",
+    "bytes": 3416
+   },
+   "store/femh_adsys_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "70c03acfb2b0c01bb3f18a995acc2154c52f16e725cf0feb51238bc98353bee6",
+    "bytes": 2138
+   },
+   "store/femh_adsys_trustfl/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/femh_adsys_trustfl/seed0/metrics.jsonl": {
+    "sha256": "cc0fd4b94a8b28db7bb09d551b0305e5fdfc8dbe202f54e4498e421891900a27",
+    "bytes": 52892
+   },
+   "store/femh_adsys_trustfl/seed0/run_meta.json": {
+    "sha256": "64f33aee01f925a040f85ae94595b2f848dd73cd9ef66187a9fe3e0d10125553",
+    "bytes": 3339
+   },
+   "store/femh_adsys_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "253b25ea4572a2773d6332f1db48ccf3969db1008df434a1ab98a3971e54afd5",
+    "bytes": 2138
+   },
+   "store/femh_adsys_trustfl/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/femh_adsys_trustfl/seed1/metrics.jsonl": {
+    "sha256": "2b2c06c3f8ec5ebc360dd866b6230af790bccf5a997ecfebec7db6a01020b21d",
+    "bytes": 51138
+   },
+   "store/femh_adsys_trustfl/seed1/run_meta.json": {
+    "sha256": "c5c85698f60f49dad3dcd4313d84968d5f9c56bb2c0e6b6b48ee31b479cf4a10",
+    "bytes": 3339
+   },
+   "store/femh_adsys_trustfl/seed2/config_resolved.yaml": {
+    "sha256": "1946d9e4cea833eec90b6f9462c2fe1a14e8fcdde38410436792852e85568553",
+    "bytes": 2138
+   },
+   "store/femh_adsys_trustfl/seed2/groups.json": {
+    "sha256": "618c4bdea0cee99703ee3b87c2e903af2214871d7a76d310048a279fbe54c6d2",
+    "bytes": 234
+   },
+   "store/femh_adsys_trustfl/seed2/metrics.jsonl": {
+    "sha256": "487655dec20a05bedbeffc1fd5beebc1b0eccaeec51b88748e2c17a95313d251",
+    "bytes": 51366
+   },
+   "store/femh_adsys_trustfl/seed2/run_meta.json": {
+    "sha256": "75ed10ff9c9b63f13e1aebce70c69137e64ce35552714a5b929539d80e2ce822",
+    "bytes": 3339
+   },
+   "store/femh_adsys_trustfl/seed3/config_resolved.yaml": {
+    "sha256": "994342d68268e23cc885fff244f3b02a47a51bd14860fafec50adfaf7425b8cf",
+    "bytes": 2161
+   },
+   "store/femh_adsys_trustfl/seed3/groups.json": {
+    "sha256": "1207fecd44124b814b1c52aea58f9837e642def07cf7449e1003690856726064",
+    "bytes": 236
+   },
+   "store/femh_adsys_trustfl/seed3/metrics.jsonl": {
+    "sha256": "a889a01fc6488fc5ed2b5c9aee3d3bb94f4a54dc3044495017248ffa8a80c637",
+    "bytes": 51040
+   },
+   "store/femh_adsys_trustfl/seed3/run_meta.json": {
+    "sha256": "5e737a2c947630bc60ec4be0678527c490dd2a0bdffb3d26796e234ebf444a03",
+    "bytes": 3364
+   },
+   "store/femh_adsys_trustfl/seed4/config_resolved.yaml": {
+    "sha256": "48a0cdee0bc35a48ecf75b271653d793ca9422fe232e39444f7d0bd85c19af71",
+    "bytes": 2156
+   },
+   "store/femh_adsys_trustfl/seed4/groups.json": {
+    "sha256": "4c9a913942d5b754a21129091651c4cf07c3faede884dbb774214f07effd4ff9",
+    "bytes": 235
+   },
+   "store/femh_adsys_trustfl/seed4/metrics.jsonl": {
+    "sha256": "28e164168a84b05579d9b1aa7292925ca4968476af97166ff734d60f1d387511",
+    "bytes": 50586
+   },
+   "store/femh_adsys_trustfl/seed4/run_meta.json": {
+    "sha256": "da5a8051dbe8125a7fa2986b6904fb8c6920c543e3579fa6522cbbfbe89f18e6",
+    "bytes": 3354
+   },
+   "store/fid_signflip_fedaa/seed0/config_resolved.yaml": {
+    "sha256": "7335e6cdda07df629b85a29b3c9b9345b568cad5373344098cd56c023425f9c4",
+    "bytes": 2174
+   },
+   "store/fid_signflip_fedaa/seed0/groups.json": {
+    "sha256": "34dc4f7cc4eb3b206bcb12ade66cade7e91e7cc402e8d0f46455e1737a0b06e0",
+    "bytes": 211
+   },
+   "store/fid_signflip_fedaa/seed0/metrics.jsonl": {
+    "sha256": "8886628e2f5ebfaa0e1f1ee40d9af7bc4a535287fadd0c8864ea4641a69a90bf",
+    "bytes": 80181
+   },
+   "store/fid_signflip_fedaa/seed0/run_meta.json": {
+    "sha256": "3709ca6c4b844478eeca5903d9b88e80031d4f9cdd7b14644fec4cc6ebdfbb96",
+    "bytes": 3402
+   },
+   "store/fid_signflip_fedaa/seed1/config_resolved.yaml": {
+    "sha256": "5f6e1051c1c71914a2b55ebddfd5f4836911b4bdb7eb3faf9cdb8ee38f74f061",
+    "bytes": 2174
+   },
+   "store/fid_signflip_fedaa/seed1/groups.json": {
+    "sha256": "d7737d4f6a14eeb0571459c52e6ea6a2aef3c2d73e9c51d80df58675fabf9b07",
+    "bytes": 206
+   },
+   "store/fid_signflip_fedaa/seed1/metrics.jsonl": {
+    "sha256": "f894d603da63ee426ecab10c8124a93a68df803335f94350bbb15313de3e0d91",
+    "bytes": 76262
+   },
+   "store/fid_signflip_fedaa/seed1/run_meta.json": {
+    "sha256": "568f947cb6fe8c908b577e78b246265c1165d6fc3afee645e75f716958b41a9e",
+    "bytes": 3402
+   },
+   "store/fid_signflip_fedaa/seed2/config_resolved.yaml": {
+    "sha256": "1a9cd03d2ecbd969d7113e2ca0553f427022e78947dbca6403e3c4c2dc9f8a0f",
+    "bytes": 2174
+   },
+   "store/fid_signflip_fedaa/seed2/groups.json": {
+    "sha256": "9e7e60a67038985b7a62452079ad3366436bb52cf9f4eca1bfe4f8e33e63a58d",
+    "bytes": 209
+   },
+   "store/fid_signflip_fedaa/seed2/metrics.jsonl": {
+    "sha256": "277bdd819ae40b0b77303315f6601197d2a2d06def90c8a8a683c0a8ce101116",
+    "bytes": 78543
+   },
+   "store/fid_signflip_fedaa/seed2/run_meta.json": {
+    "sha256": "36052c96328bae4290834268d3a042c414f5a1bd3eac3361dbd5c2fbc058a305",
+    "bytes": 3402
+   },
+   "store/fid_signflip_fltrust/seed0/config_resolved.yaml": {
+    "sha256": "f7d4127ed0ab1f0fd3a315b8615b19d7f757e36708b42b67e404efd1f8e16f26",
+    "bytes": 2145
+   },
+   "store/fid_signflip_fltrust/seed0/groups.json": {
+    "sha256": "34dc4f7cc4eb3b206bcb12ade66cade7e91e7cc402e8d0f46455e1737a0b06e0",
+    "bytes": 211
+   },
+   "store/fid_signflip_fltrust/seed0/metrics.jsonl": {
+    "sha256": "4ab4794001712ee7e8f49d6ef3e0a851f22378c30b95b1d5980f68f7602dca7d",
+    "bytes": 79597
+   },
+   "store/fid_signflip_fltrust/seed0/run_meta.json": {
+    "sha256": "7b87cb96f8433f576cb9c2eedfb293959d7b197ca84ac83d75118dffb9eb98d3",
+    "bytes": 3353
+   },
+   "store/fid_signflip_fltrust/seed1/config_resolved.yaml": {
+    "sha256": "1e6581336c55a1c9a55300218f9670fce5eb189b52ee01407872ee6fa5ce306c",
+    "bytes": 2145
+   },
+   "store/fid_signflip_fltrust/seed1/groups.json": {
+    "sha256": "d7737d4f6a14eeb0571459c52e6ea6a2aef3c2d73e9c51d80df58675fabf9b07",
+    "bytes": 206
+   },
+   "store/fid_signflip_fltrust/seed1/metrics.jsonl": {
+    "sha256": "5a5acc083c73da4b3b2ebad2d44e14e993e635841789ef96deae66cda53d9f11",
+    "bytes": 75435
+   },
+   "store/fid_signflip_fltrust/seed1/run_meta.json": {
+    "sha256": "8e171a6f3c79e8a6ece95fd0e586b1c59f17db88806d08c9fd534a2de16a9813",
+    "bytes": 3353
+   },
+   "store/fid_signflip_fltrust/seed2/config_resolved.yaml": {
+    "sha256": "c74de640645f53665bbb8a8c98be15a5e1d75638610226a8cb6d05c8942058ae",
+    "bytes": 2145
+   },
+   "store/fid_signflip_fltrust/seed2/groups.json": {
+    "sha256": "9e7e60a67038985b7a62452079ad3366436bb52cf9f4eca1bfe4f8e33e63a58d",
+    "bytes": 209
+   },
+   "store/fid_signflip_fltrust/seed2/metrics.jsonl": {
+    "sha256": "3d3923b53cdc181f2bab49ecbcb983b2471015e0db74ae584082ea320b103dd9",
+    "bytes": 78212
+   },
+   "store/fid_signflip_fltrust/seed2/run_meta.json": {
+    "sha256": "4cb5723bcd8a7641ca15f78a35983537c8876e842a25fe1484fe82e5f16f0e04",
+    "bytes": 3353
+   },
+   "store/fid_signflip_sophon/seed0/config_resolved.yaml": {
+    "sha256": "73737c63e7c2da4a860336f35e024c70abb91b58ab17924b099b90189315a2c4",
+    "bytes": 2176
+   },
+   "store/fid_signflip_sophon/seed0/groups.json": {
+    "sha256": "34dc4f7cc4eb3b206bcb12ade66cade7e91e7cc402e8d0f46455e1737a0b06e0",
+    "bytes": 211
+   },
+   "store/fid_signflip_sophon/seed0/metrics.jsonl": {
+    "sha256": "dedb0dd0b2de90042cdd303cfb9c9ba63cf8778c6409ae6083c435c0869d7e52",
+    "bytes": 80909
+   },
+   "store/fid_signflip_sophon/seed0/run_meta.json": {
+    "sha256": "5914f2d9e6f1c806cc868d587405cbc2643d18b34b1294f0ca3394c71b5e4f2d",
+    "bytes": 3404
+   },
+   "store/fid_signflip_sophon/seed1/config_resolved.yaml": {
+    "sha256": "7c970963a5e3067bbf1c5e6627795fb97d9a868b166b252db851ba92a6c8ba9a",
+    "bytes": 2176
+   },
+   "store/fid_signflip_sophon/seed1/groups.json": {
+    "sha256": "d7737d4f6a14eeb0571459c52e6ea6a2aef3c2d73e9c51d80df58675fabf9b07",
+    "bytes": 206
+   },
+   "store/fid_signflip_sophon/seed1/metrics.jsonl": {
+    "sha256": "c4e4b19e5b2192810a1874bd9ce27bdeaa61fecdf273c923150781d038d6072f",
+    "bytes": 76271
+   },
+   "store/fid_signflip_sophon/seed1/run_meta.json": {
+    "sha256": "9f00bcebe47885a91365c2c411d5e08943e1feb9bf48684df0c5a769a7435359",
+    "bytes": 3404
+   },
+   "store/fid_signflip_sophon/seed2/config_resolved.yaml": {
+    "sha256": "1db0fcb7dc220c5e47d8f646b6d8a93fa9c751ce6ea36006a69795d9f8f1f7f2",
+    "bytes": 2176
+   },
+   "store/fid_signflip_sophon/seed2/groups.json": {
+    "sha256": "9e7e60a67038985b7a62452079ad3366436bb52cf9f4eca1bfe4f8e33e63a58d",
+    "bytes": 209
+   },
+   "store/fid_signflip_sophon/seed2/metrics.jsonl": {
+    "sha256": "4245d86ef6debe165e75bcbbbd4c2b98975b6fd927047ad84dd61688b3a0f199",
+    "bytes": 79049
+   },
+   "store/fid_signflip_sophon/seed2/run_meta.json": {
+    "sha256": "cc5deb9b5bcba417c0dbf09897b97983973b6cc31ed23617d3ba534ad5179663",
+    "bytes": 3404
+   },
+   "store/fid_signflip_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "da65f89f62e4dccad26cf86deba68e62f32aa7be5ea889bf6ba3e4b0b779a171",
+    "bytes": 2145
+   },
+   "store/fid_signflip_trustfl/seed0/groups.json": {
+    "sha256": "34dc4f7cc4eb3b206bcb12ade66cade7e91e7cc402e8d0f46455e1737a0b06e0",
+    "bytes": 211
+   },
+   "store/fid_signflip_trustfl/seed0/metrics.jsonl": {
+    "sha256": "94fa80100d0604a2a79df63d2d00c29f522197140a43afbb3b59017feb763680",
+    "bytes": 86730
+   },
+   "store/fid_signflip_trustfl/seed0/run_meta.json": {
+    "sha256": "d2a5e5ebcc2fd18a2e66c9aaf38ff3755dbc6424fe5580fe6545aa7193cdf335",
+    "bytes": 3353
+   },
+   "store/fid_signflip_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "932c26258592f80f38ea83ef9db84e56d88d207908f0c0b7b5897cbd64e206ef",
+    "bytes": 2145
+   },
+   "store/fid_signflip_trustfl/seed1/groups.json": {
+    "sha256": "d7737d4f6a14eeb0571459c52e6ea6a2aef3c2d73e9c51d80df58675fabf9b07",
+    "bytes": 206
+   },
+   "store/fid_signflip_trustfl/seed1/metrics.jsonl": {
+    "sha256": "010d8eec1115cabb30e2bb7449bc38039a4908f0f1eba2c4a54270038dcb9c15",
+    "bytes": 88676
+   },
+   "store/fid_signflip_trustfl/seed1/run_meta.json": {
+    "sha256": "5e0db5b624c2e9311d39aca7bc4b8275cfe011cd066a548d94816dfaf1ecc6db",
+    "bytes": 3353
+   },
+   "store/fid_signflip_trustfl/seed2/config_resolved.yaml": {
+    "sha256": "c450d0e9c38b5b12eb1fadb206c221037a19fb65bd2e8c1c40862364116f058d",
+    "bytes": 2145
+   },
+   "store/fid_signflip_trustfl/seed2/groups.json": {
+    "sha256": "9e7e60a67038985b7a62452079ad3366436bb52cf9f4eca1bfe4f8e33e63a58d",
+    "bytes": 209
+   },
+   "store/fid_signflip_trustfl/seed2/metrics.jsonl": {
+    "sha256": "5c07fd1a7c62e8545357b52e1b71134a27243b13c902aa57f7fcf65a6d6e10be",
+    "bytes": 88205
+   },
+   "store/fid_signflip_trustfl/seed2/run_meta.json": {
+    "sha256": "e0593d2031f520b867e2dcc9983c9e688b88a827c813e9f476d69dbc77a1b68f",
+    "bytes": 3353
+   },
+   "store/mnist_attack_fedavg/seed42/config_resolved.yaml": {
+    "sha256": "93a207faf5afb0f4dca916056dc4472d22ead8cf0ec336d09e49154057b83121",
+    "bytes": 2029
+   },
+   "store/mnist_attack_fedavg/seed42/metrics.jsonl": {
+    "sha256": "1e35ba188443fdffa30c8135d87cc3d5ecefe001c4ff963ae79e797aa2942fbd",
+    "bytes": 25087
+   },
+   "store/mnist_attack_fedavg/seed42/run_meta.json": {
+    "sha256": "b195d2da657d7e37d86d1f6724a20b15a24b81fabcd530bc3e71f93d2bf0692b",
+    "bytes": 3203
+   },
+   "store/mnist_attack_fedavg/seed43/config_resolved.yaml": {
+    "sha256": "80a53716e6972bb7357dccd3caf075ee905dc0727de249d3cf721147e69119cc",
+    "bytes": 2029
+   },
+   "store/mnist_attack_fedavg/seed43/metrics.jsonl": {
+    "sha256": "047364602b80c8a0f582bf68522ba5090b8da77c3b8ce50877cf6b1e248853e4",
+    "bytes": 25069
+   },
+   "store/mnist_attack_fedavg/seed43/run_meta.json": {
+    "sha256": "c5032d061798518f281b7a980d5aaa90745a6388e55da36a9398eab3409d94e8",
+    "bytes": 3203
+   },
+   "store/mnist_attack_fedavg/seed44/config_resolved.yaml": {
+    "sha256": "411f7297d280ccd7d044d6194f79942b74b0c62dbbeb8ba1acbeedacc3d454b6",
+    "bytes": 2029
+   },
+   "store/mnist_attack_fedavg/seed44/metrics.jsonl": {
+    "sha256": "3eb74941750b93f6bb0d62c7ad0715dbfd851b654f6b06bd5123f1bb0b29683b",
+    "bytes": 24432
+   },
+   "store/mnist_attack_fedavg/seed44/run_meta.json": {
+    "sha256": "782c4c3f893913640d86e4e10648b1147a03a4d6e7f11b0bcd646aa4f8d0f9f3",
+    "bytes": 3203
+   },
+   "store/mnist_trustfl_debug/seed42/config_resolved.yaml": {
+    "sha256": "c7feb4a5bfe7b16e899a79026870965cc648cd46e9185a225cb146dcf78b1dec",
+    "bytes": 2180
+   },
+   "store/mnist_trustfl_debug/seed42/groups.json": {
+    "sha256": "f28f86c40c4c9cc3681d1b6a3ddd3ce1508da3914c992a8cd68354225e056365",
+    "bytes": 84
+   },
+   "store/mnist_trustfl_debug/seed42/metrics.jsonl": {
+    "sha256": "3866488d334b14a8053715b0fd919db993a4c73246e6204862f90fe15de6bcf6",
+    "bytes": 40919
+   },
+   "store/mnist_trustfl_debug/seed42/run_meta.json": {
+    "sha256": "abc17cd4426a3a6ad80f04df462bf50980d17641e9233f776d7a0c153750310e",
+    "bytes": 3409
+   },
+   "store/mnist_trustfl_debug/seed43/config_resolved.yaml": {
+    "sha256": "4acca0a699e083c11283b0b7c173591f19f37c0dd3b4a23b39ba3d478ce30624",
+    "bytes": 2180
+   },
+   "store/mnist_trustfl_debug/seed43/groups.json": {
+    "sha256": "93d637094148b3ccda3f8c4016a266ab778679c86777576d21eb237e75b70de5",
+    "bytes": 82
+   },
+   "store/mnist_trustfl_debug/seed43/metrics.jsonl": {
+    "sha256": "05aa3f3ca6c5e0208a5dc7318b6069a9b7b64b7d45f3bd3814540e342b525fa2",
+    "bytes": 42939
+   },
+   "store/mnist_trustfl_debug/seed43/run_meta.json": {
+    "sha256": "1042ee3eb5dc54a33de3d098233a2f8e72a6599c1c68f59a3c73b0dd5aafc649",
+    "bytes": 3409
+   },
+   "store/mnist_trustfl_debug/seed44/config_resolved.yaml": {
+    "sha256": "f15afb2527a826dd670e598d06a76be78680cd826d1b574551ff4cb2529c0002",
+    "bytes": 2180
+   },
+   "store/mnist_trustfl_debug/seed44/groups.json": {
+    "sha256": "66b2aabfba516343791698e95db1eecb62c208115685c845f5dbc74c63bed2a0",
+    "bytes": 84
+   },
+   "store/mnist_trustfl_debug/seed44/metrics.jsonl": {
+    "sha256": "77a8add18df793180b801a84401035550e1bed24b3240bafd01563905a0672bd",
+    "bytes": 43005
+   },
+   "store/mnist_trustfl_debug/seed44/run_meta.json": {
+    "sha256": "b252bfb812740144f413627ad40aa6bc9075bccda944c2d26f15e02f6b80a368",
+    "bytes": 3409
+   },
+   "store/rs_f0.1_fedavg/seed0/config_resolved.yaml": {
+    "sha256": "c551c338e00ad0e8f78ecb93858ffb36ecb3fd101b2b85913a54e49ea34eb025",
+    "bytes": 2139
+   },
+   "store/rs_f0.1_fedavg/seed0/groups.json": {
+    "sha256": "fe00e2991dafc6e2a0844628814a67df8c16fd5dde50cf6bb019e40f795b5bb2",
+    "bytes": 159
+   },
+   "store/rs_f0.1_fedavg/seed0/metrics.jsonl": {
+    "sha256": "334498d1f41894825a368161d4c119738d8bdcd33ce4414d5b49f9e824b43af3",
+    "bytes": 83061
+   },
+   "store/rs_f0.1_fedavg/seed0/run_meta.json": {
+    "sha256": "df6e5b4364bcc0ab34bb060411659d65562f627270466a9f8a81d75338f4ac2a",
+    "bytes": 3342
+   },
+   "store/rs_f0.1_fedavg/seed1/config_resolved.yaml": {
+    "sha256": "a49b992b0d11d4438c6c5931036476ebab1b18075d32fac7476da05a38fd83b4",
+    "bytes": 2139
+   },
+   "store/rs_f0.1_fedavg/seed1/groups.json": {
+    "sha256": "a88352ad64865d423070fcd2159ccce3fed071957629033e64ce8b8a6ed96e8f",
+    "bytes": 156
+   },
+   "store/rs_f0.1_fedavg/seed1/metrics.jsonl": {
+    "sha256": "c7f858a1a09806710407e6bdb528364530263d5c5078e44e6301002a5206c1f2",
+    "bytes": 77942
+   },
+   "store/rs_f0.1_fedavg/seed1/run_meta.json": {
+    "sha256": "dc4979039815da96d8a158b982ef7a388178aad2c1e3edeac613b53499b60200",
+    "bytes": 3342
+   },
+   "store/rs_f0.1_fedgreed/seed0/config_resolved.yaml": {
+    "sha256": "d46b9eb505fcaca61b4434670528153bd5a283478fd48dd6618c3503f8a7f5ca",
+    "bytes": 2143
+   },
+   "store/rs_f0.1_fedgreed/seed0/groups.json": {
+    "sha256": "fe00e2991dafc6e2a0844628814a67df8c16fd5dde50cf6bb019e40f795b5bb2",
+    "bytes": 159
+   },
+   "store/rs_f0.1_fedgreed/seed0/metrics.jsonl": {
+    "sha256": "3b5d23e268d3ccd470e82a6ed50468d35b613396d32bd5c50688d7eaa1f84463",
+    "bytes": 73046
+   },
+   "store/rs_f0.1_fedgreed/seed0/run_meta.json": {
+    "sha256": "d57a773d1f5182f968fb54f28e25ca4a012441301305dbd5fa08a2e68a6c5da9",
+    "bytes": 3346
+   },
+   "store/rs_f0.1_fedgreed/seed1/config_resolved.yaml": {
+    "sha256": "d2ebfe5c7930a2d5dd52db38e4e76dad06f52f45947d8f8f6dde0be5fb0475b0",
+    "bytes": 2143
+   },
+   "store/rs_f0.1_fedgreed/seed1/groups.json": {
+    "sha256": "a88352ad64865d423070fcd2159ccce3fed071957629033e64ce8b8a6ed96e8f",
+    "bytes": 156
+   },
+   "store/rs_f0.1_fedgreed/seed1/metrics.jsonl": {
+    "sha256": "aade1ee3980352d03e657cf3c5ad6958852cf5be94765791b32492085545986f",
+    "bytes": 69641
+   },
+   "store/rs_f0.1_fedgreed/seed1/run_meta.json": {
+    "sha256": "c3b7e735bb9b185d3bfd760f4148499a7faf80aff0651ec04bd18d49abd9b52c",
+    "bytes": 3346
+   },
+   "store/rs_f0.1_fltrust/seed0/config_resolved.yaml": {
+    "sha256": "0ff989d7556ba560c856c56038f8abdde6de2b2ae4905e4b8e78e82e2c43ab9c",
+    "bytes": 2141
+   },
+   "store/rs_f0.1_fltrust/seed0/groups.json": {
+    "sha256": "fe00e2991dafc6e2a0844628814a67df8c16fd5dde50cf6bb019e40f795b5bb2",
+    "bytes": 159
+   },
+   "store/rs_f0.1_fltrust/seed0/metrics.jsonl": {
+    "sha256": "af56dbdf12a89e0e53a83898994744200d55a31e8bb7a1784923034f997834b3",
+    "bytes": 79336
+   },
+   "store/rs_f0.1_fltrust/seed0/run_meta.json": {
+    "sha256": "f2db54b54d586522a29f83330ebc0f3da841a0ab71308a28ab69cf77acc8b855",
+    "bytes": 3344
+   },
+   "store/rs_f0.1_fltrust/seed1/config_resolved.yaml": {
+    "sha256": "50eb4ef0b8218e78073b7620fe9549eb3b01306ef609bacc03cbb0c29312f949",
+    "bytes": 2141
+   },
+   "store/rs_f0.1_fltrust/seed1/groups.json": {
+    "sha256": "a88352ad64865d423070fcd2159ccce3fed071957629033e64ce8b8a6ed96e8f",
+    "bytes": 156
+   },
+   "store/rs_f0.1_fltrust/seed1/metrics.jsonl": {
+    "sha256": "e4fdf697598d1044f47121701fd77b4a96bf2f34c176e8bb7aa59de2260f47ef",
+    "bytes": 76433
+   },
+   "store/rs_f0.1_fltrust/seed1/run_meta.json": {
+    "sha256": "f88a7eec0896310c7a8c386493f3079510b5162ef0a71db603d775da24c8739f",
+    "bytes": 3344
+   },
+   "store/rs_f0.1_multikrum/seed0/config_resolved.yaml": {
+    "sha256": "ca3c5be8746f414a11184b564280c5d9738dd677fcbabf87ec3010cd8aeaf7d5",
+    "bytes": 2145
+   },
+   "store/rs_f0.1_multikrum/seed0/groups.json": {
+    "sha256": "fe00e2991dafc6e2a0844628814a67df8c16fd5dde50cf6bb019e40f795b5bb2",
+    "bytes": 159
+   },
+   "store/rs_f0.1_multikrum/seed0/metrics.jsonl": {
+    "sha256": "9e143769e3320e338a82d432d9c3299e2067a7fadf7fe9e504e64e24824e62d1",
+    "bytes": 85251
+   },
+   "store/rs_f0.1_multikrum/seed0/run_meta.json": {
+    "sha256": "13c893ec6a9311479bcdd814632baedcb872a6ba2f589d3f5564a556063b10a9",
+    "bytes": 3348
+   },
+   "store/rs_f0.1_multikrum/seed1/config_resolved.yaml": {
+    "sha256": "7d4dded2c5133ef8083ae82f3f1c06a06a2397f047577f5b515b5f3f9ce1844a",
+    "bytes": 2145
+   },
+   "store/rs_f0.1_multikrum/seed1/groups.json": {
+    "sha256": "a88352ad64865d423070fcd2159ccce3fed071957629033e64ce8b8a6ed96e8f",
+    "bytes": 156
+   },
+   "store/rs_f0.1_multikrum/seed1/metrics.jsonl": {
+    "sha256": "02848e4c5bb5ba13ba3d50ae9f3ac4d1bb830ec7033d554da64aa8f9e9f8c4f3",
+    "bytes": 83930
+   },
+   "store/rs_f0.1_multikrum/seed1/run_meta.json": {
+    "sha256": "466dcd3cd8f209cb219b42d97afcddd921fecef46756c396aa1ae83f8bc7fb6d",
+    "bytes": 3348
+   },
+   "store/rs_f0.1_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "1828b969b819d6be2b8e87540ee6519e489bb5f563a55166c2d69b23dd70706c",
+    "bytes": 2141
+   },
+   "store/rs_f0.1_trustfl/seed0/groups.json": {
+    "sha256": "fe00e2991dafc6e2a0844628814a67df8c16fd5dde50cf6bb019e40f795b5bb2",
+    "bytes": 159
+   },
+   "store/rs_f0.1_trustfl/seed0/metrics.jsonl": {
+    "sha256": "e18605fee96ac46a909e68758bd3970863ad021cfd36bf84b476bcb801c548d6",
+    "bytes": 87764
+   },
+   "store/rs_f0.1_trustfl/seed0/run_meta.json": {
+    "sha256": "f25525d38a4639b80ac7ed810cf0a49083b2f5934c110965a4c0e73d254e99ad",
+    "bytes": 3344
+   },
+   "store/rs_f0.1_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "4834efba705b20e926573c46e07ddd938d73aa9efb73c0c29a85efa3a124cf92",
+    "bytes": 2141
+   },
+   "store/rs_f0.1_trustfl/seed1/groups.json": {
+    "sha256": "a88352ad64865d423070fcd2159ccce3fed071957629033e64ce8b8a6ed96e8f",
+    "bytes": 156
+   },
+   "store/rs_f0.1_trustfl/seed1/metrics.jsonl": {
+    "sha256": "2644c2513f5dab53be8b0344f7e8acc4da36e369d46ba180bb78204915a2b4c9",
+    "bytes": 87990
+   },
+   "store/rs_f0.1_trustfl/seed1/run_meta.json": {
+    "sha256": "8f3422a987a302fbdcfd3af8deb46a4a9739780af9d6198d084ef90bb69d466f",
+    "bytes": 3344
+   },
+   "store/rs_f0.2_fedavg/seed0/config_resolved.yaml": {
+    "sha256": "664a21508ac970f5ffbdb64fe770c8d5c01139d41b012e87d8d09146196fd536",
+    "bytes": 2139
+   },
+   "store/rs_f0.2_fedavg/seed0/groups.json": {
+    "sha256": "13f92a33382e7563f5563f75baa8a3b9f5559c6d0e635676eb76f6ab40ad77b5",
+    "bytes": 185
+   },
+   "store/rs_f0.2_fedavg/seed0/metrics.jsonl": {
+    "sha256": "1f418d4cc81089578cefca67b8002e5dc38b3e98ee40149032f49dd963c55330",
+    "bytes": 82008
+   },
+   "store/rs_f0.2_fedavg/seed0/run_meta.json": {
+    "sha256": "3f1eb99207540e1623d6443c1edcb29af24cdf001677ec03b538678e4b3914f6",
+    "bytes": 3342
+   },
+   "store/rs_f0.2_fedavg/seed1/config_resolved.yaml": {
+    "sha256": "e69bff427090bccf5019290c7c22f04ead5bd271301e288b48114ad096e16ae2",
+    "bytes": 2139
+   },
+   "store/rs_f0.2_fedavg/seed1/groups.json": {
+    "sha256": "f000fdfac7f644bee04102510d543fa90ea534d95054c30a7fd18ed4eeacb099",
+    "bytes": 181
+   },
+   "store/rs_f0.2_fedavg/seed1/metrics.jsonl": {
+    "sha256": "5cf2b1608aa1f245503b22c904b679b9c018fd712569dc077a1b65ff97b7b6b4",
+    "bytes": 77782
+   },
+   "store/rs_f0.2_fedavg/seed1/run_meta.json": {
+    "sha256": "9f1f2f878a0d2af0624999c388169da69d92cb4e0d667801092b56d73bcd310d",
+    "bytes": 3342
+   },
+   "store/rs_f0.2_fedgreed/seed0/config_resolved.yaml": {
+    "sha256": "e006fe18c7b4528ed7830b89a216a4a7e545a47785f6ad798e6e2509cd28f5c1",
+    "bytes": 2143
+   },
+   "store/rs_f0.2_fedgreed/seed0/groups.json": {
+    "sha256": "13f92a33382e7563f5563f75baa8a3b9f5559c6d0e635676eb76f6ab40ad77b5",
+    "bytes": 185
+   },
+   "store/rs_f0.2_fedgreed/seed0/metrics.jsonl": {
+    "sha256": "8e2df53ea24302e93cc28cab8de85ee6213a3aa5b634438be4ddb38e95a360ce",
+    "bytes": 72647
+   },
+   "store/rs_f0.2_fedgreed/seed0/run_meta.json": {
+    "sha256": "fbfd4a6c522289eaa813659d1e0f0e5cd3639e4d2b2b69408835800a647c5a37",
+    "bytes": 3346
+   },
+   "store/rs_f0.2_fedgreed/seed1/config_resolved.yaml": {
+    "sha256": "42194df30aa9d11f8467c5b018e26478da9660e7fa535d56f09b1e1c5798bcd0",
+    "bytes": 2143
+   },
+   "store/rs_f0.2_fedgreed/seed1/groups.json": {
+    "sha256": "f000fdfac7f644bee04102510d543fa90ea534d95054c30a7fd18ed4eeacb099",
+    "bytes": 181
+   },
+   "store/rs_f0.2_fedgreed/seed1/metrics.jsonl": {
+    "sha256": "4f9bff13f6cb471e6d33e7f29c57cf2486af7f96f96c68ebb6890f759855dbf9",
+    "bytes": 70301
+   },
+   "store/rs_f0.2_fedgreed/seed1/run_meta.json": {
+    "sha256": "0793d30dd871d553dda80a77da56eab707a36c48331f62ee54dcadfebf7606d3",
+    "bytes": 3346
+   },
+   "store/rs_f0.2_fltrust/seed0/config_resolved.yaml": {
+    "sha256": "ae71881a7d4822cb6dbdadbb1088f972f912426515d0dba48d9474721b7a50f3",
+    "bytes": 2141
+   },
+   "store/rs_f0.2_fltrust/seed0/groups.json": {
+    "sha256": "13f92a33382e7563f5563f75baa8a3b9f5559c6d0e635676eb76f6ab40ad77b5",
+    "bytes": 185
+   },
+   "store/rs_f0.2_fltrust/seed0/metrics.jsonl": {
+    "sha256": "6c23baa0d653efe65dcb3f4f9fee120fc8f8be7aa6f16b61430829eb14682c3a",
+    "bytes": 78392
+   },
+   "store/rs_f0.2_fltrust/seed0/run_meta.json": {
+    "sha256": "ac878eb8204c77dda1d3ae33358dd0b087a22a5ba4780c462ba5176ed342c817",
+    "bytes": 3344
+   },
+   "store/rs_f0.2_fltrust/seed1/config_resolved.yaml": {
+    "sha256": "b556eb1848dcdb342fe52913c21245f0c4c0ef34d0f4abe01a984dbd64e6a06e",
+    "bytes": 2141
+   },
+   "store/rs_f0.2_fltrust/seed1/groups.json": {
+    "sha256": "f000fdfac7f644bee04102510d543fa90ea534d95054c30a7fd18ed4eeacb099",
+    "bytes": 181
+   },
+   "store/rs_f0.2_fltrust/seed1/metrics.jsonl": {
+    "sha256": "8ecaf6d0df16dd631bc32f4c53bbc85bcd086fc2af6a6ce3dd5fbfd8176c0ec9",
+    "bytes": 76175
+   },
+   "store/rs_f0.2_fltrust/seed1/run_meta.json": {
+    "sha256": "a7b479b41ab319f62d150580b262e8bc86221abe2770051c9fa185499609783c",
+    "bytes": 3344
+   },
+   "store/rs_f0.2_multikrum/seed0/config_resolved.yaml": {
+    "sha256": "402ac2578ce58861935ee465634270679e30468a2dec1e1231458d6b950c507b",
+    "bytes": 2145
+   },
+   "store/rs_f0.2_multikrum/seed0/groups.json": {
+    "sha256": "13f92a33382e7563f5563f75baa8a3b9f5559c6d0e635676eb76f6ab40ad77b5",
+    "bytes": 185
+   },
+   "store/rs_f0.2_multikrum/seed0/metrics.jsonl": {
+    "sha256": "6cd794ee363cb2e0578729231d65c65a03f3be076f1c20c72227e514351d4907",
+    "bytes": 85035
+   },
+   "store/rs_f0.2_multikrum/seed0/run_meta.json": {
+    "sha256": "eeeadc1e9ddd5ea77da567ee8ab5d90367bce99e371b79c2465bb20896e7dcda",
+    "bytes": 3348
+   },
+   "store/rs_f0.2_multikrum/seed1/config_resolved.yaml": {
+    "sha256": "225e12d4fe234f7a9e36f75d725349eaae6c8e87623bc74566c9d6af99a25be0",
+    "bytes": 2145
+   },
+   "store/rs_f0.2_multikrum/seed1/groups.json": {
+    "sha256": "f000fdfac7f644bee04102510d543fa90ea534d95054c30a7fd18ed4eeacb099",
+    "bytes": 181
+   },
+   "store/rs_f0.2_multikrum/seed1/metrics.jsonl": {
+    "sha256": "9a1e87fdbea72ce3364b5ead825342288b1344dc82c0a423dbf0afc61ec65301",
+    "bytes": 82469
+   },
+   "store/rs_f0.2_multikrum/seed1/run_meta.json": {
+    "sha256": "9e9afeb7551d28d5438c67f27054e36cdcfad04d2ee16c0ecdd0c2ed7bdcd5fb",
+    "bytes": 3348
+   },
+   "store/rs_f0.2_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "ba473d0a0c3a5def6a352d9cac20ed217e958d9864e7cfa506a7d5c966ce850b",
+    "bytes": 2141
+   },
+   "store/rs_f0.2_trustfl/seed0/groups.json": {
+    "sha256": "13f92a33382e7563f5563f75baa8a3b9f5559c6d0e635676eb76f6ab40ad77b5",
+    "bytes": 185
+   },
+   "store/rs_f0.2_trustfl/seed0/metrics.jsonl": {
+    "sha256": "c31cdd15f4f094287b360b4c30cbb1e4a63703dce45ccfedfe1c0cdab67a2a1a",
+    "bytes": 87252
+   },
+   "store/rs_f0.2_trustfl/seed0/run_meta.json": {
+    "sha256": "2e3bdd6325ec43adc5b175021755850311f53659ad83a02245403af03d5637f0",
+    "bytes": 3344
+   },
+   "store/rs_f0.2_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "3ecb11e8f4e3b34361e41b57f35d4e6ee3196f6ef0cde4984fd519a84aaa995e",
+    "bytes": 2141
+   },
+   "store/rs_f0.2_trustfl/seed1/groups.json": {
+    "sha256": "f000fdfac7f644bee04102510d543fa90ea534d95054c30a7fd18ed4eeacb099",
+    "bytes": 181
+   },
+   "store/rs_f0.2_trustfl/seed1/metrics.jsonl": {
+    "sha256": "510f9d186186df28a637082e7ad4856131bc079a07753923144a8670e91a4b7b",
+    "bytes": 85836
+   },
+   "store/rs_f0.2_trustfl/seed1/run_meta.json": {
+    "sha256": "bee617175d610c871335827abffd41a2f5a8449713ba98a996f35696e2dd720b",
+    "bytes": 3344
+   },
+   "store/rs_f0.3_fedavg/seed0/config_resolved.yaml": {
+    "sha256": "9a06568cba6b1cf3db1e5b46c3e9067cb97e78a5c1340108bb87873bf3493cec",
+    "bytes": 2139
+   },
+   "store/rs_f0.3_fedavg/seed0/groups.json": {
+    "sha256": "34dc4f7cc4eb3b206bcb12ade66cade7e91e7cc402e8d0f46455e1737a0b06e0",
+    "bytes": 211
+   },
+   "store/rs_f0.3_fedavg/seed0/metrics.jsonl": {
+    "sha256": "56b4e0756327e38d7f958730f25523ad6b4050a5eaaf06b4e86a3c6f79b9eeb9",
+    "bytes": 81820
+   },
+   "store/rs_f0.3_fedavg/seed0/run_meta.json": {
+    "sha256": "ba5bb0184ceec3900e457310807e0eec17ad9ab9e44e40e98f5801c0841de189",
+    "bytes": 3342
+   },
+   "store/rs_f0.3_fedavg/seed1/config_resolved.yaml": {
+    "sha256": "05bf120f1164ca1ca03910b41227c7f1f739ddcddd77ab8d62e28694a566047c",
+    "bytes": 2139
+   },
+   "store/rs_f0.3_fedavg/seed1/groups.json": {
+    "sha256": "d7737d4f6a14eeb0571459c52e6ea6a2aef3c2d73e9c51d80df58675fabf9b07",
+    "bytes": 206
+   },
+   "store/rs_f0.3_fedavg/seed1/metrics.jsonl": {
+    "sha256": "5de483c530c43694616241cd0d1856b8f1206d86de7318332ca8a4d410db2c7f",
+    "bytes": 74300
+   },
+   "store/rs_f0.3_fedavg/seed1/run_meta.json": {
+    "sha256": "69e1e713052a72559164619f5ecf36e7c6b10d5eb679e96c9a4ceb61d0d3b0b4",
+    "bytes": 3342
+   },
+   "store/rs_f0.3_fedgreed/seed0/config_resolved.yaml": {
+    "sha256": "763eba7857e5c19bf68c8e94b9ebc820ff3a8d2992d9bb630fb05b3575067de4",
+    "bytes": 2143
+   },
+   "store/rs_f0.3_fedgreed/seed0/groups.json": {
+    "sha256": "34dc4f7cc4eb3b206bcb12ade66cade7e91e7cc402e8d0f46455e1737a0b06e0",
+    "bytes": 211
+   },
+   "store/rs_f0.3_fedgreed/seed0/metrics.jsonl": {
+    "sha256": "f63b3d098f0ff2f1c6e35bede61576388033d2edbbb6f4dccb5af9f1c462c359",
+    "bytes": 72300
+   },
+   "store/rs_f0.3_fedgreed/seed0/run_meta.json": {
+    "sha256": "3b0915100293670644c24b5d575c21608aa00241557c9ea033d34602163ac3e4",
+    "bytes": 3346
+   },
+   "store/rs_f0.3_fedgreed/seed1/config_resolved.yaml": {
+    "sha256": "386d6cd492abe5aab2962bea2e9b23b18b245fd824705cbdf32403ed29c34b81",
+    "bytes": 2143
+   },
+   "store/rs_f0.3_fedgreed/seed1/groups.json": {
+    "sha256": "d7737d4f6a14eeb0571459c52e6ea6a2aef3c2d73e9c51d80df58675fabf9b07",
+    "bytes": 206
+   },
+   "store/rs_f0.3_fedgreed/seed1/metrics.jsonl": {
+    "sha256": "d3cf3fd40e81d4bc6cabb42dae87b6d03bcee505c4ce6ba03a794313d9cec2fb",
+    "bytes": 69368
+   },
+   "store/rs_f0.3_fedgreed/seed1/run_meta.json": {
+    "sha256": "7c16ca0ad84e2bcfb239f08282c3ff1f8fca041cc81946e0b3889149f6f258db",
+    "bytes": 3346
+   },
+   "store/rs_f0.3_fltrust/seed0/config_resolved.yaml": {
+    "sha256": "38555452271f8fdf830390f308a7a6991d08bb19e32289c82fdd59a8f1337b4c",
+    "bytes": 2141
+   },
+   "store/rs_f0.3_fltrust/seed0/groups.json": {
+    "sha256": "34dc4f7cc4eb3b206bcb12ade66cade7e91e7cc402e8d0f46455e1737a0b06e0",
+    "bytes": 211
+   },
+   "store/rs_f0.3_fltrust/seed0/metrics.jsonl": {
+    "sha256": "a2766ca1b9a06aca48a1680d13465574180ea2455af94287587cf864591f232f",
+    "bytes": 79342
+   },
+   "store/rs_f0.3_fltrust/seed0/run_meta.json": {
+    "sha256": "e11c5814ccc590c7aa57e99f549685bcacc1c56fbf2baa9b72f4acb8feb16207",
+    "bytes": 3344
+   },
+   "store/rs_f0.3_fltrust/seed1/config_resolved.yaml": {
+    "sha256": "76a71cf18063fe88f1f7d784948adb7356ae24043a2002c96a4ded3620c28a69",
+    "bytes": 2141
+   },
+   "store/rs_f0.3_fltrust/seed1/groups.json": {
+    "sha256": "d7737d4f6a14eeb0571459c52e6ea6a2aef3c2d73e9c51d80df58675fabf9b07",
+    "bytes": 206
+   },
+   "store/rs_f0.3_fltrust/seed1/metrics.jsonl": {
+    "sha256": "d4463ecaa7896923f75411f228323b2b68bb8bf0a10fc26622889a92ddb82eca",
+    "bytes": 74011
+   },
+   "store/rs_f0.3_fltrust/seed1/run_meta.json": {
+    "sha256": "689c0b765a05aa8a5ea91b8162a2e3b1db106fe68633c7de3f895c37a21d74ad",
+    "bytes": 3344
+   },
+   "store/rs_f0.3_multikrum/seed0/config_resolved.yaml": {
+    "sha256": "1164655481a958f5573a1ee59cb2bf7fa7a4e43318d2258101e5c40474e771c3",
+    "bytes": 2145
+   },
+   "store/rs_f0.3_multikrum/seed0/groups.json": {
+    "sha256": "34dc4f7cc4eb3b206bcb12ade66cade7e91e7cc402e8d0f46455e1737a0b06e0",
+    "bytes": 211
+   },
+   "store/rs_f0.3_multikrum/seed0/metrics.jsonl": {
+    "sha256": "974780eee128860c55f870c430bd7b9739af2ff333f529f123888984ca2fdd7d",
+    "bytes": 85595
+   },
+   "store/rs_f0.3_multikrum/seed0/run_meta.json": {
+    "sha256": "33cd58719f919ddc8874d456257b758acddf935fc81b8c90a54bfb2063ecb5ad",
+    "bytes": 3348
+   },
+   "store/rs_f0.3_multikrum/seed1/config_resolved.yaml": {
+    "sha256": "bd777ae6a57efeb83781d65255cee48328ee56fb0614fd0bf2451f188c3f6f02",
+    "bytes": 2145
+   },
+   "store/rs_f0.3_multikrum/seed1/groups.json": {
+    "sha256": "d7737d4f6a14eeb0571459c52e6ea6a2aef3c2d73e9c51d80df58675fabf9b07",
+    "bytes": 206
+   },
+   "store/rs_f0.3_multikrum/seed1/metrics.jsonl": {
+    "sha256": "d075e895de7c32a1efbf52951d6d3be6a55a5a4ea17893a23ad7ff7e0a2dd9f5",
+    "bytes": 82319
+   },
+   "store/rs_f0.3_multikrum/seed1/run_meta.json": {
+    "sha256": "e749d6b1e03863d9b0fee26cce0b3d2fbe4d3cd03203e5087c971c1aeeb439af",
+    "bytes": 3348
+   },
+   "store/rs_f0.3_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "288b4130f9d3134db1915a1cedeee11e8924d334d1a9eb9ef488091c43a1288c",
+    "bytes": 2141
+   },
+   "store/rs_f0.3_trustfl/seed0/groups.json": {
+    "sha256": "34dc4f7cc4eb3b206bcb12ade66cade7e91e7cc402e8d0f46455e1737a0b06e0",
+    "bytes": 211
+   },
+   "store/rs_f0.3_trustfl/seed0/metrics.jsonl": {
+    "sha256": "95696ce47981677616461ce6cf765ec5368605b8dcd12e360c7b968159fe5d64",
+    "bytes": 83016
+   },
+   "store/rs_f0.3_trustfl/seed0/run_meta.json": {
+    "sha256": "c1b3d2b8554db5775f135cf636169f8846f566e4e17b8e651121daba4593773f",
+    "bytes": 3344
+   },
+   "store/rs_f0.3_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "7970849a5e6d894616ced890b24b619730cd5c9605d9d8d5dd3351f1c3cfec78",
+    "bytes": 2141
+   },
+   "store/rs_f0.3_trustfl/seed1/groups.json": {
+    "sha256": "d7737d4f6a14eeb0571459c52e6ea6a2aef3c2d73e9c51d80df58675fabf9b07",
+    "bytes": 206
+   },
+   "store/rs_f0.3_trustfl/seed1/metrics.jsonl": {
+    "sha256": "a76d90f8f534902b3160ec7c238e0d9b9fc583df95ce54d88e07f21d2c12697e",
+    "bytes": 88499
+   },
+   "store/rs_f0.3_trustfl/seed1/run_meta.json": {
+    "sha256": "6a31b76def3cc3d2cc81172e8ce4fbce07afe50631bf4c58f2df596a5b1515c9",
+    "bytes": 3344
+   },
+   "store/rs_f0.4_fedavg/seed0/config_resolved.yaml": {
+    "sha256": "f522448f8b17bffa356431c46c72f7e570b86e708b399651a811c2ec625dc408",
+    "bytes": 2139
+   },
+   "store/rs_f0.4_fedavg/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/rs_f0.4_fedavg/seed0/metrics.jsonl": {
+    "sha256": "37d1a1d926ee4577fd40d50eada2ffc1ff31cd970320c545fc165bcbccae10ac",
+    "bytes": 80977
+   },
+   "store/rs_f0.4_fedavg/seed0/run_meta.json": {
+    "sha256": "4f02f3dfe1ea2cffde32845a2c35f997cad2094394a29e98ff2a4aa58e3aae5f",
+    "bytes": 3342
+   },
+   "store/rs_f0.4_fedavg/seed1/config_resolved.yaml": {
+    "sha256": "1962b72d24d7cf23f922d238c08e3655afb1456846a659afccc0276952e1faff",
+    "bytes": 2139
+   },
+   "store/rs_f0.4_fedavg/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/rs_f0.4_fedavg/seed1/metrics.jsonl": {
+    "sha256": "8f6fe64d87e284998974532649a94e761969031c0a20c35657dc774eccc74b01",
+    "bytes": 77185
+   },
+   "store/rs_f0.4_fedavg/seed1/run_meta.json": {
+    "sha256": "6b14be76c93d53cb3521e2f87f2ad29cef6ab21ca47c58431a7670a79706470f",
+    "bytes": 3342
+   },
+   "store/rs_f0.4_fedgreed/seed0/config_resolved.yaml": {
+    "sha256": "4c1fe786b1f9bcb5418d9f5264bad2885083bb58287e9218028fd93aead3cdd2",
+    "bytes": 2143
+   },
+   "store/rs_f0.4_fedgreed/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/rs_f0.4_fedgreed/seed0/metrics.jsonl": {
+    "sha256": "d140b7577bc99929ee9f6afb6ba7eaa16321c26ac8f89744894a770739adbc09",
+    "bytes": 71942
+   },
+   "store/rs_f0.4_fedgreed/seed0/run_meta.json": {
+    "sha256": "a32a3b27cc89dfdb37adff38cea935250d8972469c4528cef54ccec545a056d5",
+    "bytes": 3346
+   },
+   "store/rs_f0.4_fedgreed/seed1/config_resolved.yaml": {
+    "sha256": "11bf246670c614350b1927fda42184e6af614d743d037e19372ba19b9294c151",
+    "bytes": 2143
+   },
+   "store/rs_f0.4_fedgreed/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/rs_f0.4_fedgreed/seed1/metrics.jsonl": {
+    "sha256": "09297a66dc28a37a2b620d25a4d666eede0ba087d5aaa12bd974f4de8b4b1c1d",
+    "bytes": 69974
+   },
+   "store/rs_f0.4_fedgreed/seed1/run_meta.json": {
+    "sha256": "4b56620fb827e9a1ff4b342cdb3d66a674eb5dcd4db55a1fc8a3a9254c940056",
+    "bytes": 3346
+   },
+   "store/rs_f0.4_fltrust/seed0/config_resolved.yaml": {
+    "sha256": "1c03c5640bbb259bd8c330761606f497fbbf243678e6ae5c11ec596e75de6e0f",
+    "bytes": 2141
+   },
+   "store/rs_f0.4_fltrust/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/rs_f0.4_fltrust/seed0/metrics.jsonl": {
+    "sha256": "67f97a2b973b41917b1102bcd6a047453a018787afd16fd25d1dbc910b2604dc",
+    "bytes": 75799
+   },
+   "store/rs_f0.4_fltrust/seed0/run_meta.json": {
+    "sha256": "55088dbf47f20ff6d8ba4f15a4068897185047ef0bafae0ac58db592d7abbb54",
+    "bytes": 3344
+   },
+   "store/rs_f0.4_fltrust/seed1/config_resolved.yaml": {
+    "sha256": "1a060f45527564bbb95da5d6c4bf5d7e0c6d4748942b379e7f9ee97ad0f84823",
+    "bytes": 2141
+   },
+   "store/rs_f0.4_fltrust/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/rs_f0.4_fltrust/seed1/metrics.jsonl": {
+    "sha256": "8175943e8388ccd032d48457feb9128740c898e2fcbc3680d6c26e61458ae559",
+    "bytes": 75574
+   },
+   "store/rs_f0.4_fltrust/seed1/run_meta.json": {
+    "sha256": "ebb07bce58fe48bb54a694e2944a304898ef53865603ec0ef9f1d17046af05d5",
+    "bytes": 3344
+   },
+   "store/rs_f0.4_multikrum/seed0/config_resolved.yaml": {
+    "sha256": "24431b4e95c094160b73c315c0818f1612ff2f50b1be4c153137fa6ba31aa7e8",
+    "bytes": 2145
+   },
+   "store/rs_f0.4_multikrum/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/rs_f0.4_multikrum/seed0/metrics.jsonl": {
+    "sha256": "c919b65aa691b105763f6bdc105df8d4769e12c9fe7071238067580231f00a48",
+    "bytes": 80517
+   },
+   "store/rs_f0.4_multikrum/seed0/run_meta.json": {
+    "sha256": "ad4e8fca51bd4919c6e034115c3e4ea965b9fadd2dc39f5333293a2eb4f5d883",
+    "bytes": 3348
+   },
+   "store/rs_f0.4_multikrum/seed1/config_resolved.yaml": {
+    "sha256": "c186ced05a17c1faa0dcce4822106f2b62690b8970365942e9385fd5fdc38486",
+    "bytes": 2145
+   },
+   "store/rs_f0.4_multikrum/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/rs_f0.4_multikrum/seed1/metrics.jsonl": {
+    "sha256": "1aa1fc47ffcc43df795013a86f421e9ae1a4e25c51283aa0b87d90aa572a1636",
+    "bytes": 83202
+   },
+   "store/rs_f0.4_multikrum/seed1/run_meta.json": {
+    "sha256": "f746f0da2a7be5e60e083a4702deea4e5a06e847ff3477ee03cf40c74cacc3f9",
+    "bytes": 3348
+   },
+   "store/rs_f0.4_trustfl/seed0/config_resolved.yaml": {
+    "sha256": "157911a2f870c0aa20970d8d139d83f60361a6319e0c8fb2d05018d715ed82db",
+    "bytes": 2141
+   },
+   "store/rs_f0.4_trustfl/seed0/groups.json": {
+    "sha256": "7c8bf0cfbf02b52c788112130ccaeab6543f75306aa43e61355c81c99d2a0fb1",
+    "bytes": 236
+   },
+   "store/rs_f0.4_trustfl/seed0/metrics.jsonl": {
+    "sha256": "242658a5f2da1d66ec5ff23046abc2fd57b20f065ecde560b9fbbd6d0c2f5cc0",
+    "bytes": 85920
+   },
+   "store/rs_f0.4_trustfl/seed0/run_meta.json": {
+    "sha256": "28ba19ace53f7928d402dcabb010994f0b35a1320657e96d5bcb05943059bde5",
+    "bytes": 3344
+   },
+   "store/rs_f0.4_trustfl/seed1/config_resolved.yaml": {
+    "sha256": "8553e2adae7ead5acea316dd6cd61ef06672e51a6b92c4e454a88924f7ffa8ec",
+    "bytes": 2141
+   },
+   "store/rs_f0.4_trustfl/seed1/groups.json": {
+    "sha256": "b90180636530f8473ace79112a0b086edd3d6f19643fcb2fd36b5eb91a456be6",
+    "bytes": 231
+   },
+   "store/rs_f0.4_trustfl/seed1/metrics.jsonl": {
+    "sha256": "8d58d20ca2bf0400d98557d1016f040f89ff41389ef8ce8542e5594ae15936f4",
+    "bytes": 83230
+   },
+   "store/rs_f0.4_trustfl/seed1/run_meta.json": {
+    "sha256": "0b1610bdf984b6bac22d4be9f93f942c8477d1f41a27b73f3b72225963e42371",
+    "bytes": 3344
+   }
+  }
+ },
+ "store_index": {
+  "store_index/results.db": {
+   "sha256": "3b5d3eb052036804345b739e154be9dd34feb917f7cf0f2cb7778917412ee1cf",
+   "bytes": 368640
+  },
+  "store_index/configs/002a6f2862bfc86b.yaml": {
+   "sha256": "0c2af67b777cad3a0a9a9254f1a77934a837cf20351f39fcb9fd584844faa06a",
+   "bytes": 2054
+  },
+  "store_index/configs/022cfad719f73610.yaml": {
+   "sha256": "4a17ed53e56f9820abd78f99565f0723c50f2481ae647df2b8d666970db60240",
+   "bytes": 2076
+  },
+  "store_index/configs/03f62558c202017c.yaml": {
+   "sha256": "2876d7f5ec183d14b9003859140c32b2fd0ef947c2dd3c153b3d9064e6f2cad3",
+   "bytes": 2042
+  },
+  "store_index/configs/070658400db2b532.yaml": {
+   "sha256": "a09be964170f3885b7dd4c4d08fba875cc07f3701ccf719c8f286fad13ea7fce",
+   "bytes": 2027
+  },
+  "store_index/configs/07a5c42a51e5dc9d.yaml": {
+   "sha256": "80fec70a615689803695fede3710b12cd19825a6ab6c82f7ce7a188e3de73faf",
+   "bytes": 2084
+  },
+  "store_index/configs/0b1fda5e14fcbd51.yaml": {
+   "sha256": "155895ee11fc3f1896760dd20a226ff49131cfa6e31979c7453d92a6dd6593a8",
+   "bytes": 2099
+  },
+  "store_index/configs/12e1a0b22f5874a9.yaml": {
+   "sha256": "dddd87ebac0290c549198da9c3e429058b0626e439759d0e45cf555b05d3eefd",
+   "bytes": 2028
+  },
+  "store_index/configs/139f68f6aba072fe.yaml": {
+   "sha256": "e6412dcf0ea723e82d5ea67a31a89882df520453e3571a48dc231adf4e5e53c1",
+   "bytes": 2050
+  },
+  "store_index/configs/148a2eb157d609ae.yaml": {
+   "sha256": "8f6ee7ab8b8be2a06a3db53fc487c5fa12b2be3dfe6804eabfd43237cd49bda3",
+   "bytes": 2050
+  },
+  "store_index/configs/1d0b7130b476c9aa.yaml": {
+   "sha256": "d91759d581d00be7b063dae4371b4f65aa509c1446d20b106a31fcb9b67a1ac9",
+   "bytes": 2032
+  },
+  "store_index/configs/2071448f025f182c.yaml": {
+   "sha256": "3070a9b3ce3a27c7bec9e1b781ae69a5f43194033e9d0f27528a2526e8d67d59",
+   "bytes": 2033
+  },
+  "store_index/configs/20fdb4a0393ee98b.yaml": {
+   "sha256": "0e91dbc1b2078a65012118cf541b3fa46492148e37ec3b6112576e582b8a16f4",
+   "bytes": 1924
+  },
+  "store_index/configs/24f9d2a1aaca9e31.yaml": {
+   "sha256": "59fec0fe370df3cbe499687bfc1d10a414f3bab95028277c980252862ea1a9e7",
+   "bytes": 2048
+  },
+  "store_index/configs/2a7f679105b556c3.yaml": {
+   "sha256": "b6e0ec17fbb9b9f1ce8dc43644ede12eeba5d049c7c83d2074c484b08e9ec1eb",
+   "bytes": 2101
+  },
+  "store_index/configs/2c796b98444f5d8e.yaml": {
+   "sha256": "52ece9abf8903a7f02d9cc3e8b3add23a86420a52a76c0c3af3e3de60324d724",
+   "bytes": 2033
+  },
+  "store_index/configs/2dda61178911a148.yaml": {
+   "sha256": "012b347a6afb7b9bd016c3f899a37334e5e718ab835954194bf6849c87461e25",
+   "bytes": 2044
+  },
+  "store_index/configs/333a1fee1f0cc4de.yaml": {
+   "sha256": "7df14097f1b9e469e1c98640d889c33b0670c318e462185360ddd6be9de9ccd6",
+   "bytes": 2050
+  },
+  "store_index/configs/36347fbbb214b377.yaml": {
+   "sha256": "6ec540ab867c80427d925284288c58e21ca0b0b1db808a74945115bda515b795",
+   "bytes": 2099
+  },
+  "store_index/configs/3643f8f6f3b807a1.yaml": {
+   "sha256": "8a59834a1dfd11281a1830e0a5cf20b0b2bcfbe323ebecbabb85b8720958f151",
+   "bytes": 2042
+  },
+  "store_index/configs/3747b433ac43a29d.yaml": {
+   "sha256": "e2bcdd1866c1745aeae32ad238fb850633a2bae65d89a7f19a8f615081f8af52",
+   "bytes": 2056
+  },
+  "store_index/configs/396b34e78c18cc38.yaml": {
+   "sha256": "fd96a31f78e912a09dd1f96026c8bee25e8b99bde093d30adafddca6491dbe79",
+   "bytes": 1950
+  },
+  "store_index/configs/417da3757f93243a.yaml": {
+   "sha256": "aa007df994aec661f09776ebd68bcfd78ef693dce17db6d5986e86866b8deea9",
+   "bytes": 2091
+  },
+  "store_index/configs/42c059eaf7118f30.yaml": {
+   "sha256": "b4d2a1efd41a949c5162245a69f468dc091a8b47049e44c547f17a13acbdf1a9",
+   "bytes": 2034
+  },
+  "store_index/configs/4b94c8249bb1ce53.yaml": {
+   "sha256": "15aae62df30ed8b2dd8dfb9fca0e1e2944175ed522ff3629b8a6903364c8280e",
+   "bytes": 2048
+  },
+  "store_index/configs/4e9f34476eaed248.yaml": {
+   "sha256": "d8c0a34f88ea6e44e73d6eec49b6ad897b64763dad28c829340f2014e2c294d1",
+   "bytes": 2070
+  },
+  "store_index/configs/5170bcceeec6422f.yaml": {
+   "sha256": "a65c63f51bb9e4ab6470529d0aa5a02bf9d54afd79e0b5f5d4e21fd167ae7ef0",
+   "bytes": 2050
+  },
+  "store_index/configs/5196bfc037cd7c7e.yaml": {
+   "sha256": "fd3c977e8d0572435ae2cfb78352a8cd1b124c00514f5ddfb2e919c1637f909a",
+   "bytes": 2066
+  },
+  "store_index/configs/58822b557ab3d9ae.yaml": {
+   "sha256": "cc4a88a4bf0592192aeea004d33c0c0bbd5651a7b9ac9c298e913f97575bb5cb",
+   "bytes": 2060
+  },
+  "store_index/configs/59ba82cd533c8695.yaml": {
+   "sha256": "7861f900638f8b4d1cef3ba3321ecdd4704a20b05ef791ab088f181a08354f1f",
+   "bytes": 2030
+  },
+  "store_index/configs/5f6aa423f9d778b5.yaml": {
+   "sha256": "57f8801c1dde3ba901e4286f0f0de3df3a691a29ce4516e6529f896b6a4b9dbe",
+   "bytes": 2030
+  },
+  "store_index/configs/6214308d646c4ab5.yaml": {
+   "sha256": "e21b470533f5fed1b4c23113f4105ef53e29d3565b83e4d51e66e361a0622f63",
+   "bytes": 2056
+  },
+  "store_index/configs/6901ef764d8aa26f.yaml": {
+   "sha256": "714a8a312a28c1f2fd50fa2f123977e16305eb77bc1f16063951b04a847bea03",
+   "bytes": 2028
+  },
+  "store_index/configs/737051550947bb9e.yaml": {
+   "sha256": "a10b83ead37039fe7d27f2c40aa54430fbe02de57d5dddf2d09bd2d2f7af4e5b",
+   "bytes": 2064
+  },
+  "store_index/configs/77fc348f5303e699.yaml": {
+   "sha256": "c4501b448b3f50010239369c18378ec6d30a67c94aad346f4681b1544e930f88",
+   "bytes": 2030
+  },
+  "store_index/configs/7e16cf5c93c03921.yaml": {
+   "sha256": "31daa3f7e2eff0683f69c7c8bae5a13d76c3f90c04ebd9e13c9e8051308382f5",
+   "bytes": 2069
+  },
+  "store_index/configs/81af7aec502e004d.yaml": {
+   "sha256": "8bb7c938ac8dd1358b8f06e4bb7595ef18acb79ae40967d6e5b4e0b3f8b3090c",
+   "bytes": 2030
+  },
+  "store_index/configs/8a8d5808f7ead34c.yaml": {
+   "sha256": "c6fefa75fbfdab9aa8c879e40e89b29f3ee7519b780d67f9eda061ea3a70b1f2",
+   "bytes": 2027
+  },
+  "store_index/configs/9281ff80778990e0.yaml": {
+   "sha256": "18a983bb597ba75321f3269bca4665c46a00ac50a938bd13a04483a06047195a",
+   "bytes": 2034
+  },
+  "store_index/configs/977833b6a1c99964.yaml": {
+   "sha256": "927c0dcb199717a53fa37ced864388b2b88df491f9b82b3e69022b32b09775f5",
+   "bytes": 2030
+  },
+  "store_index/configs/97f3378a1100bf1e.yaml": {
+   "sha256": "60a512fba3f5a1bd9df05fc2b59931e6ed2dadc0ff2ecfeee027d7daf3a9ad35",
+   "bytes": 2032
+  },
+  "store_index/configs/a09dc2fe7df6b669.yaml": {
+   "sha256": "752feb3a0c28867bf5d2b98084c6b09db67fa2e66115cb01fbd4aef8e9167901",
+   "bytes": 2028
+  },
+  "store_index/configs/a259a82026de3622.yaml": {
+   "sha256": "3600cc19b5bb7ccbe3d2cfe157748230e8ab180015865bcba8c592e199ee91bd",
+   "bytes": 1947
+  },
+  "store_index/configs/a62be5a06f905aa1.yaml": {
+   "sha256": "8da3a2caf078cdcdc2c87fd9fa7c4652b2960bf15ae74f19348b7ed2be9a0f63",
+   "bytes": 2089
+  },
+  "store_index/configs/ab8a3d4a5bfcb2f6.yaml": {
+   "sha256": "b24653bf4331e412b048ae5ac6a237333a5577da68ea6c2ce619053e772fe560",
+   "bytes": 2078
+  },
+  "store_index/configs/ac7492c65191ff7e.yaml": {
+   "sha256": "58649aab55a35bf40c6fb73b6b32b63b085b0cdf445f694cd28be4b6e3c89156",
+   "bytes": 2030
+  },
+  "store_index/configs/ac8badda4544a71c.yaml": {
+   "sha256": "9d62e794b05a58cb1fa3e75ecf813d5df73a09c9bb5a109f6cbcd91b3541604a",
+   "bytes": 2044
+  },
+  "store_index/configs/ad185ea36e6b76bc.yaml": {
+   "sha256": "a12fe4f2cd35ab4a020e9fd557677c779cfad14a4215b03737c373a9bb2fa5f3",
+   "bytes": 1922
+  },
+  "store_index/configs/b17db620e580e951.yaml": {
+   "sha256": "6b442ed8116a37b2292a82fbd7c0b9dbcca7b1a04c71025206eac2f9b98c7cc5",
+   "bytes": 2034
+  },
+  "store_index/configs/bfca10f12bda36af.yaml": {
+   "sha256": "f353bd16c19b2d8b0137a3420e0531c581ba3db96ca60c12af26b10725e383e8",
+   "bytes": 2071
+  },
+  "store_index/configs/c29726b7839d9418.yaml": {
+   "sha256": "9ca6ea0eb01a3c2a01c04429463c677bd53e29974bf0465717d7c1089e2f8bd0",
+   "bytes": 2048
+  },
+  "store_index/configs/ca122487895a8a79.yaml": {
+   "sha256": "d4b95894d474743f757434c3ad8dbf971713beacceac02ecb9a6bed5b87a51c0",
+   "bytes": 2052
+  },
+  "store_index/configs/d21f5d57432dbe7d.yaml": {
+   "sha256": "0d754f0b99282c52bda0b5efea61b585529422462588a75e52d1ebf7b889b3a3",
+   "bytes": 2025
+  },
+  "store_index/configs/d65c5d0bb1eaef0f.yaml": {
+   "sha256": "3347b641aff5f017751c17ddce200e238e485931417e01c77c46464bd03d5341",
+   "bytes": 1948
+  },
+  "store_index/configs/d890420c2eb4c757.yaml": {
+   "sha256": "7e11c61ee3813f59641331b696908b6aabb7891d9c111be57e1e1847ed0654d8",
+   "bytes": 2087
+  },
+  "store_index/configs/d9258556ba0a5f4c.yaml": {
+   "sha256": "761e2caa9b344462aba813c8361c0696f203ee1af35b52d129f43c783534fa1e",
+   "bytes": 2031
+  },
+  "store_index/configs/db9fb64328265502.yaml": {
+   "sha256": "20f28cbf62f00238c3f6f16fd193f7734f0ef5a5c4b8bd70576bf5f945b561ab",
+   "bytes": 2032
+  },
+  "store_index/configs/dd33834f98795877.yaml": {
+   "sha256": "7819994809f40255fa05e8855f34bc96df7683977d8ab44b3f4e1d0ebc714a1f",
+   "bytes": 2029
+  },
+  "store_index/configs/e6cf857c3a34edbb.yaml": {
+   "sha256": "ca5b11b27cc413fae4b31f5a4211f7859cd3310c6794d0f8c33550c1a1790ef2",
+   "bytes": 1949
+  },
+  "store_index/configs/ea31c93cacffb862.yaml": {
+   "sha256": "631fc92faa9286e035d44200716c807deaad3b5c9205966951dab0e6a86dc982",
+   "bytes": 2043
+  },
+  "store_index/configs/f25028a56d9a8dce.yaml": {
+   "sha256": "e0d888307e2256ee0afdb49c86f36324d87040f0f230f325c91285e7d58a8c6c",
+   "bytes": 2046
+  },
+  "store_index/configs/f3af78eac0e18cb1.yaml": {
+   "sha256": "4159c26377d97461eb61e4e9d4b1aa667329100a5eff4da31624c3bde93b0373",
+   "bytes": 2089
+  },
+  "store_index/configs/f4407b6dbbbbdbd1.yaml": {
+   "sha256": "f89c3d8695418467f93b7d5da914065454877ca0504b25667e354dbd368839ff",
+   "bytes": 1949
+  },
+  "store_index/configs/fac1ce91f123caec.yaml": {
+   "sha256": "beb8cbec60420f629f0710bf7bd58081179535f94778018b5f0b7e845c2a1443",
+   "bytes": 2040
+  },
+  "store_index/configs/fd4dc235de8ece48.yaml": {
+   "sha256": "15c8f0001710223e9da2fcafde29785b698aa92199105008864891eae6a65090",
+   "bytes": 2020
+  },
+  "store_index/configs/ff1a1d1d87be0b3e.yaml": {
+   "sha256": "2a70c3ec83ae7513f7531990a3a15c462108a4025b3fcc09823bb7e8f72f827f",
+   "bytes": 2097
+  }
+ },
+ "outputs": {
+  "data": {
+   "paper_assets/data/claims_report.txt": {
+    "sha256": "6777efbf70786dd5f5dc93a95e64266781510d0ff62b6958d0674ad47e783b7e",
+    "bytes": 797
+   },
+   "paper_assets/data/experiment_groups.csv": {
+    "sha256": "3e95e2d124c88ee09358f7d4a559852e027ba6e10aeedfeabe667cfd146e4aa3",
+    "bytes": 33951
+   },
+   "paper_assets/data/fidelity_jump.csv": {
+    "sha256": "a8cea9524eb36498cad81533c5a8ebb81c512f25ec404a2c70db108e277da636",
+    "bytes": 384
+   },
+   "paper_assets/data/hardened_dual.csv": {
+    "sha256": "dbb589b617ffedcde08c69d0765b6cd5b35644c5b01f17d7104345a1535fe791",
+    "bytes": 19381
+   },
+   "paper_assets/data/runs_summary.csv": {
+    "sha256": "f983fdb994bc7294bc1afe73694dad6e663606ee1133b03a69b80393d8d75401",
+    "bytes": 52062
+   },
+   "paper_assets/data/scalability.csv": {
+    "sha256": "62a88df8796b1a507c4d7d21b5aecc19bf6bcd68a499256ac6c6b224d049e17c",
+    "bytes": 1167
+   },
+   "paper_assets/data/sweep.csv": {
+    "sha256": "9ed73366c222513ddf14378f872c63cbf1aeaf0b33dc80d9525140f64166f9cc",
+    "bytes": 10388
+   },
+   "paper_assets/data/system_attacks.csv": {
+    "sha256": "d503219ea4cd4548e6e5bdd8e0a5215686bee14c497e0b4a4be149699fa493a6",
+    "bytes": 9577
+   },
+   "paper_assets/data/table1.tex": {
+    "sha256": "31e4d193df45bf1cf70816e3582564d276088f74f886ae9bc02b755189e32871",
+    "bytes": 709
+   },
+   "paper_assets/data/timeseries_key.csv": {
+    "sha256": "968972df4f3538c8489bbe999e6d21597cffa57381e2096f9efe41345c6afea4",
+    "bytes": 4041040
+   }
+  },
+  "figures": {
+   "paper_assets/figures/F1_motivation.pdf": {
+    "sha256": "8714367eb28d3230275718e053459cd3333d1b147b09e128cfb974960593f753",
+    "bytes": 73063
+   },
+   "paper_assets/figures/F1_motivation.png": {
+    "sha256": "6e23603406cf76d5e039740976c4de7743358e680f9f49c032d89f63868b7ba8",
+    "bytes": 376147
+   },
+   "paper_assets/figures/F2_distinction.pdf": {
+    "sha256": "73bff8ab8e794fc7cb1f2fc72bae4987b00ffe973d695c991bd1af5f7acc75eb",
+    "bytes": 34967
+   },
+   "paper_assets/figures/F2_distinction.png": {
+    "sha256": "db304e69a747f5fe42d9104810959797e5634d31fb6fc45e3b4a6f8186bbbad5",
+    "bytes": 220701
+   },
+   "paper_assets/figures/F3_paradigm.pdf": {
+    "sha256": "c528a9c3ab012be4f96ce3e0edde504d6f732d5f15d1d7b13a0299423594b8d8",
+    "bytes": 68343
+   },
+   "paper_assets/figures/F3_paradigm.png": {
+    "sha256": "d8d53b9d1af26018a30ddbbdcfa1ecb3e97434f34eef45102d8d523b545c7510",
+    "bytes": 419321
+   },
+   "paper_assets/figures/F4_system_attacks.pdf": {
+    "sha256": "55132fdbe927d3ae62f57ba622f3f1ec2077bd3ae280937a0586f9b2a3e9af0a",
+    "bytes": 45280
+   },
+   "paper_assets/figures/F4_system_attacks.png": {
+    "sha256": "baad24dcec5ff76815e69dc93964b7691571de5cfe189d54319b2871c0c4a044",
+    "bytes": 334564
+   },
+   "paper_assets/figures/F5_sweep.pdf": {
+    "sha256": "9ded178e981b960c63dd970f83b60c893e14298caa859d8f3243622b5a978818",
+    "bytes": 28349
+   },
+   "paper_assets/figures/F5_sweep.png": {
+    "sha256": "4c90d303dcf0bf9c1089d02262dc7614602ea7de937b1d4ab8208565c724c64a",
+    "bytes": 334786
+   },
+   "paper_assets/figures/F6_resource.pdf": {
+    "sha256": "57fe0b8bba443f36e7d5985dc71803faec0410cca9044ee6af0b3edba6ce75c0",
+    "bytes": 78031
+   },
+   "paper_assets/figures/F6_resource.png": {
+    "sha256": "9f4c0a2228ae79ed3f9055310770fb925f03f1f590dda934609aefa3f76f1e57",
+    "bytes": 451572
+   },
+   "paper_assets/figures/F7_mechanism.pdf": {
+    "sha256": "17b8ea8512b3170a83433eb783edf3b6a3fa79e51eb8d2c28513be0238065f67",
+    "bytes": 40338
+   },
+   "paper_assets/figures/F7_mechanism.png": {
+    "sha256": "5b41a37bbd48754e644c6a17096f04aa409907ab6a2479b7e71fec2c285ee30e",
+    "bytes": 375838
+   },
+   "paper_assets/figures/F8_scalability.pdf": {
+    "sha256": "96c73a1a69e85b9184544909e4180abb1376bef7a2d9726f0a2f0fcbb5c4a0e1",
+    "bytes": 25876
+   },
+   "paper_assets/figures/F8_scalability.png": {
+    "sha256": "1d0118cf7b8c2b1a6e72541ecacf7d56ade124d1b024c8d0ee7834fd2398b091",
+    "bytes": 245298
+   },
+   "paper_assets/figures/F8_scalability_fit.json": {
+    "sha256": "b28ae55564c3e094c9f5f0794e44d6e08b957140d1a4fba771e136824df1a4a0",
+    "bytes": 423
+   },
+   "paper_assets/figures/F9_eurosat.pdf": {
+    "sha256": "4e45b2eb7002a504da34dda15bfaa013ca5d054016e03e8085364f535b8e9f2a",
+    "bytes": 21903
+   },
+   "paper_assets/figures/F9_eurosat.png": {
+    "sha256": "7d8d372146ca0c68a82ac31b97cbcaef926a3a8026cdccd43134a1cfe013a2f2",
+    "bytes": 160276
+   }
+  },
+  "tables": {
+   "tables/matrix_exp_h_adsys.csv": {
+    "sha256": "36449eec52a4ccce14f49b08774f6a8ff51463240ae5d2a92f6d7c274967a9c7",
+    "bytes": 805
+   },
+   "tables/matrix_femh_adsys.csv": {
+    "sha256": "1628f3a145041bfb63cbc0e99ab0826a14c52abd202e60fd47e203cf79de1465",
+    "bytes": 922
+   },
+   "tables/mwu_primary_tests.csv": {
+    "sha256": "a4b5537c4d362a33cda82a9709c71ca6278779f360bc2c9c7506e0e4d80caab6",
+    "bytes": 979
+   },
+   "tables/table3_rows.tex": {
+    "sha256": "edb4a85672178a929e325fe8504082b981ad3f7b51f91a485dc9ef73b91c27f2",
+    "bytes": 698
+   },
+   "tables/table3_summary.csv": {
+    "sha256": "ef00a9a8350a813e3dcd3714f936fd69316cec7fc73f4c6ecd3fa01706ef9f60",
+    "bytes": 1813
+   },
+   "tables/table4_marks.csv": {
+    "sha256": "80f6c4b8994a5bd9624d576b7f5b8095c27b63c1bb6612ee005a623340c04898",
+    "bytes": 1562
+   },
+   "tables/table4_rows.tex": {
+    "sha256": "1fafbe9772c3ea8931da2edba36656bda0da6b03ba52ec965116674c2e8d36ef",
+    "bytes": 792
+   },
+   "tables/table5_rows.tex": {
+    "sha256": "42f40d63d39307476621567f98860b71c1a1e7e79b3c57109a0f5bb508e17cc8",
+    "bytes": 1418
+   },
+   "tables/table5_summary.csv": {
+    "sha256": "d9610f2f80fc1a0583428e105735a8bc2e78b923aee3a2c2f56093a1ab25a4bd",
+    "bytes": 4124
+   },
+   "tables/table6_full.tex": {
+    "sha256": "dff70b59a690d9d41feeec0544eb3c3cfefaad0e018edd24a7bb40cccd3044e5",
+    "bytes": 8736
+   },
+   "tables/table6_mechanism.tex": {
+    "sha256": "85d84c1c3be050096a8985db62369ec5e6252fda55e82d8150d47a9a8d0f766e",
+    "bytes": 1750
+   }
+  },
+  "supplement": {
+   "supplement/exclusion_precision_recall.csv": {
+    "sha256": "ee9e2efcf942b21dd5113babea94becb9f6726856c69ace8b13d022d9d93be5e",
+    "bytes": 5644
+   },
+   "supplement/exclusion_precision_recall.tex": {
+    "sha256": "360782538362f31a07765a002bafa13f6e3867fe0ea28897d3425cd6dec2238c",
+    "bytes": 3415
+   },
+   "supplement/rounds_to_target.csv": {
+    "sha256": "e1c5916febcfd48ccaa6bf80afe270b3efb04aba266024475c7f11e322d6ebee",
+    "bytes": 2320
+   },
+   "supplement/rounds_to_target.tex": {
+    "sha256": "e22b0c25501576d213f2c05ee2dc474660cf99bc52626ecfa7c4284c6ee06a09",
+    "bytes": 931
+   },
+   "supplement/secondary_per_seed.csv": {
+    "sha256": "822ff356570c86500abd6e5a53b0b621fb3db41f9f804840b8a79d9b6cc6994d",
+    "bytes": 13462
+   },
+   "supplement/secondary_summary.csv": {
+    "sha256": "b27a6846039d6fd97a81f2419d300dc00b475fb76e90f96ea96cf7fd08e4c4db",
+    "bytes": 9266
+   },
+   "supplement/table5_per_seed.csv": {
+    "sha256": "9daec12fc401173d6a6a986c8e8b9cf154e310fcb1b71cd6a8bc056cfeb5d12e",
+    "bytes": 10030
+   },
+   "supplement/table5_per_seed.tex": {
+    "sha256": "3c09fe291608355dd788b56d234509e60dd9177b621a13822306f0ca51039c82",
+    "bytes": 4177
+   },
+   "supplement/table5_submitted_vs_regenerated.csv": {
+    "sha256": "8d4f0c301db10a33917e89676ff3499344ea887f0d8e2e08bf6f7f5d9607709d",
+    "bytes": 3510
+   },
+   "supplement/table5_submitted_vs_regenerated.tex": {
+    "sha256": "b21e43710f56b30c74573e226029cf30f4c8b14f872317e30c97ef9bf2878c7b",
+    "bytes": 3742
+   },
+   "supplement/worst_seed_accuracy.csv": {
+    "sha256": "f11ae4b06d6ff2ab7d0c7f18bff69ffc54aacfde0064944640da03156468ec8d",
+    "bytes": 665
+   }
+  },
+  "checks": {
+   "checks/REGEN_LOG_20261020_0936_pre_followup.md": {
+    "sha256": "474192fec9cb0ed70eee6cb16952bce14527f5dfdde4a12f5c606692db2ebf0b",
+    "bytes": 18283
+   },
+   "checks/REGEN_MANIFEST_20261020_0934_pre_followup.json": {
+    "sha256": "888b4a92f55935c5a139b2bb41528f77beee3a292e63886a7581cb521bfa2587",
+    "bytes": 163308
+   },
+   "checks/baseline_hashes_0934.json": {
+    "sha256": "cb93a51b58971ea921e36cda5ebd1f46851a271085cca7646157dc33500b9c83",
+    "bytes": 6944
+   },
+   "checks/baseline_hashes_1020.json": {
+    "sha256": "b6139c21bc3e010ea496fee2529a6c71671fd1e5dbda3dc6f6d4f500d2f26f49",
+    "bytes": 7204
+   },
+   "checks/claims_audit_scipy_crosscheck.log": {
+    "sha256": "a3b77e614e41019821c86efcca44da90fe32eb082a409089f3ac847cdaa9bb5b",
+    "bytes": 39756
+   },
+   "checks/composition_check.md": {
+    "sha256": "f019cb9fdfe1fced9cec3e1df1b648a069203c1b83e34a9accb317758e6b659b",
+    "bytes": 23972
+   },
+   "checks/composition_check.stdout": {
+    "sha256": "f019cb9fdfe1fced9cec3e1df1b648a069203c1b83e34a9accb317758e6b659b",
+    "bytes": 23972
+   },
+   "checks/composition_check.tsv": {
+    "sha256": "4f8b4518351ce89c4ca0319d992d18c78ce3f564c1f5f210228abfedc1820e04",
+    "bytes": 73176
+   },
+   "checks/composition_manifest.json": {
+    "sha256": "51ced42fd2b8cd2e02e12c72ca5dde1780621e5e410a9a83a5206271639d1d7a",
+    "bytes": 141887
+   },
+   "checks/expected_vs_regenerated.json": {
+    "sha256": "08e2e2a2d86db2a7a08aeeff88e8aa4f816bc92668c47d35760e70c14df1aeef",
+    "bytes": 34240
+   },
+   "checks/expected_vs_regenerated.md": {
+    "sha256": "b90c1f8c09bca24c7a45c7f3462d17ca80c39e32eb97e6386f38c53d951288e0",
+    "bytes": 18242
+   },
+   "checks/git_log_revision-r1.txt": {
+    "sha256": "8291b5aabcd76f222dfa1d605d600f7088af98e1d9c8810d9e5c613a6e9c2a64",
+    "bytes": 1930
+   },
+   "checks/store_manifest.json": {
+    "sha256": "766ef8e7963e52a2be1d8c24bdf293ec8d2bc30e3357743dcff89ee7cf1faa3d",
+    "bytes": 199375
+   },
+   "checks/store_manifest.json.progress.jsonl": {
+    "sha256": "37186b6ee85ab1342e3f93c47a1366d9825c5ade3c04b6a857b5de1d977bba14",
+    "bytes": 170680
+   },
+   "checks/zip_members.txt": {
+    "sha256": "4fd20ef8a32a1ac31204b8c6fb5d3bd5e5806d3ccc1c91515c247d533b5173e2",
+    "bytes": 3459
+   },
+   "checks/zip_sha256.txt": {
+    "sha256": "7ce5ce5f21d4292f92ffe929af6edb08edd502222fcc6c4edb7c0476804acc4f",
+    "bytes": 95
+   }
+  },
+  "logs": {
+   "logs/01_ingest.log": {
+    "sha256": "90d37270f7a70d392b82ea01d3d27a7a3a206c66520251fab7b4624246361a61",
+    "bytes": 21475
+   },
+   "logs/01_ingest.nohup": {
+    "sha256": "515b76e4990d683788028c6389283e82d1b41bb4d37787d6989e7fbaddf8b656",
+    "bytes": 745
+   },
+   "logs/02_export.log": {
+    "sha256": "3dc8b193f30d6e94f66b10c35c6d1bd36cc8809e8815d9949d2dbe95f93fae50",
+    "bytes": 922
+   },
+   "logs/03_table5.log": {
+    "sha256": "5b832ca4e55c5befc7ba4c6a3f9df6a977970a10ea76b6602752b383b65603db",
+    "bytes": 2983
+   },
+   "logs/04_secondary.log": {
+    "sha256": "d18a42ae4c852f1f1a60a9f35fad97ea6ba9c1756ca84978a83e483ac1d25a7b",
+    "bytes": 5416
+   },
+   "logs/05_figures_tmc.log": {
+    "sha256": "5bc4a0cb3be3cf68d9813489902273ec8b7f4ad77df5470440616a7d12fac29f",
+    "bytes": 401
+   },
+   "logs/06_fig_scalability.log": {
+    "sha256": "fda8fd36dec6d526e26f736c5956723392b3a4b7b155c2e20a129aed85722bd0",
+    "bytes": 447
+   },
+   "logs/07_fig_eurosat.log": {
+    "sha256": "17c877829bb4eb5519d2394a43d7071379f397910e144089afcacc5218e73a70",
+    "bytes": 166
+   },
+   "logs/08_matrix_table4.log": {
+    "sha256": "832ab978036feff7239f5ae89a4156b70e9ec60991601e03bd8606dd5e7af886",
+    "bytes": 2780
+   },
+   "logs/09_audit_all.log": {
+    "sha256": "dd32c743bee27bb8487b6330ac2bad3fa97adbfb068f19f058073bb388a53ba7",
+    "bytes": 3892
+   },
+   "logs/10_check_expected.log": {
+    "sha256": "650a4e6d360e3413d402b5685b72a3944153834766e94521ed8350555ac53c9f",
+    "bytes": 175
+   },
+   "logs/11_claims_audit.log": {
+    "sha256": "803598cf6b94e8893d766f6ae9dea960ac872aace1b4ec3e27ef75f9ef789191",
+    "bytes": 41755
+   },
+   "logs/12_fig7_after_R08.log": {
+    "sha256": "fd0a69588865740ce8b9277d98c39e44a02a93735339570698fa0f55c28d0afe",
+    "bytes": 57
+   },
+   "logs/13_table3.log": {
+    "sha256": "df236ff464c56dfb98f53dec8d73bed92fce028be43ec03a51b138c7da9cf1e0",
+    "bytes": 606
+   },
+   "logs/14_fig9_twopanel_R09.log": {
+    "sha256": "cebf9595b0300753a7e37fcc83f968df5419d63cd4f9293fc5b63f467b465858",
+    "bytes": 101
+   },
+   "logs/REGEN_COMMANDS.log": {
+    "sha256": "34ab85c40d70b33b54cc7caf331edf69deb9ec36aa08cd1ef4a54c7866c6fd4d",
+    "bytes": 5105
+   },
+   "logs/build_store.start": {
+    "sha256": "e86d976286aafe47d4721e9cff4570f2e71670604b8ccaf25bc59a99d744c52f",
+    "bytes": 26
+   },
+   "logs/build_store.stdout": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+   },
+   "logs/logs_note.txt": {
+    "sha256": "d4addfb9719853e99f2957ba4890a027c25ffa601ed5dd267fa97d2624732d69",
+    "bytes": 185
+   }
+  }
+ },
+ "scripts": {
+  "scripts/apply_patches.py": {
+   "sha256": "d691c8ef24eb1767585d6d120c7a191d3130b424f95d38f944406bba894cb1e2",
+   "bytes": 2763
+  },
+  "scripts/apply_patches_v1_R04_R05.py": {
+   "sha256": "3c163668dcac1a05dacd64860c46f80178e8f6480a9285f855a3e490ef9fbdbc",
+   "bytes": 1958
+  },
+  "scripts/build_store.py": {
+   "sha256": "21a2271b3c5b386702a263d249459fedaa077ef4adca0d6132f375142e307d8a",
+   "bytes": 4299
+  },
+  "scripts/build_store_v1_nonresumable.py": {
+   "sha256": "1da5c6e5f9675d27708de8b72b38ab6c68b95905fa7c245fb03fc470b9b05e96",
+   "bytes": 3572
+  },
+  "scripts/check_expected.py": {
+   "sha256": "c6c74b8d7f1fccdf2865c7a4e756f88a8db2437e16e3668d9f6a7e5107916bc8",
+   "bytes": 13325
+  },
+  "scripts/check_expected_v1_round.py": {
+   "sha256": "09fd0f4de9eabd4b204ce964391b470eef6943e325a2bf30246306086fd6ade4",
+   "bytes": 12873
+  },
+  "scripts/check_expected_v2_csvmean.py": {
+   "sha256": "fb1ee7badc654698ecbebf0c56c4a276c80ebc195fd9e6a627555065ae595cfa",
+   "bytes": 12934
+  },
+  "scripts/claims_audit_r1.py": {
+   "sha256": "5c466f8743a3867a09dc2ba4fd2b9261ddfca739a9114c43f44a15079430b034",
+   "bytes": 22212
+  },
+  "scripts/composition_check.py": {
+   "sha256": "c4e40d91f3687f5725cf930e8506e9d8e10905f85e04e966eb5daeef7a8d14ae",
+   "bytes": 11790
+  },
+  "scripts/logrun.sh": {
+   "sha256": "7718b132366c33a8801c01d29a64f52c143ea1a42be398ebcac13f96af40e875",
+   "bytes": 635
+  },
+  "scripts/make_fig_scalability_v2.py": {
+   "sha256": "ee2655e705392d449d2eb356a7d6402a54536b2a037a113316e987cd84aacd21",
+   "bytes": 6104
+  },
+  "scripts/make_manifest.py": {
+   "sha256": "6ca668d1260b17fe954d0d69296c3d84fc169930fa9561fcd9073cb8e8f2d31c",
+   "bytes": 4457
+  },
+  "scripts/make_manifest_v1.py": {
+   "sha256": "2b995ac8a75b13284ebcbfbcfd9cd5858f229751ad94de8be3fafca2fd124cfe",
+   "bytes": 3132
+  },
+  "scripts/make_manifest_v2.py": {
+   "sha256": "e53cbe3bc14c7be7c00ff8a42370aa33ae5e6761b34e0cdb5e09b0f63f463e62",
+   "bytes": 3402
+  },
+  "scripts/make_manifest_v3_kitdir.py": {
+   "sha256": "a3f8ff446a845eeb72ae5aa0b6e477f0b02e480ffea07903ce2db88b5f36148e",
+   "bytes": 3504
+  },
+  "scripts/make_secondary.py": {
+   "sha256": "5acc6d0068b4d84268d33d2626b63b102e869eb979087dfe622020e907ec61aa",
+   "bytes": 9941
+  },
+  "scripts/make_secondary_v1_py310_syntax.py": {
+   "sha256": "b1b7bc9060df3f6c6a96ff9059f20745fa95a536dcd5c470196021694b292c1f",
+   "bytes": 9952
+  },
+  "scripts/make_table3.py": {
+   "sha256": "54504f55b69a74bd8219dd067f4e01ad8e272e9b5739c6e527d248fadca20995",
+   "bytes": 4499
+  },
+  "scripts/make_table4_marks_v2.py": {
+   "sha256": "78949ab068107e07b86a902022066c017b87eb68a95b31267c8f842385397218",
+   "bytes": 3873
+  },
+  "scripts/make_table5.py": {
+   "sha256": "b790823fb9741fabe0927f063d7c73aba7cb96acea9feb9b9c81ccde9522e91b",
+   "bytes": 10180
+  },
+  "scripts/regen_common.py": {
+   "sha256": "043038d7bb4baedf87dd949b53cdb5415b2179697320193bddb7d15c698937e7",
+   "bytes": 1782
+  },
+  "scripts/secondary_metrics.py": {
+   "sha256": "3fc86f881d42a4acea4c2358c1cb1cb877e9dc9b97175a561b32fd7d9b2a7a69",
+   "bytes": 2719
+  },
+  "scripts/zip_from_manifest.py": {
+   "sha256": "d674f0433b320b33ed0f695dcfd7642316fefeebf7e4c1041f156c7e1681ef23",
+   "bytes": 2230
+  }
+ },
+ "env_shim": {
+  "_env/fastparquet/__init__.py": {
+   "sha256": "c4bea91fd5e89c00c344f39b95b1cfa8c27a8cba0e656f2df7690ecc55353ec1",
+   "bytes": 1623
+  }
+ },
+ "regeneration_kit_inputs": {
+  "REGENERATION_TASK.md": {
+   "sha256": "6fac4d165c006e6b937273e080decab1d889e697de95c461c50d5acc579a8b8d",
+   "bytes": 11371
+  },
+  "ADDENDUM_A_secondary_metrics.md": {
+   "sha256": "238a2a9bcab3dff0715219260a1ce97ee19c39b941075208791474fcc29d838f",
+   "bytes": 5131
+  },
+  "TrustFL_corrected_results_20261019.txt": {
+   "sha256": "05d40552989d976f1c75b9b0aca41eedaff509b606bec5694f6fc7cf91d2eb30",
+   "bytes": 10552
+  },
+  "TrustFL_R13_results_20261020.txt": {
+   "sha256": "724d31b51dc0a3bdbced7091a1bf7812b0a8ff91ee292c759f5add8bd004e718",
+   "bytes": 6148
+  },
+  "legacy_metrics.py": {
+   "sha256": "c42641a03e16587f83ab7e4e84ed52559809930bbc2b174c317d26c100fac93f",
+   "bytes": 2459
+  },
+  "secondary_metrics.py": {
+   "sha256": "3fc86f881d42a4acea4c2358c1cb1cb877e9dc9b97175a561b32fd7d9b2a7a69",
+   "bytes": 2719
+  },
+  "signflip_fidelity_20261020.txt": {
+   "sha256": "3a1b2b7df55f57c9f49fe6bfe580e252db45ae1a524793965036ba805819cd96",
+   "bytes": 1522
+  },
+  "REGEN_FOLLOWUP_20261020.md": {
+   "sha256": "e19b8ce370dd97c90be560c7fb712d401c5c342a0c868eee3d5c717a82114379",
+   "bytes": 4552
+  },
+  "followup2/REGEN_FOLLOWUP2_20261020.md": {
+   "sha256": "2405d4b44ec4674c90fe86d8448c0f2c5d9b20b5efadde6b251e6f8e7cbbb7e0",
+   "bytes": 2772
+  },
+  "followup2/make_fig_eurosat_twopanel.py": {
+   "sha256": "02aba0f99f710c6c45f879b1bd4d2a3cc5f80a9a3e316a7e12c0f05962fe3d8e",
+   "bytes": 5199
+  }
+ },
+ "repository_code_used": {
+  "trustfl/store.py": "2d5cf86fcd660625c3bb85004590815951ac6ce7ec0243116fd5324130f96ab1",
+  "trustfl/export.py": "d0fa090b63167fd738e2fe2dd2ae75fc7d22d5d50d0ae55b4119e4dafcacdfef",
+  "trustfl/audit.py": "8852d00ab0d08b25f8ffe068485fd8805a0c07e82dcc82a8f8f3eacdf8f7ea93",
+  "trustfl/metrics_matrix.py": "f509f9809f2aa7502301e6446855445c52ec9d013763de9bcfce76ddb76aa0b4",
+  "trustfl/figures_tmc.py": "92105460f241f0afa8905db86e09850b5a7f6d66ea16916ca206598ccf391c3c",
+  "paper_assets/make_fig_eurosat.py": "0b8f5e96e32b958a3ecc53548fc81ba7a1920f3f8ccd6c1ff8281f58ef476b22",
+  "paper_assets/make_fig_eurosat_twopanel.py": "02aba0f99f710c6c45f879b1bd4d2a3cc5f80a9a3e316a7e12c0f05962fe3d8e",
+  "paper_assets/make_fig_scalability.py": "ee2655e705392d449d2eb356a7d6402a54536b2a037a113316e987cd84aacd21",
+  "paper_assets/make_table4_marks.py": "78949ab068107e07b86a902022066c017b87eb68a95b31267c8f842385397218",
+  "claims_audit.py": "5c466f8743a3867a09dc2ba4fd2b9261ddfca739a9114c43f44a15079430b034",
+  "paper_assets/data/scalability.csv": "62a88df8796b1a507c4d7d21b5aecc19bf6bcd68a499256ac6c6b224d049e17c"
+ },
+ "counts": {
+  "store_run_files": 837,
+  "csv": 8,
+  "images": 18
+ }
+}
