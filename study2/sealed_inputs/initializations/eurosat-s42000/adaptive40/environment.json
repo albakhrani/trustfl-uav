@@ -1,0 +1,117 @@
+{
+  "command": [
+    "D:\\postdoc_WorkDUT\\paper1\\trustfl-v5-transfer\\addon5\\worker.py",
+    "--prepared",
+    "D:\\postdoc_WorkDUT\\paper1\\trustfl-uav-scientific-v5",
+    "--staging",
+    "D:\\postdoc_WorkDUT\\paper1\\trustfl-v5-staging",
+    "--output",
+    "D:\\postdoc_WorkDUT\\paper1\\trustfl-v5-campaign\\attempts\\v5-eurosat-common-adaptive40-s42000-fltrust_declared_root_fallback",
+    "--attempt",
+    "v5-eurosat-common-adaptive40-s42000-fltrust_declared_root_fallback",
+    "--original",
+    "D:\\postdoc_WorkDUT\\paper1\\trustfl-uav",
+    "--data",
+    "D:\\postdoc_WorkDUT\\paper1\\trustfl-uav\\data",
+    "--campaign",
+    "D:\\postdoc_WorkDUT\\paper1\\trustfl-v5-campaign",
+    "--binding-sha",
+    "ea718239ab9807241b02f92b5f18a003f6d2885dae1d0609a2cd39954134b99d"
+  ],
+  "cublas_workspace_config": ":4096:8",
+  "cuda_available": true,
+  "cudnn_benchmark": false,
+  "cudnn_deterministic": true,
+  "cwd": "D:\\postdoc_WorkDUT\\paper1\\trustfl-uav-scientific-v5",
+  "deterministic_algorithms": true,
+  "executable": "D:\\postdoc_WorkDUT\\paper1\\trustfl-uav\\.venv\\Scripts\\python.exe",
+  "numpy": "2.4.4",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "precision_execution": {
+    "after": {
+      "cublas_workspace_config": null,
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": true,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "deterministic_algorithms": false,
+      "deterministic_warn_only": false
+    },
+    "before": {
+      "cublas_workspace_config": null,
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": true,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "deterministic_algorithms": false,
+      "deterministic_warn_only": false
+    },
+    "cuda_initialization_provenance": "uninitialized_before_policy",
+    "cuda_initialized_after_body": false,
+    "cuda_initialized_before": false,
+    "effective": {
+      "cublas_workspace_config": ":4096:8",
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "deterministic_algorithms": true,
+      "deterministic_warn_only": false
+    },
+    "identity": {
+      "api_family": "legacy_allow_tf32",
+      "identity_sha256": "8e8394cce77d06532f860bce3b70dc9cf200342118fb5296deae0f228e48bfd8",
+      "policy_id": "scientific-precision-v3-2-strict-legacy-no-tf32-v1",
+      "scope": "all_scientific_methods_entire_numerical_execution",
+      "settings": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_allow_tf32": false,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false
+      }
+    },
+    "requested": {
+      "cublas_workspace_config": ":4096:8",
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "deterministic_algorithms": true,
+      "deterministic_warn_only": false
+    },
+    "restoration": {
+      "attempted": [
+        "deterministic_algorithms_and_warn_only",
+        "cudnn_deterministic",
+        "cudnn_benchmark",
+        "cudnn_allow_tf32",
+        "cuda_matmul_allow_tf32",
+        "cublas_workspace_config"
+      ],
+      "errors": [],
+      "status": "PASS"
+    },
+    "status": "complete"
+  },
+  "precision_execution_identity": {
+    "api_family": "legacy_allow_tf32",
+    "identity_sha256": "8e8394cce77d06532f860bce3b70dc9cf200342118fb5296deae0f228e48bfd8",
+    "policy_id": "scientific-precision-v3-2-strict-legacy-no-tf32-v1",
+    "scope": "all_scientific_methods_entire_numerical_execution",
+    "settings": {
+      "cublas_workspace_config": ":4096:8",
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "deterministic_algorithms": true,
+      "deterministic_warn_only": false
+    }
+  },
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "torch": "2.12.1+cu126",
+  "torch_cuda_build": "12.6"
+}

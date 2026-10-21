@@ -1,0 +1,1157 @@
+{
+  "document_type": "DECISION_READY_PROPOSED_PROTOCOL_NOT_EXECUTABLE_CONFIG",
+  "schema": "TrustFL-budget-scientific-protocol-v5",
+  "date": "2026-10-05",
+  "paper_id": "IoT-71387-2026",
+  "deadline": "2026-10-27",
+  "selected_recommendation": "prospective sampled-client common-policy study; author/adviser review pending",
+  "current_runner_accepts_this": false,
+  "implementation_authorized_by_this_task": false,
+  "execution_authorized_by_this_task": false,
+  "planning": {
+    "daily_availability_hours": 24,
+    "target_continuous_compute_days": [
+      7,
+      10
+    ],
+    "half_root_credit_factor2_hours": 202.3169,
+    "max_prefix_half_credit_factor2_hours": 207.00358,
+    "fd_latency_sensitivity_factor2_hours": 223.96798,
+    "additional_unmeasured_lifecycle_allowance_hours": 12,
+    "recommended_planning_hours_including_allowance": 214.3169,
+    "prefix_and_fd_sensitivity_including_allowance_hours": 235.96798,
+    "is_duration_guarantee": false,
+    "first_attempt_counts_in_160": "v5-emnist_byclass-common-honest-s41000-fd_distance_validation_local",
+    "automatic_grid_after_first": false,
+    "total_worker_time_cap_hours_proposed": 240,
+    "per_attempt_owned_worker_watchdog_hours_proposed": 6,
+    "scope_of_time": "new scientific campaign only; preparation/analysis/writing and separate node/hardware studies not falsely included"
+  },
+  "grid": {
+    "cells": [
+      {
+        "dataset": "emnist_byclass",
+        "policy": "common",
+        "condition": "honest",
+        "attack_type": "none",
+        "method": "trustfl",
+        "scenario_seeds": [
+          41000,
+          41001,
+          41002,
+          41003,
+          41004,
+          41005,
+          41006,
+          41007,
+          41008,
+          41009
+        ],
+        "attempts": 10,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "emnist_byclass",
+        "policy": "common",
+        "condition": "honest",
+        "attack_type": "none",
+        "method": "fedavg",
+        "scenario_seeds": [
+          41000,
+          41001,
+          41002,
+          41003,
+          41004,
+          41005,
+          41006,
+          41007,
+          41008,
+          41009
+        ],
+        "attempts": 10,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "emnist_byclass",
+        "policy": "common",
+        "condition": "honest",
+        "attack_type": "none",
+        "method": "fltrust_declared_root_fallback",
+        "scenario_seeds": [
+          41000,
+          41001,
+          41002,
+          41003,
+          41004,
+          41005,
+          41006,
+          41007,
+          41008,
+          41009
+        ],
+        "attempts": 10,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "emnist_byclass",
+        "policy": "common",
+        "condition": "honest",
+        "attack_type": "none",
+        "method": "fedgreed_algorithm1",
+        "scenario_seeds": [
+          41000,
+          41001,
+          41002,
+          41003,
+          41004,
+          41005,
+          41006,
+          41007,
+          41008,
+          41009
+        ],
+        "attempts": 10,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "emnist_byclass",
+        "policy": "common",
+        "condition": "honest",
+        "attack_type": "none",
+        "method": "fd_distance_validation_local",
+        "scenario_seeds": [
+          41000,
+          41001,
+          41002,
+          41003,
+          41004,
+          41005,
+          41006,
+          41007,
+          41008,
+          41009
+        ],
+        "attempts": 10,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "emnist_byclass",
+        "policy": "common",
+        "condition": "adaptive40",
+        "attack_type": "adaptive_system",
+        "method": "trustfl",
+        "scenario_seeds": [
+          41000,
+          41001,
+          41002,
+          41003,
+          41004,
+          41005,
+          41006,
+          41007,
+          41008,
+          41009
+        ],
+        "attempts": 10,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "emnist_byclass",
+        "policy": "common",
+        "condition": "adaptive40",
+        "attack_type": "adaptive_system",
+        "method": "fedavg",
+        "scenario_seeds": [
+          41000,
+          41001,
+          41002,
+          41003,
+          41004,
+          41005,
+          41006,
+          41007,
+          41008,
+          41009
+        ],
+        "attempts": 10,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "emnist_byclass",
+        "policy": "common",
+        "condition": "adaptive40",
+        "attack_type": "adaptive_system",
+        "method": "fltrust_declared_root_fallback",
+        "scenario_seeds": [
+          41000,
+          41001,
+          41002,
+          41003,
+          41004,
+          41005,
+          41006,
+          41007,
+          41008,
+          41009
+        ],
+        "attempts": 10,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "emnist_byclass",
+        "policy": "common",
+        "condition": "adaptive40",
+        "attack_type": "adaptive_system",
+        "method": "fedgreed_algorithm1",
+        "scenario_seeds": [
+          41000,
+          41001,
+          41002,
+          41003,
+          41004,
+          41005,
+          41006,
+          41007,
+          41008,
+          41009
+        ],
+        "attempts": 10,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "emnist_byclass",
+        "policy": "common",
+        "condition": "adaptive40",
+        "attack_type": "adaptive_system",
+        "method": "fd_distance_validation_local",
+        "scenario_seeds": [
+          41000,
+          41001,
+          41002,
+          41003,
+          41004,
+          41005,
+          41006,
+          41007,
+          41008,
+          41009
+        ],
+        "attempts": 10,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "eurosat",
+        "policy": "common",
+        "condition": "honest",
+        "attack_type": "none",
+        "method": "trustfl",
+        "scenario_seeds": [
+          42000,
+          42001,
+          42002,
+          42003,
+          42004,
+          42005
+        ],
+        "attempts": 6,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "eurosat",
+        "policy": "common",
+        "condition": "honest",
+        "attack_type": "none",
+        "method": "fedavg",
+        "scenario_seeds": [
+          42000,
+          42001,
+          42002,
+          42003,
+          42004,
+          42005
+        ],
+        "attempts": 6,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "eurosat",
+        "policy": "common",
+        "condition": "honest",
+        "attack_type": "none",
+        "method": "fltrust_declared_root_fallback",
+        "scenario_seeds": [
+          42000,
+          42001,
+          42002,
+          42003,
+          42004,
+          42005
+        ],
+        "attempts": 6,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "eurosat",
+        "policy": "common",
+        "condition": "honest",
+        "attack_type": "none",
+        "method": "fedgreed_algorithm1",
+        "scenario_seeds": [
+          42000,
+          42001,
+          42002,
+          42003,
+          42004,
+          42005
+        ],
+        "attempts": 6,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "eurosat",
+        "policy": "common",
+        "condition": "honest",
+        "attack_type": "none",
+        "method": "fd_distance_validation_local",
+        "scenario_seeds": [
+          42000,
+          42001,
+          42002,
+          42003,
+          42004,
+          42005
+        ],
+        "attempts": 6,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "eurosat",
+        "policy": "common",
+        "condition": "adaptive40",
+        "attack_type": "adaptive_system",
+        "method": "trustfl",
+        "scenario_seeds": [
+          42000,
+          42001,
+          42002,
+          42003,
+          42004,
+          42005
+        ],
+        "attempts": 6,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "eurosat",
+        "policy": "common",
+        "condition": "adaptive40",
+        "attack_type": "adaptive_system",
+        "method": "fedavg",
+        "scenario_seeds": [
+          42000,
+          42001,
+          42002,
+          42003,
+          42004,
+          42005
+        ],
+        "attempts": 6,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "eurosat",
+        "policy": "common",
+        "condition": "adaptive40",
+        "attack_type": "adaptive_system",
+        "method": "fltrust_declared_root_fallback",
+        "scenario_seeds": [
+          42000,
+          42001,
+          42002,
+          42003,
+          42004,
+          42005
+        ],
+        "attempts": 6,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "eurosat",
+        "policy": "common",
+        "condition": "adaptive40",
+        "attack_type": "adaptive_system",
+        "method": "fedgreed_algorithm1",
+        "scenario_seeds": [
+          42000,
+          42001,
+          42002,
+          42003,
+          42004,
+          42005
+        ],
+        "attempts": 6,
+        "rounds_per_attempt": 60
+      },
+      {
+        "dataset": "eurosat",
+        "policy": "common",
+        "condition": "adaptive40",
+        "attack_type": "adaptive_system",
+        "method": "fd_distance_validation_local",
+        "scenario_seeds": [
+          42000,
+          42001,
+          42002,
+          42003,
+          42004,
+          42005
+        ],
+        "attempts": 6,
+        "rounds_per_attempt": 60
+      }
+    ],
+    "attempts": 160,
+    "rounds": 9600,
+    "shared_scenarios": 16,
+    "methods": [
+      "trustfl",
+      "fedavg",
+      "fltrust_declared_root_fallback",
+      "fedgreed_algorithm1",
+      "fd_distance_validation_local"
+    ],
+    "conditions": [
+      {
+        "id": "honest",
+        "malicious_count": 0,
+        "attack_type": "none"
+      },
+      {
+        "id": "adaptive40",
+        "malicious_count": 12,
+        "attack_type": "adaptive_system"
+      }
+    ],
+    "policy": "common_only",
+    "MNIST_new_attempts": 0,
+    "new_native_policy_attempts": 0
+  },
+  "data_recipe": {
+    "version": "sampled_clients_reserved_root_v5",
+    "base_partition_recipe": "Generate prospective full-reserve indices with the unchanged authenticated full-data scientific adapter recipe and base namespace; record that base recipe and namespace separately. Apply independent v5 subset domains afterwards. No recovered-historical or already-existing-v1-indices claim.",
+    "partition": {
+      "distribution": "Dirichlet",
+      "alpha": 0.2,
+      "clients": 30,
+      "min_samples_per_client": 10,
+      "stage": "full non-root pool BEFORE cap",
+      "implementation": "retain exact existing partition allocator/minimum enforcement, not a new rejection/seed-search scheme"
+    },
+    "selection": {
+      "client": "uniform without replacement via deterministic HMAC-SHA256 priority of ultimate sample ID within each original client; choose min(cap,n_original); tie ultimate ID",
+      "seed_contract": "existing HMAC master/scenario seed contract; canonical UTF-8 fixed version/domain, never Python hash(); cap/root domains exclude method/policy/threat-presence",
+      "client_event_fields": [
+        "base_partition_namespace",
+        "v5_client_cap",
+        "dataset_identity",
+        "client_id",
+        "ultimate_sample_id"
+      ],
+      "root_event_fields": [
+        "base_partition_namespace",
+        "v5_root_subset",
+        "dataset_identity",
+        "class_id",
+        "ultimate_sample_id"
+      ],
+      "post_selection_order": "ascending ultimate ID; minibatch order separate event domain"
+    },
+    "emnist_byclass": {
+      "raw_train": 697932,
+      "full_test": 116323,
+      "classes": 62,
+      "reserve_root": 6944,
+      "reserve_per_class": 112,
+      "active_root": 620,
+      "active_root_per_class": 10,
+      "unused_reserve_excluded_from_all_methods": 6324,
+      "original_client_pool": 690988,
+      "client_cap": 512,
+      "retained_clients_total_ceiling": 15360,
+      "discarded_client_pool_floor": 675628,
+      "root_subset": "hash-priority 10 per class from original112/class reserve; root_count in base partition producer is NOT changed to620"
+    },
+    "eurosat": {
+      "raw_images": 27000,
+      "classes": 10,
+      "train": 21600,
+      "full_test": 5400,
+      "stratified_outer_split_seed": 42,
+      "root": 210,
+      "root_per_class": 21,
+      "original_client_pool": 21390,
+      "client_cap": 256,
+      "retained_clients_total_ceiling": 7680,
+      "discarded_client_pool_floor": 13710,
+      "terminology": "satellite-image extension, not UAV imagery or flight"
+    },
+    "actual_counts": "n_j=min(cap,len(full_partition_j)); actual per-seed totals not known from supplied records and must be sealed before execution. Never assert cap as an observed count.",
+    "small_empty_handling": "Keep every enrolled client. Below-cap clients retain all original samples. No refill/redistribution/replacement seed. Unexpected original empty/<10 partition is a preparation error, preserved and stops; do not fix by selecting another seed.",
+    "coverage": "Save full and retained per-client/per-class and global histograms including absent classes; no forced one-per-class, label repair, test tuning or post-outcome resampling.",
+    "identity_equations": [
+      "raw_train = reserved_root disjoint_union full_client_partitions",
+      "active_root subset reserved_root",
+      "retained_client_j subset full_client_partition_j",
+      "raw_train = active_root disjoint_union retained_clients disjoint_union excluded_reserve disjoint_union excluded_client_examples",
+      "test namespace-qualified IDs disjoint from every train/root/excluded-train identity"
+    ],
+    "actual_n_use": [
+      "local training and epochs",
+      "n-weighted aggregation",
+      "label variance sigma2 via unchanged Client calculation",
+      "utility/resource metadata",
+      "modeled cycles/compute energy/deadline work",
+      "logging and sample-exposure denominators"
+    ],
+    "test_access": "full fixed test; boundary0 then5,10,...,60 =13 evaluations; no duplicate final pass, no feedback to trust/attack/selection/hyperparameters",
+    "index_identity": "(dataset_content_identity,split_namespace,ultimate_index_or_path); EMNIST train index0 and test index0 are distinct identities, not a demand for unequal bare integers"
+  },
+  "training": {
+    "models": {
+      "emnist_byclass": "CNNMnist(62),1690046parameters",
+      "eurosat": "CNNEuroSAT(10),1664970parameters"
+    },
+    "epochs": {
+      "emnist_byclass": 2,
+      "eurosat": 4
+    },
+    "batch": 64,
+    "root_batch": 256,
+    "test_batch": 512,
+    "lr": 0.01,
+    "momentum": 0.9,
+    "weight_decay": 0.0,
+    "fedprox_mu": 0.0,
+    "precision": "unchanged v3.2 strict deterministic float32 no-TF32, verified pooling; no AMP/operator/transform change",
+    "sequential_cuda": true,
+    "workers": 0
+  },
+  "shared_defaults_with_explicit_cell_resolution": {
+    "data": {
+      "dataset": "PER_FIXED_CELL",
+      "data_dir": "D:\\postdoc_WorkDUT\\paper1\\trustfl-uav\\data",
+      "partition": "dirichlet",
+      "dirichlet_alpha": 0.2,
+      "server_val_fraction": 0.01,
+      "min_samples_per_client": 10
+    },
+    "model": {
+      "name": "UNCHANGED_DATASET_MODEL",
+      "num_classes": 0
+    },
+    "train": {
+      "rounds": 60,
+      "local_epochs": 2,
+      "batch_size": 64,
+      "lr": 0.01,
+      "momentum": 0.9,
+      "weight_decay": 0.0,
+      "fedprox_mu": 0.0,
+      "device": "cuda",
+      "eval_every": 5
+    },
+    "uav": {
+      "enabled": true,
+      "num_uavs": 30,
+      "area_m": 1000.0,
+      "alt_min_m": 50.0,
+      "alt_max_m": 150.0,
+      "v_max": 20.0,
+      "a_max": 5.0,
+      "gm_alpha": 0.85,
+      "round_duration_s": 10.0,
+      "high_mobility_fraction": 0.3,
+      "high_mobility_speed_factor": 3.0,
+      "battery_j": 500000.0,
+      "kappa": 1e-27,
+      "p0_hover_w": 80.0,
+      "p1_speed_w": 0.15,
+      "f_min_hz": 500000000.0,
+      "f_max_hz": 2000000000.0,
+      "cycles_per_sample": 2000000.0,
+      "server_pos": [
+        500.0,
+        500.0,
+        0.0
+      ],
+      "bandwidth_hz": 5000000.0,
+      "beta0_db": -50.0,
+      "pathloss_alpha": 2.2,
+      "noise_dbm_per_hz": -174.0,
+      "p_tx_min_w": 0.05,
+      "p_tx_max_w": 1.0,
+      "bits_per_param": 32.0,
+      "comm_deadline_s": 5.0,
+      "comm_slack": 0.0,
+      "e_min_j": 10000.0,
+      "idle_energy_drain": true
+    },
+    "trust": {
+      "alpha_beh": 0.7,
+      "alpha_comp": 0.7,
+      "alpha_comm": 0.7,
+      "w_participation": 0.2,
+      "w_commitment": 0.2,
+      "w_gradient": 0.6,
+      "weight_mode": "learnable",
+      "w_beh": 0.34,
+      "w_comp": 0.33,
+      "w_comm": 0.33,
+      "learnable_lr": 0.5,
+      "asymmetry": 3.0,
+      "init_trust": 0.5,
+      "t_min": 0.3,
+      "aggregation_gate": true,
+      "round_consistency_gate": true,
+      "k_max": 12,
+      "staleness_beta": 0.0,
+      "explore_slots": 1
+    },
+    "resources": {
+      "enabled": true,
+      "lambda1": 1.0,
+      "lambda2": 1.0,
+      "lambda3": 0.0001,
+      "tau_max_s": 8.0,
+      "t_max_s": 5.0,
+      "dual_step": 0.1,
+      "max_iters": 50,
+      "tol": 0.001,
+      "compute_deadline": true,
+      "compute_slack": 1.5
+    },
+    "attack": {
+      "attack_type": "none",
+      "malicious_fraction": 0.0,
+      "label_flip_prob": 1.0,
+      "grad_scale_factor": 5.0,
+      "random_update_std": 1.0,
+      "misreport_factor": 2.0,
+      "delay_slack_s": 0.5,
+      "selective_prob": 0.4,
+      "adaptive_trust_target": 0.6,
+      "adaptive_probe_rounds": 5,
+      "evasive_align": 0.9,
+      "evasive_poison_scale": 1.0
+    },
+    "method": {
+      "name": "PER_FIXED_CELL",
+      "krum_f": 12,
+      "multikrum_m": 8,
+      "trimmed_mean_beta": 0.1,
+      "fedgreed_k": 5
+    }
+  },
+  "common_request": {
+    "frequency_hz": 2000000000.0,
+    "power_w": 0.525,
+    "true_caps_enforced_by": "simulator",
+    "true_time_observer": "oracle",
+    "replace_unavailable_scheduled": false
+  },
+  "membership": {
+    "N": 30,
+    "K": 12,
+    "high_mobility_count": 9,
+    "potential_malicious_count": 12,
+    "independent_draws": true,
+    "allow_overlap": true,
+    "honest_high_mobility": "high_mobility minus active_malicious"
+  },
+  "rng": {
+    "version_proposed": "scientific_rng_v1",
+    "derivation": "reviewed HMAC-SHA256 canonical UTF-8 contract; fixed byte order; never process hash()",
+    "base_namespace_includes": [
+      "dataset_content_identity",
+      "scenario_seed",
+      "preparation_rules",
+      "trace_version"
+    ],
+    "base_namespace_excludes": [
+      "method",
+      "policy",
+      "threat_presence"
+    ],
+    "separate_domains": [
+      "initial_model",
+      "partition",
+      "membership",
+      "physical_initialization",
+      "invitations",
+      "mobility",
+      "channel",
+      "attack",
+      "minibatch",
+      "model_stochastic_ops",
+      "sample_transform"
+    ],
+    "event_fields": [
+      "round",
+      "client",
+      "event_type",
+      "epoch_if_needed",
+      "batch_if_needed",
+      "ultimate_sample_id_if_needed",
+      "occurrence_or_draw_index"
+    ],
+    "match_external_not_endogenous": true,
+    "workers": 0,
+    "execution": "sequential",
+    "invitation_external_object": "full-client uniform priority permutation per round",
+    "invitation_policies": {
+      "common": "first K enrolled IDs",
+      "native_random_baseline": "first K currently eligible IDs",
+      "native_trustfl": "existing score/exploration rule; permutation need not be consumed"
+    },
+    "selected_sets_are_shared_payloads": false,
+    "large_scenario_storage": "compact versioned PRF-domain/shape registries; chunked saved permutations/traces; consumed-event hashes; unused events derivable; preflight storage/memory fail closed",
+    "derivation_exact": {
+      "master": "SHA256(UTF8(\"TrustFLCommonPolicy.master.v1:\"+decimal_seed))",
+      "event": "HMAC-SHA256(master,canonical_event_key_UTF8)",
+      "torch": "int.from_bytes(digest[:8],big) & ((1<<63)-1)",
+      "numpy": "PCG64(SeedSequence(struct.unpack(>8I,digest)))",
+      "contract_source": "delivered trustfl/comparison/randomness.py",
+      "scientific_key_namespace_version": "scientific_rng_v1 proposed; engineering cp_rng_v1 untouched"
+    }
+  },
+  "attack": {
+    "preserve_current_rules": true,
+    "probe_rounds": 5,
+    "own_trust_target": 0.6,
+    "off_threshold": 0.45,
+    "fresh_strike_modes": [
+      "delay",
+      "selective",
+      "misreport"
+    ],
+    "delay_slack_s": 0.5,
+    "selective_probability": 0.4,
+    "misreport_factor": 2.0,
+    "decision_cadence": "all malicious clients before invitation every round",
+    "observer_inputs": [
+      "own_method_diagnostic_trust",
+      "round",
+      "own_attack_state",
+      "own_true_capability",
+      "attack_configuration"
+    ],
+    "force_identical_strikes": false,
+    "extend_for_exposure": false
+  },
+  "threat_scope": "adaptive40 resolves to adaptive_system: no direct delta poisoning; endogenous strikes follow own method history. Does not reproduce hardened gradient-evasive threat or establish poisoning damage robustness.",
+  "root_method_budgets": {
+    "same_active_root_for_all": true,
+    "equal_root_data_not_equal_query_work": true,
+    "n": "finite usable same-round candidates <=12",
+    "learner_or_sidecar": "n+1 passes if n>=2 else0; TrustFL counted once, every baseline shadow included for declared adaptive feedback",
+    "trustfl": {
+      "max_validation_passes_per_round": 13
+    },
+    "fedavg": {
+      "max_validation_passes_per_round": 13,
+      "intrinsic": 0
+    },
+    "fltrust_declared_root_fallback": {
+      "max_validation_passes_per_round": 13,
+      "root_training_if_candidates": true,
+      "root_epochs": {
+        "emnist_byclass": 2,
+        "eurosat": 4
+      },
+      "max_root_SGD_steps_per_round": {
+        "emnist_byclass": 6,
+        "eurosat": 4
+      },
+      "fallback": "unchanged score_sum<=1e-12 -> root-only; ReLUcosine and norm factors unchanged"
+    },
+    "fedgreed_algorithm1": {
+      "intrinsic": "n individual + at most n-1 tested prefix root queries; singleton cached; UIDtiebreak; first nonimprovement; no fixedtop5",
+      "max_validation_passes_per_round": 36
+    },
+    "fd_distance_validation_local": {
+      "intrinsic": "8*(1+k) if n>=2 else0; k=max(1,round(.6*n));lr.8,epsilon.15,persistent UIDlogits",
+      "max_validation_passes_per_round": 77,
+      "published_DDPG": false
+    },
+    "scheduled_root_evaluations_per_attempt": 13,
+    "no_privilege_or_fallback_changes": true
+  },
+  "metrics": {
+    "alpha_basis": "post-attack/pre-aggregation submitted client delta; effective algebraic coefficient after norm scaling",
+    "aggregate_identity": "delta_applied=sum_i(alpha_i*delta_i)+beta_root*delta_root",
+    "reconstruction_l2_tolerance": "1e-6 + 1e-5*(sum_i(abs(alpha_i)*norm(delta_i))+abs(beta_root)*norm(delta_root))",
+    "primary_accuracy": "final fixed-boundary test accuracy; algorithmic numerical failure or method-caused OOM has separately labeled composite0; external time/storage limits, interruption, incomplete or corrupted evidence are unobserved per failure_rules",
+    "primary_retention": {
+      "window": "0..T-1",
+      "numerator": "sum count(H intersection positively weighted applied clients)",
+      "denominator": "sum count(H intersection executable invitations)",
+      "pool_before_division": true,
+      "zero_denominator": null
+    },
+    "primary_malicious_share": {
+      "window": "floor(T/2)..T-1",
+      "positive_applied_round": "sum_malicious alpha / sum_all_clients alpha",
+      "valid_noapply_zero_root_only": 0,
+      "missing_stale_nonfinite": null,
+      "aggregate": "mean over all fixed late rounds",
+      "interpretation": "coefficient representation; neither attack damage nor vector contribution"
+    },
+    "secondary": [
+      "q shares",
+      "raw malicious/total alpha",
+      "conditional positive-client-mass share",
+      "full-window share",
+      "norm diagnostics",
+      "root-only/noapply/zero/quarantine frequencies",
+      "scheduled opportunity retention",
+      "acceptance given arrival",
+      "participation and physical arrival ratios",
+      "accuracy trajectories",
+      "energy",
+      "timing",
+      "exposure"
+    ],
+    "energy": {
+      "window": "pre-round0 through post-roundT-1",
+      "separate": [
+        "modeled compute/communication/mobility demand",
+        "clipped battery depletion",
+        "overdraw"
+      ],
+      "ratio_denominators": [
+        "physical arrivals over same window",
+        "positive applied client contributions over same window"
+      ],
+      "zero_denominator": null,
+      "delay_assumption": "tx power charged over delay-inclusive communication time"
+    }
+  },
+  "statistics": {
+    "unit": "paired scenario seed",
+    "condition": "adaptive40/common/emnist_byclass",
+    "endpoints": [
+      "final_accuracy_composite",
+      "pooled_honest_HM_retention",
+      "late_unconditional_applied_raw_update_malicious_coefficient_share"
+    ],
+    "comparators": [
+      "fedavg",
+      "fltrust_declared_root_fallback",
+      "fedgreed_algorithm1",
+      "fd_distance_validation_local"
+    ],
+    "effect": "TrustFL minus comparator",
+    "test": "two-sided exhaustive sign flip of absolute paired mean; zeros retained; equal extreme included",
+    "assumptions": [
+      "independent scenario units",
+      "null sign symmetry/exchangeability, not proved by pairing"
+    ],
+    "holm_alpha": 0.05,
+    "family_size": 12,
+    "bootstrap": {
+      "resamples": 50000,
+      "seed": 51001,
+      "method": "percentile mean difference",
+      "confidence": 0.95,
+      "scope": "approximate marginal, not simultaneous"
+    },
+    "execution_order_seed": 51002,
+    "missing_pair_rule": "whole confirmatory contrast unavailable; available-pair descriptive only; p1 bookkeeping slot for fixed Holm family, not calculated p",
+    "nonsignificance": "not equality",
+    "power_guarantee": false,
+    "confirmatory_dataset": "emnist_byclass",
+    "EuroSAT": "descriptive extension,6pairedseeds, no additionalconfirmatoryfamily",
+    "execution_order": "first declared honestFD41000; remaining IDs sorted HMAC-SHA256 with masterSHA256(ASCII TrustFL-v5.execution-order:51002), inputASCII fixedID"
+  },
+  "failure_rules": {
+    "algorithmic_nonfinite_or_method_OOM": "accuracy composite0; measured failed accuracy not asserted; finite-only sensitivity",
+    "external_interruption_never_started_corruption": "unobserved, no0imputation",
+    "mechanistic_incomplete_invalid": "NA",
+    "valid_empty_zero": "valid per metric definition",
+    "replacement_seeds": false,
+    "resume_overwrite": false,
+    "guarded_nonfinite_aggregate": "numerical failure, not valid zero: no clean-complete certificate;mechanistic NA;algorithmic accuracy composite0",
+    "external_time_or_storage_limit": "unobserved external missingness; not accuracy0; preserve all charged reservations and attempted status"
+  },
+  "new_scientific_allowances": {
+    "separate_from_exhausted_cost_budget": true,
+    "maximum_attempts": 160,
+    "no_retry_replacement_resume": true,
+    "by_dataset_method": [
+      {
+        "dataset": "emnist_byclass",
+        "method": "trustfl",
+        "attempts": 20,
+        "rounds": 1200,
+        "max_client_steps": 230400,
+        "max_client_examples": 14745600,
+        "max_root_training_passes": 0,
+        "max_root_query_passes": 15860,
+        "test_passes": 260,
+        "permutation_files_max": 28800,
+        "permutation_payload_bytes_max": 117964800,
+        "max_root_steps": 0,
+        "max_root_training_examples": 0,
+        "max_root_query_examples": 9833200,
+        "max_root_query_batches": 47580,
+        "test_examples": 30243980,
+        "test_batches": 59280
+      },
+      {
+        "dataset": "emnist_byclass",
+        "method": "fedavg",
+        "attempts": 20,
+        "rounds": 1200,
+        "max_client_steps": 230400,
+        "max_client_examples": 14745600,
+        "max_root_training_passes": 0,
+        "max_root_query_passes": 15860,
+        "test_passes": 260,
+        "permutation_files_max": 28800,
+        "permutation_payload_bytes_max": 117964800,
+        "max_root_steps": 0,
+        "max_root_training_examples": 0,
+        "max_root_query_examples": 9833200,
+        "max_root_query_batches": 47580,
+        "test_examples": 30243980,
+        "test_batches": 59280
+      },
+      {
+        "dataset": "emnist_byclass",
+        "method": "fltrust_declared_root_fallback",
+        "attempts": 20,
+        "rounds": 1200,
+        "max_client_steps": 230400,
+        "max_client_examples": 14745600,
+        "max_root_training_passes": 2400,
+        "max_root_query_passes": 15860,
+        "test_passes": 260,
+        "permutation_files_max": 28800,
+        "permutation_payload_bytes_max": 117964800,
+        "max_root_steps": 7200,
+        "max_root_training_examples": 1488000,
+        "max_root_query_examples": 9833200,
+        "max_root_query_batches": 47580,
+        "test_examples": 30243980,
+        "test_batches": 59280
+      },
+      {
+        "dataset": "emnist_byclass",
+        "method": "fedgreed_algorithm1",
+        "attempts": 20,
+        "rounds": 1200,
+        "max_client_steps": 230400,
+        "max_client_examples": 14745600,
+        "max_root_training_passes": 0,
+        "max_root_query_passes": 43460,
+        "test_passes": 260,
+        "permutation_files_max": 28800,
+        "permutation_payload_bytes_max": 117964800,
+        "max_root_steps": 0,
+        "max_root_training_examples": 0,
+        "max_root_query_examples": 26945200,
+        "max_root_query_batches": 130380,
+        "test_examples": 30243980,
+        "test_batches": 59280
+      },
+      {
+        "dataset": "emnist_byclass",
+        "method": "fd_distance_validation_local",
+        "attempts": 20,
+        "rounds": 1200,
+        "max_client_steps": 230400,
+        "max_client_examples": 14745600,
+        "max_root_training_passes": 0,
+        "max_root_query_passes": 92660,
+        "test_passes": 260,
+        "permutation_files_max": 28800,
+        "permutation_payload_bytes_max": 117964800,
+        "max_root_steps": 0,
+        "max_root_training_examples": 0,
+        "max_root_query_examples": 57449200,
+        "max_root_query_batches": 277980,
+        "test_examples": 30243980,
+        "test_batches": 59280
+      },
+      {
+        "dataset": "eurosat",
+        "method": "trustfl",
+        "attempts": 12,
+        "rounds": 720,
+        "max_client_steps": 138240,
+        "max_client_examples": 8847360,
+        "max_root_training_passes": 0,
+        "max_root_query_passes": 9516,
+        "test_passes": 156,
+        "permutation_files_max": 34560,
+        "permutation_payload_bytes_max": 70778880,
+        "max_root_steps": 0,
+        "max_root_training_examples": 0,
+        "max_root_query_examples": 1998360,
+        "max_root_query_batches": 9516,
+        "test_examples": 842400,
+        "test_batches": 1716
+      },
+      {
+        "dataset": "eurosat",
+        "method": "fedavg",
+        "attempts": 12,
+        "rounds": 720,
+        "max_client_steps": 138240,
+        "max_client_examples": 8847360,
+        "max_root_training_passes": 0,
+        "max_root_query_passes": 9516,
+        "test_passes": 156,
+        "permutation_files_max": 34560,
+        "permutation_payload_bytes_max": 70778880,
+        "max_root_steps": 0,
+        "max_root_training_examples": 0,
+        "max_root_query_examples": 1998360,
+        "max_root_query_batches": 9516,
+        "test_examples": 842400,
+        "test_batches": 1716
+      },
+      {
+        "dataset": "eurosat",
+        "method": "fltrust_declared_root_fallback",
+        "attempts": 12,
+        "rounds": 720,
+        "max_client_steps": 138240,
+        "max_client_examples": 8847360,
+        "max_root_training_passes": 2880,
+        "max_root_query_passes": 9516,
+        "test_passes": 156,
+        "permutation_files_max": 34560,
+        "permutation_payload_bytes_max": 70778880,
+        "max_root_steps": 2880,
+        "max_root_training_examples": 604800,
+        "max_root_query_examples": 1998360,
+        "max_root_query_batches": 9516,
+        "test_examples": 842400,
+        "test_batches": 1716
+      },
+      {
+        "dataset": "eurosat",
+        "method": "fedgreed_algorithm1",
+        "attempts": 12,
+        "rounds": 720,
+        "max_client_steps": 138240,
+        "max_client_examples": 8847360,
+        "max_root_training_passes": 0,
+        "max_root_query_passes": 26076,
+        "test_passes": 156,
+        "permutation_files_max": 34560,
+        "permutation_payload_bytes_max": 70778880,
+        "max_root_steps": 0,
+        "max_root_training_examples": 0,
+        "max_root_query_examples": 5475960,
+        "max_root_query_batches": 26076,
+        "test_examples": 842400,
+        "test_batches": 1716
+      },
+      {
+        "dataset": "eurosat",
+        "method": "fd_distance_validation_local",
+        "attempts": 12,
+        "rounds": 720,
+        "max_client_steps": 138240,
+        "max_client_examples": 8847360,
+        "max_root_training_passes": 0,
+        "max_root_query_passes": 55596,
+        "test_passes": 156,
+        "permutation_files_max": 34560,
+        "permutation_payload_bytes_max": 70778880,
+        "max_root_steps": 0,
+        "max_root_training_examples": 0,
+        "max_root_query_examples": 11675160,
+        "max_root_query_batches": 55596,
+        "test_examples": 842400,
+        "test_batches": 1716
+      }
+    ],
+    "global": {
+      "attempts": 160,
+      "rounds": 9600,
+      "max_client_steps": 1843200,
+      "max_client_examples": 117964800,
+      "max_root_training_passes": 5280,
+      "max_root_query_passes": 293920,
+      "test_passes": 2080,
+      "permutation_files_max": 316800,
+      "permutation_payload_bytes_max": 943718400,
+      "max_root_steps": 10080,
+      "max_root_training_examples": 2092800,
+      "max_root_query_examples": 137040200,
+      "max_root_query_batches": 661320,
+      "test_examples": 155431900,
+      "test_batches": 304980
+    },
+    "maximum_optimizer_steps": 1853280,
+    "historical_cost": "38complete+1censored;388acknowledgedsteps; historicalpendingrootpass remains charged once; oldcomplete-suiteFAILED unchanged"
+  },
+  "storage": {
+    "new_output_hard_cap_bytes": 68719476736,
+    "archive_staging_allowance_bytes": 68719476736,
+    "minimum_new_free_bytes": 171798691840,
+    "reserve_fraction_of_initial_free": 0.2,
+    "event_size_limit_bytes_proposed": 4096,
+    "event_count_limit_proposed": 8200000,
+    "base_operation_events_ceiling": 8005120,
+    "round_json_limit_bytes_proposed": 1048576,
+    "no_silent_truncation_or_deletion": true,
+    "new_compact_event_schema_required": "retain separate batch/step/query reserve+ack; reference frozen caps/manifest and separate bounded snapshots; existing fullsnapshotv4.2records exceed4KiB and cannot simply be reused"
+  },
+  "lifecycle": {
+    "dataset_auth": "full offlinecontenthash at initial preparation and before/after each attempt; same identity orstop; no rounds rehash allcontent",
+    "scenario": "save fullreserve/partitions/retained/excluded/root/testindices, actualn/histograms, memberships, traces, initialmodel once per seed; shared across methods+conditions",
+    "attempt": "own isolated worker, source/import/environment/rawhash/preparedscenario before+after; read-only inputs; fresh outputs; fullfinalmodel only, no fullclientmodelhistory",
+    "round": "save exactopportunities/arrivals/quarantine/unroundedweights/appliedidentity/attack/resources/energy/timers/permutationidentities; resetroundfields even empty; charge before work, acknowledge after",
+    "progress": "currentfixedID+ordinal, completed/attempted, elapsed, cumulative budgets; bounded nonblocking5s reports; independent ownedworker watchdog",
+    "timing": "nonoverlapping local inclnestedRPC, server residual, rootSGD, rootqueries, scheduled root/test, setuphash, serialization, bookkeeping separately; do not subtractRPC or doublecount nestedtimer"
+  },
+  "coverage": "reportzero/singleton/multicandidate/noapply/rootonly frequencies and denominators for everymethod/condition/seed; no resampling or deadline/resource retuning for bettercoverage; lowexposurelimitsmechanisticinterpretation",
+  "separate_pending_work": {
+    "larger_nodes": "existing v1fallbackN30/128/512 fullmodel proposal retained as separate unselected/unbudgeted scope, no launch command; N30 measurements do notcloseR1.3",
+    "observer_hardware": "conditional device/accessories/logger calibration; missingaccessories/labclosure not assumed resolved",
+    "theory": "implementation-theorem mapping remains separate review",
+    "manuscript": "18page submittedvs17pagearchivedbuild lineage unresolved; no source/PDF editnow"
+  },
+  "contingency_only": "If cost-only forecast, storage or remaining calendar cannot support exact fixed protocol, stop before further dispatch and seek author decision on extension/additionalresource. Retain all seeds/methods/failedwork; no automatic smaller grid, root change, replay or allowance reset.",
+  "departures_from_v1": [
+    {
+      "change": "Select existing fallback objectives instead of primary",
+      "effect": "No new MNIST/native cells; retain100EM+60Euroattempts,60rounds,10/6seeds,12contrasts; no native-v-commoncausal inference"
+    },
+    {
+      "change": "New perclientcaps512/256 after fullpartition",
+      "effect": "New sampled-trainingregime; smallern modifies dataheterogeneity/weights/compute/energy; explicitlimitation"
+    },
+    {
+      "change": "EMactive root6944\u2192620 balanced subset; exclude6324reserve",
+      "effect": "Changes learning/validation/attackfeedback for allmethods and FLTrustSGD56\u21926; not measured speedup; samepartitionpool"
+    },
+    {
+      "change": "fedgreed_algorithm1_proposed alias\u2192implementedfedgreed_algorithm1",
+      "effect": "Identity clarification of alreadyavailablealgorithm; no newmethodimplementation"
+    },
+    {
+      "change": "Fixed firstEMhonestFD41000; savedHMACorder remaining",
+      "effect": "Cost-onlymanualgate uses retainedscientificattempt, notdisposable smoke"
+    },
+    {
+      "change": "Explicit prospective durablework/time/storage allowances/lifecycle",
+      "effect": "Newscientificcontroller scope, no reuse/resetcostclaims; compactsavedledgersemanticsretained; no creditedspeedgain"
+    }
+  ],
+  "all_17_comments_status": "OPEN; this recommendation supplies no new comparative/deployment outcome"
+}

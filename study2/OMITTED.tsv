@@ -1,0 +1,546 @@
+path	sha256	bytes
+campaign/events.jsonl		3406277946
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fd_distance_validation_local/completion.json	0acb48a4bc4e5c75aa8ab3a2af45a04fedb5c1113c1168e1449581fd3eff8518	200346
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fedavg/completion.json	78938ace2e1ad99a308ff1b6c489d25ca3fc20782e86da13966367199b3c871b	199585
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fedgreed_algorithm1/completion.json	c2152c39256f25e876267472ec86de9e3fae4f834388d689dd12e3ba36c47a55	202884
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fltrust_declared_root_fallback/completion.json	91666b9619039537ad31da4f51625db202ebec49ec80423ecd32a34c45384761	205935
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-trustfl/completion.json	1c42b823072bc516b11bbcc14bbb5e979a9759076dc4d6c112631c1f3f1508d4	188663
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41000-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fd_distance_validation_local/completion.json	0136cf33531fe52be5d98ca244d029e309bc5a635646d6888adca40ed1299857	199823
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fedavg/completion.json	b1a68f26296b9c5486fd22d709785badacc39506974c91cb78049e0ffc201e59	200589
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fedgreed_algorithm1/completion.json	8a72540373d50e3cb14812899c6da2121b79632d4a905b8531271018ac75fbb9	195761
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fltrust_declared_root_fallback/completion.json	bb1d47ebfa43d55a9d0d464f2aacc2cee70edf657babada4530a3487bb07788a	198555
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-trustfl/completion.json	14e89563e43f7dd53e681d4887f14ac9a3fba8b8d6f77a9103b54cd3a604b41b	195507
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41001-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fd_distance_validation_local/completion.json	5deb6d0cf56e02f0754d7a18e253cac443f13e26a06571954ec51a92be42d35b	191707
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fedavg/completion.json	3559c84caf3623666d5e8181ce73d7081a6bcd85a8b210b40eed663a57c92371	199327
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fedgreed_algorithm1/completion.json	246d7e24a0760da71612d3f0cef809b49569dbda09b73351e4ee9d283abeaf34	193485
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fltrust_declared_root_fallback/completion.json	efa9f6301d72df02cc678be28a0de13985f9cc2821165ffd54351eb6bba32147	200088
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-trustfl/completion.json	cfe5b2a61eacf19635f4ddb9066a0e6ebd1b22bc5771abcf350f0094e3e181c7	196280
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41002-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fd_distance_validation_local/completion.json	66fcba96188b976dbb682951d0d305b999a8a323f0ef2abba32d707e24f56e7e	198812
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fedavg/completion.json	5b14b738b519046639770bf7032c859a3926e36c5fd11d8348983a104a7f942f	205421
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fedgreed_algorithm1/completion.json	532543d872bfdaed5ec2ce33bb73ff8869186a8544a646bfed051d7d0d9f27a9	203388
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fltrust_declared_root_fallback/completion.json	f0d486b6aac5e7b5a7a1fe9c593178d3342d0a860e95fa8578fc13bd7937ffa0	205923
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-trustfl/completion.json	1053ea83ca941ca68a246147e6fff1846a2ee2025618133b7c4a436eb2a44963	201860
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41003-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fd_distance_validation_local/completion.json	e6244599e9a88ff48a972dd8907e55b59db326afadaf1c491c57caa12cfda997	194498
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fedavg/completion.json	5d6c703bf9197f6273c67c2d95460ef727b046b6fe1a792f1d28c89683f94543	203641
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fedgreed_algorithm1/completion.json	874673c7ec909f9bfc9f92f3959868bd1523de76a5d2f05b84c5dff42205441c	203644
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fltrust_declared_root_fallback/completion.json	307a5ec90703dd47bc044c48098dd8ba3c10225caf4caa2f3881aaef515e2a7f	202373
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-trustfl/completion.json	2142848d07a097a57f3ffcc8a86af8f79ea6c683e977de5626f9ed0daaa1a49d	199324
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41004-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fd_distance_validation_local/completion.json	337c6fd63a783c0751471f0f184bc8d7929d248d39d3967abea41339a07485ea	189421
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fedavg/completion.json	65eaae468296778419b6b11da72eeae9592e901c28148479ad213690e8f0c3cb	194002
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fedgreed_algorithm1/completion.json	aec61636d2f2821c79f7b209f02c85655b8d380ce42475ffa48534b36f1140c7	200602
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fltrust_declared_root_fallback/completion.json	bbec8cbdb16cea1a6be859a760b08c92a92093af6cb02ca4f8766c38cbf163a0	198821
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-trustfl/completion.json	faa214856072e95389bb4d5c9799e11c75bf72223498320fd08f15b5a97d06bb	202886
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41005-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fd_distance_validation_local/completion.json	8409eeb488175373791cedd7682db5ba6d17b37d77f266e30f765e5b0118ce86	201619
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fedavg/completion.json	eb5076b4fe80164e3143a2eb41f0abb9fdffca03f9c0d2544bc91c62eaf5013a	199587
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fedgreed_algorithm1/completion.json	092d884c0886205fb7b286c040e54620e2576ffcdfbedda0fa1afd933d6c431a	204157
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fltrust_declared_root_fallback/completion.json	e071946df6ea24312efdad6ae972c3734c1a63bfa1f5555bb81bde3ac67f0a12	203138
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-trustfl/completion.json	787b81522471efa6f4778cbf411aecc1d28f09807093705f8cac07b62874be85	198824
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41006-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fd_distance_validation_local/completion.json	ff0da0d648d063de87f2550e015af426fa39afd6bdccd8b98a66ba40e37674e0	198824
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fedavg/completion.json	8176d05ff38b1f0b07f77b3adde308bfaa54e75c3f9f92e4b68dd7d663132ab3	203146
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fedgreed_algorithm1/completion.json	d6ebd5529c41ef1c7fb0c9cbc9150097a984e4b483a1916f0b16a50067279a0e	204666
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fltrust_declared_root_fallback/completion.json	e64934d1818b0c931ab2c9f70fc8a8ed491f6a68d7ce0f05f93f77f334bec8f9	203655
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-trustfl/completion.json	5a86722ba3b3a4b6db6a7e5274613d745e7cf74c3bbabacd2ccb314de0d7890c	201619
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41007-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fd_distance_validation_local/completion.json	f105c057b568bd1f1d206be11a4dd5343d4d67b4c031d54732174456cda70903	190685
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fedavg/completion.json	6867ab7d7e6cfd2bcea66f823e32fdceeb3ddad87d0fbf618d488542c9653055	197292
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fedgreed_algorithm1/completion.json	9c98b34680df9870e21e89d37e705e29313b0d280bb265394bbee5a16c5cc167	203634
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fltrust_declared_root_fallback/completion.json	15ad21466fa1f4ca0bc025289c122de5f21954ba67f23e581cd8a0442efa0e01	203133
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-trustfl/completion.json	8bdb8983076c88849ab9d83980f32c496a4d60d505978c1664b47a07c84cd1ac	204401
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41008-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fd_distance_validation_local/completion.json	3e757922a40672cd48577f6044670c5b59baf78194b949c82066bdc13bcdb5fa	184595
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fedavg/completion.json	f32c6e91937b69c5ec4fc3fd5839f741c539ac89a1516133bff930b836a06a63	198813
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fedgreed_algorithm1/completion.json	a2ff1312d15e79cd099ec463a097b63b339c074fd641f2a17e3fa431951e3c07	198308
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fltrust_declared_root_fallback/completion.json	fc9b65705198f63e6658b34324db7706c780e4ee73995eb22484aac155204e52	176212
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-trustfl/completion.json	168c37c1500de9c8af1e2ac322b607ceb3712d15fe6a5c54e730fd8c8b563b2e	188402
+campaign/attempts/v5-emnist_byclass-common-adaptive40-s41009-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fd_distance_validation_local/completion.json	6dac632cee6ba8494a976e866064a866f8c56490f8c8df79af4b975e100787cb	205935
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fedavg/completion.json	e905838271832806892b7dcd0b2adbcd343c4c8c1463b7bdf6e8176ac6dcaa4a	205935
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fedgreed_algorithm1/completion.json	5a3e8c3e96bacd663cf7eea6c2a04c71c671b0bd909d27023a51280ae68d8860	205935
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fltrust_declared_root_fallback/completion.json	7476eaeab626c3ae8a2c90b50bb1241680af014048d140b242d1033ad72ce690	205935
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-trustfl/completion.json	309de5b344f11203224b1dd42e958048f91f0eca6402601fe1de4beab12149ce	205935
+campaign/attempts/v5-emnist_byclass-common-honest-s41000-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fd_distance_validation_local/completion.json	c3199e2f8f94316bdcc099f95f146faf1c64f5def8f10b439ed4712e1054b444	205924
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fedavg/completion.json	4213477471c9860e2b7e643e850e84a5465689a76ea85d607614e8664d3699c1	205924
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fedgreed_algorithm1/completion.json	44f7073f161813413cf287f8c6bb9758e5735dd0147e05a23ce5ca0509972739	205924
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fltrust_declared_root_fallback/completion.json	929d5fae46f92ca2c956023d929976ad1d4b8379df05cbf1a0d8a529d452b661	205924
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-trustfl/completion.json	2a0356481d61e6a967d80aef91150d331d57293aedaaf461179316cafbda008e	205924
+campaign/attempts/v5-emnist_byclass-common-honest-s41001-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fd_distance_validation_local/completion.json	8de7e13f7a25f6e537f6ea7b83786ce1cd9ae12d9727338690c29706372223a9	205929
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fedavg/completion.json	80a5258c661375afe46cfa1f3651a237b77c2f2b6e3ca79fb69c4fb0f5f5ce6f	205929
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fedgreed_algorithm1/completion.json	07d706b210855ec8a5a88be1e1ba08c8ccc25f6415610f1af875c077eadaed82	205929
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fltrust_declared_root_fallback/completion.json	ec73b95138248526af346e46df9e42b704ed97b45b768dfb70de9588872711ce	205929
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-trustfl/completion.json	2af7418c86fcc5366534934e279e9d1354d1e23a0417013b53fec870780d7ed9	205929
+campaign/attempts/v5-emnist_byclass-common-honest-s41002-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fd_distance_validation_local/completion.json	293ef51d217dccd2892787215a89be98ab851e345654867e8da16279af9ed4b7	205926
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fedavg/completion.json	bf5020267c70dbda6942c284e08d0263941c5d395d9454a4f183b9a96b1341c6	205926
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fedgreed_algorithm1/completion.json	ecaa78fb9c6128389192261e643b51b2da75348415131643b3998ea4970c1aa0	205926
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fltrust_declared_root_fallback/completion.json	7a13aa6da70bda3f50469dcc376c34bfb1e3a361a638a22d8ad7219cda427f1a	205926
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-trustfl/completion.json	63e8ddc4f3f0f6728f3f0d12744df359f7e62df5a46777b7a51c3af8d41839af	205926
+campaign/attempts/v5-emnist_byclass-common-honest-s41003-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fd_distance_validation_local/completion.json	2f200077d8e136a503a199972d63bcc3eea54684ee8725affd8709f8538f5905	205927
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fedavg/completion.json	6ca4bef8b368501d5c2865130bca16ead00afba14ac7af9a5f9e87f50d9dc0b1	205927
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fedgreed_algorithm1/completion.json	cda08af7f3ffcaff309445e5637dcc9e7fb2573cab628c5b0f720f0fb2c39818	205927
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fltrust_declared_root_fallback/completion.json	7b22b2f64bba64aa8ff223a0d2329324de13b5a20d21c72622c129f5793586d2	205927
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-trustfl/completion.json	bf9d4b1dc6dad51b29b3f45bab707dacb0460c61299c38b2da48205f2cad9c88	205927
+campaign/attempts/v5-emnist_byclass-common-honest-s41004-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fd_distance_validation_local/completion.json	a85170420cc2d0d6ee598bdb3e9dfc892cd7b23fff6f1e1b214207a684d42708	205933
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fedavg/completion.json	9940de5e1836ccb4ed2bfb486f9c09c1113162ca73847591428c07e98a2e9eaf	205933
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fedgreed_algorithm1/completion.json	6cb8fca7f65e8f8ea2fa5fb3695da8e4a0f4ea94954ac18132b780417b0ff018	205933
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fltrust_declared_root_fallback/completion.json	b946bf03fad00ecbd338653db1f969d91e8214b1d37598a04d8cb0b37d6c7c49	205933
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-trustfl/completion.json	8724645c1d86db581974469cd1f99e7cf502e1d6f96059bce674f88294b5d809	205933
+campaign/attempts/v5-emnist_byclass-common-honest-s41005-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fd_distance_validation_local/completion.json	551e403aa0229d894c315ea8817c48136dd897c6ef5812892d9ef2238c6010e3	205939
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fedavg/completion.json	951d5dd6e4f442c93fd10b85c1dda446bd5961be1049bd05a0b4026cef893fb5	205939
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fedgreed_algorithm1/completion.json	3c6040db41354da51f851bc6cc2f4f54ac151eeabe393c171f4abc9f3ebacba2	205939
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fltrust_declared_root_fallback/completion.json	c0729cd5ae5afb2872c47abe345b0031f93e74e909f1b35e336272e40d256b50	205939
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-trustfl/completion.json	a380cd44f86a43bf795c2ba3d579a398c11b8756f193f4fbc0c04c74e142aca5	205939
+campaign/attempts/v5-emnist_byclass-common-honest-s41006-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fd_distance_validation_local/completion.json	e85a7f79c13200cb84a40f5eaa02a456b1884303f2167ac376672dd3d9beeee8	205937
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fedavg/completion.json	27959c227331ef5297824285676fcb7da016e02bb52ef7f547635ee5d6de5ee4	205937
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fedgreed_algorithm1/completion.json	ce4fe9e3762bca4bc96eca9f9ac6f6d18f315c05b8f53a0d94c3cd04739e2c18	205937
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fltrust_declared_root_fallback/completion.json	fbbc94ac3e5820bee19b457fd9d7f134d2d6e71896790b77cabf69d78f66d0e3	205937
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-trustfl/completion.json	ab89725c42f37d7009107ecc85d8cab72eced408e0ea47fa60f2efa64610e1cc	205937
+campaign/attempts/v5-emnist_byclass-common-honest-s41007-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fd_distance_validation_local/completion.json	95d43cf2b3b620797fe74d8c84b68287441890e66830effa2df0870992293d16	205926
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fedavg/completion.json	778d222f2e80792524cee392dc5d11101fa1d69e3debda094295fefef9713e62	205926
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fedgreed_algorithm1/completion.json	34455af73ee0818d26a8631ac3a5da1575a240c4281a87fdc6f448ca5c86f75d	205926
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fltrust_declared_root_fallback/completion.json	8a0273b61c7f2af661cc8c6c8f2f5399ee14d5b0a97d3c76c975406973625575	205926
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-trustfl/completion.json	c448e259941d4eac6e1e8e3aab4f1f4d8c1676c465d3259558a1134a7358f2f6	205926
+campaign/attempts/v5-emnist_byclass-common-honest-s41008-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fd_distance_validation_local/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fd_distance_validation_local/completion.json	18f47c3113b49eb787f50cd718d0439b1bc7de2cdd8942989263a11918f29a1b	205928
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fedavg/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fedavg/completion.json	176929001ceeeb6311f04758ae6666592224fe6a02ed81fd69bf87efc65d4d75	205928
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fedgreed_algorithm1/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fedgreed_algorithm1/completion.json	bbc93f458a5299bd26ddfadd087f4c32daf2f02b5a5b8470c05258c116ed73b2	205928
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fltrust_declared_root_fallback/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fltrust_declared_root_fallback/completion.json	cb0cf827f3b9d2d1ca6649205a3d55c4edb63b4fc9aa3b58363f89174eb22e64	205928
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-trustfl/final-model.pt		6763085
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-trustfl/completion.json	fa8c5f026a03a8f7b92c2a0524c7fdfe7650db639a38ba8f1a0aaa00cfbb4417	205928
+campaign/attempts/v5-emnist_byclass-common-honest-s41009-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fd_distance_validation_local/completion.json	379c6bdb377206d2c42510278764ffa4f59f0b1df0e2e4a651fbaebcbab51247	383043
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fedavg/completion.json	20a785aa4cc954d68eebe86814f44e62208304b6c32a8b929fb93408d3eeb5cc	380500
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fedgreed_algorithm1/completion.json	34f38f83f2d96834512e470cadf94e85938fa8b4cdd10bb658798f6e9628a240	381517
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fltrust_declared_root_fallback/completion.json	7080e5e3b7d648ed5d1e054d32cd689ad4b356e09ce879f4e098c3a68917a8ac	385067
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-trustfl/completion.json	c4a90f5f9a683e63b533347cdc5268c216517a36895f9113f52e9c7045967106	379994
+campaign/attempts/v5-eurosat-common-adaptive40-s42000-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fd_distance_validation_local/completion.json	1f88c34a6adf69361d4861eea20ca282d1d788202bc2e5c623a29b2dad833906	384138
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fedavg/completion.json	bfecd2b7eeaf963dd94e7432147de5d0f57bc5a786eb1978ebec7e887aded304	384138
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fedgreed_algorithm1/completion.json	02d5fe47db32745172affd18f5e41a566589787f5fe0d76021b9b8155ff86e40	384137
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fltrust_declared_root_fallback/completion.json	a78d6415dec06664e61f3a8e8f2ab780f1fabdeedbf8957c87e2ac966db66ba5	384647
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-trustfl/completion.json	f46ab4c28461cb3bb1a622b2d43f5578b159e7c9fdf4beb660b7d3b76aa6b15f	384138
+campaign/attempts/v5-eurosat-common-adaptive40-s42001-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fd_distance_validation_local/completion.json	410e168dacc6286e327fb565431357e71c444c9612e9278f22494ea84d7fbe1c	383870
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fedavg/completion.json	1ebcb2eca1685295575025cc9e63e7a8c8e10442a9e71993d2a44f5269d81c6a	384885
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fedgreed_algorithm1/completion.json	97ab50cac02ca2892e727d2ff09b30491947454ce1d9104edfb133a417cfd7f2	383871
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fltrust_declared_root_fallback/completion.json	8051b5a0b415df40656778ab2676b9c173d724c99c47e53ad2af6b3dc4a8494f	383872
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-trustfl/completion.json	f4be930ffa18f2102876557b2a156a2c52cd398ef1a5c9c212c579c640733fd6	384377
+campaign/attempts/v5-eurosat-common-adaptive40-s42002-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fd_distance_validation_local/completion.json	0acf5d60e6304cab3ea38a465e9c7b1129e9a7989dca9413b061abb47992c759	385764
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fedavg/completion.json	ba2f1a1f409f99b44442ae1f8bce7206b5a67dbc5657aecb83e83705b6b3e119	385257
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fedgreed_algorithm1/completion.json	b51eea543fcd25a43d5eb962a0addf2eb2381bac45020c37375843e830013983	386271
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fltrust_declared_root_fallback/completion.json	0439b423716397ab6e5c77395a7a7c39867b7024d5fb124edec1ff05ee8dbf5a	385763
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-trustfl/completion.json	a935154a37ed0e24e71fe2be693284e77a40ab37798077344af03182576a37b0	378653
+campaign/attempts/v5-eurosat-common-adaptive40-s42003-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fd_distance_validation_local/completion.json	619f63bc412ee345c663955fe239feec10e241e089f4c898a3c1aa33da22992a	382707
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fedavg/completion.json	7a7d436225fae5fa48d3b405c05f808e6d2f55f014dc219e8caade0b2853f850	383216
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fedgreed_algorithm1/completion.json	bea56a532e19b98de4c8f3c5a5950fdda3b6096397f8ec91e5d50b07babb0233	383728
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fltrust_declared_root_fallback/completion.json	6b0e7ad08fe4c46a16a7e554fb09072a0867a5c9692e48747ded54707dc12f6c	384743
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-trustfl/completion.json	d3aa27fc2d0a63e9b00d6d575ce829f48ce6ddda722ba7fe2737e857d9655b17	383217
+campaign/attempts/v5-eurosat-common-adaptive40-s42004-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fd_distance_validation_local/completion.json	123f176b5bd05423c6cc0cc2ae3a670b5f109ec6858c305939a41baaf4a4e4cd	385248
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fedavg/completion.json	df149968015e11891e7b36da8cdf76c95046c58ee24da0ea7a5c7eff69843799	385251
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fedgreed_algorithm1/completion.json	3058424c7c6eba847b27a38c6d57070cf3a5e834ab4ac8afed1cddec63eb3b73	385760
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fltrust_declared_root_fallback/completion.json	f6d52b5476cada6bd92eb2758cb0054ba841abb652c96d6633699f32fd5e1f31	385251
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-trustfl/completion.json	e62691dfebf5372510117ae3a78c3e413a8f189746d18dc8c5dad8b90b61aaa7	385250
+campaign/attempts/v5-eurosat-common-adaptive40-s42005-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42000-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42000-fd_distance_validation_local/completion.json	a1b9de80c9e5e3325c47ba327284f495029b990328f986910210b8a860a3943e	388622
+campaign/attempts/v5-eurosat-common-honest-s42000-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42000-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42000-fedavg/completion.json	18784cfa5acd75d31e006acd4f3f5aa6beea4486e19ae8537ba73dead99ffaec	388622
+campaign/attempts/v5-eurosat-common-honest-s42000-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42000-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42000-fedgreed_algorithm1/completion.json	46052c4385a55a09f4690f5ab307dd00d7f233e39ef0d5e07b4a6dcaed394dae	388622
+campaign/attempts/v5-eurosat-common-honest-s42000-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42000-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42000-fltrust_declared_root_fallback/completion.json	682da926b74e0ace7c7637cc88c0b3081ab11cd780e1cc1c6220c876ab204c08	388622
+campaign/attempts/v5-eurosat-common-honest-s42000-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42000-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42000-trustfl/completion.json	2438afad019f1306216970929aa54e81db16b5ebe5d07f668dc5d7c55f26757a	388622
+campaign/attempts/v5-eurosat-common-honest-s42000-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42001-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42001-fd_distance_validation_local/completion.json	2378d10969369c472a87c218edffb53a8519ab2047f433c0067ab1e71a2842fe	388707
+campaign/attempts/v5-eurosat-common-honest-s42001-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42001-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42001-fedavg/completion.json	8419a4af15caa244254e797a63a3efa6640dbdce2abbfbe2db175cd6407adb9f	388707
+campaign/attempts/v5-eurosat-common-honest-s42001-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42001-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42001-fedgreed_algorithm1/completion.json	4b54f2148609e1110ed4ded91f863611414660baa32ba2dc6419997fb2f1d0ed	388707
+campaign/attempts/v5-eurosat-common-honest-s42001-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42001-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42001-fltrust_declared_root_fallback/completion.json	59bac2901060ccb030b56ff02f50961dd0f979a56d02a526c43a6ec42607103c	388707
+campaign/attempts/v5-eurosat-common-honest-s42001-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42001-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42001-trustfl/completion.json	dc876e36ecea951ddcf55fab2d7c541b96d50f40061b1102fcc5d8f09550601b	388707
+campaign/attempts/v5-eurosat-common-honest-s42001-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42002-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42002-fd_distance_validation_local/completion.json	b54e578c60c987c4a9b35a54444a448e667069f7fd18d096fccd866ebbea60d2	388432
+campaign/attempts/v5-eurosat-common-honest-s42002-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42002-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42002-fedavg/completion.json	85f82962aaf3b6a12e4c82cfce697a54401bec235ebcca63ad2495b73b7733d7	388432
+campaign/attempts/v5-eurosat-common-honest-s42002-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42002-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42002-fedgreed_algorithm1/completion.json	185369f1839c3907afefb494346bcee366725f34376c4b36baeec6e053f463bb	388432
+campaign/attempts/v5-eurosat-common-honest-s42002-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42002-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42002-fltrust_declared_root_fallback/completion.json	2d9e592dc459e1a243419705ea7bfa6b53bc3437270e857f9a0623a5819ec570	388432
+campaign/attempts/v5-eurosat-common-honest-s42002-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42002-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42002-trustfl/completion.json	0befa0b1e4bafbb86004bfaee8258ddfee4d8d4e0c277d32a3fdc52106056820	388432
+campaign/attempts/v5-eurosat-common-honest-s42002-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42003-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42003-fd_distance_validation_local/completion.json	abdb395dcc8b01e4b8f3e4349fdf289601de30fcf41799153151d2e0e0f89a5b	388813
+campaign/attempts/v5-eurosat-common-honest-s42003-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42003-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42003-fedavg/completion.json	09ff2828e29b4d0c2044e5246f300ef1bdd02cd37ee84635e8d3360e90f7234c	388813
+campaign/attempts/v5-eurosat-common-honest-s42003-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42003-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42003-fedgreed_algorithm1/completion.json	fc9dac79f58abe719c716c6e6cde6ceb6a1ec3658a437eea4b17f8b029ca239a	388813
+campaign/attempts/v5-eurosat-common-honest-s42003-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42003-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42003-fltrust_declared_root_fallback/completion.json	9d46cf29047387b96d76fef75a70b835ecbe28b69bda9c9708036cd8500ac26b	388813
+campaign/attempts/v5-eurosat-common-honest-s42003-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42003-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42003-trustfl/completion.json	0c74aaf0b05c3c5b4b083bf61cc6f490749b42268a33f4f2348e138e97f6f3a2	388813
+campaign/attempts/v5-eurosat-common-honest-s42003-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42004-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42004-fd_distance_validation_local/completion.json	890c54ddc616d20c77e20924aeace287d4b3baacff8d3f1c451665ca52a82daf	388805
+campaign/attempts/v5-eurosat-common-honest-s42004-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42004-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42004-fedavg/completion.json	4a17e272c5394cf8a4036e6a34455c87a2e4cc2b88b7d2e96a804087d4d871be	388805
+campaign/attempts/v5-eurosat-common-honest-s42004-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42004-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42004-fedgreed_algorithm1/completion.json	d7a6fdd07ba3c16ea3cd6c0425c8b5c96ad3c57355201e071ff8b4e126c2185e	388805
+campaign/attempts/v5-eurosat-common-honest-s42004-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42004-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42004-fltrust_declared_root_fallback/completion.json	a776766462f84026866ce813041d331acdd08ad4517bfbf80c55cbb9fdeca9c5	388805
+campaign/attempts/v5-eurosat-common-honest-s42004-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42004-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42004-trustfl/completion.json	fa9ca1e1b0bed10c2669919059dbda64bb262adb02811c28daf15df8fbd60e9a	388805
+campaign/attempts/v5-eurosat-common-honest-s42004-trustfl/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42005-fd_distance_validation_local/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42005-fd_distance_validation_local/completion.json	b33dfe1a42e646f36f41326fa8b08aa83810cea44072abcbbdc386f7cb8476c5	388806
+campaign/attempts/v5-eurosat-common-honest-s42005-fd_distance_validation_local/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42005-fedavg/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42005-fedavg/completion.json	609469ae5ead6a92e1291d53ee0cbe84f11393ea337d2f32e560ce9674e32997	388806
+campaign/attempts/v5-eurosat-common-honest-s42005-fedavg/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42005-fedgreed_algorithm1/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42005-fedgreed_algorithm1/completion.json	01029d005b49b9423c26128de8b22e23ce59dff1e2a52caeacb1fb3b5e8b3225	388806
+campaign/attempts/v5-eurosat-common-honest-s42005-fedgreed_algorithm1/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42005-fltrust_declared_root_fallback/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42005-fltrust_declared_root_fallback/completion.json	948e2c0a96eb2141fa647548c4f10756013b4534b9ebc4e827375db31467316f	388806
+campaign/attempts/v5-eurosat-common-honest-s42005-fltrust_declared_root_fallback/round-*.json (120 files)		0
+campaign/attempts/v5-eurosat-common-honest-s42005-trustfl/final-model.pt		6662797
+campaign/attempts/v5-eurosat-common-honest-s42005-trustfl/completion.json	ec312f10b58df8d795f18c49c5732c22395b9421fe68c8b03e8c90c98d7dceea	388806
+campaign/attempts/v5-eurosat-common-honest-s42005-trustfl/round-*.json (120 files)		0
+sealed_inputs/initializations/emnist_byclass-s41000/adaptive40/indexes.npz	e3498aef0d8f103aa37883738be61867d5fb36e7c79886e365fd107863f6c0f1	4547762
+sealed_inputs/initializations/emnist_byclass-s41000/adaptive40/initial_model.pt	8670fe3b99db0abcb6bda34ea4d6581ac9dce2eeb3b5bae8349940daa9c59b22	6763085
+sealed_inputs/initializations/emnist_byclass-s41000/honest/indexes.npz	e3498aef0d8f103aa37883738be61867d5fb36e7c79886e365fd107863f6c0f1	4547762
+sealed_inputs/initializations/emnist_byclass-s41000/honest/initial_model.pt	8670fe3b99db0abcb6bda34ea4d6581ac9dce2eeb3b5bae8349940daa9c59b22	6763085
+sealed_inputs/initializations/emnist_byclass-s41001/adaptive40/indexes.npz	7861c0b232aefe0152cdb76775d599399ba9a7177a66219ffd268702fdcf9c26	4546678
+sealed_inputs/initializations/emnist_byclass-s41001/adaptive40/initial_model.pt	fa3ee7be74f2d2ec23631837cdbaa5d2daf0af0da7994ea86857f89318a5b1b4	6763085
+sealed_inputs/initializations/emnist_byclass-s41001/honest/indexes.npz	7861c0b232aefe0152cdb76775d599399ba9a7177a66219ffd268702fdcf9c26	4546678
+sealed_inputs/initializations/emnist_byclass-s41001/honest/initial_model.pt	fa3ee7be74f2d2ec23631837cdbaa5d2daf0af0da7994ea86857f89318a5b1b4	6763085
+sealed_inputs/initializations/emnist_byclass-s41002/adaptive40/indexes.npz	3a247068ca71b038a7604abf59415ca70a5fb898c6c3de8e35e8dc14f13ce753	4549042
+sealed_inputs/initializations/emnist_byclass-s41002/adaptive40/initial_model.pt	c128723b9218d19be1f7c9715d824fb2db6f55a3382c4e34772bc1171eb1e571	6763085
+sealed_inputs/initializations/emnist_byclass-s41002/honest/indexes.npz	3a247068ca71b038a7604abf59415ca70a5fb898c6c3de8e35e8dc14f13ce753	4549042
+sealed_inputs/initializations/emnist_byclass-s41002/honest/initial_model.pt	c128723b9218d19be1f7c9715d824fb2db6f55a3382c4e34772bc1171eb1e571	6763085
+sealed_inputs/initializations/emnist_byclass-s41003/adaptive40/indexes.npz	1b35cf5af14c47b067df9d438680748ec46ead34106c9e9226c4b02315926b37	4548610
+sealed_inputs/initializations/emnist_byclass-s41003/adaptive40/initial_model.pt	7325a301f9e3ad732b52eda392f962433e7d11c9add9adc12fd0d8f25f799106	6763085
+sealed_inputs/initializations/emnist_byclass-s41003/honest/indexes.npz	1b35cf5af14c47b067df9d438680748ec46ead34106c9e9226c4b02315926b37	4548610
+sealed_inputs/initializations/emnist_byclass-s41003/honest/initial_model.pt	7325a301f9e3ad732b52eda392f962433e7d11c9add9adc12fd0d8f25f799106	6763085
+sealed_inputs/initializations/emnist_byclass-s41004/adaptive40/indexes.npz	c227767299cc094f2f70b417c05a1ea12370ece911ef88bcd3f1667881649274	4549113
+sealed_inputs/initializations/emnist_byclass-s41004/adaptive40/initial_model.pt	51ab71915816e0eb168588f83687c29226695ffe3e8973da2d1a53e8c6baf3ec	6763085
+sealed_inputs/initializations/emnist_byclass-s41004/honest/indexes.npz	c227767299cc094f2f70b417c05a1ea12370ece911ef88bcd3f1667881649274	4549113
+sealed_inputs/initializations/emnist_byclass-s41004/honest/initial_model.pt	51ab71915816e0eb168588f83687c29226695ffe3e8973da2d1a53e8c6baf3ec	6763085
+sealed_inputs/initializations/emnist_byclass-s41005/adaptive40/indexes.npz	12ed9411c1749c148c610b05be3c124541922f81a9610366b40381ea36ef8f74	4548005
+sealed_inputs/initializations/emnist_byclass-s41005/adaptive40/initial_model.pt	a5ec11597c26cfab2da6cb92d6863465812dcb9fef053947f49381fc941c24fa	6763085
+sealed_inputs/initializations/emnist_byclass-s41005/honest/indexes.npz	12ed9411c1749c148c610b05be3c124541922f81a9610366b40381ea36ef8f74	4548005
+sealed_inputs/initializations/emnist_byclass-s41005/honest/initial_model.pt	a5ec11597c26cfab2da6cb92d6863465812dcb9fef053947f49381fc941c24fa	6763085
+sealed_inputs/initializations/emnist_byclass-s41006/adaptive40/indexes.npz	6f243f6494ad163bf4010055931bb63cd074810f5fc26855b9e6d6f44518aa7c	4545469
+sealed_inputs/initializations/emnist_byclass-s41006/adaptive40/initial_model.pt	fa45dbbf420c66a6a8772c3ca90cf8688ffc650c500bb586580af8eb937b1a14	6763085
+sealed_inputs/initializations/emnist_byclass-s41006/honest/indexes.npz	6f243f6494ad163bf4010055931bb63cd074810f5fc26855b9e6d6f44518aa7c	4545469
+sealed_inputs/initializations/emnist_byclass-s41006/honest/initial_model.pt	fa45dbbf420c66a6a8772c3ca90cf8688ffc650c500bb586580af8eb937b1a14	6763085
+sealed_inputs/initializations/emnist_byclass-s41007/adaptive40/indexes.npz	e1066844a9315d5ad0e943717919fb6d3ffb109c849cf571236a47585a621901	4547363
+sealed_inputs/initializations/emnist_byclass-s41007/adaptive40/initial_model.pt	33c9963650622fadff87e92ca86da076604f92464f41639d48958bc63629dd00	6763085
+sealed_inputs/initializations/emnist_byclass-s41007/honest/indexes.npz	e1066844a9315d5ad0e943717919fb6d3ffb109c849cf571236a47585a621901	4547363
+sealed_inputs/initializations/emnist_byclass-s41007/honest/initial_model.pt	33c9963650622fadff87e92ca86da076604f92464f41639d48958bc63629dd00	6763085
+sealed_inputs/initializations/emnist_byclass-s41008/adaptive40/indexes.npz	4fb91e8de582346e598b801a2a63606ad7b0b7bd4977ec4789d8bec9e9c18bc2	4548808
+sealed_inputs/initializations/emnist_byclass-s41008/adaptive40/initial_model.pt	ce7cb3e70002c8c628b2aba5bb48d466a3409695bec7d52a5de220ba60b1b2de	6763085
+sealed_inputs/initializations/emnist_byclass-s41008/honest/indexes.npz	4fb91e8de582346e598b801a2a63606ad7b0b7bd4977ec4789d8bec9e9c18bc2	4548808
+sealed_inputs/initializations/emnist_byclass-s41008/honest/initial_model.pt	ce7cb3e70002c8c628b2aba5bb48d466a3409695bec7d52a5de220ba60b1b2de	6763085
+sealed_inputs/initializations/emnist_byclass-s41009/adaptive40/indexes.npz	23d76134b49bcebc12e65ab1af1b83ca83f1148aa67b98db5a7bba32660ffe17	4548391
+sealed_inputs/initializations/emnist_byclass-s41009/adaptive40/initial_model.pt	8c6f27ae17bc1a410c95ee5a51cc60e07e04517dfc4dc201106ac0e63efae727	6763085
+sealed_inputs/initializations/emnist_byclass-s41009/honest/indexes.npz	23d76134b49bcebc12e65ab1af1b83ca83f1148aa67b98db5a7bba32660ffe17	4548391
+sealed_inputs/initializations/emnist_byclass-s41009/honest/initial_model.pt	8c6f27ae17bc1a410c95ee5a51cc60e07e04517dfc4dc201106ac0e63efae727	6763085
+sealed_inputs/initializations/eurosat-s42000/adaptive40/indexes.npz	d528a333b7ecb8e98f7b58bd99ca433c905ace225f0b86dcdc48041ab2980708	118901
+sealed_inputs/initializations/eurosat-s42000/adaptive40/initial_model.pt	c6eacde1787e0df650eb7c50b805969b79506d1ed6b6a0785e57e0f850e618be	6662797
+sealed_inputs/initializations/eurosat-s42000/honest/indexes.npz	d528a333b7ecb8e98f7b58bd99ca433c905ace225f0b86dcdc48041ab2980708	118901
+sealed_inputs/initializations/eurosat-s42000/honest/initial_model.pt	c6eacde1787e0df650eb7c50b805969b79506d1ed6b6a0785e57e0f850e618be	6662797
+sealed_inputs/initializations/eurosat-s42001/adaptive40/indexes.npz	95a91c2cf00bc68e024eda206ac115cd5b293f3382164b26c521363d4c12bc5e	118641
+sealed_inputs/initializations/eurosat-s42001/adaptive40/initial_model.pt	62b5c9113ce428ee90eb2bc18048200f3c2848aad0022ed432bb0c0526e346eb	6662797
+sealed_inputs/initializations/eurosat-s42001/honest/indexes.npz	95a91c2cf00bc68e024eda206ac115cd5b293f3382164b26c521363d4c12bc5e	118641
+sealed_inputs/initializations/eurosat-s42001/honest/initial_model.pt	62b5c9113ce428ee90eb2bc18048200f3c2848aad0022ed432bb0c0526e346eb	6662797
+sealed_inputs/initializations/eurosat-s42002/adaptive40/indexes.npz	30adb90c2e029d543564df4dc5c59501a7bf3b184999496ace9351929c821b65	118881
+sealed_inputs/initializations/eurosat-s42002/adaptive40/initial_model.pt	41ab2b6a28579f37319cb0e4776b61e35777a4b6b4050709cfb445b19f8b8026	6662797
+sealed_inputs/initializations/eurosat-s42002/honest/indexes.npz	30adb90c2e029d543564df4dc5c59501a7bf3b184999496ace9351929c821b65	118881
+sealed_inputs/initializations/eurosat-s42002/honest/initial_model.pt	41ab2b6a28579f37319cb0e4776b61e35777a4b6b4050709cfb445b19f8b8026	6662797
+sealed_inputs/initializations/eurosat-s42003/adaptive40/indexes.npz	14d0552b44dd84583f6ca3fb012a77282724371d04393c48173585e943f5b217	119260
+sealed_inputs/initializations/eurosat-s42003/adaptive40/initial_model.pt	49db9e07b77b3e0d2f1b5c7d9bf99aeede0dca0c897c00eab4c617f80dd7e290	6662797
+sealed_inputs/initializations/eurosat-s42003/honest/indexes.npz	14d0552b44dd84583f6ca3fb012a77282724371d04393c48173585e943f5b217	119260
+sealed_inputs/initializations/eurosat-s42003/honest/initial_model.pt	49db9e07b77b3e0d2f1b5c7d9bf99aeede0dca0c897c00eab4c617f80dd7e290	6662797
+sealed_inputs/initializations/eurosat-s42004/adaptive40/indexes.npz	b68631d6d3446f2b831bf1808c0353ebeb36015204c801b707008b589dd36190	119007
+sealed_inputs/initializations/eurosat-s42004/adaptive40/initial_model.pt	620542af776853cd892982e9fc830f1b04ae0931a584aed3c0577ce131b1606f	6662797
+sealed_inputs/initializations/eurosat-s42004/honest/indexes.npz	b68631d6d3446f2b831bf1808c0353ebeb36015204c801b707008b589dd36190	119007
+sealed_inputs/initializations/eurosat-s42004/honest/initial_model.pt	620542af776853cd892982e9fc830f1b04ae0931a584aed3c0577ce131b1606f	6662797
+sealed_inputs/initializations/eurosat-s42005/adaptive40/indexes.npz	7da171d7f75fdd98dcc06b02bcd06cd89ea9e39612ecd234cab7b14b49631326	119128
+sealed_inputs/initializations/eurosat-s42005/adaptive40/initial_model.pt	87e6f204a4f3f8c6abadbc804e574510d8ea58e29063005b689d63c3d9d920ec	6662797
+sealed_inputs/initializations/eurosat-s42005/honest/indexes.npz	7da171d7f75fdd98dcc06b02bcd06cd89ea9e39612ecd234cab7b14b49631326	119128
+sealed_inputs/initializations/eurosat-s42005/honest/initial_model.pt	87e6f204a4f3f8c6abadbc804e574510d8ea58e29063005b689d63c3d9d920ec	6662797

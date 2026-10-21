@@ -1,0 +1,12 @@
+{
+  "condition_bundle_ids": {
+    "adaptive40": "c7e4170258f0db3907a1fd19c506adbed5e071a317230886f895b32670fd5c95",
+    "honest": "9a1915f6d6c850a3e3de6cb9902842255480d4a01972a5b529e83b5d4542fbcd"
+  },
+  "data_bundle_id": "3aedb50eb0013d6d4242ea3a571fbb8802f2da9ea1e65d9efdbaef097f13bef1",
+  "model_raw_sha256": "620542af776853cd892982e9fc830f1b04ae0931a584aed3c0577ce131b1606f",
+  "model_tensor_hash": "9ed427008728dbfd4dcbe3f6602da49b674a3b14b2bd5a1e59237b63e0d0f0d9",
+  "one_model_initialization": true,
+  "schema": "scientific_initialization_v5",
+  "status": "complete"
+}
